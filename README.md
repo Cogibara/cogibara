@@ -1,11 +1,15 @@
-daemon-kit README
+![Build Status](https://travis-ci.org/Cogibara/cogibara.png?branch=master)](https://travis-ci.org/Cogibara/cogibara)
+
+Cogibara README
 ================
+
+(This is the daemon kit default readme. more will be added soon)
 
 daemon-kit has generated a skeleton Ruby daemon for you to build on. Please read
 through this file to ensure you get going quickly.
 
 Directories
-===========
+====
 
 bin/
   cogibara - Stub executable to control your daemon with
@@ -57,7 +61,7 @@ level to DEBUG.
 Bundler
 =======
 
-daemon-kit uses bundler to ease the nightmare of dependency loading in Ruby 
+daemon-kit uses bundler to ease the nightmare of dependency loading in Ruby
 projects. daemon-kit and its generators all create/update the Gemfile in the
 root of the daemon. You can satisfy the project's dependencies by running
 `bundle install` from within the project root.
