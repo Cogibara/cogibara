@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=hello%3F&start=y&sessionid=&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=&vText2=&icognoid=wsf&icognocheck=c9234e849d667e910d8e5f4915589ad9&fno=0&prevref=&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Sep 2013 15:46:44 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=U10MX+WotQZxdB5qZl6QbQ
+      - JSESSIONID=47E9404E18626056A95567D125EA9487; Path=/
+      - RPS=server52054
+      - cleverbotfirstref2="*AKNSYSYEOYIITOUFMOTZANROYJISWUGNOWAAAGQMQK"; Expires=""
+      - cleverbotref="*AKKPBVQGGAIFWGWFJRLBAKUGAJFVOWGKROCAAONCTI"; Expires="Thu,
+        19 Sep 2013 16:48:44 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - server52054
+      Rlm:
+      - '1445'
+      Sc:
+      - '9453'
+      Content-Length:
+      - '117'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "How are you?\rRVA01576206\rj2log-gPnSMmMICZKPIAESYQLE-detail\r\r\r\r\r\rHello?\rHow
+        are you?\rB2328475\r\r\r\r\r\rHow are you?\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Thu, 19 Sep 2013 15:48:35 GMT
+recorded_with: VCR 2.5.0
