@@ -8,7 +8,6 @@ class Cogibara
   end
 
   def ask(message)
-
     modules.each do |mod|
       response = mod.ask(message)
       if response.is_a? String
