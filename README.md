@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/Cogibara/cogibara.png?branch=master)](https://travis-ci.org/Cogibara/cogibara)
+![Build Status](https://travis-ci.org/Cogibara/cogibara.png?branch=master)
 
 Cogibara README
 ================
