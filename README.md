@@ -1,5 +1,5 @@
-![Build Status](https://travis-ci.org/Cogibara/cogibara.png?branch=master)
-![Code Climate](https://codeclimate.com/github/Cogibara/cogibara.png)
+![Build Status](https://travis-ci.org/Cogibara/cogibara.png?branch=master) |
+[![Code Climate](https://codeclimate.com/github/Cogibara/cogibara.png)](https://codeclimate.com/github/Cogibara/cogibara)
 
 Cogibara README
 ================
