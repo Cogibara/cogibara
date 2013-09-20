@@ -37,4 +37,4 @@ gem 'rdf-turtle'
 gem 'spira'
 
 ## COGIBARA GEMS
-gem 'cleverbot'
+gem 'cleverbot', :require => false

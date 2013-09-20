@@ -1,14 +1,11 @@
 class Cogibara
-  def modules
-    @modules ||= []
-  end
-
   def memory
     @memory ||= Memory.new
   end
 
   def ask(message)
-    modules.each do |mod|
+
+    ModuleStack.stack.each do |mod|
       response = mod.ask(message)
       if response.is_a? String
         response = memory.new_message(response)
@@ -17,9 +14,11 @@ class Cogibara
       elsif response.is_a? Symbol
         raise "received code #{response} from #{mod}"
       elsif response.is_a? Cogibara::Message
-        puts "pass along messages or return new ones"
+        # puts "pass along messages or return new ones"
       end
     end
+
+    raise "Didnt know what to say for #{message}, #{ModuleStack.stack}"
   end
 
   def response_details(message, response)

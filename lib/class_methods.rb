@@ -1,10 +1,6 @@
 class Cogibara
 
 
-    def self.modules
-      base_cogi.modules
-    end
-
     def self.dump_memory
       memory.dump_memory
     end
@@ -19,6 +15,12 @@ class Cogibara
 
     def self.ask(message)
       base_cogi.ask(message)
+    end
+
+    def self.load_base_modules
+      ::Chatbot.register
+
+      # require_relative 'modules.rb'
     end
 
 end

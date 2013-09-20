@@ -1,5 +1,5 @@
-require 'simplecov'
-SimpleCov.start
+# require 'simplecov'
+# SimpleCov.start
 
 DAEMON_ENV = 'test' unless defined?( DAEMON_ENV )
 

@@ -22,6 +22,8 @@ DaemonKit::XMPP.run do
 
   # Echo back what was said
   message :chat?, :body do |m|
-    write_to_stream m.reply
+    repl = m.reply
+    repl.body = Cogibara::Interface.new.ask_xmpp(m)
+    write_to_stream repl
   end
 end

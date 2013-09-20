@@ -12,14 +12,14 @@
 # * require_master - Disable filtering of messages based on the sender being a 'master'
 
 defaults: &defaults
-  jabber_id: dk@jabber.org
-  host: jabber.org
+  jabber_id: arthur@wonderland.lit
+  host: 127.0.0.1
   port: 5222
-  password: secret
-  resource: daemon_kit
+  password: secr3t
+  resource:
   enable_logging: false
   masters:
-    - kenneth.kalmer@gmail.com
+    - alice@wonderland.lit
   supporters:
     - someone@gmail.com
 

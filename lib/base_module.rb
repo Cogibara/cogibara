@@ -1,10 +1,20 @@
 class Cogibara
   # Change Module to 'Base' or something
   class Module
-    def self.register
+    def self.register(category=:none)
       #should probably put them on a list that gets loaded to make this more transparent
       # also need multiple categories
-      Cogibara.modules.unshift self.new
+      Cogibara::ModuleStack.register self.new, category
+    end
+
+    def self.requires(*gems)
+      gems.each{|g|
+        begin
+          require g
+        rescue LoadError
+          DaemonKit.logger.info "missing gem #{g}, Skipping module #{self}"
+        end
+      }
     end
 
     def self.on(pattern,&block)
