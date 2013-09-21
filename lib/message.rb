@@ -13,6 +13,8 @@ class Cogibara
       property :to, predicate: onto_prop.to_user, type: String
       property :message_id, predicate: onto_prop.message_id
 
+      has_many :topics, predicate: onto_prop.message_topics
+
     end
 
     def repo
@@ -54,6 +56,10 @@ class Cogibara
 
     def response
       Message.for(rdf_msg.response)
+    end
+
+    def respond_to?(meth)
+      (methods | @msg.methods).include? meth
     end
 
     def method_missing(meth, *args, &block)

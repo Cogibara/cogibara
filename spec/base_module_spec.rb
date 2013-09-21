@@ -46,6 +46,46 @@ describe Cogibara::Module do
       it { @cogi.ask_local("roll me 4d12").split("\n").size.should == 4 }
     end
 
+
+
+    describe "specify order with categories" do
+
+
+      class K1 < Cogibara::Module
+        on 'hi' do
+          "K1 got your message"
+        end
+      end
+
+      class K2 < Cogibara::Module
+        on 'hi' do
+          "K2 got your message"
+        end
+      end
+
+      before do
+        K1.register
+        K2.register :last
+      end
+
+
+      it { @cogi.ask_local('hi').should ==  "K1 got your message" }
+    end
+
+    describe "add topics" do
+      class Topicizer < Cogibara::Module
+        on(/.*/) do
+          current_message.topics << 'tests and stuff'
+        end
+      end
+
+      before do
+        Topicizer.register :classify
+      end
+
+      it { @cogi.ask('hi').response_to.topics.first.should ==  "tests and stuff" }
+    end
+
     describe "can still access the raw message" do
       class CreepyGreeter < Cogibara::Module
         on(/.*/) do
@@ -58,26 +98,6 @@ describe Cogibara::Module do
       end
 
       it { @cogi.ask_local('hello you').should ==  "hehe... hello local" }
-    end
-
-    describe "specify order with categories" do
-      class K1 < Cogibara::Module
-        on 'hi' do
-          "K1 got your message"
-        end
-
-        register :pre
-      end
-      class K2 < Cogibara::Module
-        on 'hi' do
-          "K2 got your message"
-        end
-
-        register
-      end
-
-
-      it { @cogi.ask_local('hi').should ==  "K1 got your message" }
     end
   end
 
