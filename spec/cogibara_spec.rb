@@ -45,4 +45,19 @@ describe Cogibara do
     end
   end
 
+  it "can save memory" do
+    VCR.use_cassette('chatbot') do
+      msg = @cogi.ask('hello?',from: "wstrinz@gmail.com")
+      Cogibara.export_memory('resource/example_memory.ttl')
+      RDF::Repository.load('resource/example_memory.ttl').size.should == Cogibara.base_cogi.memory.repo.size
+    end
+  end
+
+  it "can load memory" do
+    VCR.use_cassette('chatbot') do
+      msg = @cogi.ask('hello?',from: "wstrinz@gmail.com")
+      Cogibara.import_memory('resource/example_memory.ttl')
+    end
+  end
+
 end

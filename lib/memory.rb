@@ -33,7 +33,15 @@ class Cogibara
     end
 
     def repo
+      # @repo ||= RDF::DataObjects::Repository.new('sqlite3:cogi_brain.db')
       @repo ||= RDF::Repository.new
+    end
+
+    def repo=(new_repo)
+      # @repo ||= RDF::DataObjects::Repository.new('sqlite3:cogi_brain.db')
+      raise 'not a repository' unless new_repo.is_a? RDF::Repository
+      @repo = new_repo
+      Spira.add_repository(:default,@repo)
     end
 
     # TODO: move this to the message class

@@ -3,6 +3,10 @@ class Cogibara
     @memory ||= Memory.new
   end
 
+  def memory=(repo)
+    @memory.repo = repo
+  end
+
   def ask(message)
 
     ModuleStack.stack.each do |mod|

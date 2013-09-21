@@ -13,14 +13,10 @@ class Cogibara
 
     def self.modules
       @modules ||= known_categories.each_with_object({}) { |cat, h| h[cat] = [] }
-      # @modules ||= {classify: [], none: [], last: []}
     end
 
     def self.stack
-      known_categories.map{|cat|
-        modules[cat]
-      }.flatten
-      # [modules[:classify], modules[:none], modules[:last]].flatten
+      known_categories.map{|cat| modules[cat] }.flatten
     end
 
     def self.clear

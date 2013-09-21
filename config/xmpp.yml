@@ -15,7 +15,7 @@ defaults: &defaults
   jabber_id: arthur@wonderland.lit
   host: 127.0.0.1
   port: 5222
-  password: secr3t
+  password: passw0rd
   resource:
   enable_logging: false
   masters:

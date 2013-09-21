@@ -23,4 +23,12 @@ class Cogibara
       # require_relative 'modules.rb'
     end
 
+    def self.export_memory(file='brain.ttl')
+      open(file,'w'){|f| f.write(dump_memory)}
+    end
+
+    def self.import_memory(file)
+      base_cogi.memory = RDF::Repository.load(file)
+    end
+
 end

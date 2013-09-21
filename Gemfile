@@ -36,5 +36,10 @@ gem 'rdf'
 gem 'rdf-turtle'
 gem 'spira'
 
+# ## SQLite based persistence (some trouble with daemonizing)
+
+# gem 'rdf-do'
+# gem 'do_sqlite3'
+
 ## COGIBARA GEMS
 gem 'cleverbot', :require => false
