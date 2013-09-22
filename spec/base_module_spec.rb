@@ -86,6 +86,16 @@ describe Cogibara::Module do
       it { @cogi.ask('hi').response_to.topics.first.should ==  "tests and stuff" }
     end
 
+    describe "can set/get properties manually" do
+      it {
+        pending('not yet implemented')
+        msg = @cogi.ask('hi')
+        msg.set_cunkiness 1000
+        msg.get_cunkiness.should == 1000
+      }
+
+    end
+
     describe "can still access the raw message" do
       class CreepyGreeter < Cogibara::Module
         on(/.*/) do
@@ -99,6 +109,7 @@ describe Cogibara::Module do
 
       it { @cogi.ask_local('hello you').should ==  "hehe... hello local" }
     end
+
   end
 
 end

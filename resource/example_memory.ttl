@@ -2,135 +2,135 @@
 @prefix message: <http://cogi.strinz.me/messages/> .
 @prefix prop: <http://onto.cogibara.com/properties/> .
 
-message:104159310_817 a cogi_class:Message;
-   prop:from_user "wstrinz@gmail.com";
-   prop:message_id "104159310_817";
-   prop:message_string "hello?";
-   prop:response message:110723032_726 .
-
 message:1234 a cogi_class:Message;
    prop:message_id "1234";
    prop:message_string "hello?";
-   prop:response message:212746098_80 .
+   prop:response message:179278234_62 .
 
-message:219452297_413 a cogi_class:Message;
+message:185830184_37 a cogi_class:Message;
    prop:from_user "wstrinz@gmail.com";
-   prop:message_id "219452297_413";
+   prop:message_id "185830184_37";
    prop:message_string "hello?";
-   prop:response message:223769631_132 .
+   prop:response message:190188559_534 .
 
-message:22745968_580 a cogi_class:Message;
+message:24445147_808 a cogi_class:Message;
    prop:from_user "local";
-   prop:message_id "22745968_580";
-   prop:message_string "hello?";
-   prop:response message:52798847_991 .
-
-message:56925374_232 a cogi_class:Message;
-   prop:from_user "local";
-   prop:message_id "56925374_232";
+   prop:message_id "24445147_808";
    prop:message_string "hello you";
-   prop:response message:57988364_794 .
+   prop:response message:25605351_350 .
 
-message:61741657_847 a cogi_class:Message;
+message:29354710_446 a cogi_class:Message;
    prop:from_user "local";
-   prop:message_id "61741657_847";
+   prop:message_id "29354710_446";
    prop:message_string "I'm bill";
-   prop:response message:62747377_8 .
+   prop:response message:30341986_136 .
 
-message:67132318_207 a cogi_class:Message;
+message:34833339_670 a cogi_class:Message;
    prop:from_user "local";
-   prop:message_id "67132318_207";
+   prop:message_id "34833339_670";
    prop:message_string "roll me 1d150";
-   prop:response message:68120438_776 .
+   prop:response message:35811955_795 .
 
-message:72730549_200 a cogi_class:Message;
+message:40144349_367 a cogi_class:Message;
    prop:from_user "local";
-   prop:message_id "72730549_200";
+   prop:message_id "40144349_367";
    prop:message_string "roll me 4d12";
-   prop:response message:73712802_950 .
+   prop:response message:41855461_816 .
 
-message:78254747_380 a cogi_class:Message;
+message:46987957_548 a cogi_class:Message;
    prop:from_user "local";
-   prop:message_id "78254747_380";
+   prop:message_id "46987957_548";
    prop:message_string "hi";
-   prop:response message:79244823_826 .
+   prop:response message:47971042_703 .
 
-message:85317418_628 a cogi_class:Message;
-   prop:message_id "85317418_628";
+message:53348821_59 a cogi_class:Message;
+   prop:message_id "53348821_59";
    prop:message_string "hi";
    prop:message_topics "tests and stuff";
-   prop:response message:86318110_603 .
+   prop:response message:54399792_811 .
 
-message:95696173_620 a cogi_class:Message;
+message:63744835_292 a cogi_class:Message;
    prop:from_user "local";
-   prop:message_id "95696173_620";
+   prop:message_id "63744835_292";
    prop:message_string "hello you";
    prop:message_topics "tests and stuff";
-   prop:response message:96822300_416 .
+   prop:response message:64895260_166 .
 
-message:110723032_726 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "110723032_726";
-   prop:message_string "How are you?";
-   prop:to_user "wstrinz@gmail.com" .
+message:72677255_535 a cogi_class:Message;
+   prop:from_user "wstrinz@gmail.com";
+   prop:message_id "72677255_535";
+   prop:message_string "hello?";
+   prop:response message:79157129_382 .
 
-message:212746098_80 a cogi_class:Message;
+message:992363416_116 a cogi_class:Message;
+   prop:from_user "local";
+   prop:message_id "992363416_116";
+   prop:message_string "hello?";
+   prop:response message:20657795_448 .
+
+message:179278234_62 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "212746098_80";
+   prop:message_id "179278234_62";
    prop:message_string "How are you?" .
 
-message:223769631_132 a cogi_class:Message;
+message:190188559_534 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "223769631_132";
+   prop:message_id "190188559_534";
    prop:message_string "How are you?";
    prop:to_user "wstrinz@gmail.com" .
 
-message:52798847_991 a cogi_class:Message;
+message:20657795_448 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "52798847_991";
+   prop:message_id "20657795_448";
    prop:message_string "?olleh";
    prop:to_user "local" .
 
-message:57988364_794 a cogi_class:Message;
+message:25605351_350 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "57988364_794";
+   prop:message_id "25605351_350";
    prop:message_string "hai dere";
    prop:to_user "local" .
 
-message:62747377_8 a cogi_class:Message;
+message:30341986_136 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "62747377_8";
+   prop:message_id "30341986_136";
    prop:message_string "hi bill";
    prop:to_user "local" .
 
-message:68120438_776 a cogi_class:Message;
+message:35811955_795 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "68120438_776";
-   prop:message_string "128";
+   prop:message_id "35811955_795";
+   prop:message_string "47";
    prop:to_user "local" .
 
-message:73712802_950 a cogi_class:Message;
+message:41855461_816 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "73712802_950";
+   prop:message_id "41855461_816";
    prop:message_string """12
-2
 12
-5""";
+11
+7""";
    prop:to_user "local" .
 
-message:79244823_826 a cogi_class:Message;
+message:47971042_703 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "79244823_826";
+   prop:message_id "47971042_703";
    prop:message_string "K1 got your message";
    prop:to_user "local" .
 
-message:86318110_603 a cogi_class:Message;
+message:54399792_811 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "86318110_603";
+   prop:message_id "54399792_811";
    prop:message_string "K1 got your message" .
 
-message:96822300_416 a cogi_class:Message;
+message:64895260_166 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "96822300_416";
+   prop:message_id "64895260_166";
    prop:message_string "hehe... hello local";
    prop:to_user "local" .
+
+message:79157129_382 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "79157129_382";
+   prop:message_string "How are you?";
+   prop:to_user "wstrinz@gmail.com" .

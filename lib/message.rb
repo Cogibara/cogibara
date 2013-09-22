@@ -62,8 +62,25 @@ class Cogibara
       (methods | @msg.methods).include? meth
     end
 
+    def set(property, value)
+      repo.insert([@msg.subject, RDF::URI.new(property), value])
+    end
+
+    def get(property)
+      s = self
+      solutions = RDF::Query.execute(repo) do
+        pattern [s.rdf_msg.subject, RDF::URI.new(property), :value]
+      end
+
+      solutions.map(&:value)
+    end
+
     def method_missing(meth, *args, &block)
-      if @msg.respond_to? meth
+      if meth.to_s =~ /^set_/
+        raise "call set method"
+      elsif meth.to_s =~ /^get_/
+        raise "call get method"
+      elsif @msg.respond_to? meth
         if args.size >0
           @msg.send meth, *args, &block
         else
