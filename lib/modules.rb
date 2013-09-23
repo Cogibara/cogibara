@@ -34,9 +34,13 @@ class Maluuba < Cogibara::Module
 end
 
 class MemoryDumper < Cogibara::Module
-  on(/^dump memory/) do
+  on(/^dump memory to gist/) do
     g = Gist.gist(Cogibara.dump_memory, filename: 'memory.ttl')
     g["html_url"]
+  end
+
+  on(/^dump memory/) do
+    Cogibara.dump_memory
   end
 
   register
