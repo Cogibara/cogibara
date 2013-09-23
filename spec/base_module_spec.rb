@@ -111,6 +111,24 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       it { @cogi.ask_local('hello you').should ==  "hehe... hello local" }
     end
 
+    describe "can order response handlers" do
+      class OrderKlass < Cogibara::Module
+        on do
+          "do say this"
+        end
+
+        on do
+          "don't say this"
+        end
+      end
+
+      before do
+        OrderKlass.register
+      end
+
+      it { @cogi.ask_local('testing').should == "do say this"}
+    end
+
   end
 
 end
