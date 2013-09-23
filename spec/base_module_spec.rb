@@ -88,7 +88,6 @@ describe Cogibara::Module do
 
     describe "can set/get properties manually" do
       it {
-        pending('not yet implemented')
         msg = @cogi.ask('hi')
         msg.set_cunkiness 1000
         msg.get_cunkiness.should == 1000

@@ -72,14 +72,21 @@ class Cogibara
         pattern [s.rdf_msg.subject, RDF::URI.new(property), :value]
       end
 
-      solutions.map(&:value)
+      sols = solutions.map{|sol| sol[:value].object}
+      if sols.size == 0
+        nil
+      elsif sols.size == 1
+        sols.first
+      else
+        sols
+      end
     end
 
     def method_missing(meth, *args, &block)
       if meth.to_s =~ /^set_/
-        raise "call set method"
+        set(onto_prop[meth.to_s.gsub(/^set_/,'')], *args, &block)
       elsif meth.to_s =~ /^get_/
-        raise "call get method"
+        get(onto_prop[meth.to_s.gsub(/^get_/,'')], *args, &block)
       elsif @msg.respond_to? meth
         if args.size >0
           @msg.send meth, *args, &block
