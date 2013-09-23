@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=bla
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 23 Sep 2013 21:00:28 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
+    http_version: 
+  recorded_at: Mon, 23 Sep 2013 20:59:40 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=bla&start=y&sessionid=RZQ00555882&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=Hello%20mr%20chatbot.&vText2=How%20are%20you%20today%3F&icognoid=wsf&icognocheck=baf2158ba375cb4c4fc64d14d3cf3ab3&fno=0&prevref=ROZ021497874&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 23 Sep 2013 20:57:00 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=jg5nva9koye0u2z5CaA5jA
+      - JSESSIONID=A88C105CBE044846AE81577E6B9DA641; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*NXLQKAYWORTGFUMSJATPNLDOQVGEWMVHAXMANKOECK"; Expires=""
+      - cleverbotref="*ISTYRHNSDNOOMJINRHILITKDMQOLLIQPHMIAIAWAJK"; Expires="Mon,
+        23 Sep 2013 21:59:34 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1656'
+      Sc:
+      - '19071'
+      Content-Length:
+      - '148'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Crno vino.\rRZQ00555882\rj2log-mVrSAqYNODQNVAWQLENG-detail\r\r\r\rHello
+        mr chatbot.\rHow are you today?\rBla.\rCrno vino.\rRXS045089567\r\r\r\r\r\rCrno
+        vino.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Mon, 23 Sep 2013 20:59:43 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=dump%20memory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 23 Sep 2013 21:00:52 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '87'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{"searchTerm":["memory"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
+    http_version: 
+  recorded_at: Mon, 23 Sep 2013 21:00:03 GMT
+recorded_with: VCR 2.5.0

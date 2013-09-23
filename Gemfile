@@ -20,7 +20,7 @@ gem 'safely' # Optional, but recommended.
 # gem 'toadhopper' # For reporting exceptions to hoptoad
 # gem 'mail' # For reporting exceptions via mail
 
-gem 'blather', '~> 0.8.7'
+gem 'blather', git: 'https://github.com/adhearsion/blather.git', branch: 'develop' #, '~> 0.8.7'
 group :development, :test do
   gem 'rake'
   gem 'rspec'
@@ -51,3 +51,4 @@ gem 'vines-web'
 gem 'cleverbot', :require => false
 gem 'maluuba_napi', :require => false, git: 'https://github.com/wstrinz/napi-ruby.git'
 gem 'gist', :require => false
+gem 'sparql-client', :require => false
