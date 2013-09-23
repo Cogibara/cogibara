@@ -5,3 +5,5 @@ rescue LoadError
   exit 1
 end
 
+BASE_DIR = File.absolute_path(File.dirname(__FILE__) + '/../..')
+# puts `cd ../../wonderland.lit && vines start -d`

@@ -8,10 +8,13 @@ class Chatbot < Cogibara::Module
     @cleverbot ||= Cleverbot::Client.new
     @cleverbot.write message.message
   end
+
+  register :last
 end
 
 class Maluuba < Cogibara::Module
   requires 'maluuba_napi'
+  requires 'gist'
 
   def initialize
     @client ||= MaluubaNapi::Client.new(@api_key)
@@ -26,6 +29,17 @@ class Maluuba < Cogibara::Module
     current_message.set_maluuba_category(h[:category])
     current_message.set_maluuba_action(h[:action])
   end
+
+  register :classify
+end
+
+class MemoryDumper < Cogibara::Module
+  on(/^dump memory/) do
+    g = Gist.gist(Cogibara.dump_memory, filename: 'memory.ttl')
+    g["html_url"]
+  end
+
+  register
 end
 
 class DiceRoller < Cogibara::Module
@@ -33,8 +47,5 @@ class DiceRoller < Cogibara::Module
     number.to_i.times.map{|t| rand(size.to_i)+1 }.join("\n")
   end
 
+  register
 end
-
-Maluuba.register :classify
-Chatbot.register
-DiceRoller.register :last

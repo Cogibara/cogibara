@@ -2,6 +2,7 @@
 # already included in your load path, so no need to specify it.
 
 require 'yaml'
+require 'tempfile'
 
 require_relative 'onto.rb'
 

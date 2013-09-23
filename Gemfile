@@ -8,7 +8,8 @@
 source 'https://rubygems.org'
 
 # Live on the edge instead: gem 'daemon-kit', :github => 'kennethkalmer/daemon-kit'
-gem 'daemon-kit'
+gem 'daemon-kit', :github => 'kennethkalmer/daemon-kit'
+# gem 'daemon-kit', git: 'https://github.com/wstrinz/daemon-kit.git'
 
 #
 # safely (http://github.com/kennethkalmer/safely)
@@ -41,6 +42,12 @@ gem 'spira'
 # gem 'rdf-do'
 # gem 'do_sqlite3'
 
+## XMPP Server
+
+gem 'vines', "~> 0.4.7"
+gem 'vines-web'
+
 ## COGIBARA GEMS
 gem 'cleverbot', :require => false
 gem 'maluuba_napi', :require => false, git: 'https://github.com/wstrinz/napi-ruby.git'
+gem 'gist', :require => false

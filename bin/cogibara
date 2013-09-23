@@ -5,4 +5,19 @@
 
 require File.expand_path('../../config/environment',  __FILE__)
 
+dir = File.absolute_path File.dirname(__FILE__)
+puts dir
+unless File.exists?(File.dirname(__FILE__) + '/../wonderland.lit')
+  puts `cd #{dir}/.. && vines init wonderland.lit && vines-web install wonderland.lit/web`
+end
+
+# Dir.chdir d + '/../wonderland.lit'
+# puts "?????"
+# puts `vines start -d`
+# puts "dddd"
+
+# Dir.chdir d
+
+puts `cd #{dir}/../wonderland.lit && vines start -d`
+
 DaemonKit::Application.exec( DAEMON_ROOT + '/libexec/cogibara-daemon.rb' )
