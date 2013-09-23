@@ -23,12 +23,12 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
   config.treat_symbols_as_metadata_keys_with_true_values = true
-
 end
 
 VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr/cassettes"
   c.hook_into :webmock
+  c.configure_rspec_metadata!
 end
 
 def test_values(object, expected_values)

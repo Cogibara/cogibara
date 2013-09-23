@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/spec_helper.rb'
 
-describe Cogibara::Module do
+describe Cogibara::Module, vcr: { record: :new_episodes } do
 
   before(:all) do
     @cogi = Cogibara::Interface.new
@@ -20,7 +20,7 @@ describe Cogibara::Module do
     it { @cogi.ask_local('hello?').should ==  "?olleh" }
   end
 
-  context "using the dsl" do
+  context "using the dsl", vcr: { record: :new_episodes } do
     describe "use on keyword and strings or regexps to define behavior" do
       class DiceRoller < Cogibara::Module
         on 'hello you' do
@@ -87,12 +87,14 @@ describe Cogibara::Module do
     end
 
     describe "can set/get properties manually" do
-      it {
-        msg = @cogi.ask('hi')
-        msg.set_cunkiness 1000
-        msg.get_cunkiness.should == 1000
-      }
+        before do
+          @msg = @cogi.ask('hi')
+        end
 
+        it {
+          @msg.set_cunkiness 1000
+          @msg.get_cunkiness.should == 1000
+        }
     end
 
     describe "can still access the raw message" do

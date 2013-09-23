@@ -13,18 +13,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 Sep 2013 15:46:44 GMT
+      - Mon, 23 Sep 2013 03:13:11 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS=U10MX+WotQZxdB5qZl6QbQ
-      - JSESSIONID=47E9404E18626056A95567D125EA9487; Path=/
-      - RPS=server52054
-      - cleverbotfirstref2="*AKNSYSYEOYIITOUFMOTZANROYJISWUGNOWAAAGQMQK"; Expires=""
-      - cleverbotref="*AKKPBVQGGAIFWGWFJRLBAKUGAJFVOWGKROCAAONCTI"; Expires="Thu,
-        19 Sep 2013 16:48:44 GMT"
+      - AIS=X5htnkHakR0T9WLnliGoPQ
+      - JSESSIONID=206125AD87100DF17E8596EDAFD2E93B; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*SCEKXWZIPDYASSYXGNUASFPPCAARXYAENXFASGIETK"; Expires=""
+      - cleverbotref="*WGWCVUENUICSQXDBYLZFWXNUHESPCDEWLCKAWSACRK"; Expires="Mon,
+        23 Sep 2013 04:15:46 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -34,19 +34,19 @@ http_interactions:
       Cache-Control:
       - no-cache;no-store
       Rps:
-      - server52054
+      - cs5860
       Rlm:
-      - '1445'
+      - '1943'
       Sc:
-      - '9453'
+      - '24689'
       Content-Length:
-      - '117'
+      - '121'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "How are you?\rRVA01576206\rj2log-gPnSMmMICZKPIAESYQLE-detail\r\r\r\r\r\rHello?\rHow
-        are you?\rB2328475\r\r\r\r\r\rHow are you?\r\r\r\r\r\r\r"
+      string: "How are you?\rVWT00448581\rj2log-yDkOQjAEQUXIOAVQCSUE-detail\r\r\r\r\r\rHello?\rHow
+        are you?\r\r+3000_cbfull\r\r\r\r\rHow are you?\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Thu, 19 Sep 2013 15:48:35 GMT
+  recorded_at: Mon, 23 Sep 2013 03:15:46 GMT
 recorded_with: VCR 2.5.0

@@ -4,7 +4,7 @@ class Cogibara
     def self.register(category=:none)
       #should probably put them on a list that gets loaded to make this more transparent
       # also need multiple categories
-      Cogibara::ModuleStack.register self.new, category
+      Cogibara::ModuleStack.register self.new, category unless @__ignore
     end
 
     def self.requires(*gems)
@@ -12,12 +12,16 @@ class Cogibara
         begin
           require g
         rescue LoadError
+          @__ignore = true
+          puts "missing gem #{g}, Skipping module #{self}"
           DaemonKit.logger.info "missing gem #{g}, Skipping module #{self}"
         end
       }
     end
 
-    def self.on(pattern,&block)
+    # TODO should make sure this is registered as a block, so "return" will override
+    # ask's return behavior?
+    def self.on(pattern=/.*/,&block)
       response_patterns << [pattern, block]
     end
 
@@ -27,6 +31,10 @@ class Cogibara
 
     def current_message
       @current_message
+    end
+
+    def settings
+      @yml ||= YAML.load_file(File.dirname(__FILE__) + '/../config/cogibara.yml')
     end
 
     # Override for custom behavior for now

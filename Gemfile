@@ -43,3 +43,4 @@ gem 'spira'
 
 ## COGIBARA GEMS
 gem 'cleverbot', :require => false
+gem 'maluuba_napi', :require => false, git: 'https://github.com/wstrinz/napi-ruby.git'

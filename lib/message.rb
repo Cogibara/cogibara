@@ -13,7 +13,7 @@ class Cogibara
       property :to, predicate: onto_prop.to_user, type: String
       property :message_id, predicate: onto_prop.message_id
 
-      has_many :topics, predicate: onto_prop.message_topics
+      has_many :topics, predicate: onto_prop.message_topic
 
     end
 
@@ -63,6 +63,7 @@ class Cogibara
     end
 
     def set(property, value)
+      value = value.to_s if value.is_a? Symbol
       repo.insert([@msg.subject, RDF::URI.new(property), value])
     end
 
