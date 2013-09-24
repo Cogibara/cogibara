@@ -63,7 +63,7 @@ SELECT DISTINCT ?label WHERE {
 
       property = PROPERTIES[property.to_sym] if PROPERTIES[property.to_sym]
 
-      prop = lookup_property(sols.first[:s], property)
+      prop = lookup_property(sols.first[:s], property) if sols.size > 0
       # puts "pro #{prop}"
       # puts sols.map(&:to_hash)
       # if sols.size > 0
@@ -88,7 +88,7 @@ SELECT DISTINCT ?label WHERE {
       #   current_message.set_dbpedia_response(true)
 
       #   results.join ', '
-      if prop.size > 0
+      if prop && prop.size > 0
         Array(prop).join(', ')
       else
         current_message
