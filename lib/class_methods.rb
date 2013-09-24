@@ -18,7 +18,11 @@ class Cogibara
     end
 
     def self.load_base_modules
-      ::Chatbot.register
+      ::Chatbot.register :last
+      ::Maluuba.register :classify
+      ::MemoryDumper.register
+      ::DiceRoller.register
+      ::DBPediaQuery.register
 
       # require_relative 'modules.rb'
     end

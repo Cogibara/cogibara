@@ -21,6 +21,7 @@ gem 'safely' # Optional, but recommended.
 # gem 'mail' # For reporting exceptions via mail
 
 gem 'blather', git: 'https://github.com/adhearsion/blather.git', branch: 'develop' #, '~> 0.8.7'
+
 group :development, :test do
   gem 'rake'
   gem 'rspec'

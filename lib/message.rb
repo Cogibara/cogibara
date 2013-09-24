@@ -1,5 +1,6 @@
 class Cogibara
   class Message
+    extend Cogibara::Onto
     include Cogibara::Onto
 
     class RDFMsg < Spira::Base
@@ -17,8 +18,29 @@ class Cogibara
 
     end
 
+
+    def self.where(conditions = {})
+      conditions = Hash[conditions.map{|k,v|
+        if k.is_a? Symbol
+          [onto_prop[k.to_s], v]
+        else
+          [RDF::URI(k.to_s), v]
+        end
+      }]
+
+      query = RDF::Query.new(result: conditions)
+      solutions = query.execute(repo)
+
+      solutions.map{|sol| Message.for(sol[:result]) }
+    end
+
+    def self.repo
+      Spira.repositories[RDFMsg.configure[:reposity_name] || :default]
+    end
+
     def repo
-      Spira.repositories[@msg.class.configure[:reposity_name] || :default]
+      Message.repo
+      # Spira.repositories[@msg.class.configure[:reposity_name] || :default]
     end
 
     def response_to
