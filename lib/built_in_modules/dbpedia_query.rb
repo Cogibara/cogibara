@@ -16,9 +16,9 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT DISTINCT ?label WHERE {
-  {?prop a rdf:Property}
-  UNION
-  {?prop a owl:ObjectProperty}
+  # {?prop a rdf:Property}
+  # UNION
+  # {?prop a owl:ObjectProperty}
 
   ?prop rdfs:label ?prop_label.
 
@@ -56,9 +56,9 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 
 SELECT DISTINCT ?pred ?label WHERE {
-  {?pred a rdf:Property}
-  UNION
-  {?pred a owl:ObjectProperty}
+ # {?pred a rdf:Property}
+ # UNION
+ # {?pred a owl:ObjectProperty}
 
   <#{subject}> ?pred [].
 

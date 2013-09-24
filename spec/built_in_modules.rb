@@ -32,7 +32,7 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     end
 
     describe "doesn't mind question marks" do
-      it { @cogi.ask_local('who is the leader of France?').should == "François Hollande, Jean-Marc Ayrault"}
+      it { @cogi.ask_local('who is the leader of France?').should == "Jean-Marc Ayrault, François Hollande"}
     end
 
     describe "also looks up owl properties" do
