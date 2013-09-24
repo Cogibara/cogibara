@@ -14,4 +14,6 @@ require_relative 'memory.rb'
 require_relative 'message.rb'
 require_relative 'module_stack.rb'
 
-require_relative 'modules.rb'
+require_relative 'built_in_modules/modules.rb'
+require_relative 'built_in_modules/dbpedia_query.rb'
+require_relative 'built_in_modules/dbpedia_spotlight.rb'

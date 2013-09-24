@@ -466,37 +466,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:07 GMT
 - request:
@@ -538,37 +543,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:07 GMT
 - request:
@@ -610,37 +620,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:08 GMT
 - request:
@@ -682,37 +697,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:08 GMT
 - request:
@@ -754,37 +774,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:09 GMT
 - request:
@@ -826,37 +851,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:09 GMT
 - request:
@@ -898,37 +928,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:09 GMT
 - request:
@@ -970,37 +1005,42 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヴィンフリート・クレッチュマン</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Winfried Kretschmann</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Кречманн, Винфрид</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Winfried Kretschmann</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:10 GMT
 - request:
@@ -1042,43 +1082,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:10 GMT
 - request:
@@ -1120,43 +1168,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:11 GMT
 - request:
@@ -1198,43 +1254,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:11 GMT
 - request:
@@ -1276,43 +1340,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:12 GMT
 - request:
@@ -1354,43 +1426,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:12 GMT
 - request:
@@ -1432,43 +1512,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:13 GMT
 - request:
@@ -1510,43 +1598,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:13 GMT
 - request:
@@ -1588,43 +1684,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:14 GMT
 - request:
@@ -1666,43 +1770,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:14 GMT
 - request:
@@ -1744,43 +1856,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:15 GMT
 - request:
@@ -1822,43 +1942,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:15 GMT
 - request:
@@ -1900,43 +2028,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">安格拉·默克爾</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">アンゲラ・メルケル</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Angela Merkel</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Меркель, Ангела</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Angela Merkel</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:16 GMT
 - request:
@@ -1978,41 +2114,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:16 GMT
 - request:
@@ -2054,41 +2197,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:17 GMT
 - request:
@@ -2130,41 +2280,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:17 GMT
 - request:
@@ -2206,41 +2363,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:18 GMT
 - request:
@@ -2282,41 +2446,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:18 GMT
 - request:
@@ -2358,41 +2529,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:18 GMT
 - request:
@@ -2434,41 +2612,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:19 GMT
 - request:
@@ -2510,41 +2695,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:19 GMT
 - request:
@@ -2586,41 +2778,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:20 GMT
 - request:
@@ -2662,41 +2861,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:20 GMT
 - request:
@@ -2738,41 +2944,48 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="de">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ノルベルト・ランメルト</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Norbert Lammert</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Ламмерт, Норберт</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Norbert Lammert</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:21 GMT
 - request:
@@ -2814,43 +3027,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:21 GMT
 - request:
@@ -2892,43 +3113,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:22 GMT
 - request:
@@ -2970,43 +3199,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:22 GMT
 - request:
@@ -3048,43 +3285,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:23 GMT
 - request:
@@ -3126,43 +3371,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:23 GMT
 - request:
@@ -3204,43 +3457,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:24 GMT
 - request:
@@ -3282,43 +3543,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:24 GMT
 - request:
@@ -3360,43 +3629,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:25 GMT
 - request:
@@ -3438,43 +3715,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:25 GMT
 - request:
@@ -3516,43 +3801,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:26 GMT
 - request:
@@ -3594,43 +3887,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:26 GMT
 - request:
@@ -3672,43 +3973,51 @@ http_interactions:
       Accept-Ranges:
       - bytes
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="zh">约阿希姆·高克</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="de">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="es">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="fr">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="it">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ja">ヨアヒム・ガウク</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="nl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pl">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="pt">Joachim Gauck</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="ru">Гаук, Йоахим</literal></binding>
+          </result>
+          <result>
+           <binding name="label"><literal xml:lang="sv">Joachim Gauck</literal></binding>
+          </result>
+         </results>
+        </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:26 GMT
 - request:
@@ -3761,4 +4070,61 @@ http_interactions:
         leader name of germany.\rBerlin.\rUI009434998\r\r\r\r\r\rBerlin.\r\r\r\r\r\r\r"
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:27:31 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20is%20the%20leader%20name%20of%20germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:13:38 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "what is the leader name of germany",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Leader_%28comics%29",
+              "@support": "104",
+              "@types": "DBpedia:ComicsCharacter,DBpedia:FictionalCharacter,DBpedia:Person,Schema:Person,Freebase:/comic_books/comic_book_character,Freebase:/comic_books,Freebase:/fictional_universe/character_occupation,Freebase:/fictional_universe,Freebase:/fictional_universe/fictional_character,Freebase:/film/film_character,Freebase:/film",
+              "@surfaceForm": "leader",
+              "@offset": "12",
+              "@similarityScore": "0.12786239385604858",
+              "@percentageOfSecondRank": "0.980731408859417"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/History_of_Germany",
+              "@support": "75",
+              "@types": "DBpedia:TopicalConcept",
+              "@surfaceForm": "germany",
+              "@offset": "27",
+              "@similarityScore": "0.22417937219142914",
+              "@percentageOfSecondRank": "0.8987152249042718"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:13:43 GMT
 recorded_with: VCR 2.5.0

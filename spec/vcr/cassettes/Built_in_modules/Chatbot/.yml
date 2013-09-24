@@ -75,4 +75,41 @@ http_interactions:
         you?\r\r\r\r\r\r\r"
     http_version: 
   recorded_at: Mon, 23 Sep 2013 23:03:12 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=hello%20mr%20chatbot
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:13:05 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "hello mr chatbot",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist"
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:13:09 GMT
 recorded_with: VCR 2.5.0

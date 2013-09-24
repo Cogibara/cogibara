@@ -15,7 +15,36 @@ class Cogibara
       property :message_id, predicate: onto_prop.message_id
 
       has_many :topics, predicate: onto_prop.message_topic
+      has_many :structured_properties, predicate: onto_prop.has_structured_property, type: RDF::URI
 
+    end
+
+    class StructuredProperty
+
+      def initialize(uri,values)
+        @uri = uri
+        @values = values
+      end
+
+
+      def subject
+        @uri
+      end
+
+      def <<(values)
+        @values << values
+      end
+
+      def values
+        Hash[@values.map{|v| [v[0].to_s.gsub('http://onto.cogibara.com/properties/',''), v[1].to_s]}]
+      end
+
+      def save(repo)
+        @values.map{|val|
+          # puts "#{[RDF::URI(@uri),val[0],val[1]]}"
+          repo << [RDF::URI(@uri),val[0],val[1]]
+        }
+      end
     end
 
 
@@ -41,6 +70,33 @@ class Cogibara
     def repo
       Message.repo
       # Spira.repositories[@msg.class.configure[:reposity_name] || :default]
+    end
+
+    def new_property(index,values=[])
+      values << [onto_prop.attached_to_message, rdf_msg.subject]
+      StructuredProperty.new("#{rdf_msg.subject.to_s}/structured_properties/#{index}", values)
+    end
+
+    def property_for(property_uri)
+
+      props = RDF::Query.execute(repo) do
+        pattern [RDF::URI(property_uri), :p, :o]
+      end
+
+      props = props.map{|prop|
+        [prop[:p], prop[:o]]
+      }
+
+      StructuredProperty.new(property_uri, props)
+    end
+
+    def <<(prop)
+      unless prop.is_a? StructuredProperty
+        raise "Can only append Structured_Property instances at the moment (tried #{prop.class})"
+      end
+      rdf_msg.structured_properties << RDF::URI(prop.subject)
+      rdf_msg.save
+      prop.save(repo)
     end
 
     def response_to

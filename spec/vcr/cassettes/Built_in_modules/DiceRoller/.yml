@@ -100,4 +100,50 @@ http_interactions:
       string: '{"entities":{"searchTerm":["roll 6d6"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
     http_version: 
   recorded_at: Mon, 23 Sep 2013 23:03:14 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=roll%206d6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:13:24 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "roll 6d6",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Roll_call",
+            "@support": "68",
+            "@types": "",
+            "@surfaceForm": "roll",
+            "@offset": "0",
+            "@similarityScore": "0.21562056243419647",
+            "@percentageOfSecondRank": "0.7772247658283996"
+          }]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:13:29 GMT
 recorded_with: VCR 2.5.0

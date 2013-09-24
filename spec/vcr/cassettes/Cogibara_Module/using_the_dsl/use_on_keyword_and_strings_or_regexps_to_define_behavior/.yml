@@ -100,4 +100,179 @@ http_interactions:
       string: '{"entities":{"searchTerm":["4d12"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
     http_version: 
   recorded_at: Mon, 23 Sep 2013 23:10:49 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=hello%20you
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:02:20 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "hello you",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist"
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:02:25 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=I'm%20bill
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:02:20 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "I'm bill",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Bill_%28proposed_law%29",
+            "@support": "628",
+            "@types": "Freebase:/tv/tv_subject,Freebase:/tv,DBpedia:TopicalConcept",
+            "@surfaceForm": "bill",
+            "@offset": "4",
+            "@similarityScore": "0.338969349861145",
+            "@percentageOfSecondRank": "0.9976075099499522"
+          }]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:02:25 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=roll%20me%201d150
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:02:22 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "roll me 1d150",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Roll_call",
+            "@support": "68",
+            "@types": "",
+            "@surfaceForm": "roll",
+            "@offset": "0",
+            "@similarityScore": "0.21562056243419647",
+            "@percentageOfSecondRank": "0.7772247658283996"
+          }]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:02:26 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=roll%20me%204d12
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:02:24 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "roll me 4d12",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Roll_call",
+            "@support": "68",
+            "@types": "",
+            "@surfaceForm": "roll",
+            "@offset": "0",
+            "@similarityScore": "0.21562056243419647",
+            "@percentageOfSecondRank": "0.7772247658283996"
+          }]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:02:29 GMT
 recorded_with: VCR 2.5.0

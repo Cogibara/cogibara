@@ -100,4 +100,107 @@ http_interactions:
         don't understand you.\r\r\r\r\r\r\r"
     http_version: 
   recorded_at: Mon, 23 Sep 2013 23:03:14 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=bla
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:13:15 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "bla",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Black_Liberation_Army",
+            "@support": "86",
+            "@types": "Freebase:/business/employer,Freebase:/business,Freebase:/organization/organization,Freebase:/organization",
+            "@surfaceForm": "bla",
+            "@offset": "0",
+            "@similarityScore": "0.30502504110336304",
+            "@percentageOfSecondRank": "-1.0"
+          }]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:13:19 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=dump%20memory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:13:18 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "dump memory",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Broadcast_delay",
+              "@support": "165",
+              "@types": "",
+              "@surfaceForm": "dump",
+              "@offset": "0",
+              "@similarityScore": "0.10110040009021759",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Memory_%28Cats_song%29",
+              "@support": "72",
+              "@types": "Freebase:/music/composition,Freebase:/music",
+              "@surfaceForm": "memory",
+              "@offset": "5",
+              "@similarityScore": "0.17923083901405334",
+              "@percentageOfSecondRank": "0.9491822316269617"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:13:23 GMT
 recorded_with: VCR 2.5.0

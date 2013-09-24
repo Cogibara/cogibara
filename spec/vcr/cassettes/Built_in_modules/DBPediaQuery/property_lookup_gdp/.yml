@@ -183,4 +183,79 @@ http_interactions:
         the GDP PPP per capita of United States.\rWashington.\rQD006571359\r\r\r\r\r\rWashington.\r\r\r\r\r\r\r"
     http_version: 
   recorded_at: Tue, 24 Sep 2013 14:23:55 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20is%20the%20GDP%20PPP%20per%20capita%20of%20United%20States
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 16:13:34 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "what is the GDP PPP per capita of United States",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Gross_domestic_product",
+              "@support": "945",
+              "@types": "Freebase:/book/book_subject,Freebase:/book,DBpedia:TopicalConcept",
+              "@surfaceForm": "GDP",
+              "@offset": "12",
+              "@similarityScore": "0.19340699911117554",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Purchasing_power_parity",
+              "@support": "349",
+              "@types": "",
+              "@surfaceForm": "PPP",
+              "@offset": "16",
+              "@similarityScore": "0.5611969232559204",
+              "@percentageOfSecondRank": "0.12234479341226992"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Per_capita",
+              "@support": "226",
+              "@types": "",
+              "@surfaceForm": "per capita",
+              "@offset": "20",
+              "@similarityScore": "0.2932635545730591",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/United_States",
+              "@support": "312771",
+              "@types": "DBpedia:Country,DBpedia:PopulatedPlace,DBpedia:Place,Schema:Place,Schema:Country,Freebase:/fictional_universe/fictional_setting,Freebase:/fictional_universe,Freebase:/fictional_universe/ethnicity_in_fiction,Freebase:/exhibitions/exhibition_subject,Freebase:/exhibitions,Freebase:/radio/radio_subject,Freebase:/radio,Freebase:/location/statistical_region,Freebase:/location,Freebase:/food/beer_country_region,Freebase:/food,Freebase:/organization/organization_member,Freebase:/organization,Freebase:/media_common/quotation_subject,Freebase:/media_common,Freebase:/people/place_of_interment,Freebase:/people,Freebase:/business/employer,Freebase:/business,Freebase:/government/political_district,Freebase:/government,Freebase:/film/film_subject,Freebase:/film,Freebase:/film/film_location,Freebase:/location/administrative_division,Freebase:/sports/sport_country,Freebase:/sports,Freebase:/government/governmental_jurisdiction,Freebase:/meteorology/cyclone_affected_area,Freebase:/meteorology,Freebase:/business/asset_owner,Freebase:/military/military_combatant,Freebase:/military,Freebase:/media_common/media_genre,Freebase:/book/book_subject,Freebase:/book,Freebase:/organization/organization_scope,Freebase:/location/location,Freebase:/cvg/computer_game_region,Freebase:/cvg,Freebase:/film/cinematographer,Freebase:/law/patent_office,Freebase:/law,Freebase:/sports/sports_team_location,Freebase:/olympics/olympic_participating_country,Freebase:/olympics,Freebase:/language/human_language,Freebase:/language,Freebase:/location/region,Freebase:/event/speech_topic,Freebase:/event,Freebase:/location/country,Freebase:/law/court_jurisdiction_area,Freebase:/people/profession,Freebase:/law/litigant,Freebase:/location/dated_location,Freebase:/biology/breed_origin,Freebase:/biology,DBpedia:TopicalConcept",
+              "@surfaceForm": "United States",
+              "@offset": "34",
+              "@similarityScore": "0.06650668382644653",
+              "@percentageOfSecondRank": "0.619863480991614"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 16:13:38 GMT
 recorded_with: VCR 2.5.0

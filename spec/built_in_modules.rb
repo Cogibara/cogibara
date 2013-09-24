@@ -39,4 +39,25 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('who is the leader of germany')[/Angela Merkel/].should_not be nil }
     end
   end
+
+  describe DBPediaSpotlight do
+    it "resolves entities using spotlight" do
+      @cogi.ask_local('What does President Obama think of the Bacon Crisis?')
+      # puts Cogibara.dump_memory
+      Cogibara.dump_memory["structured_properties"].should_not be nil
+    end
+
+    it "creates structured properties" do
+      msg = @cogi.ask('I live in Madison Wisconsin')
+      original = msg.response_to
+      prop = original.property_for(original.structured_properties[1])
+      prop.values["spotlight_entity_uri"].should == "http://dbpedia.org/resource/Madison,_Wisconsin"
+      prop.values["spotlight_types"]["DBpedia:City"].should_not be nil
+    end
+
+    it "has debug keywords" do
+      msg = @cogi.ask_local('spotlight entities for "I live in Madison Wisconsin"')
+      msg['"spotlight_entity_uri"=>"http://dbpedia.org/resource/Madison,_Wisconsin"'].should_not be nil
+    end
+  end
 end

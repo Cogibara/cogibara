@@ -29,9 +29,7 @@ describe Cogibara, vcr: {record: :new_episodes} do
   end
 
   it "has a memory" do
-
       Cogibara.dump_memory["hello?"].should_not be nil
-
   end
 
   it "can send xmpp response" do
