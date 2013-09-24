@@ -35,6 +35,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('who is the leader of France?').should == "Jean-Marc Ayrault, François Hollande"}
     end
 
+    describe "also looks up owl properties" do
+      it { @cogi.ask_local('what is the record label of Arashi').should == "J Storm, Pony Canyon"}
+    end
+
     describe "property lookup with multi-word property 'leader name'" do
       it { @cogi.ask_local('what is the leader name of germany')[/Angela Merkel/].should_not be nil  }
     end

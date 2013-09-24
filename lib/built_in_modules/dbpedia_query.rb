@@ -2,10 +2,10 @@ class DBPediaQuery < Cogibara::Module
   requires 'sparql/client'
 
   PROPERTIES = {
-    leader: "http://dbpedia.org/property/leaderName"
+    leader: "leader name"
   }
 
-  def lookup_property(property)
+  def lookup_property(subject, property)
     if PROPERTIES[property.to_sym]
       PROPERTIES[property.to_sym]
     else
@@ -15,20 +15,33 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT ?s WHERE {
-  {?s a rdf:Property}
+SELECT DISTINCT ?label WHERE {
+  {?prop a rdf:Property}
   UNION
-  {?s a owl:ObjectProperty}
+  {?prop a owl:ObjectProperty}
 
-  ?s rdfs:label "#{property}"@en.
+  ?prop rdfs:label "#{property}"@en.
+
+  {
+    <#{subject}> ?prop ?label .
+    FILTER isLiteral(?label)
+  }
+  UNION
+  {
+    <#{subject}> ?prop [ rdfs:label ?label ].
+  }
+  FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
 }
       EOF
+
+
       # qry = spq.select.where([:s, RDF.type, RDF.Property]).select.where([:s, RDF::RDFS.label, RDF::Literal.new(property, language: :en)])
       # puts qry.to_s
-      # sols = qry.execute
       sols = spq.query(qry)
+      # puts sols.to_s
+      # sols = qry.execute
       # puts sols.map(&:to_hash)
-      sols.map(&:s).map(&:to_s)
+      sols.map(&:label).map(&:object)
     end
   end
 
@@ -39,37 +52,42 @@ SELECT ?s WHERE {
     if past_results.size > 0
       past_results.first.response.message
     else
-      prop = lookup_property(property)
 
       sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
       object = object.capitalize unless object[0] == object[0].capitalize
 
-      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]).select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
       sols = qry.execute
 
+      property = PROPERTIES[property.to_sym] if PROPERTIES[property.to_sym]
+
+      prop = lookup_property(sols.first[:s], property)
+      # puts "pro #{prop}"
       # puts sols.map(&:to_hash)
-      if sols.size > 0
-        results = sols.distinct.map{|sol|
-          if sol[:prop_val].is_a? RDF::URI
-            qr2 = sparql.select.where([sol[:prop_val], RDF::RDFS.label, :label]).distinct
-            sol2 = qr2.execute.filter {|so| so[:label].language == :en}
+      # if sols.size > 0
+      #   results = sols.distinct.map{|sol|
+      #     if sol[:prop_val].is_a? RDF::URI
+      #       qr2 = sparql.select.where([sol[:prop_val], RDF::RDFS.label, :label]).distinct
+      #       sol2 = qr2.execute.filter {|so| so[:label].language == :en}
 
-            # puts sol2.map(&:to_hash)
-            # puts sol.class.to_s
+      #       # puts sol2.map(&:to_hash)
+      #       # puts sol.class.to_s
 
-            if sol2.size > 0
-              sol2.first[:label].object
-            else
-              current_message
-            end
-          else
-            sol[:prop_val].object.to_s
-          end
-        }
+      #       if sol2.size > 0
+      #         sol2.first[:label].object
+      #       else
+      #         current_message
+      #       end
+      #     else
+      #       sol[:prop_val].object.to_s
+      #     end
+      #   }
 
-        current_message.set_dbpedia_response(true)
+      #   current_message.set_dbpedia_response(true)
 
-        results.join ', '
+      #   results.join ', '
+      if prop.size > 0
+        Array(prop).join(', ')
       else
         current_message
       end

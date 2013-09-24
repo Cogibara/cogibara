@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 20:49:34 GMT
+      - Tue, 24 Sep 2013 21:39:45 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -56,7 +56,7 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:40 GMT
+  recorded_at: Tue, 24 Sep 2013 21:39:52 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20is%20the%20leader%20name%20of%20germany
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 24 Sep 2013 20:50:29 GMT
+      - Tue, 24 Sep 2013 21:40:41 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -81,13 +81,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:40 GMT
+  recorded_at: Tue, 24 Sep 2013 21:39:52 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
     body:
       encoding: US-ASCII
-      string: query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0ASELECT+%3Fs+WHERE+%7B%0A++%7B%3Fs+a+rdf%3AProperty%7D%0A++UNION%0A++%7B%3Fs+a+owl%3AObjectProperty%7D%0A%0A++%3Fs+rdfs%3Alabel+%22leader+name%22%40en.%0A%7D%0A
+      string: query=SELECT+*+WHERE+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%22Germany%22%40en+.+%7D
     headers:
       Accept:
       - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
@@ -109,11 +109,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 20:49:40 GMT
+      - Tue, 24 Sep 2013 21:39:52 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
-      - '776'
+      - '1000'
       Connection:
       - keep-alive
       Server:
@@ -129,30 +129,33 @@ http_interactions:
          </head>
          <results>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/property/leaderName</uri></binding>
+           <binding name="s"><uri>http://dbpedia.org/resource/Germany</uri></binding>
           </result>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/ontology/leaderName</uri></binding>
+           <binding name="s"><uri>http://dbpedia.org/resource/Category:Germany</uri></binding>
           </result>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/ontology/leaderName</uri></binding>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/en/Germany_2295</uri></binding>
           </result>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/ontology/leaderName</uri></binding>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/en/Germany</uri></binding>
           </result>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/ontology/leaderName</uri></binding>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/Mx4rvVj4PJwpEbGdrcN5Y29ycA</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/Mx8Ngh4rvYkdfpwpEbGdrcN5Y29ycB4rvVj4PJwpEbGdrcN5Y29ycA</uri></binding>
           </result>
          </results>
         </sparql>
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:41 GMT
+  recorded_at: Tue, 24 Sep 2013 21:39:53 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
     body:
       encoding: US-ASCII
-      string: query=SELECT+*+WHERE+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%22Germany%22%40en+.+%3Fs+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2FleaderName%3E+%3Fprop_val+.+%3Fs+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FleaderName%3E+%3Fprop_val+.+%3Fs+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FleaderName%3E+%3Fprop_val+.+%3Fs+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FleaderName%3E+%3Fprop_val+.+%3Fs+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FleaderName%3E+%3Fprop_val+.+%7D
+      string: query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0ASELECT+DISTINCT+%3Flabel+WHERE+%7B%0A++%7B%3Fprop+a+rdf%3AProperty%7D%0A++UNION%0A++%7B%3Fprop+a+owl%3AObjectProperty%7D%0A%0A++%3Fprop+rdfs%3Alabel+%22leader+name%22%40en.%0A%0A++%7B%0A++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%3Flabel+.%0A++++FILTER+isLiteral%28%3Flabel%29%0A++%7D%0A++UNION%0A++%7B%0A++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%5B+rdfs%3Alabel+%3Flabel+%5D.%0A++%7D%0A++FILTER%28LANG%28%3Flabel%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Flabel%29%2C+%22en%22%29%29%0A%7D%0A
     headers:
       Accept:
       - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
@@ -174,11 +177,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 20:49:40 GMT
+      - Tue, 24 Sep 2013 21:39:52 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
-      - '1063'
+      - '689'
       Connection:
       - keep-alive
       Server:
@@ -190,332 +193,23 @@ http_interactions:
       string: |-
         <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
          <head>
-          <variable name="s"/>
-          <variable name="prop_val"/>
+          <variable name="label"/>
          </head>
          <results>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/resource/Germany</uri></binding>
-           <binding name="prop_val"><uri>http://dbpedia.org/resource/Winfried_Kretschmann</uri></binding>
+           <binding name="label"><literal xml:lang="en">Winfried Kretschmann</literal></binding>
           </result>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/resource/Germany</uri></binding>
-           <binding name="prop_val"><uri>http://dbpedia.org/resource/Angela_Merkel</uri></binding>
+           <binding name="label"><literal xml:lang="en">Angela Merkel</literal></binding>
           </result>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/resource/Germany</uri></binding>
-           <binding name="prop_val"><uri>http://dbpedia.org/resource/Norbert_Lammert</uri></binding>
+           <binding name="label"><literal xml:lang="en">Norbert Lammert</literal></binding>
           </result>
           <result>
-           <binding name="s"><uri>http://dbpedia.org/resource/Germany</uri></binding>
-           <binding name="prop_val"><uri>http://dbpedia.org/resource/Joachim_Gauck</uri></binding>
+           <binding name="label"><literal xml:lang="en">Joachim Gauck</literal></binding>
           </result>
          </results>
         </sparql>
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:41 GMT
-- request:
-    method: post
-    uri: http://dbpedia.org/sparql
-    body:
-      encoding: US-ASCII
-      string: query=SELECT+*+WHERE+%7B+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FWinfried_Kretschmann%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%3Flabel+.+%7D
-    headers:
-      Accept:
-      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
-        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
-        application/n-triples, text/plain
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 120
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Sep 2013 20:49:41 GMT
-      Content-Type:
-      - application/sparql-results+xml; charset=UTF-8
-      Content-Length:
-      - '1305'
-      Connection:
-      - keep-alive
-      Server:
-      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
-      Accept-Ranges:
-      - bytes
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPldpbmZyaWVkIEtyZXRzY2ht
-        YW5uPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVuIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlcyI+V2luZnJpZWQgS3JldHNjaG1h
-        bm48L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        ZnIiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFsPjwvYmluZGluZz4K
-        ICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJl
-        bCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5XaW5mcmllZCBLcmV0c2NobWFu
-        bjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4K
-        ICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJq
-        YSI+44O044Kj44Oz44OV44Oq44O844OI44O744Kv44Os44OD44OB44Ol44Oe
-        44OzPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        Im5sIj5XaW5mcmllZCBLcmV0c2NobWFubjwvbGl0ZXJhbD48L2JpbmRpbmc+
-        CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0ibGFi
-        ZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJydSI+0JrRgNC10YfQvNCw0L3QvSwg
-        0JLQuNC90YTRgNC40LQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ic3YiPldpbmZyaWVkIEtyZXRzY2htYW5uPC9saXRlcmFs
-        PjwvYmluZGluZz4KICA8L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
-    http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:42 GMT
-- request:
-    method: post
-    uri: http://dbpedia.org/sparql
-    body:
-      encoding: US-ASCII
-      string: query=SELECT+*+WHERE+%7B+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FAngela_Merkel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%3Flabel+.+%7D
-    headers:
-      Accept:
-      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
-        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
-        application/n-triples, text/plain
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 120
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Sep 2013 20:49:41 GMT
-      Content-Type:
-      - application/sparql-results+xml; charset=UTF-8
-      Content-Length:
-      - '1556'
-      Connection:
-      - keep-alive
-      Server:
-      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
-      Accept-Ranges:
-      - bytes
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPuWuieagvOaLicK36buY5YWL
-        54i+PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImVzIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImZyIj5BbmdlbGEgTWVya2VsPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9Iml0Ij5BbmdlbGEgTWVy
-        a2VsPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImphIj7jgqLjg7PjgrLjg6njg7vjg6Hjg6vjgrHjg6s8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ibmwiPkFuZ2VsYSBNZXJr
-        ZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        cGwiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCc0LXRgNC60LXQu9GMLCDQkNC90LPQtdC7
-        0LA8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+
-        CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0i
-        c3YiPkFuZ2VsYSBNZXJrZWw8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
-    http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:42 GMT
-- request:
-    method: post
-    uri: http://dbpedia.org/sparql
-    body:
-      encoding: US-ASCII
-      string: query=SELECT+*+WHERE+%7B+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FNorbert_Lammert%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%3Flabel+.+%7D
-    headers:
-      Accept:
-      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
-        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
-        application/n-triples, text/plain
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 120
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Sep 2013 20:49:42 GMT
-      Content-Type:
-      - application/sparql-results+xml; charset=UTF-8
-      Content-Length:
-      - '1470'
-      Connection:
-      - keep-alive
-      Server:
-      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
-      Accept-Ranges:
-      - bytes
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZGUiPk5vcmJlcnQgTGFtbWVydDwv
-        bGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAg
-        PGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJlbiI+
-        Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3Vs
-        dD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVy
-        YWwgeG1sOmxhbmc9ImVzIj5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9i
-        aW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5h
-        bWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iZnIiPk5vcmJlcnQgTGFt
-        bWVydDwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJpdCI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+
-        PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg47jg6vjg5njg6vjg4jjg7vjg6nj
-        g7Pjg6Hjg6vjg4g8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0Pgog
-        IDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4
-        bWw6bGFuZz0ibmwiPk5vcmJlcnQgTGFtbWVydDwvbGl0ZXJhbD48L2JpbmRp
-        bmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3VsdD4KICAgPGJpbmRpbmcgbmFtZT0i
-        bGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5nPSJwbCI+Tm9yYmVydCBMYW1tZXJ0
-        PC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0Pgog
-        ICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9InB0
-        Ij5Ob3JiZXJ0IExhbW1lcnQ8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVz
-        dWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0
-        ZXJhbCB4bWw6bGFuZz0icnUiPtCb0LDQvNC80LXRgNGCLCDQndC+0YDQsdC1
-        0YDRgjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9yZXN1bHQ+CiAgPHJlc3Vs
-        dD4KICAgPGJpbmRpbmcgbmFtZT0ibGFiZWwiPjxsaXRlcmFsIHhtbDpsYW5n
-        PSJzdiI+Tm9yYmVydCBMYW1tZXJ0PC9saXRlcmFsPjwvYmluZGluZz4KICA8
-        L3Jlc3VsdD4KIDwvcmVzdWx0cz4KPC9zcGFycWw+
-    http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:43 GMT
-- request:
-    method: post
-    uri: http://dbpedia.org/sparql
-    body:
-      encoding: US-ASCII
-      string: query=SELECT+*+WHERE+%7B+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FJoachim_Gauck%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%3Flabel+.+%7D
-    headers:
-      Accept:
-      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
-        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
-        application/n-triples, text/plain
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - 120
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Sep 2013 20:49:42 GMT
-      Content-Type:
-      - application/sparql-results+xml; charset=UTF-8
-      Content-Length:
-      - '1547'
-      Connection:
-      - keep-alive
-      Server:
-      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
-      Accept-Ranges:
-      - bytes
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PHNwYXJxbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwNS9zcGFycWwt
-        cmVzdWx0cyMiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9Y
-        TUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDov
-        L3d3dy53My5vcmcvMjAwMS9zdy9EYXRhQWNjZXNzL3JmMS9yZXN1bHQyLnhz
-        ZCI+CiA8aGVhZD4KICA8dmFyaWFibGUgbmFtZT0ibGFiZWwiLz4KIDwvaGVh
-        ZD4KIDxyZXN1bHRzPgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9Imxh
-        YmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0iemgiPue6pumYv+W4jOWnhsK36auY
-        5YWLPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImRlIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9ImVuIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImVzIj5Kb2FjaGltIEdh
-        dWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0
-        PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9
-        ImZyIj5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwvYmluZGluZz4KICA8L3Jl
-        c3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBuYW1lPSJsYWJlbCI+PGxp
-        dGVyYWwgeG1sOmxhbmc9Iml0Ij5Kb2FjaGltIEdhdWNrPC9saXRlcmFsPjwv
-        YmluZGluZz4KICA8L3Jlc3VsdD4KICA8cmVzdWx0PgogICA8YmluZGluZyBu
-        YW1lPSJsYWJlbCI+PGxpdGVyYWwgeG1sOmxhbmc9ImphIj7jg6jjgqLjg5Lj
-        g6Djg7vjgqzjgqbjgq88L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0ibmwiPkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5k
-        aW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9
-        ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icGwiPkpvYWNoaW0gR2F1Y2s8
-        L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAg
-        IDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0icHQi
-        PkpvYWNoaW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0
-        PgogIDxyZXN1bHQ+CiAgIDxiaW5kaW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJh
-        bCB4bWw6bGFuZz0icnUiPtCT0LDRg9C6LCDQmdC+0LDRhdC40Lw8L2xpdGVy
-        YWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogIDxyZXN1bHQ+CiAgIDxiaW5k
-        aW5nIG5hbWU9ImxhYmVsIj48bGl0ZXJhbCB4bWw6bGFuZz0ic3YiPkpvYWNo
-        aW0gR2F1Y2s8L2xpdGVyYWw+PC9iaW5kaW5nPgogIDwvcmVzdWx0PgogPC9y
-        ZXN1bHRzPgo8L3NwYXJxbD4=
-    http_version: 
-  recorded_at: Tue, 24 Sep 2013 20:49:43 GMT
+  recorded_at: Tue, 24 Sep 2013 21:39:53 GMT
 recorded_with: VCR 2.5.0
