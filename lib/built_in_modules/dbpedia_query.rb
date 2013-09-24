@@ -20,7 +20,9 @@ SELECT DISTINCT ?label WHERE {
   UNION
   {?prop a owl:ObjectProperty}
 
-  ?prop rdfs:label "#{property}"@en.
+  ?prop rdfs:label ?prop_label.
+
+  FILTER regex(str(?prop_label), "#{property}$", "i")
 
   {
     <#{subject}> ?prop ?label .
@@ -45,7 +47,7 @@ SELECT DISTINCT ?label WHERE {
     end
   end
 
-  on(/^(who|what) is the (.+) of (.+)/) do |question,property,object|
+  on(/^(who|what) is the (.+) of (.+)/i) do |question,property,object|
     object = object.gsub("?",'')
     past_results = Cogibara::Message.where(message_string: current_message.message).select{|msg| msg.get_dbpedia_response }
 

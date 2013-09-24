@@ -28,11 +28,11 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     end
 
     describe "property lookup gdp 2" do
-      it { @cogi.ask_local('what is the GDP PPP per capita of Japan').should == "36179.0"}
+      it { @cogi.ask_local('What is the gdp PPP per capita of Japan').should == "36179.0"}
     end
 
     describe "doesn't mind question marks" do
-      it { @cogi.ask_local('who is the leader of France?').should == "Jean-Marc Ayrault, François Hollande"}
+      it { @cogi.ask_local('who is the leader of France?').should == "François Hollande, Jean-Marc Ayrault"}
     end
 
     describe "also looks up owl properties" do
