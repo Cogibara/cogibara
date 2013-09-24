@@ -47,6 +47,44 @@ SELECT DISTINCT ?label WHERE {
     end
   end
 
+  def properties_for(subject)
+    spq = SPARQL::Client.new("http://dbpedia.org/sparql")
+    qry = <<-EOF
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+
+SELECT DISTINCT ?pred ?label WHERE {
+  {?pred a rdf:Property}
+  UNION
+  {?pred a owl:ObjectProperty}
+
+  <#{subject}> ?pred [].
+
+  ?pred rdfs:label ?label
+  FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
+}
+    EOF
+
+    sols = spq.query(qry)
+    sols.map(&:label).map(&:object)
+  end
+
+  on(/^what can you tell me about (.+)/i) do |object|
+    sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
+    object = object.capitalize unless object[0] == object[0].capitalize
+
+    qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)])
+    sols = qry.execute
+
+    if sols.size > 0
+      properties_for(sols.first[:s]).join(", ")
+    else
+      current_message
+    end
+  end
+
   on(/^(who|what) is the (.+) of (.+)/i) do |question,property,object|
     object = object.gsub("?",'')
     past_results = Cogibara::Message.where(message_string: current_message.message).select{|msg| msg.get_dbpedia_response }

@@ -1,0 +1,545 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20can%20you%20tell%20me%20about%20Germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 22:41:17 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "what can you tell me about Germany",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/History_of_Germany",
+            "@support": "75",
+            "@types": "DBpedia:TopicalConcept",
+            "@surfaceForm": "Germany",
+            "@offset": "27",
+            "@similarityScore": "0.2589113712310791",
+            "@percentageOfSecondRank": "0.958497916116075"
+          }]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 22:41:23 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20can%20you%20tell%20me%20about%20Germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 24 Sep 2013 22:42:13 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 22:41:24 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=SELECT+*+WHERE+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%22Germany%22%40en+.+%7D
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 22:41:24 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '1000'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="s"/>
+         </head>
+         <results>
+          <result>
+           <binding name="s"><uri>http://dbpedia.org/resource/Germany</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://dbpedia.org/resource/Category:Germany</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/en/Germany_2295</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/en/Germany</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/Mx4rvVj4PJwpEbGdrcN5Y29ycA</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/Mx8Ngh4rvYkdfpwpEbGdrcN5Y29ycB4rvVj4PJwpEbGdrcN5Y29ycA</uri></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 22:41:24 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0A%0ASELECT+DISTINCT+%3Fpred+%3Flabel+WHERE+%7B%0A++%7B%3Fpred+a+rdf%3AProperty%7D%0A++UNION%0A++%7B%3Fpred+a+owl%3AObjectProperty%7D%0A%0A++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fpred+%5B%5D.%0A%0A++%3Fpred+rdfs%3Alabel+%3Flabel%0A++FILTER%28LANG%28%3Flabel%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Flabel%29%2C+%22en%22%29%29%0A%7D%0A
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 22:41:45 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '16816'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="pred"/>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="pred"><uri>http://www.w3.org/2002/07/owl#sameAs</uri></binding>
+           <binding name="label"><literal>sameAs</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://xmlns.com/foaf/0.1/depiction</uri></binding>
+           <binding name="label"><literal>depiction</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://xmlns.com/foaf/0.1/name</uri></binding>
+           <binding name="label"><literal>name</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/accessioneudate</uri></binding>
+           <binding name="label"><literal xml:lang="en">accessionEUdate</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/aircraftCode</uri></binding>
+           <binding name="label"><literal xml:lang="en">aircraft code</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/altSportCode</uri></binding>
+           <binding name="label"><literal xml:lang="en">alt sport code</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/areaKm</uri></binding>
+           <binding name="label"><literal xml:lang="en">area km</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/areaMagnitude</uri></binding>
+           <binding name="label"><literal xml:lang="en">area magnitude</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/areaRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">area rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/areaSqMi</uri></binding>
+           <binding name="label"><literal xml:lang="en">area sq mi</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/callingCode</uri></binding>
+           <binding name="label"><literal xml:lang="en">calling code</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/capital</uri></binding>
+           <binding name="label"><literal xml:lang="en">Capital</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/caption</uri></binding>
+           <binding name="label"><literal xml:lang="en">Caption</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/cctld</uri></binding>
+           <binding name="label"><literal xml:lang="en">cctld</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/color</uri></binding>
+           <binding name="label"><literal xml:lang="en">color</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/commonName</uri></binding>
+           <binding name="label"><literal xml:lang="en">common name</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/conventionalLongName</uri></binding>
+           <binding name="label"><literal xml:lang="en">conventional long name</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/currency</uri></binding>
+           <binding name="label"><literal xml:lang="en">currency</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/currencyCode</uri></binding>
+           <binding name="label"><literal xml:lang="en">currency code</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/demonym</uri></binding>
+           <binding name="label"><literal xml:lang="en">Demonym</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/drivesOn</uri></binding>
+           <binding name="label"><literal xml:lang="en">drives on</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/establishedDate</uri></binding>
+           <binding name="label"><literal xml:lang="en">established date</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/establishedEvent</uri></binding>
+           <binding name="label"><literal xml:lang="en">established event</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/euseats</uri></binding>
+           <binding name="label"><literal xml:lang="en">EUseats</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpNominal</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP nominal</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpNominalPerCapita</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP nominal per capita</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpNominalPerCapitaRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP nominal per capita rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpNominalRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP nominal rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpNominalYear</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP nominal year</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpPpp</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP PPP</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpPppPerCapita</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP PPP per capita</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpPppPerCapitaRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP PPP per capita rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpPppRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP PPP rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gdpPppYear</uri></binding>
+           <binding name="label"><literal xml:lang="en">GDP PPP year</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/gini</uri></binding>
+           <binding name="label"><literal xml:lang="en">Gini</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/giniYear</uri></binding>
+           <binding name="label"><literal xml:lang="en">Gini year</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/governmentType</uri></binding>
+           <binding name="label"><literal xml:lang="en">government type</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/hdi</uri></binding>
+           <binding name="label"><literal xml:lang="en">HDI</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/hdiRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">HDI rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/hdiYear</uri></binding>
+           <binding name="label"><literal xml:lang="en">HDI year</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/imageCoat</uri></binding>
+           <binding name="label"><literal xml:lang="en">image coat</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/imageFlag</uri></binding>
+           <binding name="label"><literal xml:lang="en">image flag</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/imageMap</uri></binding>
+           <binding name="label"><literal xml:lang="en">image map</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/iso31661Alpha</uri></binding>
+           <binding name="label"><literal xml:lang="en">ISO 3166-1 alpha</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/iso31661Numeric</uri></binding>
+           <binding name="label"><literal xml:lang="en">ISO 3166-1 numeric</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/label</uri></binding>
+           <binding name="label"><literal xml:lang="en">label</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/largestCity</uri></binding>
+           <binding name="label"><literal xml:lang="en">largest city</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/latd</uri></binding>
+           <binding name="label"><literal xml:lang="en">latd</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/latm</uri></binding>
+           <binding name="label"><literal xml:lang="en">latm</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/latns</uri></binding>
+           <binding name="label"><literal xml:lang="en">latNS</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/leaderName</uri></binding>
+           <binding name="label"><literal xml:lang="en">leader name</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/leaderTitle</uri></binding>
+           <binding name="label"><literal xml:lang="en">leader title</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/longd</uri></binding>
+           <binding name="label"><literal xml:lang="en">longd</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/longew</uri></binding>
+           <binding name="label"><literal xml:lang="en">longEW</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/longm</uri></binding>
+           <binding name="label"><literal xml:lang="en">longm</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/lowerHouse</uri></binding>
+           <binding name="label"><literal xml:lang="en">lower house</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/nationalAnthem</uri></binding>
+           <binding name="label"><literal xml:lang="en">national anthem</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/officialLanguages</uri></binding>
+           <binding name="label"><literal xml:lang="en">official languages</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/percentWater</uri></binding>
+           <binding name="label"><literal xml:lang="en">percent water</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/populationDensityKm</uri></binding>
+           <binding name="label"><literal xml:lang="en">population density km</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/populationDensityRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">population density rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/populationDensitySqMi</uri></binding>
+           <binding name="label"><literal xml:lang="en">population density sq mi</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/populationEstimate</uri></binding>
+           <binding name="label"><literal xml:lang="en">population estimate</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/populationEstimateRank</uri></binding>
+           <binding name="label"><literal xml:lang="en">population estimate rank</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/populationEstimateYear</uri></binding>
+           <binding name="label"><literal xml:lang="en">population estimate year</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/sovereigntyType</uri></binding>
+           <binding name="label"><literal xml:lang="en">sovereignty type</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/thumb</uri></binding>
+           <binding name="label"><literal xml:lang="en">thumb</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/timeZone</uri></binding>
+           <binding name="label"><literal xml:lang="en">time zone</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/timeZoneDst</uri></binding>
+           <binding name="label"><literal xml:lang="en">time zone DST</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/title</uri></binding>
+           <binding name="label"><literal xml:lang="en">title</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/upperHouse</uri></binding>
+           <binding name="label"><literal xml:lang="en">upper house</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/utcOffset</uri></binding>
+           <binding name="label"><literal xml:lang="en">utc offset</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/utcOffsetDst</uri></binding>
+           <binding name="label"><literal xml:lang="en">utc offset DST</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/value</uri></binding>
+           <binding name="label"><literal xml:lang="en">value</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/vehicleCode</uri></binding>
+           <binding name="label"><literal xml:lang="en">vehicle code</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://xmlns.com/foaf/0.1/homepage</uri></binding>
+           <binding name="label"><literal>homepage</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://xmlns.com/foaf/0.1/isPrimaryTopicOf</uri></binding>
+           <binding name="label"><literal>is primary topic of</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/footnoteA</uri></binding>
+           <binding name="label"><literal xml:lang="en">footnote a</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/hdiChange</uri></binding>
+           <binding name="label"><literal xml:lang="en">HDI change</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/property/footnoteB</uri></binding>
+           <binding name="label"><literal xml:lang="en">footnote b</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/capital</uri></binding>
+           <binding name="label"><literal xml:lang="en">capital</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/currency</uri></binding>
+           <binding name="label"><literal xml:lang="en">currency</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/governmentType</uri></binding>
+           <binding name="label"><literal xml:lang="en">government type</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/language</uri></binding>
+           <binding name="label"><literal xml:lang="en">language</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/leaderName</uri></binding>
+           <binding name="label"><literal xml:lang="en">leader name</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/officialLanguage</uri></binding>
+           <binding name="label"><literal xml:lang="en">official language</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/thumbnail</uri></binding>
+           <binding name="label"><literal xml:lang="en">thumbnail</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/wikiPageExternalLink</uri></binding>
+           <binding name="label"><literal xml:lang="en">Link from a Wikipage to an external page</literal></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 22:41:46 GMT
+recorded_with: VCR 2.5.0

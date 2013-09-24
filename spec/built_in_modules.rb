@@ -46,6 +46,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     describe "cached properties" do
       it { @cogi.ask_local('who is the leader of germany')[/Angela Merkel/].should_not be nil }
     end
+
+    describe "lists known predicates" do
+      it { @cogi.ask_local('what can you tell me about Germany')['Capital, Caption, cctld, color, common name, conventional long name, currency'].should_not be nil }
+    end
   end
 
   describe DBPediaSpotlight do
