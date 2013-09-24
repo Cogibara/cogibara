@@ -51,6 +51,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('who is the leader of germany')[/Angela Merkel/].should_not be nil }
     end
 
+    describe "use it to refer to current object" do
+      it { @cogi.ask_local('what is the capital of it').should == "Berlin" }
+    end
+
     describe "lists known predicates" do
       it { @cogi.ask_local('what can you tell me about Germany')['Capital, Caption, cctld, color, common name, conventional long name, currency'].should_not be nil }
     end

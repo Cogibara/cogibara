@@ -80,6 +80,11 @@ SELECT DISTINCT ?pred ?label WHERE {
 
   on(/.*tell me about (.+)/i) do |object|
     object = object.gsub("?",'')
+    if object == "it"
+      object = @it if @it
+    else
+      @it = object
+    end
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
     object = object.capitalize unless object[0] == object[0].capitalize
 
@@ -93,8 +98,14 @@ SELECT DISTINCT ?pred ?label WHERE {
     end
   end
 
-  on(/^(who|what) is the (.+) of (.+)/i) do |question,property,object|
+  on(/^(who|what) (?:is|are) the (.+) of (.+)/i) do |question,property,object|
     object = object.gsub("?",'')
+
+    if object == "it"
+      object = @it if @it
+    else
+      @it = object
+    end
     past_results = Cogibara::Message.where(message_string: current_message.message).select{|msg| msg.get_dbpedia_response }
 
     if past_results.size > 0
