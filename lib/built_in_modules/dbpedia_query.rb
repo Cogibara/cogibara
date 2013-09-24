@@ -72,6 +72,7 @@ SELECT DISTINCT ?pred ?label WHERE {
   end
 
   on(/^what can you tell me about (.+)/i) do |object|
+    object = object.gsub("?",'')
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
     object = object.capitalize unless object[0] == object[0].capitalize
 
