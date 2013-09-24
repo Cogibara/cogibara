@@ -39,6 +39,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('what is the record label of Arashi').should == "J Storm, Pony Canyon"}
     end
 
+    describe "returns uris of no labels available" do
+      it { @cogi.ask_local('what is the website of Community (TV series)').should == "http://www.nbc.com/community/"}
+    end
+
     describe "property lookup with multi-word property 'leader name'" do
       it { @cogi.ask_local('what is the leader name of germany')[/Angela Merkel/].should_not be nil  }
     end

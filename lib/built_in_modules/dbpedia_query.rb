@@ -23,16 +23,23 @@ SELECT DISTINCT ?label WHERE {
   ?prop rdfs:label ?prop_label.
 
   FILTER regex(str(?prop_label), "#{property}$", "i")
-
   {
-    <#{subject}> ?prop ?label .
-    FILTER isLiteral(?label)
+    {
+      <#{subject}> ?prop ?label .
+      FILTER isLiteral(?label)
+    }
+    UNION
+    {
+      <#{subject}> ?prop [ rdfs:label ?label ].
+    }
+    FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
   }
   UNION
   {
-    <#{subject}> ?prop [ rdfs:label ?label ].
+    <#{subject}> ?prop ?label .
+    FILTER isURI(?label)
+    MINUS { ?label rdfs:label ?lab}
   }
-  FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
 }
       EOF
 
@@ -43,7 +50,7 @@ SELECT DISTINCT ?label WHERE {
       # puts sols.to_s
       # sols = qry.execute
       # puts sols.map(&:to_hash)
-      sols.map(&:label).map(&:object)
+      sols.map(&:label).map(&:to_s)
     end
   end
 
