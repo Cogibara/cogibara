@@ -10,15 +10,30 @@ class DBPediaQuery < Cogibara::Module
       PROPERTIES[property.to_sym]
     else
       spq = SPARQL::Client.new("http://dbpedia.org/sparql")
-      qry = spq.select.where([:s, RDF.type, RDF.Property]).select.where([:s, RDF::RDFS.label, RDF::Literal.new(property, language: :en)])
+      qry = <<-EOF
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?s WHERE {
+  {?s a rdf:Property}
+  UNION
+  {?s a owl:ObjectProperty}
+
+  ?s rdfs:label "#{property}"@en.
+}
+      EOF
+      # qry = spq.select.where([:s, RDF.type, RDF.Property]).select.where([:s, RDF::RDFS.label, RDF::Literal.new(property, language: :en)])
       # puts qry.to_s
-      sols = qry.execute
+      # sols = qry.execute
+      sols = spq.query(qry)
       # puts sols.map(&:to_hash)
-      sols.map(&:s).map(&:to_s).first
+      sols.map(&:s).map(&:to_s)
     end
   end
 
   on(/^(who|what) is the (.+) of (.+)/) do |question,property,object|
+    object = object.gsub("?",'')
     past_results = Cogibara::Message.where(message_string: current_message.message).select{|msg| msg.get_dbpedia_response }
 
     if past_results.size > 0
@@ -29,7 +44,7 @@ class DBPediaQuery < Cogibara::Module
       sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
       object = object.capitalize unless object[0] == object[0].capitalize
 
-      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]).select.where([:s, RDF::URI.new(prop),:prop_val])
+      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]).select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
       sols = qry.execute
 
       # puts sols.map(&:to_hash)

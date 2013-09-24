@@ -23,19 +23,23 @@ describe "Built in modules", vcr: { record: :new_episodes } do
   end
 
   describe DBPediaQuery do
-    context "property lookup gdp" do
+    describe "property lookup gdp" do
       it { @cogi.ask_local('what is the GDP PPP per capita of United States').should == "49802.0"}
     end
 
-    context "property lookup gdp 2" do
+    describe "property lookup gdp 2" do
       it { @cogi.ask_local('what is the GDP PPP per capita of Japan').should == "36179.0"}
     end
 
-    context "property lookup with multi-word property 'leader name'" do
+    describe "doesn't mind question marks" do
+      it { @cogi.ask_local('who is the leader of France?').should == "Jean-Marc Ayrault, François Hollande"}
+    end
+
+    describe "property lookup with multi-word property 'leader name'" do
       it { @cogi.ask_local('what is the leader name of germany')[/Angela Merkel/].should_not be nil  }
     end
 
-    context "cached properties" do
+    describe "cached properties" do
       it { @cogi.ask_local('who is the leader of germany')[/Angela Merkel/].should_not be nil }
     end
   end
