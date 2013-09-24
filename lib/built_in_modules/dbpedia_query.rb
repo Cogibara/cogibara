@@ -78,7 +78,7 @@ SELECT DISTINCT ?pred ?label WHERE {
     sols.map(&:label).map(&:object)
   end
 
-  on(/tell me about (.+)/i) do |object|
+  on(/.*tell me about (.+)/i) do |object|
     object = object.gsub("?",'')
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
     object = object.capitalize unless object[0] == object[0].capitalize
