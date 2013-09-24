@@ -1,0 +1,212 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=spotlight%20URIs%20for%20%22I%20live%20in%20Madison%20Wisconsin%22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 17:32:09 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "spotlight URIs for \"I live in Madison Wisconsin\"",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Flashlight",
+              "@support": "236",
+              "@types": "Freebase:/sports/sports_equipment,Freebase:/sports,Freebase:/law/invention,Freebase:/law,DBpedia:TopicalConcept",
+              "@surfaceForm": "spotlight",
+              "@offset": "0",
+              "@similarityScore": "0.0870683342218399",
+              "@percentageOfSecondRank": "0.7894217872596485"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Leon_Uris",
+              "@support": "106",
+              "@types": "DBpedia:Writer,DBpedia:Artist,DBpedia:Person,Schema:Person,Freebase:/film/writer,Freebase:/film,Freebase:/tv/tv_program_creator,Freebase:/tv,Freebase:/film/film_story_contributor,Freebase:/people/person,Freebase:/people,Freebase:/award/award_winner,Freebase:/award,Freebase:/book/author,Freebase:/book,Freebase:/people/deceased_person,DBpedia:TopicalConcept",
+              "@surfaceForm": "URIs",
+              "@offset": "10",
+              "@similarityScore": "0.11863742768764496",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Live_album",
+              "@support": "3028",
+              "@types": "Freebase:/music/album_release_type,Freebase:/music,Freebase:/music/genre,Freebase:/music/album,Freebase:/music/release",
+              "@surfaceForm": "live",
+              "@offset": "22",
+              "@similarityScore": "0.13806015253067017",
+              "@percentageOfSecondRank": "0.5515136976986658"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Madison,_Wisconsin",
+              "@support": "2282",
+              "@types": "DBpedia:City,DBpedia:Settlement,DBpedia:PopulatedPlace,DBpedia:Place,Schema:Place,Schema:City,Freebase:/location/hud_foreclosure_area,Freebase:/location,Freebase:/location/location,Freebase:/location/dated_location,Freebase:/sports/sports_team_location,Freebase:/sports,Freebase:/film/film_location,Freebase:/film,Freebase:/location/citytown,Freebase:/location/statistical_region,Freebase:/location/hud_county_place",
+              "@surfaceForm": "Madison Wisconsin",
+              "@offset": "30",
+              "@similarityScore": "0.22121240198612213",
+              "@percentageOfSecondRank": "-1.0"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 17:32:13 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=spotlight%20URIs%20for%20%22I%20live%20in%20Madison%20Wisconsin%22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 24 Sep 2013 17:33:03 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{"contacts":[{"name":"uris"}]},"action":"CONTACT_SEARCH","category":"CONTACT"}'
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 17:32:14 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=spotlight%20URIs%20for%20%22I%20live%20in%20Madison%20Wisconsin%22&start=y&sessionid=RVE01318573&vText8=I%20don't%20understand%20you.&vText7=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis%3F&vText6=Answering%20a%20question%20with%20another%20question%3F%20That's%20smart.&vText5=I%20live%20in%20Madison%20Wisconsin.&vText4=Who%20is%20the%20apple%3F&vText3=Spotlight%20entities%20for%20'I%20live%20in%20Madison%20Wisconsin'.&vText2=So%20where%20you%20were%20born%3F&icognoid=wsf&icognocheck=3dfba0c79531362c61082f382e5f00c2&fno=0&prevref=RZS051731767&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 17:29:22 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=Jk5yYu9tVuW436PRRAFyhw
+      - JSESSIONID=B8E871CBCF96418820911DB876B2959B; Path=/
+      - RPS=cs5860
+      - cleverbotref="*ZJQVXOQIGDELSJYERNKHZQOGCILROYFUNOEAZQTIPK"; Expires="Tue,
+        24 Sep 2013 18:32:21 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1602'
+      Sc:
+      - '15275'
+      Content-Length:
+      - '495'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Then I spent so many nights just thinking how you did me wrong.\rRVE01318573\rj2log-uDbGRvWQMHWXPARCNGWG-detail\rAnswering
+        a question with another question? That's smart.\rI live in Madison Wisconsin.\rWho
+        is the apple?\rSpotlight entities for 'I live in Madison Wisconsin'.\rSo where
+        you were born?\rSpotlight URIs for 'I live in Madison Wisconsin'.\rThen I
+        spent so many nights just thinking how you did me wrong.\rROD067120945\r\r\r\r\r\rThen
+        I spent so many nights just thinking how you did me wrong.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 17:32:16 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=I%20live%20in%20Madison%20Wisconsin
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Sep 2013 17:33:40 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "I live in Madison Wisconsin",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Live_album",
+              "@support": "3028",
+              "@types": "Freebase:/music/album_release_type,Freebase:/music,Freebase:/music/genre,Freebase:/music/album,Freebase:/music/release",
+              "@surfaceForm": "live",
+              "@offset": "2",
+              "@similarityScore": "0.20115503668785095",
+              "@percentageOfSecondRank": "0.6097190621785478"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Madison,_Wisconsin",
+              "@support": "2282",
+              "@types": "DBpedia:City,DBpedia:Settlement,DBpedia:PopulatedPlace,DBpedia:Place,Schema:Place,Schema:City,Freebase:/location/hud_foreclosure_area,Freebase:/location,Freebase:/location/location,Freebase:/location/dated_location,Freebase:/sports/sports_team_location,Freebase:/sports,Freebase:/film/film_location,Freebase:/film,Freebase:/location/citytown,Freebase:/location/statistical_region,Freebase:/location/hud_county_place",
+              "@surfaceForm": "Madison Wisconsin",
+              "@offset": "10",
+              "@similarityScore": "0.2932870388031006",
+              "@percentageOfSecondRank": "-1.0"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 24 Sep 2013 17:33:45 GMT
+recorded_with: VCR 2.5.0

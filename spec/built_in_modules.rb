@@ -55,9 +55,16 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       prop.values["spotlight_types"]["DBpedia:City"].should_not be nil
     end
 
-    it "has debug keywords" do
-      msg = @cogi.ask_local('spotlight entities for "I live in Madison Wisconsin"')
-      msg['"spotlight_entity_uri"=>"http://dbpedia.org/resource/Madison,_Wisconsin"'].should_not be nil
+    describe "debug keywords" do
+      it "can print all entities" do
+        msg = @cogi.ask_local('spotlight entities for "I live in Madison Wisconsin"')
+        msg['"spotlight_entity_uri"=>"http://dbpedia.org/resource/Madison,_Wisconsin"'].should_not be nil
+      end
+
+      it "can return just URIs" do
+        msg = @cogi.ask_local('spotlight URIs for "I live in Madison Wisconsin"')
+        eval(msg)["Madison Wisconsin"].should == "http://dbpedia.org/resource/Madison,_Wisconsin"
+      end
     end
   end
 end

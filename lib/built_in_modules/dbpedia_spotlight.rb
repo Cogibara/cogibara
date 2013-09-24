@@ -23,9 +23,14 @@ class DBPediaSpotlight < Cogibara::Module
     end
   end
 
-  on(/^spotlight entities for "(.+)"$/) do |msg|
+  on(/.*spotlight entities for "(.+)"$/) do |msg|
     structs = spotlight_structures(msg)
     structs.map{|st| st.values}.join(', ')
+  end
+
+  on(/.*spotlight URIs for "(.+)"$/) do |msg|
+    structs = spotlight_structures(msg)
+    Hash[structs.map{|st| [st.values["spotlight_surface_form"], st.values["spotlight_entity_uri"]]}].to_s
   end
 
   on do
