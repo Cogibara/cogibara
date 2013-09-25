@@ -2,6 +2,55 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.wit.ai/message?q=who%20is%20the%20leader%20of%20germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '463'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:43:38 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "ea9ebb6b-a3ed-4ac0-84e9-6433afd13b23",
+          "msg_body" : "who is the leader of germany",
+          "outcome" : {
+            "intent" : "fact_question",
+            "entities" : {
+              "country" : {
+                "end" : 28,
+                "start" : 21,
+                "value" : "germany",
+                "body" : "germany"
+              },
+              "fact_property" : {
+                "end" : 17,
+                "start" : 11,
+                "value" : "leader",
+                "body" : "leader"
+              }
+            },
+            "confidence" : 0.933
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:43:38 GMT
+- request:
+    method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=who%20is%20the%20leader%20of%20germany
     body:
       encoding: US-ASCII
@@ -15,7 +64,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 02:52:13 GMT
+      - Wed, 25 Sep 2013 05:43:38 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -56,7 +105,7 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:22 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:38 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=who%20is%20the%20leader%20of%20germany
@@ -72,7 +121,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 02:53:11 GMT
+      - Wed, 25 Sep 2013 05:44:28 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -81,7 +130,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:22 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:39 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -109,7 +158,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 02:52:22 GMT
+      - Wed, 25 Sep 2013 05:43:38 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -149,7 +198,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:23 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:39 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -177,7 +226,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 02:52:22 GMT
+      - Wed, 25 Sep 2013 05:43:39 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -211,41 +260,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:23 GMT
-- request:
-    method: get
-    uri: https://api.wit.ai/message?q=who%20is%20the%20leader%20of%20germany
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '196'
-      Server:
-      - http-kit
-      Date:
-      - Wed, 25 Sep 2013 04:27:11 GMT
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "5f8efec9-9ca1-4cc3-bb81-f709be752e76",
-          "msg_body" : "who is the leader of germany",
-          "outcome" : {
-            "intent" : "wake_up",
-            "entities" : { },
-            "confidence" : 0.258
-          }
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 04:27:11 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:39 GMT
 recorded_with: VCR 2.5.0

@@ -28,6 +28,7 @@ end
 VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr/cassettes"
   c.hook_into :webmock
+  c.filter_sensitive_data('<Wit Auth>') { Cogibara::Module.settings["keys"]["wit"] }
   c.configure_rspec_metadata!
 end
 

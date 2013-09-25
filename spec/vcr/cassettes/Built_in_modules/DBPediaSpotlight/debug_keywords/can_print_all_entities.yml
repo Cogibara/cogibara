@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+      - Bearer <Wit Auth>
   response:
     status:
       code: 200
@@ -21,21 +21,21 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 04:59:29 GMT
+      - Wed, 25 Sep 2013 05:44:08 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "5da65f7c-9f9f-46fd-8c6c-ea2885cedf1e",
+          "msg_id" : "2e46ee24-f34a-4174-91d0-041a971795e1",
           "msg_body" : "spotlight entities for \"I live in Madison Wisconsin\"",
           "outcome" : {
             "intent" : "spotlight_query",
             "entities" : { },
-            "confidence" : 0.807
+            "confidence" : 0.934
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 04:59:29 GMT
+  recorded_at: Wed, 25 Sep 2013 05:44:08 GMT
 - request:
     method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=I%20live%20in%20Madison%20Wisconsin
@@ -51,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 04:59:30 GMT
+      - Wed, 25 Sep 2013 05:44:09 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -92,5 +92,5 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 04:59:30 GMT
+  recorded_at: Wed, 25 Sep 2013 05:44:10 GMT
 recorded_with: VCR 2.5.0

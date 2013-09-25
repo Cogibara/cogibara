@@ -2,6 +2,49 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.wit.ai/message?q=what%20can%20you%20tell%20me%20about%20Germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '351'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:43:56 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "6b7b30c3-a2dd-4c79-a539-409d59ff2832",
+          "msg_body" : "what can you tell me about Germany",
+          "outcome" : {
+            "intent" : "general_knowledge_question",
+            "entities" : {
+              "subject" : {
+                "end" : 34,
+                "start" : 27,
+                "value" : "Germany",
+                "body" : "germany"
+              }
+            },
+            "confidence" : 0.928
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:43:56 GMT
+- request:
+    method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20can%20you%20tell%20me%20about%20Germany
     body:
       encoding: US-ASCII
@@ -15,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 02:52:29 GMT
+      - Wed, 25 Sep 2013 05:43:56 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -45,7 +88,7 @@ http_interactions:
           }]
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:37 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:57 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20can%20you%20tell%20me%20about%20Germany
@@ -61,7 +104,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 02:53:27 GMT
+      - Wed, 25 Sep 2013 05:44:46 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -70,7 +113,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:38 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:57 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -98,7 +141,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 02:52:38 GMT
+      - Wed, 25 Sep 2013 05:43:57 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -138,7 +181,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:39 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:57 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -166,7 +209,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 02:52:38 GMT
+      - Wed, 25 Sep 2013 05:43:57 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -589,41 +632,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 02:52:39 GMT
-- request:
-    method: get
-    uri: https://api.wit.ai/message?q=what%20can%20you%20tell%20me%20about%20Germany
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '202'
-      Server:
-      - http-kit
-      Date:
-      - Wed, 25 Sep 2013 04:27:13 GMT
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "d45fb1bc-d5df-464e-b951-68e5d7a00ae6",
-          "msg_body" : "what can you tell me about Germany",
-          "outcome" : {
-            "intent" : "wake_up",
-            "entities" : { },
-            "confidence" : 0.232
-          }
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 04:27:13 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:58 GMT
 recorded_with: VCR 2.5.0

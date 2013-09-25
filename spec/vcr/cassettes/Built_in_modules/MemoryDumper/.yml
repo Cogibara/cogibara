@@ -2,104 +2,40 @@
 http_interactions:
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=dump%20memory
+    uri: https://api.wit.ai/message?q=bla
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
   response:
     status:
       code: 200
       message: OK
     headers:
       Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Mon, 23 Sep 2013 23:03:34 GMT
-      Server:
-      - Apache-Coyote/1.1
+      - application/json
       Content-Length:
-      - '87'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{"searchTerm":["memory"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
-    http_version: 
-  recorded_at: Mon, 23 Sep 2013 23:02:45 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=bla
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Mon, 23 Sep 2013 23:04:02 GMT
+      - '168'
       Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '66'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
-    http_version: 
-  recorded_at: Mon, 23 Sep 2013 23:03:13 GMT
-- request:
-    method: post
-    uri: http://www.cleverbot.com/webservicemin
-    body:
-      encoding: UTF-8
-      string: stimulus=bla&start=y&sessionid=RVE01318573&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=Hello%20mr%20chatbot.&vText2=Hello.%20What%20are%20you%3F&icognoid=wsf&icognocheck=0615c565a7525197ff0d9fdb692bdf0c&fno=0&prevref=QG004492786&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
+      - http-kit
       Date:
-      - Mon, 23 Sep 2013 23:00:29 GMT
-      Content-Type:
-      - text/html;charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - AIS=2FnI1HuaAf5JuMseFFXLvA
-      - JSESSIONID=F50E8B6BD62D73A930589E06901F1A76; Path=/
-      - RPS=cs5860
-      - cleverbotfirstref2="*SCTYPGBCRXXOKUSXUFVBSTGRWBOJZSYXFZYASOWCHM"; Expires=""
-      - cleverbotref="*UETYJAMMCHZOEFCZUZGLUTACGDODKCAXZKIAUEWOBI"; Expires="Tue,
-        24 Sep 2013 00:03:17 GMT"
-      Mime-Version:
-      - '1.0'
-      Expires:
-      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache;no-store
-      Rps:
-      - cs5860
-      Rlm:
-      - '1457'
-      Sc:
-      - '20286'
-      Content-Length:
-      - '189'
-      Server:
-      - Jabberwacky
+      - Wed, 25 Sep 2013 05:43:15 GMT
     body:
       encoding: UTF-8
-      string: "I don't understand you.\rRVE01318573\rj2log-rAvALpKEAVTRJAFGBMTE-detail\r\r\r\rHello
-        mr chatbot.\rHello. What are you?\rBla.\rI don't understand you.\rRSL024438174\r\r\r\r\r\rI
-        don't understand you.\r\r\r\r\r\r\r"
+      string: |-
+        {
+          "msg_id" : "f1be0495-1958-40db-a642-c1e27d2f64e6",
+          "msg_body" : "bla",
+          "outcome" : {
+            "intent" : "chat",
+            "entities" : { },
+            "confidence" : 0.829
+          }
+        }
     http_version: 
-  recorded_at: Mon, 23 Sep 2013 23:03:14 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:15 GMT
 - request:
     method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=bla
@@ -115,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 16:13:15 GMT
+      - Wed, 25 Sep 2013 05:43:15 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -145,134 +81,80 @@ http_interactions:
           }]
         }
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 16:13:19 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:15 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=dump%20memory
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=bla
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept:
-      - application/json
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json;charset=UTF-8
       Date:
-      - Tue, 24 Sep 2013 16:13:18 GMT
+      - Wed, 25 Sep 2013 05:44:04 GMT
       Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "dump memory",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources":   [
-                {
-              "@URI": "http://dbpedia.org/resource/Broadcast_delay",
-              "@support": "165",
-              "@types": "",
-              "@surfaceForm": "dump",
-              "@offset": "0",
-              "@similarityScore": "0.10110040009021759",
-              "@percentageOfSecondRank": "-1.0"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Memory_%28Cats_song%29",
-              "@support": "72",
-              "@types": "Freebase:/music/composition,Freebase:/music",
-              "@surfaceForm": "memory",
-              "@offset": "5",
-              "@similarityScore": "0.17923083901405334",
-              "@percentageOfSecondRank": "0.9491822316269617"
-            }
-          ]
-        }
-    http_version: 
-  recorded_at: Tue, 24 Sep 2013 16:13:23 GMT
-- request:
-    method: get
-    uri: https://api.wit.ai/message?q=bla
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
+      - Apache-Coyote/1.1
       Content-Length:
-      - '169'
-      Server:
-      - http-kit
-      Date:
-      - Wed, 25 Sep 2013 04:27:07 GMT
+      - '66'
     body:
       encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "bf859394-4308-4b32-bcdc-a961c5f47608",
-          "msg_body" : "bla",
-          "outcome" : {
-            "intent" : "hello",
-            "entities" : { },
-            "confidence" : 0.158
-          }
-        }
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 04:27:07 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:15 GMT
 - request:
-    method: get
-    uri: https://api.wit.ai/message?q=dump%20memory
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
     body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+      encoding: UTF-8
+      string: stimulus=bla&start=y&sessionid=VWT00488177&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=Hello%20mr%20chatbot.&vText2=Hello%2C%20my%20Earthling%20friend.&icognoid=wsf&icognocheck=c917508ca0f1afd377a6bcf61e984b19&fno=0&prevref=&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '181'
-      Server:
-      - http-kit
       Date:
-      - Wed, 25 Sep 2013 04:28:16 GMT
+      - Wed, 25 Sep 2013 05:40:16 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=wnzuYw45NxpaHmz5LZv19g
+      - JSESSIONID=FCF95B40774991572BBF0FCAC1A7CA09; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*AKFKSNQUGPFAMPKFGILQAFKGOIAMOKIEIORAACISOG"; Expires=""
+      - cleverbotref="*WGLQGBYYOTBGAXOBMWTUWLYOSEGAWOEKWWVAWCOKCK"; Expires="Wed,
+        25 Sep 2013 06:43:23 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1066'
+      Sc:
+      - '15562'
+      Content-Length:
+      - '151'
+      Server:
+      - Jabberwacky
     body:
       encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "eac9c2cd-71df-4ef6-bd85-18913bb3ed37",
-          "msg_body" : "dump memory",
-          "outcome" : {
-            "intent" : "set_alarm",
-            "entities" : { },
-            "confidence" : 0.255
-          }
-        }
+      string: "Bla bla.\rVWT00488177\rj2log-nSgKZsPNFDMIXAGIKSPE-detail\r\r\r\rHello
+        mr chatbot.\rHello, my Earthling friend.\rBla.\rBla bla.\rRMH065413264\r\r\r\r\r\rBla
+        bla.\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 04:28:16 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:16 GMT
 recorded_with: VCR 2.5.0

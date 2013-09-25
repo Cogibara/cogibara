@@ -2,79 +2,40 @@
 http_interactions:
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=hello%20mr%20chatbot
+    uri: https://api.wit.ai/message?q=hello%20mr%20chatbot
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
   response:
     status:
       code: 200
       message: OK
     headers:
       Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Mon, 23 Sep 2013 23:03:59 GMT
-      Server:
-      - Apache-Coyote/1.1
+      - application/json
       Content-Length:
-      - '66'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
-    http_version: 
-  recorded_at: Mon, 23 Sep 2013 23:03:11 GMT
-- request:
-    method: post
-    uri: http://www.cleverbot.com/webservicemin
-    body:
-      encoding: UTF-8
-      string: stimulus=hello%20mr%20chatbot&start=y&sessionid=&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=&vText2=&icognoid=wsf&icognocheck=555b08d3dfc1b6407c4d6edc6c461f4b&fno=0&prevref=&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 23 Sep 2013 23:00:28 GMT
-      Content-Type:
-      - text/html;charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - AIS=mFPnVnDm743UyBLB+t8xpQ
-      - JSESSIONID=524DFAFD2548765551B7C37952785A98; Path=/
-      - RPS=cs5860
-      - cleverbotfirstref2="*YIHMARWWMRDCVPMDIQQVYHRMQHCUUMELQUSAYIKKSK"; Expires=""
-      - cleverbotref="*SCRWVMXDNYXMQQTXSLRCSRMNXBMPVTYVLVZASIUKNM"; Expires="Tue,
-        24 Sep 2013 00:03:16 GMT"
-      Mime-Version:
-      - '1.0'
-      Expires:
-      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache;no-store
-      Rps:
-      - cs5860
-      Rlm:
-      - '1458'
-      Sc:
-      - '20286'
-      Content-Length:
-      - '155'
+      - '181'
       Server:
-      - Jabberwacky
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:43:13 GMT
     body:
       encoding: UTF-8
-      string: "Hello. What are you?\rRVE01318573\rj2log-nWrWUyASQJPNSAVEPKPG-detail\r\r\r\r\r\rHello
-        mr chatbot.\rHello. What are you?\rQG004492786\r\r\r\r\r\rHello. What are
-        you?\r\r\r\r\r\r\r"
+      string: |-
+        {
+          "msg_id" : "fc92d692-5376-4685-b710-955806eaa811",
+          "msg_body" : "hello mr chatbot",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.93
+          }
+        }
     http_version: 
-  recorded_at: Mon, 23 Sep 2013 23:03:12 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:13 GMT
 - request:
     method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=hello%20mr%20chatbot
@@ -90,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 16:13:05 GMT
+      - Wed, 25 Sep 2013 05:43:12 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -111,41 +72,80 @@ http_interactions:
           "@policy": "whitelist"
         }
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 16:13:09 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:13 GMT
 - request:
     method: get
-    uri: https://api.wit.ai/message?q=hello%20mr%20chatbot
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=hello%20mr%20chatbot
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Authorization:
-      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Content-Type:
-      - application/json
-      Content-Length:
-      - '182'
-      Server:
-      - http-kit
+      - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 04:27:07 GMT
+      - Wed, 25 Sep 2013 05:44:02 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
     body:
       encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "bed4f0a3-5f27-4b61-a904-478d4f99f299",
-          "msg_body" : "hello mr chatbot",
-          "outcome" : {
-            "intent" : "hello",
-            "entities" : { },
-            "confidence" : 0.481
-          }
-        }
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 04:27:07 GMT
+  recorded_at: Wed, 25 Sep 2013 05:43:13 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=hello%20mr%20chatbot&start=y&sessionid=&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=&vText2=&icognoid=wsf&icognocheck=555b08d3dfc1b6407c4d6edc6c461f4b&fno=0&prevref=&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 05:40:14 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=X5htnkHakR0T9WLnliGoPQ
+      - JSESSIONID=138DAAF8F3D9E2C8D8FAD8082BF7DB7C; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*WGLQBWENUIBGVDDBMRZJWLTUHEGVCDEKRCKAWMOOXI"; Expires=""
+      - cleverbotref="*WGCHWRBQRLBXQAGBDMWMWCORKEXQZGEBMZNAWIFSSI"; Expires="Wed,
+        25 Sep 2013 06:43:16 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1073'
+      Sc:
+      - '15562'
+      Content-Length:
+      - '177'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Hello, my Earthling friend.\rVWT00488177\rj2log-kPkORkIOYEJMPAZILAMG-detail\r\r\r\r\r\rHello
+        mr chatbot.\rHello, my Earthling friend.\r\r+3000_cbfull\r\r\r\r\rHello, my
+        Earthling friend.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:43:14 GMT
 recorded_with: VCR 2.5.0
