@@ -633,4 +633,54 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Wed, 25 Sep 2013 05:43:58 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20can%20you%20tell%20me%20about%20Germany&start=y&sessionid=VWT00488177&vText8=&vText7=&vText6=&vText5=Hello%20mr%20chatbot.&vText4=Hello%2C%20my%20Earthling%20friend.&vText3=Bla.&vText2=Bla%20bla.&icognoid=wsf&icognocheck=aea77e31c17644e1cfb891ae3a0bd169&fno=0&prevref=RMH065413264&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 17:48:02 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=FFGyECxYPFHgdvIdwRDljw
+      - JSESSIONID=BD94231E79D0597A8F93E8FFB3A62A09; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*OYFKQLCSSNTAKBITGGXOOFISMWAKAIWEGAPAOGIKMI"; Expires=""
+      - cleverbotref="*WGTYDYBSRNBOXAIBUTWOWTVRMEOXZIESTZPAWEWEZM"; Expires="Wed,
+        25 Sep 2013 18:51:08 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1939'
+      Sc:
+      - '22684'
+      Content-Length:
+      - '193'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Nothing.\rVWT00488177\rj2log-iNmQUnYIOYHOSAPKFCKG-detail\r\rHello mr
+        chatbot.\rHello, my Earthling friend.\rBla.\rBla bla.\rWhat can you tell me
+        about Germany.\rNothing.\rUJ004460546\r\r\r\r\r\rNothing.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 17:51:09 GMT
 recorded_with: VCR 2.5.0

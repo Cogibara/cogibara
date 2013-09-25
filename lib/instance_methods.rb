@@ -17,15 +17,13 @@ class Cogibara
           response_details(message, response)
           return response
         elsif response.is_a? Symbol
-          # if response == :pass
-
-          # else
-            raise "received code #{response} from #{mod}"
-          # end
+          raise "received code #{response} from #{mod}"
         elsif response.is_a? Cogibara::Message
+          # for now, just pass along message objects
           # puts "pass along messages or return new ones"
         else
-          # raise "unknown return type #{response.class} from #{mod.class}"
+          # for now, just pass along messages with unknown returns
+          # puts "unknown return type #{response.class} from #{mod.class}"
         end
       end
     end
