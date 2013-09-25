@@ -102,7 +102,7 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     end
   end
 
-  describe Wit do
+  describe Wit, :no_travis do
     # before do
     #   Wit.register(:pre)
     # end

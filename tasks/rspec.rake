@@ -4,6 +4,7 @@ if ['test', 'development'].include?(DAEMON_ENV)
 
   desc "Run the specs under spec/"
   RSpec::Core::RakeTask.new do |t|
+    t.rspec_opts = "--tag ~no_travis"
     t.rspec_opts = ['--options', "spec/spec.opts"]
   end
 
