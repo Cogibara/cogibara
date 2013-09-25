@@ -2,6 +2,42 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.wit.ai/message?q=I%20live%20in%20Madison%20Wisconsin
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '197'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:59:23 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "b471c264-f9ce-4584-8f12-6f38279a1a8d",
+          "msg_body" : "I live in Madison Wisconsin",
+          "outcome" : {
+            "intent" : "statement",
+            "entities" : { },
+            "confidence" : 0.798
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:59:23 GMT
+- request:
+    method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=I%20live%20in%20Madison%20Wisconsin
     body:
       encoding: US-ASCII
@@ -15,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 17:31:54 GMT
+      - Wed, 25 Sep 2013 04:59:23 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -56,7 +92,7 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 17:31:59 GMT
+  recorded_at: Wed, 25 Sep 2013 04:59:24 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=I%20live%20in%20Madison%20Wisconsin
@@ -72,7 +108,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 24 Sep 2013 17:32:49 GMT
+      - Wed, 25 Sep 2013 05:00:14 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -81,13 +117,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"location":["madison wisconsin"]},"action":"CONTACT_LOCATE","category":"CONTACT"}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 17:32:00 GMT
+  recorded_at: Wed, 25 Sep 2013 04:59:25 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
     body:
       encoding: UTF-8
-      string: stimulus=I%20live%20in%20Madison%20Wisconsin&start=y&sessionid=RVE01318573&vText8=&vText7=Hello%20mr%20chatbot.&vText6=Hello.%20What%20are%20you%3F&vText5=Bla.&vText4=I%20don't%20understand%20you.&vText3=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis%3F&vText2=Answering%20a%20question%20with%20another%20question%3F%20That's%20smart.&icognoid=wsf&icognocheck=5f625528aa6d4e56e9a6dfc978d1865f&fno=0&prevref=RTI054742220&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=!01&sub=Say&islearning=1&cleanslate=false
+      string: stimulus=I%20live%20in%20Madison%20Wisconsin&start=y&sessionid=RVE01318573&vText8=&vText7=Hello%20mr%20chatbot.&vText6=Hello.%20What%20are%20you%3F&vText5=Bla.&vText4=I%20don't%20understand%20you.&vText3=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis%3F&vText2=What%20do%20you%20think%20about%20clifton%20newman%3F&icognoid=wsf&icognocheck=5f625528aa6d4e56e9a6dfc978d1865f&fno=0&prevref=&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
     headers: {}
   response:
     status:
@@ -95,18 +131,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 17:29:07 GMT
+      - Wed, 25 Sep 2013 04:56:28 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS=X5htnkHakR0T9WLnliGoPQ
-      - JSESSIONID=AA3CEAE5A58E1EB39B3C45400FFA2DF3; Path=/
+      - AIS=w56z7Vg9d3ElKzqpHOp1qQ
+      - JSESSIONID=46DD5BDE532BC396CBD8570A471A44DB; Path=/
       - RPS=cs5860
-      - cleverbotfirstref2="*CMEJRIMUCPHZMFKHFHGTCEICOLZLKKIIHKQACMHAJI"; Expires=""
-      - cleverbotref="*RBXCMDHCXXWSHASWYCBBRXDXWASGFSXBCFYAROAOEI"; Expires="Tue,
-        24 Sep 2013 18:32:02 GMT"
+      - cleverbotfirstref2="*UEGLYPQUGPZBTJKZHOKTUGPGODBSOKAKOOQAUAJEQK"; Expires=""
+      - cleverbotref="*LVFKKBQKGFQAFJAQGAKJLFBGEUAEOARJAOGALMIGCG"; Expires="Wed,
+        25 Sep 2013 05:59:19 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -118,20 +154,20 @@ http_interactions:
       Rps:
       - cs5860
       Rlm:
-      - '1661'
+      - '1095'
       Sc:
-      - '15275'
+      - '16385'
       Content-Length:
-      - '314'
+      - '413'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "Who is the apple?\rRVE01318573\rj2log-dMbGImKWANFXGAFITIFE-detail\rHello.
+      string: "What is significant about wisconsin pertaining to chess?\rRVE01318573\rj2log-tCeJCgYMODVAAATSJKVE-detail\rHello.
         What are you?\rBla.\rI don't understand you.\rWhat does President Obama think
-        of the Bacon Crisis?\rAnswering a question with another question? That's smart.\rI
-        live in Madison Wisconsin.\rWho is the apple?\r\r+3000_cbfull\r\r\r\r\rWho
-        is the apple?\r\r\r\r\r\r\r"
+        of the Bacon Crisis?\rWhat do you think about clifton newman?\rI live in Madison
+        Wisconsin.\rWhat is significant about wisconsin pertaining to chess?\rRVF106401021\r\r\r\r\r\rWhat
+        is significant about wisconsin pertaining to chess?\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 17:32:01 GMT
+  recorded_at: Wed, 25 Sep 2013 04:59:28 GMT
 recorded_with: VCR 2.5.0

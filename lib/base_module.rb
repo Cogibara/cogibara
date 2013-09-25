@@ -19,7 +19,18 @@ class Cogibara
       }
     end
 
-    # TODO should make sure this is registered as a block, so "return" will override
+    def self.requires_key(key)
+      unless settings["keys"][key]
+        DaemonKit.logger.info "missing key #{key}, Skipping module #{self}"
+        @__ignore = true
+      end
+    end
+
+    def self.settings
+      @@yml ||= YAML.load_file(File.dirname(__FILE__) + '/../config/cogibara.yml')
+    end
+
+    # TODO should make sure this is registered as a proc if it isnt already, so "return" will override
     # ask's return behavior?
     def self.on(pattern=/.*/,&block)
       response_patterns << [pattern, block]

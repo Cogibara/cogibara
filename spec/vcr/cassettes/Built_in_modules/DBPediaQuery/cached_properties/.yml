@@ -212,4 +212,40 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Wed, 25 Sep 2013 02:52:23 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=who%20is%20the%20leader%20of%20germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '196'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:11 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "5f8efec9-9ca1-4cc3-bb81-f709be752e76",
+          "msg_body" : "who is the leader of germany",
+          "outcome" : {
+            "intent" : "wake_up",
+            "entities" : { },
+            "confidence" : 0.258
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:11 GMT
 recorded_with: VCR 2.5.0

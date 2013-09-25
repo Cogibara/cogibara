@@ -16,7 +16,11 @@ class Cogibara
         response_details(message, response)
         return response
       elsif response.is_a? Symbol
-        raise "received code #{response} from #{mod}"
+        if response == :pass
+
+        else
+          raise "received code #{response} from #{mod}"
+        end
       elsif response.is_a? Cogibara::Message
         # puts "pass along messages or return new ones"
       end

@@ -203,4 +203,76 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 24 Sep 2013 16:13:23 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=bla
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '169'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:07 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "bf859394-4308-4b32-bcdc-a961c5f47608",
+          "msg_body" : "bla",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.158
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:07 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=dump%20memory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '181'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:28:16 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "eac9c2cd-71df-4ef6-bd85-18913bb3ed37",
+          "msg_body" : "dump memory",
+          "outcome" : {
+            "intent" : "set_alarm",
+            "entities" : { },
+            "confidence" : 0.255
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:28:16 GMT
 recorded_with: VCR 2.5.0

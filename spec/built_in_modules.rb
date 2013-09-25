@@ -51,6 +51,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('who is the leader of germany')[/Angela Merkel/].should_not be nil }
     end
 
+    describe "use it to refer to current object" do
+      it { @cogi.ask_local('what is the capital of it').should == "Berlin" }
+    end
+
     describe "can fetch abstracts" do
       it { @cogi.ask_local('what is Tardigrade')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
     end
@@ -63,9 +67,7 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('what is pitch?')[0..43].should == "Pitch Pine, Pitch (card game), Pitch (film)," }
     end
 
-    describe "use it to refer to current object" do
-      it { @cogi.ask_local('what is the capital of it').should == "Berlin" }
-    end
+
 
     describe "lists known predicates" do
       it { @cogi.ask_local('what can you tell me about Germany')['Capital, Caption, cctld, color, common name, conventional long name, currency'].should_not be nil }
@@ -97,6 +99,24 @@ describe "Built in modules", vcr: { record: :new_episodes } do
         msg = @cogi.ask_local('spotlight URIs for "I live in Madison Wisconsin"')
         eval(msg)["Madison Wisconsin"].should == "http://dbpedia.org/resource/Madison,_Wisconsin"
       end
+    end
+  end
+
+  describe Wit do
+    # before do
+    #   Wit.register(:pre)
+    # end
+
+    describe "raw output" do
+      it {
+        JSON.parse(@cogi.ask_local('wit debug "heyo hows it going"'))["outcome"]["intent"].should == "hello"
+      }
+    end
+
+    describe "sets wit_intent properties" do
+      it {
+        @cogi.ask("heyo hows it going").response_to.get_wit_intent.should == "hello"
+      }
     end
   end
 end

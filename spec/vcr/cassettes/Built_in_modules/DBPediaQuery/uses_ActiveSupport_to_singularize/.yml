@@ -201,4 +201,40 @@ http_interactions:
         ZXN1bHQ+CiA8L3Jlc3VsdHM+Cjwvc3BhcnFsPg==
     http_version: 
   recorded_at: Wed, 25 Sep 2013 02:52:31 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20are%20Tardigrades?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '191'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:13 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "e38047d1-deeb-4d16-bfb4-30b0ffa70819",
+          "msg_body" : "what are Tardigrades?",
+          "outcome" : {
+            "intent" : "set_alarm",
+            "entities" : { },
+            "confidence" : 0.216
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:13 GMT
 recorded_with: VCR 2.5.0

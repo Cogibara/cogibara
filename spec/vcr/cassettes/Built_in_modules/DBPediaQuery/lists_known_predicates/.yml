@@ -590,4 +590,40 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Wed, 25 Sep 2013 02:52:39 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20can%20you%20tell%20me%20about%20Germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '202'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:13 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "d45fb1bc-d5df-464e-b951-68e5d7a00ae6",
+          "msg_body" : "what can you tell me about Germany",
+          "outcome" : {
+            "intent" : "wake_up",
+            "entities" : { },
+            "confidence" : 0.232
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:13 GMT
 recorded_with: VCR 2.5.0

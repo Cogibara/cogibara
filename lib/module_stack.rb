@@ -2,7 +2,7 @@ class Cogibara
   class ModuleStack
 
     def self.known_categories
-      [:pre, :classify, :none, :last]
+      [:classify, :pre, :none, :last]
     end
 
     def self.register(klass,category=:none)

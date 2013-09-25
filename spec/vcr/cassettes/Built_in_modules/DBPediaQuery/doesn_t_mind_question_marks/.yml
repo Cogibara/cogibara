@@ -204,4 +204,40 @@ http_interactions:
         cmVzdWx0PgogPC9yZXN1bHRzPgo8L3NwYXJxbD4=
     http_version: 
   recorded_at: Wed, 25 Sep 2013 02:52:14 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=who%20is%20the%20leader%20of%20France?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '196'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:09 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "1be0357e-5c03-413a-a774-7d66f6156663",
+          "msg_body" : "who is the leader of France?",
+          "outcome" : {
+            "intent" : "wake_up",
+            "entities" : { },
+            "confidence" : 0.269
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:09 GMT
 recorded_with: VCR 2.5.0

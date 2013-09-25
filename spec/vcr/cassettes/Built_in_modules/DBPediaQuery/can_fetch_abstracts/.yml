@@ -201,4 +201,40 @@ http_interactions:
         ZXN1bHQ+CiA8L3Jlc3VsdHM+Cjwvc3BhcnFsPg==
     http_version: 
   recorded_at: Wed, 25 Sep 2013 02:52:27 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20is%20Tardigrade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '188'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:12 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "2617aa73-a8fb-443b-9305-3b2808231e0f",
+          "msg_body" : "what is Tardigrade",
+          "outcome" : {
+            "intent" : "set_alarm",
+            "entities" : { },
+            "confidence" : 0.184
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:12 GMT
 recorded_with: VCR 2.5.0

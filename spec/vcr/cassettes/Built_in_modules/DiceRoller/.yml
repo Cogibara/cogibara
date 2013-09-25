@@ -146,4 +146,40 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 24 Sep 2013 16:13:29 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=roll%206d6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '174'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:08 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "4ef8bfb5-4385-4603-b1bc-bf523fadb5e5",
+          "msg_body" : "roll 6d6",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.246
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:08 GMT
 recorded_with: VCR 2.5.0

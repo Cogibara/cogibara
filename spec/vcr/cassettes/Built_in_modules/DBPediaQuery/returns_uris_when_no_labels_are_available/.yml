@@ -197,4 +197,40 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Wed, 25 Sep 2013 02:52:19 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20is%20the%20website%20of%20Community%20(TV%20series)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '212'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:10 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "dd890ca8-f412-478c-b997-6205f999f2f9",
+          "msg_body" : "what is the website of Community (TV series)",
+          "outcome" : {
+            "intent" : "wake_up",
+            "entities" : { },
+            "confidence" : 0.296
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:10 GMT
 recorded_with: VCR 2.5.0

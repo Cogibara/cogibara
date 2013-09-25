@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=heyo%20hows%20it%20going
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 04:23:46 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "heyo hows it going",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist"
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:23:54 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=heyo%20hows%20it%20going
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Sep 2013 04:24:44 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:23:55 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=heyo%20hows%20it%20going
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '184'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:23:55 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "abc8a273-d831-4e76-8d15-153f3dae0a04",
+          "msg_body" : "heyo hows it going",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.361
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:23:55 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=heyo%20hows%20it%20going&start=y&sessionid=RVE01318573&vText8=Hello.%20What%20are%20you%3F&vText7=Bla.&vText6=I%20don't%20understand%20you.&vText5=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis%3F&vText4=Answering%20a%20question%20with%20another%20question%3F%20That's%20smart.&vText3=I%20live%20in%20Madison%20Wisconsin.&vText2=Who%20is%20the%20apple%3F&icognoid=wsf&icognocheck=c1fb1b8402f87ec8528962f6524656b0&fno=0&prevref=&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 04:25:18 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS="yy/oKdqtWl+848xcRNuHDA"; Version=1
+      - JSESSIONID=25F4B7F966FF012E213E28E1CAD7BB56; Path=/
+      - RPS=cs5860
+      - cleverbotref="*UEYDYPWKMFZTTPAZZOQJUYPMEDTSUAACOUGAUQBKQK"; Expires="Wed,
+        25 Sep 2013 05:28:24 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1205'
+      Sc:
+      - '15468'
+      Content-Length:
+      - '349'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Very well. I play hockey.\rRVE01318573\rj2log-pYrWImMNCERNGAHGKSRE-detail\rI
+        don't understand you.\rWhat does President Obama think of the Bacon Crisis?\rAnswering
+        a question with another question? That's smart.\rI live in Madison Wisconsin.\rWho
+        is the apple?\rHeyo hows it going.\rVery well. I play hockey.\rUH017979148\r\r\r\r\r\rVery
+        well. I play hockey.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:28:18 GMT
+recorded_with: VCR 2.5.0

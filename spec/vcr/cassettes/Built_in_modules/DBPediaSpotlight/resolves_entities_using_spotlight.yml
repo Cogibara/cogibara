@@ -2,6 +2,42 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.wit.ai/message?q=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '231'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:59:19 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "00a53c4e-c286-4373-a638-4593460d30b0",
+          "msg_body" : "What does President Obama think of the Bacon Crisis?",
+          "outcome" : {
+            "intent" : "knowledge_question",
+            "entities" : { },
+            "confidence" : 0.805
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:59:19 GMT
+- request:
+    method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis?
     body:
       encoding: US-ASCII
@@ -15,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 17:31:47 GMT
+      - Wed, 25 Sep 2013 04:59:19 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -65,7 +101,7 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 17:31:52 GMT
+  recorded_at: Wed, 25 Sep 2013 04:59:20 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis?
@@ -81,7 +117,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 24 Sep 2013 17:32:42 GMT
+      - Wed, 25 Sep 2013 05:00:10 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -90,7 +126,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 17:31:53 GMT
+  recorded_at: Wed, 25 Sep 2013 04:59:21 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
@@ -104,18 +140,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 17:29:03 GMT
+      - Wed, 25 Sep 2013 04:56:22 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS="1vl6j40z/xU966SYa3O3GQ"; Version=1
-      - JSESSIONID=2A12D3F8D8874A90D173443ECD0B6FB1; Path=/
+      - AIS="SBtHq94b1zqf/Exm8kOaJQ"; Version=1
+      - JSESSIONID=D09C3FCCC7A5620CF78B9A2B775B1E3F; Path=/
       - RPS=cs5860
-      - cleverbotfirstref2="*MWPULCRMHHRKGKCRQBLLMPCHGVKFPCSTBPIAMGSKDI"; Expires=""
-      - cleverbotref="*MWVAEVVMLHRQZOCRWUPLMVVLGVQYTCSZUTIAMSYEWM"; Expires="Tue,
-        24 Sep 2013 18:31:48 GMT"
+      - cleverbotref="*CMGLSJZDPYHBNSTHHITCCGJPXLBMXTIKIXZACAJQKI"; Expires="Wed,
+        25 Sep 2013 05:59:23 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -127,20 +162,19 @@ http_interactions:
       Rps:
       - cs5860
       Rlm:
-      - '1653'
+      - '1105'
       Sc:
-      - '15275'
+      - '16385'
       Content-Length:
-      - '369'
+      - '312'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "Answering a question with another question? That's smart.\rRVE01318573\rj2log-fOzEJnUCKTHVHAPOZSHE-detail\r\rHello
+      string: "What do you think about clifton newman?\rRVE01318573\rj2log-iRbGHlGSWJKXFABGPMKE-detail\r\rHello
         mr chatbot.\rHello. What are you?\rBla.\rI don't understand you.\rWhat does
-        President Obama think of the Bacon Crisis?\rAnswering a question with another
-        question? That's smart.\rRTI054742220\r\r\r\r\r\rAnswering a question with
-        another question? That's smart.\r!01\r\r\r\r\r\r"
+        President Obama think of the Bacon Crisis?\rWhat do you think about clifton
+        newman?\r\r+3000_cbfull\r\r\r\r\rWhat do you think about clifton newman?\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 17:31:57 GMT
+  recorded_at: Wed, 25 Sep 2013 04:59:22 GMT
 recorded_with: VCR 2.5.0

@@ -112,4 +112,40 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 24 Sep 2013 16:13:09 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello%20mr%20chatbot
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '182'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 04:27:07 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "bed4f0a3-5f27-4b61-a904-478d4f99f299",
+          "msg_body" : "hello mr chatbot",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.481
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:27:07 GMT
 recorded_with: VCR 2.5.0
