@@ -55,6 +55,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('what is Tardigrade')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
     end
 
+    describe "can help disambiguate abstracts" do
+      it { @cogi.ask_local('what is pitch?')[0..43].should == "Pitch Pine, Pitch (card game), Pitch (film)," }
+    end
+
     describe "use it to refer to current object" do
       it { @cogi.ask_local('what is the capital of it').should == "Berlin" }
     end

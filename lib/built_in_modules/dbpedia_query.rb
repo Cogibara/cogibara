@@ -183,14 +183,29 @@ on(/^(who|what) (?:is|are) the (.+) of (.+)/i) do |question,property,object|
 
 
       SELECT DISTINCT ?summary WHERE {
-        <#{sols.first[:s].to_s}> dbpedia-owl:abstract ?summary.
+        {
+          <#{sols.first[:s].to_s}> dbpedia-owl:abstract ?summary.
+        }
+        UNION
+        {
+          <#{sols.first[:s].to_s}> dbpedia-owl:wikiPageDisambiguates
+            [
+              rdfs:label ?summary;
+              dbpedia-owl:abstract []
+            ]
+        }
 
         FILTER(LANG(?summary) = "" || LANGMATCHES(LANG(?summary), "en"))
       }
       EOF
 
-
-      sparql.query(qry).map(&:summary).map(&:to_s).join(', ')
+      # puts qry
+      results = sparql.query(qry).map(&:summary).map(&:to_s)
+      if results.size > 0
+        results.join(', ')
+      else
+        current_message
+      end
     else
       current_message
     end
