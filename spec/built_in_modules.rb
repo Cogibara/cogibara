@@ -7,12 +7,12 @@ describe "Built in modules", vcr: { record: :new_episodes } do
   end
 
   describe Chatbot do
-    it { @cogi.ask_local('hello mr chatbot').should == "Hello. What are you?"}
+    it { @cogi.ask_local('hello mr chatbot').should == "Hello, my Earthling friend."}
   end
 
   describe MemoryDumper do
     before do
-      @cogi.ask_local('bla').should == "I don't understand you."
+      @cogi.ask_local('bla').should == "Bla bla."
     end
 
     it { @cogi.ask_local('dump memory')[/message_string "bla"/].should_not be nil }
@@ -59,9 +59,9 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('what is Tardigrade')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
     end
 
-    describe "uses ActiveSupport to singularize" do
-      it { @cogi.ask_local('what are Tardigrades?')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
-    end
+    # describe "uses ActiveSupport to singularize" do
+    #   it { @cogi.ask_local('what are Tardigrades?')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
+    # end
 
     describe "can help disambiguate abstracts" do
       it { @cogi.ask_local('what is pitch?')[0..43].should == "Pitch Pine, Pitch (card game), Pitch (film)," }
