@@ -209,4 +209,58 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 23:39:06 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20is%20the%20GDP%20PPP%20per%20capita%20of%20United%20States&start=y&sessionid=RVE01318573&vText8=&vText7=&vText6=&vText5=Hello%20mr%20chatbot.&vText4=Hello.%20What%20are%20you%3F&vText3=Bla.&vText2=I%20don't%20understand%20you.&icognoid=wsf&icognocheck=2de713e34fb69b67b8c5a4d652c19f3f&fno=0&prevref=RSL024438174&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:51:11 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=kvslRi6xF2KJ4C7T7JPWQA
+      - JSESSIONID=5518A47A852406CE840EA39DDE604980; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*CMPUPGYTOOHKKRJHQFSSCPGONLKJWJITFWPACGSAHK"; Expires=""
+      - cleverbotref="*EOJOKBUHKCJEFNXJKAOGEJBKBNEESXKNASDAECMOCG"; Expires="Wed,
+        25 Sep 2013 02:54:12 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1598'
+      Sc:
+      - '21058'
+      Content-Length:
+      - '539'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Washington DC. As opposed to the fake capital which is the entire state
+        of Washington. Robots often confuse the two.\rRVE01318573\rj2log-tCoTKoYWONVKIATGTIVG-detail\r\rHello
+        mr chatbot.\rHello. What are you?\rBla.\rI don't understand you.\rWhat is
+        the GDP PPP per capita of United States.\rWashington DC. As opposed to the
+        fake capital which is the entire state of Washington. Robots often confuse
+        the two.\rRSZ030154876\r\r\r\r\r\rWashington DC. As opposed to the fake capital
+        which is the entire state of Washington. Robots often confuse the two.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:54:10 GMT
 recorded_with: VCR 2.5.0

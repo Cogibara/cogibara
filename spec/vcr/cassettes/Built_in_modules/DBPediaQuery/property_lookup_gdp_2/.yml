@@ -221,4 +221,57 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 23:39:10 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan&start=y&sessionid=RVE01318573&vText8=&vText7=Hello%20mr%20chatbot.&vText6=Hello.%20What%20are%20you%3F&vText5=Bla.&vText4=I%20don't%20understand%20you.&vText3=What%20is%20the%20GDP%20PPP%20per%20capita%20of%20United%20States.&vText2=Washington%20DC.%20As%20opposed%20to%20the%20fake%20capital%20which%20is%20the%20entire%20state%20of%20Washington.%20Robots%20often%20confuse%20the%20two.&icognoid=wsf&icognocheck=13e391d3bcff270c713f2b4917b6d87e&fno=0&prevref=RSZ030154876&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:51:22 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=cVeK7qzj02Pt2SU4psbLTg
+      - JSESSIONID=933BA9D141508BA7DC6578970369C74E; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*VFHMULLQBLACPEGAIKFPVHLBKECOJGBLKJMAVSKQMG"; Expires=""
+      - cleverbotref="*TDJOHYIEYZYECBUYKXCDTJYYYCEBGUZNXGAATIMIZK"; Expires="Wed,
+        25 Sep 2013 02:54:10 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1619'
+      Sc:
+      - '21058'
+      Content-Length:
+      - '426'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "The capital of Canada is Ottawa.\rRVE01318573\rj2log-nWlQZdQUGLPHXALKREPG-detail\rHello.
+        What are you?\rBla.\rI don't understand you.\rWhat is the GDP PPP per capita
+        of United States.\rWashington DC. As opposed to the fake capital which is
+        the entire state of Washington. Robots often confuse the two.\rWhat is the
+        gdp PPP per capita of Japan.\rThe capital of Canada is Ottawa.\rRTZ027066313\r\r\r\r\r\rThe
+        capital of Canada is Ottawa.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:54:21 GMT
 recorded_with: VCR 2.5.0

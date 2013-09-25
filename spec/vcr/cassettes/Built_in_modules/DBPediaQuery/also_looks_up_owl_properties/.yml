@@ -191,4 +191,56 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 23:39:15 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20is%20the%20record%20label%20of%20Arashi&start=y&sessionid=RVE01318573&vText8=Hello.%20What%20are%20you%3F&vText7=Bla.&vText6=I%20don't%20understand%20you.&vText5=What%20is%20the%20GDP%20PPP%20per%20capita%20of%20United%20States.&vText4=Washington%20DC.%20As%20opposed%20to%20the%20fake%20capital%20which%20is%20the%20entire%20state%20of%20Washington.%20Robots%20often%20confuse%20the%20two.&vText3=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan.&vText2=The%20capital%20of%20Canada%20is%20Ottawa.&icognoid=wsf&icognocheck=4b4901b74233d74baad32767c40f8ade&fno=0&prevref=RTZ027066313&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:51:34 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=KzPRiWrZWUWHwime5xH5MQ
+      - JSESSIONID=C9310088BDA67A89E450C58CBAD96EEE; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*GQAFGXMECZLVBFULBWGDGAXCYPVAKUMEWKAAGADIYI"; Expires=""
+      - cleverbotref="*MWDIPGWOMJRYKPEREFQNMDGMIVYJUESHFUKAMAGSHI"; Expires="Wed,
+        25 Sep 2013 02:54:17 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1590'
+      Sc:
+      - '21058'
+      Content-Length:
+      - '384'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "115.\rRVE01318573\rj2log-xGrWKoUTKKZNIAPOQIZG-detail\rI don't understand
+        you.\rWhat is the GDP PPP per capita of United States.\rWashington DC. As
+        opposed to the fake capital which is the entire state of Washington. Robots
+        often confuse the two.\rWhat is the gdp PPP per capita of Japan.\rThe capital
+        of Canada is Ottawa.\rWhat is the record label of Arashi.\r115.\rUP009824925\r\r\r\r\r\r115.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:54:33 GMT
 recorded_with: VCR 2.5.0

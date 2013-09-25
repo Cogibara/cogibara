@@ -55,6 +55,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('what is Tardigrade')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
     end
 
+    describe "uses ActiveSupport to singularize" do
+      it { @cogi.ask_local('what are Tardigrades?')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
+    end
+
     describe "can help disambiguate abstracts" do
       it { @cogi.ask_local('what is pitch?')[0..43].should == "Pitch Pine, Pitch (card game), Pitch (film)," }
     end

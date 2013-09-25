@@ -212,4 +212,54 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 23:39:20 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=who%20is%20the%20leader%20of%20germany&start=y&sessionid=RVE01318573&vText8=The%20capital%20of%20Canada%20is%20Ottawa.&vText7=What%20is%20the%20record%20label%20of%20Arashi.&vText6=115.&vText5=What%20is%20the%20website%20of%20Community%20(TV%20series).&vText4=You%20are.&vText3=What%20is%20the%20leader%20name%20of%20germany.&vText2=Berlin.&icognoid=wsf&icognocheck=dc0a27dda5aec5d891ecc38c693948c2&fno=0&prevref=UB012896581&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:51:59 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS="AtKCBOtPtkGkjU/PQbMKog"; Version=1
+      - JSESSIONID=D5212142B940E14DEBCB2AC939F991A2; Path=/
+      - RPS=cs5860
+      - cleverbotref="*UEMRDUYYOTZHYROZNTSXUMUOSDHXWOAQTWUAUMPMVM"; Expires="Wed,
+        25 Sep 2013 02:54:42 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1627'
+      Sc:
+      - '21125'
+      Content-Length:
+      - '245'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "I don't know.\rRVE01318573\rj2log-vEvAAeCWSNXRYAXQTEXG-detail\r115.\rWhat
+        is the website of Community (TV series).\rYou are.\rWhat is the leader name
+        of germany.\rBerlin.\rWho is the leader of germany.\rI don't know.\rQV007368213\r\r\r\r\r\rI
+        don't know.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:54:57 GMT
 recorded_with: VCR 2.5.0

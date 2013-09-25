@@ -254,4 +254,58 @@ http_interactions:
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
   recorded_at: Wed, 25 Sep 2013 01:12:19 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20is%20the%20capital%20of%20it&start=y&sessionid=RVE01318573&vText8=You%20are.&vText7=What%20is%20the%20leader%20name%20of%20germany.&vText6=Berlin.&vText5=Who%20is%20the%20leader%20of%20germany.&vText4=I%20don't%20know.&vText3=What%20is%20Tardigrade.&vText2=Time%20and%20relative%20dimension%20in%20space.&icognoid=wsf&icognocheck=a42a3c8e4524e1d389b1e73ff40074b7&fno=0&prevref=QUZ052128271&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:52:11 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=I853cdz5Ekec9eMHBmBUFg
+      - JSESSIONID=0C68552B48A9BE2FFED33C39CAB33213; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*GQZEXOMXCSLUSFNLANGWGZOCRPURKNMDNKTAGSCCPK"; Expires=""
+      - cleverbotref="*LVNSMDXWNRQIHQMQOCRVLNDNQUIGVMRRCVSALSQIEK"; Expires="Wed,
+        25 Sep 2013 02:55:03 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1636'
+      Sc:
+      - '21125'
+      Content-Length:
+      - '566'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "The administrative capital is Pretoria, the legislative capital is
+        Cape Town, and the judicial capital is Bloemfontein.\rRVE01318573\rj2log-lUbGOsAWQNNXMAVMTCNG-detail\rBerlin.\rWho
+        is the leader of germany.\rI don't know.\rWhat is Tardigrade.\rTime and relative
+        dimension in space.\rWhat is the capital of it.\rThe administrative capital
+        is Pretoria, the legislative capital is Cape Town, and the judicial capital
+        is Bloemfontein.\rQI000788300\r\r\r\r\r\rThe administrative capital is Pretoria,
+        the legislative capital is Cape Town, and the judicial capital is Bloemfontein.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:55:09 GMT
 recorded_with: VCR 2.5.0

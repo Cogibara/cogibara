@@ -212,4 +212,53 @@ http_interactions:
         </sparql>
     http_version: 
   recorded_at: Tue, 24 Sep 2013 23:39:19 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20is%20the%20leader%20name%20of%20germany&start=y&sessionid=RVE01318573&vText8=Washington%20DC.%20As%20opposed%20to%20the%20fake%20capital%20which%20is%20the%20entire%20state%20of%20Washington.%20Robots%20often%20confuse%20the%20two.&vText7=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan.&vText6=The%20capital%20of%20Canada%20is%20Ottawa.&vText5=What%20is%20the%20record%20label%20of%20Arashi.&vText4=115.&vText3=What%20is%20the%20website%20of%20Community%20(TV%20series).&vText2=You%20are.&icognoid=wsf&icognocheck=21b56060ac52f3315c6d4d28a6b3f958&fno=0&prevref=UA014358260&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:51:50 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=Jk5yYu9tVuW436PRRAFyhw
+      - JSESSIONID=5157D6F041F17F5F30801FC32530DE7A; Path=/
+      - RPS=cs5860
+      - cleverbotref="*YIZECTWTMODUXPJDASQSYZTMNHUWUJEDSUPAYSCQUK"; Expires="Wed,
+        25 Sep 2013 02:54:53 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1605'
+      Sc:
+      - '21125'
+      Content-Length:
+      - '258'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Berlin.\rRVE01318573\rj2log-tCrWOsAYQPVNMAVAVKVG-detail\rThe capital
+        of Canada is Ottawa.\rWhat is the record label of Arashi.\r115.\rWhat is the
+        website of Community (TV series).\rYou are.\rWhat is the leader name of germany.\rBerlin.\rUB012896581\r\r\r\r\r\rBerlin.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:54:49 GMT
 recorded_with: VCR 2.5.0

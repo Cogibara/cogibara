@@ -33,6 +33,10 @@ class Cogibara
       @current_message
     end
 
+    def pass
+      :pass
+    end
+
     def settings
       @yml ||= YAML.load_file(File.dirname(__FILE__) + '/../config/cogibara.yml')
     end

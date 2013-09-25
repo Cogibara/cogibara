@@ -78,8 +78,8 @@ class DBPediaQuery < Cogibara::Module
    sols.map(&:label).map(&:object)
  end
 
- on(/.*tell me about (.+)/i) do |object|
-  object = object.gsub("?",'')
+ on(/.*tell me about (.+?)(?:\?|$)/i) do |object|
+  # object = object.gsub("?",'')
   if object == "it"
     object = @it if @it
   else
@@ -98,9 +98,7 @@ class DBPediaQuery < Cogibara::Module
   end
 end
 
-on(/^(who|what) (?:is|are) the (.+) of (.+)/i) do |question,property,object|
-  object = object.gsub("?",'')
-
+on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,object|
   if object == "it"
     object = @it if @it
   else
@@ -121,47 +119,16 @@ on(/^(who|what) (?:is|are) the (.+) of (.+)/i) do |question,property,object|
       property = PROPERTIES[property.to_sym] if PROPERTIES[property.to_sym]
 
       prop = lookup_property(sols.first[:s], property) if sols.size > 0
-      # puts "pro #{prop}"
-      # puts sols.map(&:to_hash)
-      # if sols.size > 0
-      #   results = sols.distinct.map{|sol|
-      #     if sol[:prop_val].is_a? RDF::URI
-      #       qr2 = sparql.select.where([sol[:prop_val], RDF::RDFS.label, :label]).distinct
-      #       sol2 = qr2.execute.filter {|so| so[:label].language == :en}
 
-      #       # puts sol2.map(&:to_hash)
-      #       # puts sol.class.to_s
-
-      #       if sol2.size > 0
-      #         sol2.first[:label].object
-      #       else
-      #         current_message
-      #       end
-      #     else
-      #       sol[:prop_val].object.to_s
-      #     end
-      #   }
-
-      #   current_message.set_dbpedia_response(true)
-
-      #   results.join ', '
       if prop && prop.size > 0
         Array(prop).join(', ')
       else
         current_message
       end
     end
-    # puts sols.map(&:to_hash)
-
-    #   sols.map(&:label).map(&:to_s).join ', '
-    # else
-    #   current_message
-    #   # "found #{object_repo.size} statements for #{object}"
-    # end
   end
 
-  on(/what (is|are)(?: a| )(.+)/) do |plural,object|
-    object = object.gsub("?",'')
+  on(/what (is|are)(?: a| )(.+?)(?:\?|$)/) do |plural,object|
     object = object.singularize if plural == "are"
     if object == "it"
       object = @it if @it
