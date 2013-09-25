@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 01:41:17 GMT
+      - Wed, 25 Sep 2013 02:52:17 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -36,7 +36,7 @@ http_interactions:
           "@policy": "whitelist"
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 01:41:25 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:25 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20is%20Tardigrade
@@ -52,7 +52,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 01:42:15 GMT
+      - Wed, 25 Sep 2013 02:53:14 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -61,7 +61,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 01:41:26 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:25 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -89,7 +89,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 01:41:25 GMT
+      - Wed, 25 Sep 2013 02:52:25 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -114,7 +114,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 01:41:26 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:26 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -142,7 +142,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 01:41:26 GMT
+      - Wed, 25 Sep 2013 02:52:26 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -200,56 +200,5 @@ http_interactions:
         ZXMgaGF2ZSBiZWVuIGZvdW5kLjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9y
         ZXN1bHQ+CiA8L3Jlc3VsdHM+Cjwvc3BhcnFsPg==
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 01:41:26 GMT
-- request:
-    method: post
-    uri: http://www.cleverbot.com/webservicemin
-    body:
-      encoding: UTF-8
-      string: stimulus=what%20is%20Tardigrade&start=y&sessionid=RVE01318573&vText8=115.&vText7=What%20is%20the%20website%20of%20Community%20(TV%20series).&vText6=You%20are.&vText5=What%20is%20the%20leader%20name%20of%20germany.&vText4=Berlin.&vText3=Who%20is%20the%20leader%20of%20germany.&vText2=I%20don't%20know.&icognoid=wsf&icognocheck=c51a17f307dd6598d838607da5e36d6e&fno=0&prevref=QV007368213&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 01:52:04 GMT
-      Content-Type:
-      - text/html;charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - AIS=tLrM0tSkMWaPHb9DIDCDwg
-      - JSESSIONID=C1D10FFE9668067B1D880EE345FC0645; Path=/
-      - RPS=cs5860
-      - cleverbotfirstref2="*UEBGYPXQNLZWTQGZCORPUBPNKDWSVGAFOVMAUGEKQK"; Expires=""
-      - cleverbotref="*YIFKIZCZSUDADVPDGYWYYFZSTHACAPEJYAVAYSIAAK"; Expires="Wed,
-        25 Sep 2013 02:55:08 GMT"
-      Mime-Version:
-      - '1.0'
-      Expires:
-      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache;no-store
-      Rps:
-      - cs5860
-      Rlm:
-      - '1651'
-      Sc:
-      - '21125'
-      Content-Length:
-      - '301'
-      Server:
-      - Jabberwacky
-    body:
-      encoding: UTF-8
-      string: "Time and relative dimension in space.\rRVE01318573\rj2log-dMfKEiOQEHFBCAJENCFE-detail\rYou
-        are.\rWhat is the leader name of germany.\rBerlin.\rWho is the leader of germany.\rI
-        don't know.\rWhat is Tardigrade.\rTime and relative dimension in space.\rQUZ052128271\r\r\r\r\r\rTime
-        and relative dimension in space.\r\r\r\r\r\r\r"
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 01:55:02 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:27 GMT
 recorded_with: VCR 2.5.0

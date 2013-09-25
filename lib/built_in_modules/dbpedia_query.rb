@@ -78,6 +78,55 @@ class DBPediaQuery < Cogibara::Module
    sols.map(&:label).map(&:object)
  end
 
+ def dbpedia_uri_for(object, use_spotlight=false)
+  # puts current_message.struct_properties.map(&:values)
+  # sparql = SPARQL::Client.new(Cogibara.memory.repo)
+
+  spotlight_results = current_message.struct_properties.select{|p| p.values["spotlight_surface_form"] == object}
+
+  if use_spotlight && spotlight_results.size > 0
+    puts "#{[{s: spotlight_results.first.values["spotlight_entity_uri"]}]}"
+    [{s: spotlight_results.first.values["spotlight_entity_uri"]}]
+  else
+  # qry = <<-EOF
+  # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  # PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  # PREFIX prop: <http://onto.cogibara.com/properties/>
+  # PREFIX cogi-class: <http://onto.cogibara.com/classes/>
+
+  # SELECT DISTINCT ?s WHERE {
+  #   ?s a cogi-class:Message ;
+  #   prop:has_structured_property [
+  #     a cogi_class:SpotlightEntity ;
+  #     prop:spotlight_surface_form ""
+  #   ]
+  # }
+  # EOF
+
+
+  sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
+  # qry = <<-EOF
+  # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  # PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+  # SELECT DISTINCT ?s WHERE {
+  #   # {?s a owl:Thing}
+  #   # UNION
+  #   # {?s a owl:ObjectProperty}
+
+  #   ?s rdfs:label ?prop_label.
+
+  #   FILTER regex(str(?prop_label), "^#{object}$", "i")
+  # }
+  # EOF
+  # puts qry
+    qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+    sparql.query(qry)
+  end
+ end
+
  on(/.*tell me about (.+?)(?:\?|$)/i) do |object|
   # object = object.gsub("?",'')
   if object == "it"
@@ -113,8 +162,7 @@ on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,ob
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
     object = object.capitalize unless object[0] == object[0].capitalize
 
-      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
-      sols = qry.execute
+      sols = dbpedia_uri_for(object)
 
       property = PROPERTIES[property.to_sym] if PROPERTIES[property.to_sym]
 
@@ -128,7 +176,7 @@ on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,ob
     end
   end
 
-  on(/what (is|are)(?: a| )(.+?)(?:\?|$)/) do |plural,object|
+  on(/(?:who|what) (is|are)(?: a| )(.+?)(?:\?|$)/) do |plural,object|
     object = object.singularize if plural == "are"
     if object == "it"
       object = @it if @it

@@ -77,6 +77,10 @@ class Cogibara
       StructuredProperty.new("#{rdf_msg.subject.to_s}/structured_properties/#{index}", values)
     end
 
+    def struct_properties
+      rdf_msg.structured_properties.map{|prop| property_for(prop.to_s)}
+    end
+
     def property_for(property_uri)
 
       props = RDF::Query.execute(repo) do

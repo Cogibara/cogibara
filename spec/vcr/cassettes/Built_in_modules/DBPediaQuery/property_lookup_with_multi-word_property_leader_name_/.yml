@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 23:39:10 GMT
+      - Wed, 25 Sep 2013 02:52:12 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -56,7 +56,7 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 23:39:17 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:20 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20is%20the%20leader%20name%20of%20germany
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Tue, 24 Sep 2013 23:40:07 GMT
+      - Wed, 25 Sep 2013 02:53:10 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -81,7 +81,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 23:39:18 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:21 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -109,7 +109,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 23:39:17 GMT
+      - Wed, 25 Sep 2013 02:52:20 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -149,13 +149,13 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 23:39:18 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:21 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
     body:
       encoding: US-ASCII
-      string: query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0ASELECT+DISTINCT+%3Flabel+WHERE+%7B%0A++%23+%7B%3Fprop+a+rdf%3AProperty%7D%0A++%23+UNION%0A++%23+%7B%3Fprop+a+owl%3AObjectProperty%7D%0A%0A++%3Fprop+rdfs%3Alabel+%3Fprop_label.%0A%0A++FILTER+regex%28str%28%3Fprop_label%29%2C+%22leader+name%24%22%2C+%22i%22%29%0A++%7B%0A++++%7B%0A++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%3Flabel+.%0A++++++FILTER+isLiteral%28%3Flabel%29%0A++++%7D%0A++++UNION%0A++++%7B%0A++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%5B+rdfs%3Alabel+%3Flabel+%5D.%0A++++%7D%0A++++FILTER%28LANG%28%3Flabel%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Flabel%29%2C+%22en%22%29%29%0A++%7D%0A++UNION%0A++%7B%0A++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%3Flabel+.%0A++++FILTER+isURI%28%3Flabel%29%0A++++MINUS+%7B+%3Flabel+rdfs%3Alabel+%3Flab%7D%0A++%7D%0A%7D%0A
+      string: query=++++++PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A++++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++++PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0A++++++SELECT+DISTINCT+%3Flabel+WHERE+%7B%0A++++++++%23+%7B%3Fprop+a+rdf%3AProperty%7D%0A++++++++%23+UNION%0A++++++++%23+%7B%3Fprop+a+owl%3AObjectProperty%7D%0A%0A++++++++%3Fprop+rdfs%3Alabel+%3Fprop_label.%0A%0A++++++++FILTER+regex%28str%28%3Fprop_label%29%2C+%22leader+name%24%22%2C+%22i%22%29%0A++++++++%7B%0A++++++++++%7B%0A++++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%3Flabel+.%0A++++++++++++FILTER+isLiteral%28%3Flabel%29%0A++++++++++%7D%0A++++++++++UNION%0A++++++++++%7B%0A++++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%5B+rdfs%3Alabel+%3Flabel+%5D.%0A++++++++++%7D%0A++++++++++FILTER%28LANG%28%3Flabel%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Flabel%29%2C+%22en%22%29%29%0A++++++++%7D%0A++++++++UNION%0A++++++++%7B%0A++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FGermany%3E+%3Fprop+%3Flabel+.%0A++++++++++FILTER+isURI%28%3Flabel%29%0A++++++++++MINUS+%7B+%3Flabel+rdfs%3Alabel+%3Flab%7D%0A++++++++%7D%0A++++++%7D%0A
     headers:
       Accept:
       - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
@@ -177,7 +177,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Sep 2013 23:39:18 GMT
+      - Wed, 25 Sep 2013 02:52:21 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -211,54 +211,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Tue, 24 Sep 2013 23:39:19 GMT
-- request:
-    method: post
-    uri: http://www.cleverbot.com/webservicemin
-    body:
-      encoding: UTF-8
-      string: stimulus=what%20is%20the%20leader%20name%20of%20germany&start=y&sessionid=RVE01318573&vText8=Washington%20DC.%20As%20opposed%20to%20the%20fake%20capital%20which%20is%20the%20entire%20state%20of%20Washington.%20Robots%20often%20confuse%20the%20two.&vText7=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan.&vText6=The%20capital%20of%20Canada%20is%20Ottawa.&vText5=What%20is%20the%20record%20label%20of%20Arashi.&vText4=115.&vText3=What%20is%20the%20website%20of%20Community%20(TV%20series).&vText2=You%20are.&icognoid=wsf&icognocheck=21b56060ac52f3315c6d4d28a6b3f958&fno=0&prevref=UA014358260&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 01:51:50 GMT
-      Content-Type:
-      - text/html;charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - AIS=Jk5yYu9tVuW436PRRAFyhw
-      - JSESSIONID=5157D6F041F17F5F30801FC32530DE7A; Path=/
-      - RPS=cs5860
-      - cleverbotref="*YIZECTWTMODUXPJDASQSYZTMNHUWUJEDSUPAYSCQUK"; Expires="Wed,
-        25 Sep 2013 02:54:53 GMT"
-      Mime-Version:
-      - '1.0'
-      Expires:
-      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache;no-store
-      Rps:
-      - cs5860
-      Rlm:
-      - '1605'
-      Sc:
-      - '21125'
-      Content-Length:
-      - '258'
-      Server:
-      - Jabberwacky
-    body:
-      encoding: UTF-8
-      string: "Berlin.\rRVE01318573\rj2log-tCrWOsAYQPVNMAVAVKVG-detail\rThe capital
-        of Canada is Ottawa.\rWhat is the record label of Arashi.\r115.\rWhat is the
-        website of Community (TV series).\rYou are.\rWhat is the leader name of germany.\rBerlin.\rUB012896581\r\r\r\r\r\rBerlin.\r\r\r\r\r\r\r"
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 01:54:49 GMT
+  recorded_at: Wed, 25 Sep 2013 02:52:21 GMT
 recorded_with: VCR 2.5.0
