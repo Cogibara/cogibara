@@ -176,8 +176,8 @@ on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,ob
     end
   end
 
-  on(/(?:who|what) (is|are)(?: a| )(.+?)(?:\?|$)/) do |plural,object|
-    object = object.singularize if plural == "are"
+  on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |plural,object|
+    # object = object.singularize
     if object == "it"
       object = @it if @it
     else
@@ -187,7 +187,21 @@ on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,ob
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
     object = object.capitalize unless object[0] == object[0].capitalize
     qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+    # puts qry.to_s
     sols = qry.execute
+
+    if sols.size == 0
+      object = object.singularize
+      if object == "it"
+        object = @it if @it
+      else
+        @it = object
+      end
+
+      object = object.capitalize unless object[0] == object[0].capitalize
+      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+      sols = qry.execute
+    end
 
     if sols.size > 0
       qry = <<-EOF
