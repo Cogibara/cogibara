@@ -129,10 +129,14 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       it { @cogi.ask_local('testing').should == "do say this"}
     end
 
-    describe "can order response handlers" do
+    describe "can restrict on arbitrary properties" do
       class AlarmSetter < Cogibara::Module
-        on(/.*/, maluuba_category: "ALARM") do
+        on(/.*/, maluuba_action: "ALARM_SET") do
           "do say this"
+        end
+
+        on(/.*/, maluuba_action: "ALARM_CANCEL") do
+          "now say this"
         end
 
         on do
@@ -147,6 +151,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       it {
         @cogi.ask_local('testing').should == "don't say this"
         @cogi.ask_local('set me an alarm for 8am tomorrow').should == "do say this"
+        @cogi.ask_local('cancel my 8am alarm').should == "now say this"
       }
     end
 
