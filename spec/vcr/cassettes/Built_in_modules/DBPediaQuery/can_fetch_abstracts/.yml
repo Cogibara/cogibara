@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20is%20Tardigrade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:22:21 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "what is Tardigrade",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist"
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:22:29 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20is%20Tardigrade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 25 Sep 2013 01:23:19 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:22:30 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=SELECT+*+WHERE+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%22Tardigrade%22%40en+.+%7D
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:22:30 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '360'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="s"/>
+         </head>
+         <results>
+          <result>
+           <binding name="s"><uri>http://dbpedia.org/resource/Tardigrade</uri></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:22:31 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=++++++PREFIX+dbpedia-owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0A++++++PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A++++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++++PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0A%0A++++++SELECT+DISTINCT+%3Fsummary+WHERE+%7B%0A++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTardigrade%3E+dbpedia-owl%3Aabstract+%3Fsummary.%0A%0A++++++++FILTER%28LANG%28%3Fsummary%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Fsummary%29%2C+%22en%22%29%29%0A++++++%7D%0A
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:22:31 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '1918'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="summary"/>
+         </head>
+         <results>
+          <result>
+           <binding name="summary"><literal xml:lang="en">Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs. They are notable for being one of the most complex of all known polyextremophiles. (An extremophile is an organism that can thrive in a physically or geochemically extreme condition that would be detrimental to most life on Earth. ) Tardigrades can withstand temperatures from just above absolute zero to well above the boiling point of water. They can survive pressures greater than any found in the deepest ocean trenches and have lived through the vacuum of outer space. They can survive solar radiation, gamma radiation, ionic radiation— at doses hundreds of times higher than would kill a person. They can go without food or water for nearly 10 years, drying out to the point where they are 3% or less water, only to rehydrate, forage, and reproduce. Usually, tardigrades are 1 millimetre long when they are fully grown. They are short and plump with 4 pairs of legs, each with 4-8 claws also known as &quot;disks. &quot; The animals are prevalent in moss and lichen and, when collected, may be viewed under a very low-power microscope, making them accessible to the student or amateur scientist as well as the professional. Tardigrades form the phylum Tardigrada, part of the superphylum Ecdysozoa. It is an ancient group, with fossils dating from 530 million years ago, in the Cambrian period. The first tardigrades were discovered by Johann August Ephraim Goeze in 1773. Since 1778, over 500 new tardigrade species have been found.</literal></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:22:32 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20is%20Tardigrade&start=y&sessionid=RVE01318573&vText8=&vText7=&vText6=&vText5=Hello%20mr%20chatbot.&vText4=Hello.%20What%20are%20you%3F&vText3=Bla.&vText2=I%20don't%20understand%20you.&icognoid=wsf&icognocheck=c51a17f307dd6598d838607da5e36d6e&fno=0&prevref=RSL024438174&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Sep 2013 01:19:55 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=X5htnkHakR0T9WLnliGoPQ
+      - JSESSIONID=FB29A45966FBA9317D5476E7B6120231; Path=/
+      - RPS=cs5860
+      - cleverbotref="*MWPUYPMSCNRKTFIRQOGRMPPCMVKSKISTOKOAMISMQK"; Expires="Wed,
+        25 Sep 2013 02:22:53 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1494'
+      Sc:
+      - '19963'
+      Content-Length:
+      - '291'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "It is a language spoken in the Philippines.\rRVE01318573\rj2log-zIeJImCVSMBAGAXESMBE-detail\r\rHello
+        mr chatbot.\rHello. What are you?\rBla.\rI don't understand you.\rWhat is
+        Tardigrade.\rIt is a language spoken in the Philippines.\r\r+3000_cbfull\r\r\r\r\rIt
+        is a language spoken in the Philippines.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 01:22:53 GMT
+recorded_with: VCR 2.5.0

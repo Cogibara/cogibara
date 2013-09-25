@@ -39,7 +39,7 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it { @cogi.ask_local('what is the record label of Arashi').should == "J Storm, Pony Canyon"}
     end
 
-    describe "returns uris of no labels available" do
+    describe "returns uris when no labels are available" do
       it { @cogi.ask_local('what is the website of Community (TV series)').should == "http://www.nbc.com/community/"}
     end
 
@@ -49,6 +49,10 @@ describe "Built in modules", vcr: { record: :new_episodes } do
 
     describe "cached properties" do
       it { @cogi.ask_local('who is the leader of germany')[/Angela Merkel/].should_not be nil }
+    end
+
+    describe "can fetch abstracts" do
+      it { @cogi.ask_local('what is Tardigrade')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
     end
 
     describe "use it to refer to current object" do

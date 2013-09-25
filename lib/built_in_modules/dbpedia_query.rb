@@ -11,36 +11,36 @@ class DBPediaQuery < Cogibara::Module
     else
       spq = SPARQL::Client.new("http://dbpedia.org/sparql")
       qry = <<-EOF
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT ?label WHERE {
-  # {?prop a rdf:Property}
-  # UNION
-  # {?prop a owl:ObjectProperty}
+      SELECT DISTINCT ?label WHERE {
+        # {?prop a rdf:Property}
+        # UNION
+        # {?prop a owl:ObjectProperty}
 
-  ?prop rdfs:label ?prop_label.
+        ?prop rdfs:label ?prop_label.
 
-  FILTER regex(str(?prop_label), "#{property}$", "i")
-  {
-    {
-      <#{subject}> ?prop ?label .
-      FILTER isLiteral(?label)
-    }
-    UNION
-    {
-      <#{subject}> ?prop [ rdfs:label ?label ].
-    }
-    FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
-  }
-  UNION
-  {
-    <#{subject}> ?prop ?label .
-    FILTER isURI(?label)
-    MINUS { ?label rdfs:label ?lab}
-  }
-}
+        FILTER regex(str(?prop_label), "#{property}$", "i")
+        {
+          {
+            <#{subject}> ?prop ?label .
+            FILTER isLiteral(?label)
+          }
+          UNION
+          {
+            <#{subject}> ?prop [ rdfs:label ?label ].
+          }
+          FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
+        }
+        UNION
+        {
+          <#{subject}> ?prop ?label .
+          FILTER isURI(?label)
+          MINUS { ?label rdfs:label ?lab}
+        }
+      }
       EOF
 
 
@@ -57,63 +57,63 @@ SELECT DISTINCT ?label WHERE {
   def properties_for(subject)
     spq = SPARQL::Client.new("http://dbpedia.org/sparql")
     qry = <<-EOF
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 
-SELECT DISTINCT ?pred ?label WHERE {
- # {?pred a rdf:Property}
- # UNION
- # {?pred a owl:ObjectProperty}
+    SELECT DISTINCT ?pred ?label WHERE {
+     # {?pred a rdf:Property}
+     # UNION
+     # {?pred a owl:ObjectProperty}
 
-  <#{subject}> ?pred [].
+     <#{subject}> ?pred [].
 
-  ?pred rdfs:label ?label
-  FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
-}
-    EOF
+     ?pred rdfs:label ?label
+     FILTER(LANG(?label) = "" || LANGMATCHES(LANG(?label), "en"))
+   }
+   EOF
 
-    sols = spq.query(qry)
-    sols.map(&:label).map(&:object)
+   sols = spq.query(qry)
+   sols.map(&:label).map(&:object)
+ end
+
+ on(/.*tell me about (.+)/i) do |object|
+  object = object.gsub("?",'')
+  if object == "it"
+    object = @it if @it
+  else
+    @it = object
   end
+  sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
+  object = object.capitalize unless object[0] == object[0].capitalize
 
-  on(/.*tell me about (.+)/i) do |object|
-    object = object.gsub("?",'')
-    if object == "it"
-      object = @it if @it
-    else
-      @it = object
-    end
+  qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)])
+  sols = qry.execute
+
+  if sols.size > 0
+    properties_for(sols.first[:s]).join(", ")
+  else
+    current_message
+  end
+end
+
+on(/^(who|what) (?:is|are) the (.+) of (.+)/i) do |question,property,object|
+  object = object.gsub("?",'')
+
+  if object == "it"
+    object = @it if @it
+  else
+    @it = object
+  end
+  past_results = Cogibara::Message.where(message_string: current_message.message).select{|msg| msg.get_dbpedia_response }
+
+  if past_results.size > 0
+    past_results.first.response.message
+  else
+
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
     object = object.capitalize unless object[0] == object[0].capitalize
-
-    qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)])
-    sols = qry.execute
-
-    if sols.size > 0
-      properties_for(sols.first[:s]).join(", ")
-    else
-      current_message
-    end
-  end
-
-  on(/^(who|what) (?:is|are) the (.+) of (.+)/i) do |question,property,object|
-    object = object.gsub("?",'')
-
-    if object == "it"
-      object = @it if @it
-    else
-      @it = object
-    end
-    past_results = Cogibara::Message.where(message_string: current_message.message).select{|msg| msg.get_dbpedia_response }
-
-    if past_results.size > 0
-      past_results.first.response.message
-    else
-
-      sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
-      object = object.capitalize unless object[0] == object[0].capitalize
 
       qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
       sols = qry.execute
@@ -158,6 +158,42 @@ SELECT DISTINCT ?pred ?label WHERE {
     #   current_message
     #   # "found #{object_repo.size} statements for #{object}"
     # end
+  end
+
+  on(/what (is|are)(?: a| )(.+)/) do |plural,object|
+    object = object.gsub("?",'')
+    object = object.singularize if plural == "are"
+    if object == "it"
+      object = @it if @it
+    else
+      @it = object
+    end
+
+    sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
+    object = object.capitalize unless object[0] == object[0].capitalize
+    qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+    sols = qry.execute
+
+    if sols.size > 0
+      qry = <<-EOF
+      PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+
+      SELECT DISTINCT ?summary WHERE {
+        <#{sols.first[:s].to_s}> dbpedia-owl:abstract ?summary.
+
+        FILTER(LANG(?summary) = "" || LANGMATCHES(LANG(?summary), "en"))
+      }
+      EOF
+
+
+      sparql.query(qry).map(&:summary).map(&:to_s).join(', ')
+    else
+      current_message
+    end
   end
 
   register
