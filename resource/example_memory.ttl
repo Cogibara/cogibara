@@ -2,324 +2,388 @@
 @prefix message: <http://cogi.strinz.me/messages/> .
 @prefix prop: <http://onto.cogibara.com/properties/> .
 
-message:100258753_239 a cogi_class:Message;
-   prop:from_user "local";
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "100258753_239";
-   prop:message_string "hello you";
-   prop:message_topic "tests and stuff";
-   prop:response message:113508812_397;
-   prop:wit_intent "hello" .
-
 message:1234 a cogi_class:Message;
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
    prop:message_id "1234";
    prop:message_string "hello?";
-   prop:response message:558312295_761 .
+   prop:response message:309831680_425 .
 
-message:15499332_427 a cogi_class:Message;
-   prop:from_user "local";
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "15499332_427";
-   prop:message_string "hi";
-   prop:response message:31181553_703;
-   prop:wit_intent "hello" .
-
-message:330496716_806 a cogi_class:Message;
+message:326353883_442 a cogi_class:Message;
    prop:from_user "wstrinz@gmail.com";
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "330496716_806";
+   prop:message_id "326353883_442";
    prop:message_string "hello?";
-   prop:response message:355315328_25 .
+   prop:response message:336462705_295 .
 
-message:40102274_74 a cogi_class:Message;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "40102274_74";
-   prop:message_string "hi";
-   prop:message_topic "tests and stuff";
-   prop:response message:66987637_295;
-   prop:wit_intent "hello" .
-
-message:572932645_896 a cogi_class:Message;
-   prop:from_user "wstrinz@gmail.com";
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "572932645_896";
-   prop:message_string "hello?";
-   prop:response message:583753894_914 .
-
-message:79988781_100 a cogi_class:Message;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "79988781_100";
-   prop:message_string "hi";
-   prop:message_topic "tests and stuff";
-   prop:response message:89365986_494;
-   prop:wit_intent "hello" .
-
-message:833592836_938 a cogi_class:Message;
+message:419055212_358 a cogi_class:Message;
    prop:from_user "local";
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "833592836_938";
+   prop:message_id "419055212_358";
    prop:message_string "hello?";
-   prop:response message:863161791_709;
+   prop:response message:449094769_442;
    prop:wit_intent "hello" .
 
-message:886045792_818 a cogi_class:Message;
+message:471587002_80 a cogi_class:Message;
    prop:from_user "local";
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "886045792_818";
+   prop:message_id "471587002_80";
    prop:message_string "hello you";
-   prop:response message:904286449_353;
+   prop:response message:488591949_756;
    prop:wit_intent "hello" .
 
-message:113508812_397 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "113508812_397";
-   prop:message_string "hehe... hello local";
-   prop:to_user "local" .
-
-message:124203228_160 a cogi_class:Message;
-   prop:from_user "local";
-   prop:has_structured_property <http://cogi.strinz.me/messages/124203228_160/structured_properties/0>;
+message:52516699_374 a cogi_class:Message;
+   prop:from_user "wstrinz@gmail.com";
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "124203228_160";
-   prop:message_string "testing";
-   prop:message_topic "tests and stuff";
-   prop:response message:166707676_881;
-   prop:wit_intent "chat" .
+   prop:message_id "52516699_374";
+   prop:message_string "hello?";
+   prop:response message:62031591_994 .
 
-<http://cogi.strinz.me/messages/124203228_160/structured_properties/0> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:124203228_160;
-   prop:spotlight_entity_uri "http://dbpedia.org/resource/Debian";
-   prop:spotlight_support_score "669";
-   prop:spotlight_surface_form "testing";
-   prop:spotlight_types "Freebase:/computer/operating_system,Freebase:/computer,Freebase:/computer/software,DBpedia:TopicalConcept" .
-
-message:166707676_881 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "166707676_881";
-   prop:message_string "do say this";
-   prop:to_user "local" .
-
-message:178376242_710 a cogi_class:Message;
+message:596575732_537 a cogi_class:Message;
    prop:from_user "local";
-   prop:has_structured_property <http://cogi.strinz.me/messages/178376242_710/structured_properties/0>;
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "178376242_710";
-   prop:message_string "testing";
+   prop:message_id "596575732_537";
+   prop:message_string "hi";
+   prop:response message:612388349_660;
+   prop:wit_intent "hello" .
+
+message:621246453_439 a cogi_class:Message;
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "621246453_439";
+   prop:message_string "hi";
    prop:message_topic "tests and stuff";
-   prop:response message:199379830_62;
-   prop:wit_intent "chat" .
+   prop:response message:646390419_140;
+   prop:wit_intent "hello" .
 
-<http://cogi.strinz.me/messages/178376242_710/structured_properties/0> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:178376242_710;
-   prop:spotlight_entity_uri "http://dbpedia.org/resource/Debian";
-   prop:spotlight_support_score "669";
-   prop:spotlight_surface_form "testing";
-   prop:spotlight_types "Freebase:/computer/operating_system,Freebase:/computer,Freebase:/computer/software,DBpedia:TopicalConcept" .
+message:659803570_640 a cogi_class:Message;
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "659803570_640";
+   prop:message_string "hi";
+   prop:message_topic "tests and stuff";
+   prop:response message:670193991_252;
+   prop:wit_intent "hello" .
 
-message:199379830_62 a cogi_class:Message;
+message:681260197_644 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "681260197_644";
+   prop:message_string "hello you";
+   prop:message_topic "tests and stuff";
+   prop:response message:692875075_80;
+   prop:wit_intent "hello" .
+
+message:309831680_425 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "199379830_62";
-   prop:message_string "don't say this";
-   prop:to_user "local" .
-
-<http://cogi.strinz.me/messages/214322289_741/structured_properties/0> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:214322289_741;
-   prop:spotlight_entity_uri "http://dbpedia.org/resource/Set_list";
-   prop:spotlight_support_score "218";
-   prop:spotlight_surface_form "set";
-   prop:spotlight_types "" .
-
-<http://cogi.strinz.me/messages/214322289_741/structured_properties/1> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:214322289_741;
-   prop:spotlight_entity_uri "http://dbpedia.org/resource/The_Alarm";
-   prop:spotlight_support_score "152";
-   prop:spotlight_surface_form "alarm";
-   prop:spotlight_types "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/internet/social_network_user,Freebase:/internet,Freebase:/tv/tv_actor,Freebase:/tv,Freebase:/music/musical_group,Freebase:/music,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music/producer" .
-
-<http://cogi.strinz.me/messages/214322289_741/structured_properties/2> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:214322289_741;
-   prop:spotlight_entity_uri "http://dbpedia.org/resource/Tomorrow_%28band%29";
-   prop:spotlight_support_score "54";
-   prop:spotlight_surface_form "tomorrow";
-   prop:spotlight_types "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music,Freebase:/music/musical_group" .
-
-message:269585669_931 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "269585669_931";
-   prop:message_string "do say this";
-   prop:to_user "local" .
-
-<http://cogi.strinz.me/messages/283391946_632/structured_properties/0> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:283391946_632;
-   prop:spotlight_entity_uri "http://dbpedia.org/resource/Cancellation_%28mail%29";
-   prop:spotlight_support_score "82";
-   prop:spotlight_surface_form "cancel";
-   prop:spotlight_types "" .
-
-<http://cogi.strinz.me/messages/283391946_632/structured_properties/1> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:283391946_632;
-   prop:spotlight_entity_uri "http://dbpedia.org/resource/The_Alarm";
-   prop:spotlight_support_score "152";
-   prop:spotlight_surface_form "alarm";
-   prop:spotlight_types "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/internet/social_network_user,Freebase:/internet,Freebase:/tv/tv_actor,Freebase:/tv,Freebase:/music/musical_group,Freebase:/music,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music/producer" .
-
-message:31181553_703 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "31181553_703";
-   prop:message_string "K1 got your message";
-   prop:to_user "local" .
-
-message:314744375_411 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "314744375_411";
-   prop:message_string "now say this";
-   prop:to_user "local" .
-
-message:355315328_25 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "355315328_25";
-   prop:message_string "What are you?";
-   prop:to_user "wstrinz@gmail.com" .
-
-message:558312295_761 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "558312295_761";
+   prop:message_id "309831680_425";
    prop:message_string "Hi." .
 
-message:583753894_914 a cogi_class:Message;
+message:336462705_295 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "583753894_914";
+   prop:message_id "336462705_295";
    prop:message_string "How are you?";
    prop:to_user "wstrinz@gmail.com" .
 
-message:6592580_956 a cogi_class:Message;
+message:35805924_610 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "6592580_956";
-   prop:message_string """9
-7
-12
-3""";
+   prop:message_id "35805924_610";
+   prop:message_string "you have to say 'who'";
    prop:to_user "local" .
 
-message:66987637_295 a cogi_class:Message;
+message:449094769_442 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "66987637_295";
-   prop:message_string "K1 got your message" .
-
-message:863161791_709 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "863161791_709";
+   prop:message_id "449094769_442";
    prop:message_string "?olleh";
    prop:to_user "local" .
 
-message:89365986_494 a cogi_class:Message;
-   prop:cunkiness 1000;
+message:488591949_756 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "89365986_494";
-   prop:message_string "K1 got your message" .
-
-message:904286449_353 a cogi_class:Message;
-   prop:from_user "cogibara";
-   prop:message_id "904286449_353";
+   prop:message_id "488591949_756";
    prop:message_string "hai dere";
    prop:to_user "local" .
 
-message:909925455_497 a cogi_class:Message;
+message:493574423_944 a cogi_class:Message;
    prop:from_user "local";
-   prop:has_structured_property <http://cogi.strinz.me/messages/909925455_497/structured_properties/0>;
+   prop:has_structured_property <http://cogi.strinz.me/messages/493574423_944/structured_properties/0>;
    prop:maluuba_action "CONTACT_SEARCH";
    prop:maluuba_category "CONTACT";
-   prop:message_id "909925455_497";
+   prop:message_id "493574423_944";
    prop:message_string "I'm bill";
-   prop:response message:934520295_432;
+   prop:response message:517567125_95;
    prop:wit_intent "my_name" .
 
-<http://cogi.strinz.me/messages/909925455_497/structured_properties/0> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:909925455_497;
+<http://cogi.strinz.me/messages/493574423_944/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:493574423_944;
    prop:spotlight_entity_uri "http://dbpedia.org/resource/Bill_%28proposed_law%29";
    prop:spotlight_support_score "628";
    prop:spotlight_surface_form "bill";
    prop:spotlight_types "Freebase:/tv/tv_subject,Freebase:/tv,DBpedia:TopicalConcept" .
 
-message:934520295_432 a cogi_class:Message;
+message:517567125_95 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "934520295_432";
+   prop:message_id "517567125_95";
    prop:message_string "hi bill";
    prop:to_user "local" .
 
-message:940564941_946 a cogi_class:Message;
+message:522982336_708 a cogi_class:Message;
    prop:from_user "local";
-   prop:has_structured_property <http://cogi.strinz.me/messages/940564941_946/structured_properties/0>;
+   prop:has_structured_property <http://cogi.strinz.me/messages/522982336_708/structured_properties/0>;
    prop:maluuba_action "BUSINESS_SEARCH";
    prop:maluuba_category "BUSINESS";
-   prop:message_id "940564941_946";
+   prop:message_id "522982336_708";
    prop:message_string "roll me 1d150";
-   prop:response message:977960060_697;
+   prop:response message:560634031_940;
    prop:wit_intent "dice_roll" .
 
-<http://cogi.strinz.me/messages/940564941_946/structured_properties/0> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:940564941_946;
+<http://cogi.strinz.me/messages/522982336_708/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:522982336_708;
    prop:spotlight_entity_uri "http://dbpedia.org/resource/Roll_call";
    prop:spotlight_support_score "68";
    prop:spotlight_surface_form "roll";
    prop:spotlight_types "" .
 
-message:977960060_697 a cogi_class:Message;
+message:560634031_940 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "977960060_697";
-   prop:message_string "41";
+   prop:message_id "560634031_940";
+   prop:message_string "26";
    prop:to_user "local" .
 
-message:984073989_681 a cogi_class:Message;
+message:566972822_105 a cogi_class:Message;
    prop:from_user "local";
-   prop:has_structured_property <http://cogi.strinz.me/messages/984073989_681/structured_properties/0>;
+   prop:has_structured_property <http://cogi.strinz.me/messages/566972822_105/structured_properties/0>;
    prop:maluuba_action "BUSINESS_SEARCH";
    prop:maluuba_category "BUSINESS";
-   prop:message_id "984073989_681";
+   prop:message_id "566972822_105";
    prop:message_string "roll me 4d12";
-   prop:response message:6592580_956;
+   prop:response message:588982871_189;
    prop:wit_intent "dice_roll" .
 
-<http://cogi.strinz.me/messages/984073989_681/structured_properties/0> a cogi_class:SpotlightEntity;
-   prop:attached_to_message message:984073989_681;
+<http://cogi.strinz.me/messages/566972822_105/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:566972822_105;
    prop:spotlight_entity_uri "http://dbpedia.org/resource/Roll_call";
    prop:spotlight_support_score "68";
    prop:spotlight_surface_form "roll";
    prop:spotlight_types "" .
 
-message:283391946_632 a cogi_class:Message;
+message:588982871_189 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "588982871_189";
+   prop:message_string """6
+7
+1
+2""";
+   prop:to_user "local" .
+
+message:612388349_660 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "612388349_660";
+   prop:message_string "K1 got your message";
+   prop:to_user "local" .
+
+message:62031591_994 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "62031591_994";
+   prop:message_string "What are you?";
+   prop:to_user "wstrinz@gmail.com" .
+
+message:646390419_140 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "646390419_140";
+   prop:message_string "K1 got your message" .
+
+message:670193991_252 a cogi_class:Message;
+   prop:cunkiness 1000;
+   prop:from_user "cogibara";
+   prop:message_id "670193991_252";
+   prop:message_string "K1 got your message" .
+
+message:692875075_80 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "692875075_80";
+   prop:message_string "hehe... hello local";
+   prop:to_user "local" .
+
+message:704695008_912 a cogi_class:Message;
    prop:from_user "local";
-   prop:has_structured_property <http://cogi.strinz.me/messages/283391946_632/structured_properties/0>,
-     <http://cogi.strinz.me/messages/283391946_632/structured_properties/1>;
+   prop:has_structured_property <http://cogi.strinz.me/messages/704695008_912/structured_properties/0>;
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "704695008_912";
+   prop:message_string "testing";
+   prop:message_topic "tests and stuff";
+   prop:response message:745164377_648;
+   prop:wit_intent "chat" .
+
+<http://cogi.strinz.me/messages/704695008_912/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:704695008_912;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Debian";
+   prop:spotlight_support_score "669";
+   prop:spotlight_surface_form "testing";
+   prop:spotlight_types "Freebase:/computer/operating_system,Freebase:/computer,Freebase:/computer/software,DBpedia:TopicalConcept" .
+
+message:745164377_648 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "745164377_648";
+   prop:message_string "do say this";
+   prop:to_user "local" .
+
+message:756647954_281 a cogi_class:Message;
+   prop:from_user "local";
+   prop:has_structured_property <http://cogi.strinz.me/messages/756647954_281/structured_properties/0>;
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "756647954_281";
+   prop:message_string "testing";
+   prop:message_topic "tests and stuff";
+   prop:response message:776703566_835;
+   prop:wit_intent "chat" .
+
+<http://cogi.strinz.me/messages/756647954_281/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:756647954_281;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Debian";
+   prop:spotlight_support_score "669";
+   prop:spotlight_surface_form "testing";
+   prop:spotlight_types "Freebase:/computer/operating_system,Freebase:/computer,Freebase:/computer/software,DBpedia:TopicalConcept" .
+
+message:776703566_835 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "776703566_835";
+   prop:message_string "not an alarm";
+   prop:to_user "local" .
+
+<http://cogi.strinz.me/messages/789613022_130/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:789613022_130;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Set_list";
+   prop:spotlight_support_score "218";
+   prop:spotlight_surface_form "set";
+   prop:spotlight_types "" .
+
+<http://cogi.strinz.me/messages/789613022_130/structured_properties/1> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:789613022_130;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/The_Alarm";
+   prop:spotlight_support_score "152";
+   prop:spotlight_surface_form "alarm";
+   prop:spotlight_types "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/internet/social_network_user,Freebase:/internet,Freebase:/tv/tv_actor,Freebase:/tv,Freebase:/music/musical_group,Freebase:/music,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music/producer" .
+
+<http://cogi.strinz.me/messages/789613022_130/structured_properties/2> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:789613022_130;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Tomorrow_%28band%29";
+   prop:spotlight_support_score "54";
+   prop:spotlight_surface_form "tomorrow";
+   prop:spotlight_types "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music,Freebase:/music/musical_group" .
+
+message:845233192_248 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "845233192_248";
+   prop:message_string "set an alarm";
+   prop:to_user "local" .
+
+<http://cogi.strinz.me/messages/858212210_486/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:858212210_486;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Cancellation_%28mail%29";
+   prop:spotlight_support_score "82";
+   prop:spotlight_surface_form "cancel";
+   prop:spotlight_types "" .
+
+<http://cogi.strinz.me/messages/858212210_486/structured_properties/1> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:858212210_486;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/The_Alarm";
+   prop:spotlight_support_score "152";
+   prop:spotlight_surface_form "alarm";
+   prop:spotlight_types "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/internet/social_network_user,Freebase:/internet,Freebase:/tv/tv_actor,Freebase:/tv,Freebase:/music/musical_group,Freebase:/music,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music/producer" .
+
+message:893995232_806 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "893995232_806";
+   prop:message_string "cancel an alarm";
+   prop:to_user "local" .
+
+message:924762815_121 a cogi_class:Message;
+   prop:from_user "local";
+   prop:has_structured_property <http://cogi.strinz.me/messages/924762815_121/structured_properties/0>;
+   prop:maluuba_action "CONTACT_SEARCH";
+   prop:maluuba_category "CONTACT";
+   prop:message_id "924762815_121";
+   prop:message_string "who is Johnny Habu?";
+   prop:message_topic "tests and stuff";
+   prop:response message:955856975_261;
+   prop:wit_intent "general_knowledge_question" .
+
+<http://cogi.strinz.me/messages/924762815_121/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:924762815_121;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Johnny_Belinda_%281948_film%29";
+   prop:spotlight_support_score "54";
+   prop:spotlight_surface_form "Johnny";
+   prop:spotlight_types "DBpedia:Film,DBpedia:Work,Schema:CreativeWork,Schema:Movie,Freebase:/film/film,Freebase:/film,Freebase:/award/ranked_item,Freebase:/award,Freebase:/award/award_winning_work,Freebase:/media_common/netflix_title,Freebase:/media_common,Freebase:/award/award_nominated_work" .
+
+message:955856975_261 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "955856975_261";
+   prop:message_string "looking up a person";
+   prop:to_user "local" .
+
+<http://cogi.strinz.me/messages/971758150_707/structured_properties/0> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:971758150_707;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Ghost_Rider_%28Johnny_Blaze%29";
+   prop:spotlight_support_score "182";
+   prop:spotlight_surface_form "Johnny";
+   prop:spotlight_types "DBpedia:ComicsCharacter,DBpedia:FictionalCharacter,DBpedia:Person,Schema:Person,Freebase:/comic_books/comic_book_character,Freebase:/comic_books,Freebase:/media_common/adapted_work,Freebase:/media_common,Freebase:/film/film_character,Freebase:/film,Freebase:/fictional_universe/fictional_character,Freebase:/fictional_universe" .
+
+<http://cogi.strinz.me/messages/971758150_707/structured_properties/1> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:971758150_707;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Contact_%28musical%29";
+   prop:spotlight_support_score "67";
+   prop:spotlight_surface_form "contact";
+   prop:spotlight_types "DBpedia:Musical,DBpedia:Work,Schema:CreativeWork,Freebase:/book/written_work,Freebase:/book,Freebase:/theater/play,Freebase:/theater" .
+
+<http://cogi.strinz.me/messages/971758150_707/structured_properties/2> a cogi_class:SpotlightEntity;
+   prop:attached_to_message message:971758150_707;
+   prop:spotlight_entity_uri "http://dbpedia.org/resource/Information";
+   prop:spotlight_support_score "1044";
+   prop:spotlight_surface_form "info";
+   prop:spotlight_types "Freebase:/media_common/quotation_subject,Freebase:/media_common,Freebase:/book/book_subject,Freebase:/book,Freebase:/internet/website_category,Freebase:/internet" .
+
+message:858212210_486 a cogi_class:Message;
+   prop:from_user "local";
+   prop:has_structured_property <http://cogi.strinz.me/messages/858212210_486/structured_properties/0>,
+     <http://cogi.strinz.me/messages/858212210_486/structured_properties/1>;
    prop:maluuba_action "ALARM_CANCEL";
    prop:maluuba_category "ALARM";
-   prop:message_id "283391946_632";
+   prop:message_id "858212210_486";
    prop:message_string "cancel my 8am alarm";
    prop:message_topic "tests and stuff";
-   prop:response message:314744375_411;
+   prop:response message:893995232_806;
    prop:wit_intent "cancel_alarm" .
 
-message:214322289_741 a cogi_class:Message;
+message:789613022_130 a cogi_class:Message;
    prop:from_user "local";
-   prop:has_structured_property <http://cogi.strinz.me/messages/214322289_741/structured_properties/0>,
-     <http://cogi.strinz.me/messages/214322289_741/structured_properties/1>,
-     <http://cogi.strinz.me/messages/214322289_741/structured_properties/2>;
+   prop:has_structured_property <http://cogi.strinz.me/messages/789613022_130/structured_properties/0>,
+     <http://cogi.strinz.me/messages/789613022_130/structured_properties/1>,
+     <http://cogi.strinz.me/messages/789613022_130/structured_properties/2>;
    prop:maluuba_action "ALARM_SET";
    prop:maluuba_category "ALARM";
-   prop:message_id "214322289_741";
+   prop:message_id "789613022_130";
    prop:message_string "set me an alarm for 8am tomorrow";
    prop:message_topic "tests and stuff";
-   prop:response message:269585669_931;
+   prop:response message:845233192_248;
    prop:wit_intent "set_alarm" .
+
+message:971758150_707 a cogi_class:Message;
+   prop:from_user "local";
+   prop:has_structured_property <http://cogi.strinz.me/messages/971758150_707/structured_properties/0>,
+     <http://cogi.strinz.me/messages/971758150_707/structured_properties/1>,
+     <http://cogi.strinz.me/messages/971758150_707/structured_properties/2>;
+   prop:maluuba_action "CONTACT_SEARCH";
+   prop:maluuba_category "CONTACT";
+   prop:message_id "971758150_707";
+   prop:message_string "show me Johnny Habus contact info";
+   prop:message_topic "tests and stuff";
+   prop:response message:35805924_610;
+   prop:wit_intent "general_knowledge_question" .

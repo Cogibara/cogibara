@@ -10,19 +10,23 @@ class Cogibara
   def ask(message)
 
     ModuleStack.stack.each do |mod|
-      response = mod.ask(message)
-      if response.is_a? String
-        response = memory.new_message(response)
-        response_details(message, response)
-        return response
-      elsif response.is_a? Symbol
-        if response == :pass
+      catch(:mod_pass) do
+        response = mod.ask(message)
+        if response.is_a? String
+          response = memory.new_message(response)
+          response_details(message, response)
+          return response
+        elsif response.is_a? Symbol
+          # if response == :pass
 
+          # else
+            raise "received code #{response} from #{mod}"
+          # end
+        elsif response.is_a? Cogibara::Message
+          # puts "pass along messages or return new ones"
         else
-          raise "received code #{response} from #{mod}"
+          # raise "unknown return type #{response.class} from #{mod.class}"
         end
-      elsif response.is_a? Cogibara::Message
-        # puts "pass along messages or return new ones"
       end
     end
 

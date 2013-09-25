@@ -9,7 +9,7 @@ class Wit < Cogibara::Module
 
     api_key = settings["keys"]["wit"]
     response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape message}", headers: {"Authorization" => "Bearer #{api_key}"})
-    pass
+
     response.body.to_s
     # JSON.parse(response.body).to_s
   end

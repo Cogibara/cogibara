@@ -132,15 +132,15 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
     describe "can restrict on arbitrary properties" do
       class AlarmSetter < Cogibara::Module
         on(/.*/, maluuba_action: "ALARM_SET") do
-          "do say this"
+          "set an alarm"
         end
 
         on(/.*/, maluuba_action: "ALARM_CANCEL") do
-          "now say this"
+          "cancel an alarm"
         end
 
         on do
-          "don't say this"
+          "not an alarm"
         end
       end
 
@@ -148,11 +148,33 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         AlarmSetter.register
       end
 
-      it {
-        @cogi.ask_local('testing').should == "don't say this"
-        @cogi.ask_local('set me an alarm for 8am tomorrow').should == "do say this"
-        @cogi.ask_local('cancel my 8am alarm').should == "now say this"
-      }
+      it { @cogi.ask_local('testing').should == "not an alarm" }
+      it { @cogi.ask_local('set me an alarm for 8am tomorrow').should == "set an alarm"}
+      it { @cogi.ask_local('cancel my 8am alarm').should == "cancel an alarm" }
+    end
+
+    describe "can use filter helper for more complex filtering" do
+      class PersonLookup < Cogibara::Module
+        on(/.*/, maluuba_action: "CONTACT_SEARCH") do
+          filter do |msg|
+            msg.message["who"]
+          end
+
+          "looking up a person"
+        end
+
+        on do
+          # puts current_message.get_maluuba_action
+          "you have to say 'who'"
+        end
+      end
+
+      before do
+        PersonLookup.register
+      end
+
+      it {@cogi.ask_local('who is Johnny Habu?').should == "looking up a person" }
+      it {@cogi.ask_local('show me Johnny Habus contact info').should == "you have to say 'who'" }
     end
 
   end

@@ -54,8 +54,13 @@ class Cogibara
       @current_message
     end
 
+    # FILTER = Proc.new {|block| v = block.call(current_message) }
+    def filter(&block)
+      throw :pass unless block.call(current_message)
+    end
+
     def pass
-      :pass
+      throw :mod_pass
     end
 
     def settings
@@ -71,9 +76,6 @@ class Cogibara
       @yml
     end
 
-    # Override for custom behavior for now
-    #  should have this call some other method if defined, so
-    #  eg setting up current message still happens
 
     def meets_restrictions(message,restrictions={})
       restrictions.each{|k,v|
@@ -81,18 +83,26 @@ class Cogibara
       }
     end
 
+    # Override for custom behavior for now
+    #  should have this call some other method if defined, so
+    #  eg setting up current message still happens
+
     def ask(message)
       @current_message = message
+      # @filter ||= Proc.new {|block| v = block.call(current_message); return unless v }
       selected = self.class.response_patterns.select{|patt| message.message[patt[0]] && meets_restrictions(message,patt[1][1])}
 
       if selected.size > 0
-        selected = selected.first
-        if selected[0].is_a? Regexp
-          instance_exec(*message.message.scan(selected[0]).flatten, &selected[1][0])
-        elsif selected[0].is_a? String
-          instance_exec &selected[1][0]
-        else
-          raise "unknown pattern match type"
+        selected.each do |sel|
+          catch(:pass) do
+            if sel[0].is_a? Regexp
+              return instance_exec(*message.message.scan(sel[0]).flatten, &sel[1][0])
+            elsif sel[0].is_a? String
+              return instance_exec &sel[1][0]
+            else
+              raise "unknown pattern match type"
+            end
+          end
         end
       else
         message
