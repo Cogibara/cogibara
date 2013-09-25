@@ -62,4 +62,40 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 24 Sep 2013 16:02:31 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello%20you
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '175'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:05:13 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "915c455a-b686-4e80-a422-2fc14f05cbfb",
+          "msg_body" : "hello you",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.495
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:05:13 GMT
 recorded_with: VCR 2.5.0

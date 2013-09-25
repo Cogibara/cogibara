@@ -27,7 +27,17 @@ class Cogibara
     end
 
     def self.settings
-      @@yml ||= YAML.load_file(File.dirname(__FILE__) + '/../config/cogibara.yml')
+      @@yml ||= nil
+      unless @@yml
+        yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
+        if File.exist? yml_file
+          @@yml = YAML.load_file(yml_file)
+        else
+          @@yml = {"keys" => {}}
+        end
+      end
+
+      @@yml
     end
 
     # TODO should make sure this is registered as a proc if it isnt already, so "return" will override
@@ -49,7 +59,16 @@ class Cogibara
     end
 
     def settings
-      @yml ||= YAML.load_file(File.dirname(__FILE__) + '/../config/cogibara.yml')
+      unless @yml
+        yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
+        if File.exist? yml_file
+          @yml = YAML.load_file(yml_file)
+        else
+          @yml = {"keys" => {}}
+        end
+      end
+
+      @yml
     end
 
     # Override for custom behavior for now

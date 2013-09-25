@@ -275,4 +275,148 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 24 Sep 2013 16:02:29 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello%20you
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '175'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:05:10 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "ea2a7370-ea6d-4081-b94f-deb10acc4ee2",
+          "msg_body" : "hello you",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.495
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:05:10 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=I'm%20bill
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '177'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:05:10 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "12bdf864-c520-4db7-a00c-8269579b2f1e",
+          "msg_body" : "I'm bill",
+          "outcome" : {
+            "intent" : "good_bye",
+            "entities" : { },
+            "confidence" : 0.079
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:05:10 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=roll%20me%201d150
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '183'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:05:11 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "796146aa-df80-4b23-b073-b7811c170eaf",
+          "msg_body" : "roll me 1d150",
+          "outcome" : {
+            "intent" : "dice_roll",
+            "entities" : { },
+            "confidence" : 0.404
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:05:11 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=roll%20me%204d12
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer UXV7ERXFIM2UANS5UOV23K5TLT7IAWXP
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '182'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 25 Sep 2013 05:05:11 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "d9f7042c-e725-46fd-832b-6a6c3b370de4",
+          "msg_body" : "roll me 4d12",
+          "outcome" : {
+            "intent" : "dice_roll",
+            "entities" : { },
+            "confidence" : 0.404
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 05:05:11 GMT
 recorded_with: VCR 2.5.0
