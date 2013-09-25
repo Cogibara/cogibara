@@ -42,8 +42,8 @@ class Cogibara
 
     # TODO should make sure this is registered as a proc if it isnt already, so "return" will override
     # ask's return behavior?
-    def self.on(pattern=/.*/,&block)
-      response_patterns << [pattern, block]
+    def self.on(pattern=/.*/, restrictions={}, &block)
+      response_patterns << [pattern, [block, restrictions]]
     end
 
     def self.response_patterns
@@ -75,15 +75,22 @@ class Cogibara
     #  should have this call some other method if defined, so
     #  eg setting up current message still happens
 
+    def meets_restrictions(message,restrictions={})
+      restrictions.each{|k,v|
+        return false unless message.send("get_#{k}") == v
+      }
+    end
+
     def ask(message)
       @current_message = message
-      selected = self.class.response_patterns.select{|patt| message.message[patt[0]]}
+      selected = self.class.response_patterns.select{|patt| message.message[patt[0]] && meets_restrictions(message,patt[1][1])}
+
       if selected.size > 0
         selected = selected.first
         if selected[0].is_a? Regexp
-          instance_exec(*message.message.scan(selected[0]).flatten, &selected[1])
+          instance_exec(*message.message.scan(selected[0]).flatten, &selected[1][0])
         elsif selected[0].is_a? String
-          instance_exec &selected[1]
+          instance_exec &selected[1][0]
         else
           raise "unknown pattern match type"
         end

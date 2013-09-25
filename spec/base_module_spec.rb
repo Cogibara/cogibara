@@ -129,6 +129,27 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       it { @cogi.ask_local('testing').should == "do say this"}
     end
 
+    describe "can order response handlers" do
+      class AlarmSetter < Cogibara::Module
+        on(/.*/, maluuba_category: "ALARM") do
+          "do say this"
+        end
+
+        on do
+          "don't say this"
+        end
+      end
+
+      before do
+        AlarmSetter.register
+      end
+
+      it {
+        @cogi.ask_local('testing').should == "don't say this"
+        @cogi.ask_local('set me an alarm for 8am tomorrow').should == "do say this"
+      }
+    end
+
   end
 
 end
