@@ -1,16 +1,7 @@
 
 # require 'cleverbot'
 
-class Chatbot < Cogibara::Module
-  requires 'cleverbot'
 
-  def ask(message)
-    @cleverbot ||= Cleverbot::Client.new
-    @cleverbot.write message.message
-  end
-
-  register :last
-end
 
 class Maluuba < Cogibara::Module
   requires 'maluuba_napi'
@@ -44,6 +35,49 @@ class MemoryDumper < Cogibara::Module
   end
 
   register
+end
+
+class Helper < Cogibara::Module
+  def help_text
+    "helping you helpfully"
+  end
+
+  on(/.*/, maluuba_action: 'HELP_HELP') do
+    help_text
+  end
+
+  on(/.*/, wit_intent: 'help') do
+    help_text
+  end
+
+  register
+end
+
+class Default < Cogibara::Module
+  on do
+    "I don't know how to respond to that, try asking for help if you're not sure what to do"
+  end
+
+  register :last
+end
+
+class Chatbot < Cogibara::Module
+  requires 'cleverbot'
+
+  def chat(message)
+    @cleverbot ||= Cleverbot::Client.new
+    @cleverbot.write message.message
+  end
+
+  on(/.*/) do
+    filter do |msg|
+      msg.get_wit_intent == nil || msg.get_wit_intent == "chat" || msg.get_wit_intent == "hello"
+    end
+
+    chat(current_message)
+  end
+
+  register :last
 end
 
 class DiceRoller < Cogibara::Module
