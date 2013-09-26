@@ -5,7 +5,7 @@ class Wit < Cogibara::Module
 
   requires_key 'wit'
 
-  on(/wit debug "(.+)"/i) do |message|
+  on(/wit debug "(.+)"/i) do |msg, message|
 
     api_key = settings["keys"]["wit"]
     response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape message}", headers: {"Authorization" => "Bearer #{api_key}"})

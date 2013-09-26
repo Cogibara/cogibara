@@ -85,7 +85,7 @@ class Chatbot < Cogibara::Module
 end
 
 class DiceRoller < Cogibara::Module
-  on(/^roll (\d+)d(\d+)/) do |number,size|
+  on(/^roll (\d+)d(\d+)/) do |message, number, size|
     number.to_i.times.map{|t| rand(size.to_i)+1 }.join("\n")
   end
 

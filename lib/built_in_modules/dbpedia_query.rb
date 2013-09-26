@@ -261,21 +261,21 @@ class DBPediaQuery < Cogibara::Module
     dbpedia_predicates data["outcome"]["entities"]["subject"]["value"]
   end
 
-  on(/what do you know about (.+?)(?:\?|$)/i) do |object|
+  on(/what do you know about (.+?)(?:\?|$)/i) do |message, object|
     # object = object.gsub("?",'')
     dbpedia_predicates object
   end
 
-  on(/what can you tell me about (.+?)(?:\?|$)/i) do |object|
+  on(/what can you tell me about (.+?)(?:\?|$)/i) do |message, object|
     # object = object.gsub("?",'')
     dbpedia_predicates object
   end
 
-  on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,object|
+  on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |message, question,property,object|
     dbpedia_fact_question object, property
   end
 
-  on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,object|
+  on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |message, question,property,object|
     dbpedia_fact_question object, property
   end
 
@@ -311,7 +311,7 @@ class DBPediaQuery < Cogibara::Module
     dbpedia_summarize data["outcome"]["entities"]["subject"]["value"]
   end
 
-  on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |plural,object|
+  on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |message, plural,object|
     dbpedia_summarize(object)
   end
 

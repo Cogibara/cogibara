@@ -96,7 +96,7 @@ class Cogibara
         selected.each do |sel|
           catch(:pass) do
             if sel[0].is_a? Regexp
-              return instance_exec(*message.message.scan(sel[0]).flatten, &sel[1][0])
+              return instance_exec(*[message, message.message.scan(sel[0])].flatten, &sel[1][0])
             elsif sel[0].is_a? String
               return instance_exec &sel[1][0]
             else

@@ -27,11 +27,11 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
           "hai dere"
         end
 
-        on %r{^I'm (.+)} do |name|
+        on %r{^I'm (.+)} do |message, name|
           "hi #{name}"
         end
 
-        on(/roll me (\d+)d(\d+)/) do |number,size|
+        on(/roll me (\d+)d(\d+)/) do |message, number, size|
           number.to_i.times.map{|t| rand(size.to_i)+1 }.join("\n")
         end
       end

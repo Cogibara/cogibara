@@ -93,4 +93,29 @@ http_interactions:
         }
     http_version: 
   recorded_at: Wed, 25 Sep 2013 05:44:10 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=spotlight%20entities%20for%20%22I%20live%20in%20Madison%20Wisconsin%22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 26 Sep 2013 21:11:15 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '94'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{"location":["madison wisconsin"]},"action":"CONTACT_LOCATE","category":"CONTACT"}'
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 21:10:26 GMT
 recorded_with: VCR 2.5.0
