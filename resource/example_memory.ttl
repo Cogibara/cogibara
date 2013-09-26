@@ -2,42 +2,276 @@
 @prefix message: <http://cogi.strinz.me/messages/> .
 @prefix prop: <http://onto.cogibara.com/properties/> .
 
+message:10582853_980 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "ALARM_CANCEL";
+   prop:maluuba_category "ALARM";
+   prop:message_id "10582853_980";
+   prop:message_string "cancel my 8am alarm";
+   prop:message_topic "tests and stuff";
+   prop:response message:26975473_459;
+   prop:wit_intent "cancel_alarm" .
+
 message:1234 a cogi_class:Message;
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
    prop:message_id "1234";
    prop:message_string "hello?";
-   prop:response message:23127498_615 .
+   prop:response message:282627484_380 .
 
-message:53147093_649 a cogi_class:Message;
+message:295114571_867 a cogi_class:Message;
    prop:from_user "wstrinz@gmail.com";
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "53147093_649";
+   prop:message_id "295114571_867";
    prop:message_string "hello?";
-   prop:response message:61439247_536 .
+   prop:response message:303104150_807 .
 
-message:933321537_568 a cogi_class:Message;
+message:38160437_617 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "CONTACT_SEARCH";
+   prop:maluuba_category "CONTACT";
+   prop:message_id "38160437_617";
+   prop:message_string "who is Johnny Habu?";
+   prop:message_topic "tests and stuff";
+   prop:response message:53983709_556;
+   prop:wit_intent "general_knowledge_question" .
+
+message:66328600_920 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "CONTACT_SEARCH";
+   prop:maluuba_category "CONTACT";
+   prop:message_id "66328600_920";
+   prop:message_string "show me Johnny Habus contact info";
+   prop:message_topic "tests and stuff";
+   prop:response message:84529554_112;
+   prop:wit_intent "general_knowledge_question" .
+
+message:695839690_737 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "695839690_737";
+   prop:message_string "hello?";
+   prop:response message:738374233_854;
+   prop:wit_intent "hello" .
+
+message:743883604_971 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "743883604_971";
+   prop:message_string "hello you";
+   prop:response message:756817956_713;
+   prop:wit_intent "hello" .
+
+message:761993764_871 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "CONTACT_SEARCH";
+   prop:maluuba_category "CONTACT";
+   prop:message_id "761993764_871";
+   prop:message_string "I'm bill";
+   prop:response message:775512829_820;
+   prop:wit_intent "my_name" .
+
+message:781915052_275 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "BUSINESS_SEARCH";
+   prop:maluuba_category "BUSINESS";
+   prop:message_id "781915052_275";
+   prop:message_string "roll me 1d150";
+   prop:response message:795474625_195;
+   prop:wit_intent "dice_roll" .
+
+message:801485177_343 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "BUSINESS_SEARCH";
+   prop:maluuba_category "BUSINESS";
+   prop:message_id "801485177_343";
+   prop:message_string "roll me 4d12";
+   prop:response message:816675966_103;
+   prop:wit_intent "dice_roll" .
+
+message:823086850_72 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "823086850_72";
+   prop:message_string "hi";
+   prop:response message:832720496_203;
+   prop:wit_intent "hello" .
+
+message:863824234_466 a cogi_class:Message;
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "863824234_466";
+   prop:message_string "hi";
+   prop:message_topic "tests and stuff";
+   prop:response message:872345446_435;
+   prop:wit_intent "hello" .
+
+message:883371172_858 a cogi_class:Message;
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "883371172_858";
+   prop:message_string "hi";
+   prop:message_topic "tests and stuff";
+   prop:response message:890747823_409;
+   prop:wit_intent "hello" .
+
+message:899989799_757 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "899989799_757";
+   prop:message_string "hello you";
+   prop:message_topic "tests and stuff";
+   prop:response message:908446478_787;
+   prop:wit_intent "hello" .
+
+message:917140897_694 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "917140897_694";
+   prop:message_string "testing";
+   prop:message_topic "tests and stuff";
+   prop:response message:928910294_139;
+   prop:wit_intent "chat" .
+
+message:938827217_235 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "938827217_235";
+   prop:message_string "testing";
+   prop:message_topic "tests and stuff";
+   prop:response message:949862441_749;
+   prop:wit_intent "chat" .
+
+message:959406411_979 a cogi_class:Message;
+   prop:from_user "local";
+   prop:maluuba_action "ALARM_SET";
+   prop:maluuba_category "ALARM";
+   prop:message_id "959406411_979";
+   prop:message_string "set me an alarm for 8am tomorrow";
+   prop:message_topic "tests and stuff";
+   prop:response message:974492717_946;
+   prop:wit_intent "set_alarm" .
+
+message:96617428_266 a cogi_class:Message;
    prop:from_user "wstrinz@gmail.com";
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "933321537_568";
+   prop:message_id "96617428_266";
    prop:message_string "hello?";
-   prop:response message:985354088_178 .
+   prop:response message:105769168_538 .
 
-message:23127498_615 a cogi_class:Message;
+message:105769168_538 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "23127498_615";
+   prop:message_id "105769168_538";
+   prop:message_string "What are you?";
+   prop:to_user "wstrinz@gmail.com" .
+
+message:26975473_459 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "26975473_459";
+   prop:message_string "cancel an alarm";
+   prop:to_user "local" .
+
+message:282627484_380 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "282627484_380";
    prop:message_string "Hi." .
 
-message:61439247_536 a cogi_class:Message;
+message:303104150_807 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "61439247_536";
+   prop:message_id "303104150_807";
    prop:message_string "How are you?";
    prop:to_user "wstrinz@gmail.com" .
 
-message:985354088_178 a cogi_class:Message;
+message:53983709_556 a cogi_class:Message;
    prop:from_user "cogibara";
-   prop:message_id "985354088_178";
-   prop:message_string "What are you?";
-   prop:to_user "wstrinz@gmail.com" .
+   prop:message_id "53983709_556";
+   prop:message_string "looking up a person";
+   prop:to_user "local" .
+
+message:738374233_854 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "738374233_854";
+   prop:message_string "?olleh";
+   prop:to_user "local" .
+
+message:756817956_713 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "756817956_713";
+   prop:message_string "hai dere";
+   prop:to_user "local" .
+
+message:775512829_820 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "775512829_820";
+   prop:message_string "hi bill";
+   prop:to_user "local" .
+
+message:795474625_195 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "795474625_195";
+   prop:message_string "109";
+   prop:to_user "local" .
+
+message:816675966_103 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "816675966_103";
+   prop:message_string """1
+2
+6
+4""";
+   prop:to_user "local" .
+
+message:832720496_203 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "832720496_203";
+   prop:message_string "K1 got your message";
+   prop:to_user "local" .
+
+message:84529554_112 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "84529554_112";
+   prop:message_string "you have to say 'who'";
+   prop:to_user "local" .
+
+message:872345446_435 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "872345446_435";
+   prop:message_string "K1 got your message" .
+
+message:890747823_409 a cogi_class:Message;
+   prop:cunkiness 1000;
+   prop:from_user "cogibara";
+   prop:message_id "890747823_409";
+   prop:message_string "K1 got your message" .
+
+message:908446478_787 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "908446478_787";
+   prop:message_string "hehe... hello local";
+   prop:to_user "local" .
+
+message:928910294_139 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "928910294_139";
+   prop:message_string "do say this";
+   prop:to_user "local" .
+
+message:949862441_749 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "949862441_749";
+   prop:message_string "not an alarm";
+   prop:to_user "local" .
+
+message:974492717_946 a cogi_class:Message;
+   prop:from_user "cogibara";
+   prop:message_id "974492717_946";
+   prop:message_string "set an alarm";
+   prop:to_user "local" .

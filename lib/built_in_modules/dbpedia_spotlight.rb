@@ -107,5 +107,5 @@ class DBPediaSpotlight < Cogibara::Module
   #   # end
   # end
 
-  register :classify
+  # register :classify
 end
