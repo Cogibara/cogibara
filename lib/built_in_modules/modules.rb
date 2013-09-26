@@ -55,7 +55,11 @@ end
 
 class Default < Cogibara::Module
   on do
-    "I don't know how to respond to that, try asking for help if you're not sure what to do"
+    if current_message.get_wit_intent
+      "I think you want to #{current_message.get_wit_intent}, but I don't know how. try asking for help"
+    else
+      "I don't know how to respond to that, try asking for help if you're not sure what to do"
+    end
   end
 
   register :last
