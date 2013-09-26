@@ -17,19 +17,19 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '340'
+      - '333'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:43:42 GMT
+      - Thu, 26 Sep 2013 14:57:27 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "7a6aca7b-f698-4ca6-93e4-a5c8a8133c45",
+          "msg_id" : "a7531b8a-8aa2-485a-83b6-d5511d46cede",
           "msg_body" : "what is Tardigrade",
           "outcome" : {
-            "intent" : "general_knowledge_question",
+            "intent" : "summarize_knowledge",
             "entities" : {
               "subject" : {
                 "end" : 18,
@@ -38,11 +38,11 @@ http_interactions:
                 "body" : "tardigrade"
               }
             },
-            "confidence" : 0.928
+            "confidence" : 0.999
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:42 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:27 GMT
 - request:
     method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20is%20Tardigrade
@@ -58,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:43 GMT
+      - Thu, 26 Sep 2013 14:57:25 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -79,7 +79,7 @@ http_interactions:
           "@policy": "whitelist"
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:44 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:29 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20is%20Tardigrade
@@ -95,7 +95,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:44:33 GMT
+      - Thu, 26 Sep 2013 14:58:18 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -104,7 +104,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:44 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:29 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -132,7 +132,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:44 GMT
+      - Thu, 26 Sep 2013 14:57:53 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -157,13 +157,13 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:45 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:54 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
     body:
       encoding: US-ASCII
-      string: query=++++++PREFIX+dbpedia-owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0A++++++PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A++++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++++PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0A%0A++++++SELECT+DISTINCT+%3Fsummary+WHERE+%7B%0A++++++++%7B%0A++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTardigrade%3E+dbpedia-owl%3Aabstract+%3Fsummary.%0A++++++++%7D%0A++++++++UNION%0A++++++++%7B%0A++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTardigrade%3E+dbpedia-owl%3AwikiPageDisambiguates%0A++++++++++++%5B%0A++++++++++++++rdfs%3Alabel+%3Fsummary%3B%0A++++++++++++++dbpedia-owl%3Aabstract+%5B%5D%0A++++++++++++%5D%0A++++++++%7D%0A%0A++++++++FILTER%28LANG%28%3Fsummary%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Fsummary%29%2C+%22en%22%29%29%0A++++++%7D%0A
+      string: query=++++++++PREFIX+dbpedia-owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0A++++++++PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A++++++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++++++PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0A%0A++++++++SELECT+DISTINCT+%3Fsummary+WHERE+%7B%0A++++++++++%7B%0A++++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTardigrade%3E+dbpedia-owl%3Aabstract+%3Fsummary.%0A++++++++++%7D%0A++++++++++UNION%0A++++++++++%7B%0A++++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FTardigrade%3E+dbpedia-owl%3AwikiPageDisambiguates%0A++++++++++++%5B%0A++++++++++++++rdfs%3Alabel+%3Fsummary%3B%0A++++++++++++++dbpedia-owl%3Aabstract+%5B%5D%0A++++++++++++%5D%0A++++++++++%7D%0A%0A++++++++++FILTER%28LANG%28%3Fsummary%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Fsummary%29%2C+%22en%22%29%29%0A++++++++%7D%0A
     headers:
       Accept:
       - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
@@ -185,7 +185,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:44 GMT
+      - Thu, 26 Sep 2013 14:57:54 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -243,5 +243,99 @@ http_interactions:
         ZXMgaGF2ZSBiZWVuIGZvdW5kLjwvbGl0ZXJhbD48L2JpbmRpbmc+CiAgPC9y
         ZXN1bHQ+CiA8L3Jlc3VsdHM+Cjwvc3BhcnFsPg==
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:45 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:55 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20is%20Tardigrade&start=y&sessionid=VWT00488177&vText8=&vText7=&vText6=&vText5=Hello%20mr%20chatbot.&vText4=Hello%2C%20my%20Earthling%20friend.&vText3=Bla.&vText2=Bla%20bla.&icognoid=wsf&icognocheck=c51a17f307dd6598d838607da5e36d6e&fno=0&prevref=RMH065413264&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Sep 2013 14:57:01 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS="u+D0dHZBIUXmkypEGA/A+A"; Version=1
+      - JSESSIONID=A89AE3FBC150D76FA4A50EEFCCCCEAF0; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*CMXCHCQSGNHSBPIHYXLOCXZGMKSBOIKWXOPACKAODI"; Expires=""
+      - cleverbotref="*RBBGIDWGMBWWCVWWCYRCRBAMAZWCUWZAYUDARSEQEI"; Expires="Thu,
+        26 Sep 2013 15:59:57 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1522'
+      Sc:
+      - '10339'
+      Content-Length:
+      - '267'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Time And Relative Demensions In Space.\rVWT00488177\rj2log-uZdHSlKUAKTFQABQRSWE-detail\r\rHello
+        mr chatbot.\rHello, my Earthling friend.\rBla.\rBla bla.\rWhat is Tardigrade.\rTime
+        And Relative Demensions In Space.\rQQ012484726\r\r\r\r\r\rTime And Relative
+        Demensions In Space.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:00:19 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20is%20Tardigrade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '333'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 26 Sep 2013 15:02:56 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "6a55e7b8-d203-4449-a164-1ebf43ba5f6c",
+          "msg_body" : "what is Tardigrade",
+          "outcome" : {
+            "intent" : "summarize_knowledge",
+            "entities" : {
+              "subject" : {
+                "end" : 18,
+                "start" : 8,
+                "value" : "Tardigrade",
+                "body" : "tardigrade"
+              }
+            },
+            "confidence" : 0.999
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:02:56 GMT
 recorded_with: VCR 2.5.0

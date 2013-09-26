@@ -68,9 +68,18 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     end
 
 
-
     describe "lists known predicates" do
       it { @cogi.ask_local('what can you tell me about Germany')['Capital, Caption, cctld, color, common name, conventional long name, currency'].should_not be nil }
+    end
+
+    context "experimental wit integration" do
+      describe "property enumeration" do
+        it { @cogi.ask_local('what you know about balloon?')[0..43].should == "sameAs, label, depiction, comment, is primar" }
+      end
+
+      describe "fact questions" do
+        it { @cogi.ask_local('what\'s the capital of Cuba?')[0..43].should == "Havana" }
+      end
     end
   end
 
@@ -98,6 +107,7 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       it "can return just URIs" do
         msg = @cogi.ask_local('spotlight URIs for "I live in Madison Wisconsin"')
         eval(msg)["Madison Wisconsin"].should == "http://dbpedia.org/resource/Madison,_Wisconsin"
+        # puts Cogibara.dump_memory
       end
     end
   end

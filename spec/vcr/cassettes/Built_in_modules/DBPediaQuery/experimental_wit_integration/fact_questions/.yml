@@ -1,0 +1,315 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what's%20the%20capital%20of%20Cuba?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '635'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 26 Sep 2013 15:29:05 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "23c5cb79-27cf-4688-9df9-9d834067e668",
+          "msg_body" : "what's the capital of Cuba?",
+          "outcome" : {
+            "intent" : "fact_question",
+            "entities" : {
+              "organization" : {
+                "end" : 27,
+                "start" : 26,
+                "value" : "?",
+                "body" : "?",
+                "suggested" : true
+              },
+              "subject" : {
+                "end" : 26,
+                "start" : 22,
+                "value" : "Cuba",
+                "body" : "Cuba",
+                "suggested" : true
+              },
+              "fact_property" : {
+                "end" : 19,
+                "start" : 11,
+                "value" : "capital",
+                "body" : "capital "
+              }
+            },
+            "confidence" : 0.999
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:29:05 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what's%20the%20capital%20of%20Cuba?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Sep 2013 15:29:04 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "what's the capital of Cuba?",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Havana",
+            "@support": "3150",
+            "@types": "DBpedia:City,DBpedia:Settlement,DBpedia:PopulatedPlace,DBpedia:Place,Schema:Place,Schema:City,Freebase:/location/statistical_region,Freebase:/location,Freebase:/location/location,Freebase:/location/administrative_division,Freebase:/location/citytown,Freebase:/location/dated_location,Freebase:/film/film_location,Freebase:/film,DBpedia:TopicalConcept",
+            "@surfaceForm": "capital of Cuba",
+            "@offset": "11",
+            "@similarityScore": "0.18382056057453156",
+            "@percentageOfSecondRank": "-1.0"
+          }]
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:29:08 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what's%20the%20capital%20of%20Cuba?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 26 Sep 2013 15:29:57 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:29:08 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what's%20the%20capital%20of%20Cuba?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '635'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 26 Sep 2013 15:29:09 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "63ab5910-985e-4fe0-a736-abfceb8d97e9",
+          "msg_body" : "what's the capital of Cuba?",
+          "outcome" : {
+            "intent" : "fact_question",
+            "entities" : {
+              "organization" : {
+                "end" : 27,
+                "start" : 26,
+                "value" : "?",
+                "body" : "?",
+                "suggested" : true
+              },
+              "subject" : {
+                "end" : 26,
+                "start" : 22,
+                "value" : "Cuba",
+                "body" : "Cuba",
+                "suggested" : true
+              },
+              "fact_property" : {
+                "end" : 19,
+                "start" : 11,
+                "value" : "capital",
+                "body" : "capital "
+              }
+            },
+            "confidence" : 0.999
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:29:09 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=SELECT+*+WHERE+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%22Cuba%22%40en+.+%7D
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Sep 2013 15:29:08 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '1245'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="s"/>
+         </head>
+         <results>
+          <result>
+           <binding name="s"><uri>http://dbpedia.org/resource/Cuba</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://dbpedia.org/resource/Category:Cuba</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/en/Cuba</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/en/Cuba_2335</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/en/Cuba_TheIsland</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/Mx4ra2sDAulcQdec75xNA_sDlg</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjl7JwpEbGdrcN5Y29ycA</uri></binding>
+          </result>
+          <result>
+           <binding name="s"><uri>http://sw.opencyc.org/2008/06/10/concept/Mx8Ngh4rvYkdfpwpEbGdrcN5Y29ycB4rvVjl7JwpEbGdrcN5Y29ycA</uri></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:29:09 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=++++++PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A++++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++++PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0A++++++SELECT+DISTINCT+%3Flabel+WHERE+%7B%0A++++++++%23+%7B%3Fprop+a+rdf%3AProperty%7D%0A++++++++%23+UNION%0A++++++++%23+%7B%3Fprop+a+owl%3AObjectProperty%7D%0A%0A++++++++%3Fprop+rdfs%3Alabel+%3Fprop_label.%0A%0A++++++++FILTER+regex%28str%28%3Fprop_label%29%2C+%22capital%24%22%2C+%22i%22%29%0A++++++++%7B%0A++++++++++%7B%0A++++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FCuba%3E+%3Fprop+%3Flabel+.%0A++++++++++++FILTER+isLiteral%28%3Flabel%29%0A++++++++++%7D%0A++++++++++UNION%0A++++++++++%7B%0A++++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FCuba%3E+%3Fprop+%5B+rdfs%3Alabel+%3Flabel+%5D.%0A++++++++++%7D%0A++++++++++FILTER%28LANG%28%3Flabel%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Flabel%29%2C+%22en%22%29%29%0A++++++++%7D%0A++++++++UNION%0A++++++++%7B%0A++++++++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FCuba%3E+%3Fprop+%3Flabel+.%0A++++++++++FILTER+isURI%28%3Flabel%29%0A++++++++++MINUS+%7B+%3Flabel+rdfs%3Alabel+%3Flab%7D%0A++++++++%7D%0A++++++%7D%0A
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Sep 2013 15:29:09 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '358'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="label"><literal xml:lang="en">Havana</literal></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:29:10 GMT
+recorded_with: VCR 2.5.0

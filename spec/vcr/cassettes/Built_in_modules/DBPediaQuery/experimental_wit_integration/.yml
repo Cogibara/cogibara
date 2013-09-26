@@ -1,0 +1,310 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20you%20know%20about%20balloon?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '368'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 26 Sep 2013 15:14:44 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "593e9e59-c1eb-482a-a435-97c877ed9227",
+          "msg_body" : "what you know about balloon?",
+          "outcome" : {
+            "intent" : "interrogate_knowledge",
+            "entities" : {
+              "subject" : {
+                "end" : 27,
+                "start" : 20,
+                "value" : "balloon",
+                "body" : "balloon",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.988
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:14:44 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20you%20know%20about%20balloon?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Sep 2013 15:14:41 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "what you know about balloon?",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Balloon",
+            "@support": "369",
+            "@types": "Freebase:/book/book_subject,Freebase:/book,DBpedia:TopicalConcept",
+            "@surfaceForm": "balloon",
+            "@offset": "20",
+            "@similarityScore": "0.2978133261203766",
+            "@percentageOfSecondRank": "0.9914234595425558"
+          }]
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:14:45 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20you%20know%20about%20balloon?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 26 Sep 2013 15:15:35 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '62'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"CONTACT_SEARCH","category":"CONTACT"}'
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:14:46 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20you%20know%20about%20balloon?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '368'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 26 Sep 2013 15:14:46 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "3bc52ed0-ac8f-45fb-bc07-096f21dbe864",
+          "msg_body" : "what you know about balloon?",
+          "outcome" : {
+            "intent" : "interrogate_knowledge",
+            "entities" : {
+              "subject" : {
+                "end" : 27,
+                "start" : 20,
+                "value" : "balloon",
+                "body" : "balloon",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.988
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:14:46 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=SELECT+*+WHERE+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E+%22Balloon%22%40en+.+%7D
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Sep 2013 15:14:46 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '357'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="s"/>
+         </head>
+         <results>
+          <result>
+           <binding name="s"><uri>http://dbpedia.org/resource/Balloon</uri></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:14:47 GMT
+- request:
+    method: post
+    uri: http://dbpedia.org/sparql
+    body:
+      encoding: US-ASCII
+      string: query=++++PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0A++++PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A++++PREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0A%0A%0A++++SELECT+DISTINCT+%3Fpred+%3Flabel+WHERE+%7B%0A+++++%23+%7B%3Fpred+a+rdf%3AProperty%7D%0A+++++%23+UNION%0A+++++%23+%7B%3Fpred+a+owl%3AObjectProperty%7D%0A%0A+++++%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FBalloon%3E+%3Fpred+%5B%5D.%0A%0A+++++%3Fpred+rdfs%3Alabel+%3Flabel%0A+++++FILTER%28LANG%28%3Flabel%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Flabel%29%2C+%22en%22%29%29%0A+++%7D%0A
+    headers:
+      Accept:
+      - application/sparql-results+json, application/sparql-results+xml, text/tab-separated-values;p=0.8,
+        text/csv;p=0.2, text/turtle, text/rdf+turtle, application/turtle, application/x-turtle,
+        application/n-triples, text/plain
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 120
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Sep 2013 15:14:46 GMT
+      Content-Type:
+      - application/sparql-results+xml; charset=UTF-8
+      Content-Length:
+      - '2320'
+      Connection:
+      - keep-alive
+      Server:
+      - Virtuoso/07.00.3203 (Linux) i686-generic-linux-glibc212-64  VDB
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: |-
+        <sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+         <head>
+          <variable name="pred"/>
+          <variable name="label"/>
+         </head>
+         <results>
+          <result>
+           <binding name="pred"><uri>http://www.w3.org/2002/07/owl#sameAs</uri></binding>
+           <binding name="label"><literal>sameAs</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://www.w3.org/2000/01/rdf-schema#label</uri></binding>
+           <binding name="label"><literal>label</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://xmlns.com/foaf/0.1/depiction</uri></binding>
+           <binding name="label"><literal>depiction</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://www.w3.org/2000/01/rdf-schema#comment</uri></binding>
+           <binding name="label"><literal>comment</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://xmlns.com/foaf/0.1/isPrimaryTopicOf</uri></binding>
+           <binding name="label"><literal>is primary topic of</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://purl.org/dc/terms/subject</uri></binding>
+           <binding name="label"><literal xml:lang="en">Subject</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/abstract</uri></binding>
+           <binding name="label"><literal xml:lang="en">has abstract</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/wikiPageID</uri></binding>
+           <binding name="label"><literal xml:lang="en">Wikipage page ID</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/wikiPageRevisionID</uri></binding>
+           <binding name="label"><literal xml:lang="en">Wikipage revision ID</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/thumbnail</uri></binding>
+           <binding name="label"><literal xml:lang="en">thumbnail</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://dbpedia.org/ontology/wikiPageExternalLink</uri></binding>
+           <binding name="label"><literal xml:lang="en">Link from a Wikipage to an external page</literal></binding>
+          </result>
+         </results>
+        </sparql>
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:14:47 GMT
+recorded_with: VCR 2.5.0

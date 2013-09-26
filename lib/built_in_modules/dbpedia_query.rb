@@ -146,17 +146,7 @@ class DBPediaQuery < Cogibara::Module
     end
   end
 
-  on(/what do you know about (.+?)(?:\?|$)/i) do |object|
-    # object = object.gsub("?",'')
-    dbpedia_predicates object
-  end
-
-  on(/what can you tell me about (.+?)(?:\?|$)/i) do |object|
-    # object = object.gsub("?",'')
-    dbpedia_predicates object
-  end
-
-  on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,object|
+  def dbpedia_fact_question(object,property)
     if object == "it"
       object = @it if @it
     else
@@ -167,7 +157,6 @@ class DBPediaQuery < Cogibara::Module
     if past_results.size > 0
       past_results.first.response.message
     else
-
       sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
       object = object.capitalize unless object[0] == object[0].capitalize
 
@@ -183,6 +172,58 @@ class DBPediaQuery < Cogibara::Module
         current_message
       end
     end
+  end
+
+
+
+  on(/.*(?:what|who|why|how|where|when).*/, wit_intent: "interrogate_knowledge") do
+    api_key = settings["keys"]["wit"]
+    response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape current_message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
+
+    response.body.to_s
+
+    data = JSON.parse(response.body)
+
+    # puts "#{data["outcome"]["entities"]}"
+    filter do |msg|
+      data["outcome"]["entities"] && data["outcome"]["entities"]["subject"]
+    end
+
+    dbpedia_predicates data["outcome"]["entities"]["subject"]["value"]
+  end
+
+  on(/what do you know about (.+?)(?:\?|$)/i) do |object|
+    # object = object.gsub("?",'')
+    dbpedia_predicates object
+  end
+
+  on(/what can you tell me about (.+?)(?:\?|$)/i) do |object|
+    # object = object.gsub("?",'')
+    dbpedia_predicates object
+  end
+
+  on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,object|
+    dbpedia_fact_question object, property
+  end
+
+  on(/^(who|what) (?:is|are) the (.+) of (.+?)(?:\?|$)/i) do |question,property,object|
+    dbpedia_fact_question object, property
+  end
+
+  on(/.*(?:what|who|why|how|where|when).*/, wit_intent: "fact_question") do
+    api_key = settings["keys"]["wit"]
+    response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape current_message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
+
+    response.body.to_s
+
+    data = JSON.parse(response.body)
+
+    # puts "#{data["outcome"]["entities"]}"
+    filter do |msg|
+      data["outcome"]["entities"] && data["outcome"]["entities"]["subject"] && data["outcome"]["entities"]["fact_property"]
+    end
+
+    dbpedia_fact_question data["outcome"]["entities"]["subject"]["value"], data["outcome"]["entities"]["fact_property"]["value"]
   end
 
   on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |plural,object|

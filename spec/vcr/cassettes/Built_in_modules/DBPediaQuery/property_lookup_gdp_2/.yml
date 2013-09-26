@@ -17,25 +17,26 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '494'
+      - '527'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:43:23 GMT
+      - Thu, 26 Sep 2013 14:57:06 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "24d73dae-751b-49e9-a35d-aaf283816c7f",
+          "msg_id" : "3b6a76a2-5b55-48d4-9fc5-9af2cc1d068f",
           "msg_body" : "What is the gdp PPP per capita of Japan",
           "outcome" : {
             "intent" : "fact_question",
             "entities" : {
-              "country" : {
+              "organization" : {
                 "end" : 39,
                 "start" : 34,
                 "value" : "Japan",
-                "body" : "japan"
+                "body" : "Japan",
+                "suggested" : true
               },
               "fact_property" : {
                 "end" : 30,
@@ -44,11 +45,11 @@ http_interactions:
                 "body" : "gdp ppp per capita"
               }
             },
-            "confidence" : 0.933
+            "confidence" : 0.999
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:23 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:06 GMT
 - request:
     method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan
@@ -64,7 +65,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:24 GMT
+      - Thu, 26 Sep 2013 14:57:04 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -123,7 +124,7 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:25 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:08 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan
@@ -139,7 +140,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:44:14 GMT
+      - Thu, 26 Sep 2013 14:57:58 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -148,7 +149,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:25 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:09 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -176,7 +177,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:25 GMT
+      - Thu, 26 Sep 2013 14:57:08 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -216,7 +217,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:26 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:09 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -244,7 +245,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:25 GMT
+      - Thu, 26 Sep 2013 14:57:09 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -269,5 +270,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:26 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:10 GMT
 recorded_with: VCR 2.5.0

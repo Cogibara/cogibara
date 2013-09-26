@@ -17,19 +17,19 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '351'
+      - '346'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:43:56 GMT
+      - Thu, 26 Sep 2013 14:57:31 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "6b7b30c3-a2dd-4c79-a539-409d59ff2832",
+          "msg_id" : "64a0b76d-b42b-4a77-a911-0fc9347e4b1e",
           "msg_body" : "what can you tell me about Germany",
           "outcome" : {
-            "intent" : "general_knowledge_question",
+            "intent" : "interrogate_knowledge",
             "entities" : {
               "subject" : {
                 "end" : 34,
@@ -38,11 +38,11 @@ http_interactions:
                 "body" : "germany"
               }
             },
-            "confidence" : 0.928
+            "confidence" : 0.998
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:56 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:31 GMT
 - request:
     method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20can%20you%20tell%20me%20about%20Germany
@@ -58,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:56 GMT
+      - Thu, 26 Sep 2013 14:57:27 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -88,7 +88,7 @@ http_interactions:
           }]
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:57 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:31 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20can%20you%20tell%20me%20about%20Germany
@@ -104,7 +104,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:44:46 GMT
+      - Thu, 26 Sep 2013 14:58:21 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -113,7 +113,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:57 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:32 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -141,7 +141,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:57 GMT
+      - Thu, 26 Sep 2013 14:57:31 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -181,7 +181,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:57 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:33 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -209,11 +209,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:43:57 GMT
+      - Thu, 26 Sep 2013 14:57:32 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
-      - '19180'
+      - '19878'
       Connection:
       - keep-alive
       Server:
@@ -230,12 +230,24 @@ http_interactions:
          </head>
          <results>
           <result>
+           <binding name="pred"><uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri></binding>
+           <binding name="label"><literal>type</literal></binding>
+          </result>
+          <result>
            <binding name="pred"><uri>http://www.w3.org/2002/07/owl#sameAs</uri></binding>
            <binding name="label"><literal>sameAs</literal></binding>
           </result>
           <result>
+           <binding name="pred"><uri>http://www.w3.org/2000/01/rdf-schema#label</uri></binding>
+           <binding name="label"><literal>label</literal></binding>
+          </result>
+          <result>
            <binding name="pred"><uri>http://xmlns.com/foaf/0.1/depiction</uri></binding>
            <binding name="label"><literal>depiction</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://www.w3.org/2000/01/rdf-schema#comment</uri></binding>
+           <binding name="label"><literal>comment</literal></binding>
           </result>
           <result>
            <binding name="pred"><uri>http://xmlns.com/foaf/0.1/name</uri></binding>
@@ -248,6 +260,10 @@ http_interactions:
           <result>
            <binding name="pred"><uri>http://xmlns.com/foaf/0.1/isPrimaryTopicOf</uri></binding>
            <binding name="label"><literal>is primary topic of</literal></binding>
+          </result>
+          <result>
+           <binding name="pred"><uri>http://purl.org/dc/terms/subject</uri></binding>
+           <binding name="label"><literal xml:lang="en">Subject</literal></binding>
           </result>
           <result>
            <binding name="pred"><uri>http://dbpedia.org/ontology/PopulatedPlace/areaTotal</uri></binding>
@@ -632,7 +648,50 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:58 GMT
+  recorded_at: Thu, 26 Sep 2013 14:57:33 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20can%20you%20tell%20me%20about%20Germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '346'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 26 Sep 2013 15:08:41 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "9a12a8db-af35-495f-ba1b-061688e5c374",
+          "msg_body" : "what can you tell me about Germany",
+          "outcome" : {
+            "intent" : "interrogate_knowledge",
+            "entities" : {
+              "subject" : {
+                "end" : 34,
+                "start" : 27,
+                "value" : "Germany",
+                "body" : "germany"
+              }
+            },
+            "confidence" : 0.999
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 15:08:41 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
@@ -646,18 +705,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 17:48:02 GMT
+      - Thu, 26 Sep 2013 15:08:19 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS=FFGyECxYPFHgdvIdwRDljw
-      - JSESSIONID=BD94231E79D0597A8F93E8FFB3A62A09; Path=/
+      - AIS=U10MX+WotQZxdB5qZl6QbQ
+      - JSESSIONID=37FA575BAA008EF47634BD955D68E3BF; Path=/
       - RPS=cs5860
-      - cleverbotfirstref2="*OYFKQLCSSNTAKBITGGXOOFISMWAKAIWEGAPAOGIKMI"; Expires=""
-      - cleverbotref="*WGTYDYBSRNBOXAIBUTWOWTVRMEOXZIESTZPAWEWEZM"; Expires="Wed,
-        25 Sep 2013 18:51:08 GMT"
+      - cleverbotfirstref2="*UEHMIDJFZAZCCIVZIYEBUHAZZCCCHVCGYHCAUOKGEI"; Expires=""
+      - cleverbotref="*ZJDIGBYCOXEYAXSEEWTYZDYOWHYAWSHCWWZAZKGMCK"; Expires="Thu,
+        26 Sep 2013 16:11:43 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -669,18 +728,20 @@ http_interactions:
       Rps:
       - cs5860
       Rlm:
-      - '1939'
+      - '1376'
       Sc:
-      - '22684'
+      - '10899'
       Content-Length:
-      - '193'
+      - '377'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "Nothing.\rVWT00488177\rj2log-iNmQUnYIOYHOSAPKFCKG-detail\r\rHello mr
-        chatbot.\rHello, my Earthling friend.\rBla.\rBla bla.\rWhat can you tell me
-        about Germany.\rNothing.\rUJ004460546\r\r\r\r\r\rNothing.\r\r\r\r\r\r\r"
+      string: "I cannot tell you anything about God, Master. You are my God, though.\rVWT00488177\rj2log-qVmQUnIIYYPOSAZCFKSG-detail\r\rHello
+        mr chatbot.\rHello, my Earthling friend.\rBla.\rBla bla.\rWhat can you tell
+        me about Germany.\rI cannot tell you anything about God, Master. You are my
+        God, though.\rRZA051630659\r\r\r\r\r\rI cannot tell you anything about God,
+        Master. You are my God, though.\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 17:51:09 GMT
+  recorded_at: Thu, 26 Sep 2013 15:11:37 GMT
 recorded_with: VCR 2.5.0
