@@ -174,6 +174,75 @@ class DBPediaQuery < Cogibara::Module
     end
   end
 
+  def dbpedia_summarize(object)
+    if current_message.get_wit_intent
+      filter do |m|
+        m.get_wit_intent == "summarize_knowledge"
+      end
+    end
+    # object = object.singularize
+    if object == "it"
+      object = @it if @it
+    else
+      @it = object
+    end
+
+    sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
+    object = object.capitalize unless object[0] == object[0].capitalize
+    qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+    # puts qry.to_s
+    sols = qry.execute
+
+    if sols.size == 0
+      object = object.singularize
+      if object == "it"
+        object = @it if @it
+      else
+        @it = object
+      end
+
+      object = object.capitalize unless object[0] == object[0].capitalize
+      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+      sols = qry.execute
+    end
+
+    if sols.size > 0
+      qry = <<-EOF
+      PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+
+      SELECT DISTINCT ?summary WHERE {
+        {
+          <#{sols.first[:s].to_s}> dbpedia-owl:abstract ?summary.
+        }
+        UNION
+        {
+          <#{sols.first[:s].to_s}> dbpedia-owl:wikiPageDisambiguates
+          [
+            rdfs:label ?summary;
+            dbpedia-owl:abstract []
+          ]
+        }
+
+        FILTER(LANG(?summary) = "" || LANGMATCHES(LANG(?summary), "en"))
+      }
+      EOF
+
+      # puts qry
+      results = sparql.query(qry).map(&:summary).map(&:to_s)
+      if results.size > 0
+        results.join(', ')
+      else
+        current_message
+      end
+    else
+      current_message
+    end
+  end
+
 
 
   on(/.*(?:what|who|why|how|where|when).*/, wit_intent: "interrogate_knowledge") do
@@ -226,74 +295,25 @@ class DBPediaQuery < Cogibara::Module
     dbpedia_fact_question data["outcome"]["entities"]["subject"]["value"], data["outcome"]["entities"]["fact_property"]["value"]
   end
 
-  on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |plural,object|
-      if current_message.get_wit_intent
-        filter do |m|
-          m.get_wit_intent == "summarize_knowledge"
-        end
-      end
-      # object = object.singularize
-      if object == "it"
-        object = @it if @it
-      else
-        @it = object
-      end
+  on(/.*(?:what|who|why|how|where|when).*/, wit_intent: "summarize_knowledge") do
+    api_key = settings["keys"]["wit"]
+    response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape current_message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
 
-      sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
-      object = object.capitalize unless object[0] == object[0].capitalize
-      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
-      # puts qry.to_s
-      sols = qry.execute
+    response.body.to_s
 
-      if sols.size == 0
-        object = object.singularize
-        if object == "it"
-          object = @it if @it
-        else
-          @it = object
-        end
+    data = JSON.parse(response.body)
 
-        object = object.capitalize unless object[0] == object[0].capitalize
-        qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
-        sols = qry.execute
-      end
-
-      if sols.size > 0
-        qry = <<-EOF
-        PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX owl: <http://www.w3.org/2002/07/owl#>
-
-
-        SELECT DISTINCT ?summary WHERE {
-          {
-            <#{sols.first[:s].to_s}> dbpedia-owl:abstract ?summary.
-          }
-          UNION
-          {
-            <#{sols.first[:s].to_s}> dbpedia-owl:wikiPageDisambiguates
-            [
-              rdfs:label ?summary;
-              dbpedia-owl:abstract []
-            ]
-          }
-
-          FILTER(LANG(?summary) = "" || LANGMATCHES(LANG(?summary), "en"))
-        }
-        EOF
-
-        # puts qry
-        results = sparql.query(qry).map(&:summary).map(&:to_s)
-        if results.size > 0
-          results.join(', ')
-        else
-          current_message
-        end
-      else
-        current_message
-      end
+    # puts "#{data["outcome"]["entities"]}"
+    filter do |msg|
+      data["outcome"]["entities"] && data["outcome"]["entities"]["subject"]
     end
+
+    dbpedia_summarize data["outcome"]["entities"]["subject"]["value"]
+  end
+
+  on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |plural,object|
+    dbpedia_summarize(object)
+  end
 
   register
 end
