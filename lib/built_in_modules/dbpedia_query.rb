@@ -227,6 +227,11 @@ class DBPediaQuery < Cogibara::Module
   end
 
   on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |plural,object|
+      if current_message.get_wit_intent
+        filter do |m|
+          m.get_wit_intent == "summarize_knowledge"
+        end
+      end
       # object = object.singularize
       if object == "it"
         object = @it if @it
