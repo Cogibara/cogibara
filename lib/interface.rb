@@ -1,7 +1,13 @@
 class Cogibara
   module Interface
     def ask_string(msg, opts={})
-      Cogibara.ask(Cogibara.memory.new_message(msg, opts)){|y| request_input y}
+      Cogibara.ask(Cogibara.memory.new_message(msg, opts)){|y|
+        if y.is_a? Cogibara::UserQuestion
+          request_input y
+        else
+          intermediate_response y
+        end
+      }
     end
 
     def ask(msg, opts={})
@@ -9,8 +15,13 @@ class Cogibara
     end
 
     def request_input(msg)
-      puts "#{msg}"
-      z = gets
+      puts "#{msg.question}"
+      msg.response = gets
+      msg
+    end
+
+    def intermediate_response(msg)
+      puts msg.to_s
     end
 
     # def ask_xmpp(msg)
