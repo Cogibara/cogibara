@@ -179,11 +179,16 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       it {@cogi_l.ask('show me Johnny Habus contact info').should == "you have to say 'who'" }
     end
 
-    describe "can request user response" do
+    describe "can interact with user" do
       class Namer < Cogibara::Module
         on(/hello/) do
           name = request_input "what's your name?"
           "hi #{name}! :D"
+        end
+
+        on(/hi/) do
+          say "hey, this is a intermediate response"
+          "and this is the final one"
         end
 
       end
@@ -195,6 +200,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       end
 
       it {@cogi_l.ask('hello').should == "hi bob! :D"}
+      it {@cogi_l.ask('hi').should == "and this is the final one"}
     end
 
   end

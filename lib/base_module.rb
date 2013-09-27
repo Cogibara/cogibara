@@ -75,7 +75,11 @@ class Cogibara
     end
 
     def request_input(msg)
-      @__yielder.call msg
+      @__yielder.call(Cogibara::UserQuestion.new(msg)).response
+    end
+
+    def say(msg)
+      @__yielder.call(msg)
     end
 
     def settings
