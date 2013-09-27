@@ -65,10 +65,9 @@ DaemonKit::XMPP.run do
     write_to_stream s.approve!
   end
 
-  # Echo back what was said
   message :chat?, :body do |m|
     repl = m.reply
-    repl.body = Cogibara::Interface.new.ask_xmpp(m)
+    repl.body = Cogibara::Interface::XMPP.new.ask(m)
     write_to_stream repl
   end
 end
