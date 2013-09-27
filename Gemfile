@@ -55,3 +55,4 @@ gem 'gist', :require => false
 gem 'sparql-client', :require => false
 gem 'dbpedia-spotlight', :require => false, git: 'https://github.com/fumi/dbpedia-spotlight-rb.git'
 gem 'httparty', :require => false
+gem 'evernote_oauth', :require => false

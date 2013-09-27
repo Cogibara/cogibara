@@ -3,7 +3,9 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 describe Cogibara::Module, vcr: { record: :new_episodes } do
 
   before(:all) do
-    @cogi = Cogibara::Interface.new
+    @cogi_l = Cogibara::Interface::Local.new
+    @cogi_x = Cogibara::Interface::XMPP.new
+    @cogi_p = Class.new { include Cogibara::Interface }.new
   end
 
   context "overriding ask method" do
@@ -17,7 +19,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       Reverser.register
     end
 
-    it { @cogi.ask_local('hello?').should ==  "?olleh" }
+    it { @cogi_l.ask('hello?').should ==  "?olleh" }
   end
 
   context "using the dsl", vcr: { record: :new_episodes } do
@@ -40,10 +42,10 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         DiceRoller.register
       end
 
-      it { @cogi.ask_local('hello you').should ==  "hai dere" }
-      it { @cogi.ask_local("I'm bill").should ==  "hi bill" }
-      it { @cogi.ask_local("roll me 1d150").to_i.should > 0  }
-      it { @cogi.ask_local("roll me 4d12").split("\n").size.should == 4 }
+      it { @cogi_l.ask('hello you').should ==  "hai dere" }
+      it { @cogi_l.ask("I'm bill").should ==  "hi bill" }
+      it { @cogi_l.ask("roll me 1d150").to_i.should > 0  }
+      it { @cogi_l.ask("roll me 4d12").split("\n").size.should == 4 }
     end
 
 
@@ -69,7 +71,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       end
 
 
-      it { @cogi.ask_local('hi').should ==  "K1 got your message" }
+      it { @cogi_l.ask('hi').should ==  "K1 got your message" }
     end
 
     describe "add topics" do
@@ -83,12 +85,12 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         Topicizer.register :classify
       end
 
-      it { @cogi.ask('hi').response_to.topics.first.should ==  "tests and stuff" }
+      it { @cogi_p.ask('hi').response_to.topics.first.should ==  "tests and stuff" }
     end
 
     describe "can set/get properties manually" do
         before do
-          @msg = @cogi.ask('hi')
+          @msg = @cogi_p.ask('hi')
         end
 
         it {
@@ -108,7 +110,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         CreepyGreeter.register
       end
 
-      it { @cogi.ask_local('hello you').should ==  "hehe... hello local" }
+      it { @cogi_l.ask('hello you').should ==  "hehe... hello local" }
     end
 
     describe "can order response handlers" do
@@ -126,7 +128,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         OrderKlass.register
       end
 
-      it { @cogi.ask_local('testing').should == "do say this"}
+      it { @cogi_l.ask('testing').should == "do say this"}
     end
 
     describe "can restrict on arbitrary properties" do
@@ -148,12 +150,12 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         AlarmSetter.register
       end
 
-      it { @cogi.ask_local('testing').should == "not an alarm" }
-      it { @cogi.ask_local('set me an alarm for 8am tomorrow').should == "set an alarm"}
-      it { @cogi.ask_local('cancel my 8am alarm').should == "cancel an alarm" }
+      it { @cogi_l.ask('testing').should == "not an alarm" }
+      it { @cogi_l.ask('set me an alarm for 8am tomorrow').should == "set an alarm"}
+      it { @cogi_l.ask('cancel my 8am alarm').should == "cancel an alarm" }
     end
 
-    describe "can use filter helper for more complex filtering" do
+    describe "use filter helper for more complex filtering" do
       class PersonLookup < Cogibara::Module
         on(/.*/, maluuba_action: "CONTACT_SEARCH") do
           filter do |msg|
@@ -173,8 +175,26 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         PersonLookup.register
       end
 
-      it {@cogi.ask_local('who is Johnny Habu?').should == "looking up a person" }
-      it {@cogi.ask_local('show me Johnny Habus contact info').should == "you have to say 'who'" }
+      it {@cogi_l.ask('who is Johnny Habu?').should == "looking up a person" }
+      it {@cogi_l.ask('show me Johnny Habus contact info').should == "you have to say 'who'" }
+    end
+
+    describe "can request user response" do
+      class Namer < Cogibara::Module
+        on(/hello/) do
+          name = request_input "what's your name?"
+          "hi #{name}! :D"
+        end
+
+      end
+
+      before do
+        Namer.register
+        @cogi_l.stub(:gets).and_return('bob')
+        @cogi_l.stub(:puts)
+      end
+
+      it {@cogi_l.ask('hello').should == "hi bob! :D"}
     end
 
   end

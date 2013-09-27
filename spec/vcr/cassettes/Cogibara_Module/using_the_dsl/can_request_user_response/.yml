@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '171'
+      Server:
+      - http-kit
+      Date:
+      - Fri, 27 Sep 2013 14:02:18 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "9fd4add0-bca6-45db-b2dd-70e7eb4e69e3",
+          "msg_body" : "hello",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.993
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 27 Sep 2013 14:02:18 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=hello
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Fri, 27 Sep 2013 14:03:08 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
+    http_version: 
+  recorded_at: Fri, 27 Sep 2013 14:02:19 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=bob
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '177'
+      Server:
+      - http-kit
+      Date:
+      - Fri, 27 Sep 2013 14:24:34 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "746bd7e4-2851-4a4c-afba-c3dd05bbb792",
+          "msg_body" : "bob",
+          "outcome" : {
+            "intent" : "weather_report",
+            "entities" : { },
+            "confidence" : 0.05
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 27 Sep 2013 14:24:34 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=bob
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Fri, 27 Sep 2013 14:25:24 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '89'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{"contacts":[{"name":"bob"}]},"action":"CONTACT_SEARCH","category":"CONTACT"}'
+    http_version: 
+  recorded_at: Fri, 27 Sep 2013 14:24:35 GMT
+recorded_with: VCR 2.5.0

@@ -1,0 +1,187 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '209'
+      Server:
+      - http-kit
+      Date:
+      - Thu, 26 Sep 2013 22:46:36 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "29577945-2ce1-42d6-98fd-6204f2afb974",
+          "msg_body" : "remind me to feed the cat at 7:00pm",
+          "outcome" : {
+            "intent" : "fact_question",
+            "entities" : { },
+            "confidence" : 0.881
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 22:46:36 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 26 Sep 2013 22:47:26 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '109'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{"message":["feed the cat"],"time":["07:00:00AM"]},"action":"REMINDER_SET","category":"REMINDER"}'
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 22:46:36 GMT
+- request:
+    method: post
+    uri: https://sandbox.evernote.com/edam/user
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAQAAAAxjaGVja1ZlcnNpb24AAAAACwABAAAACEVEQU1UZXN0BgACAAEG
+        AAMAGQA=
+    headers:
+      Content-Type:
+      - application/x-thrift
+      User-Agent:
+      - wstrinz-1564 / 0.2.1; Ruby / 2.0.0;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-transform
+      Content-Type:
+      - application/x-thrift
+      Content-Length:
+      - '29'
+      Date:
+      - Thu, 26 Sep 2013 22:46:37 GMT
+      Server:
+      - Evernote/1.0
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAgAAAAxjaGVja1ZlcnNpb24AAAAAAgAAAQA=
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 22:46:37 GMT
+- request:
+    method: post
+    uri: https://sandbox.evernote.com/edam/user
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAQAAAA9nZXROb3RlU3RvcmVVcmwAAAAACwABAAAAZDxFdmVybm90ZSBB
+        dXRoPgA=
+    headers:
+      Content-Type:
+      - application/x-thrift
+      User-Agent:
+      - wstrinz-1564 / 0.2.1; Ruby / 2.0.0;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-transform
+      Content-Type:
+      - application/x-thrift
+      Content-Length:
+      - '82'
+      Date:
+      - Thu, 26 Sep 2013 22:46:37 GMT
+      Server:
+      - Evernote/1.0
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAgAAAA9nZXROb3RlU3RvcmVVcmwAAAAACwAAAAAAL2h0dHBzOi8vc2Fu
+        ZGJveC5ldmVybm90ZS5jb20vc2hhcmQvczEvbm90ZXN0b3JlAA==
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 22:46:37 GMT
+- request:
+    method: post
+    uri: https://sandbox.evernote.com/shard/s1/notestore
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAQAAAApjcmVhdGVOb3RlAAAAAAsAAQAAAGQ8RXZlcm5vdGUgQXV0aD4M
+        AAILAAIAAAAMZmVlZCB0aGUgY2F0CwADAAAAkDw/eG1sIHZlcnNpb249IjEu
+        MCIgZW5jb2Rpbmc9IlVURi04Ij8+CiAgICA8IURPQ1RZUEUgZW4tbm90ZSBT
+        WVNURU0gImh0dHA6Ly94bWwuZXZlcm5vdGUuY29tL3B1Yi9lbm1sMi5kdGQi
+        PgogICAgPGVuLW5vdGU+SGVsbG8sIFdvcmxkPC9lbi1ub3RlPgwADgoAEgAA
+        AUFcc9DgCgAUAAABQVx2kAAAAAA=
+    headers:
+      Content-Type:
+      - application/x-thrift
+      User-Agent:
+      - wstrinz-1564 / 0.2.1; Ruby / 2.0.0;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-transform
+      Content-Type:
+      - application/x-thrift
+      Content-Length:
+      - '221'
+      Date:
+      - Thu, 26 Sep 2013 22:46:38 GMT
+      Server:
+      - Evernote/1.0
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAgAAAApjcmVhdGVOb3RlAAAAAAwAAAsAAQAAACRlMTg2YzFiMS04OTdk
+        LTQ0M2QtOGI1NS1kOGYzZWU5YTRlYjELAAIAAAAMZmVlZCB0aGUgY2F0CwAE
+        AAAAEFLBUnSFl+D9CFUWm7gfjK0IAAUAAACQCgAGAAABQVxz2LAKAAcAAAFB
+        XHPYsAIACQEIAAoAAAATCwALAAAAJDgzZDQzNDIzLTllNWYtNDUyOS1iNmRh
+        LTE4N2U4NjY5ODFkYwwADgoAEgAAAUFcc9DgCgAUAAABQVx2kAAAAAA=
+    http_version: 
+  recorded_at: Thu, 26 Sep 2013 22:46:38 GMT
+recorded_with: VCR 2.5.0

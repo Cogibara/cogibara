@@ -5,22 +5,24 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 describe Cogibara, vcr: {record: :new_episodes} do
 
   before(:all) do
-    @cogi = Cogibara::Interface.new
+    @cogi_l = Cogibara::Interface::Local.new
+    @cogi_x = Cogibara::Interface::XMPP.new
+    @cogi_p = Class.new { include Cogibara::Interface }.new
     Cogibara::ModuleStack.clear
     Cogibara.load_base_modules
   end
 
   describe "defaults to chatting" do
       # puts "hello?"
-      it { @cogi.ask_local('hello?').should ==  "How are you?" }
+      it { @cogi_l.ask('hello?').should ==  "How are you?" }
 
-      it { @cogi.ask_local('Who are you').should == "How are you?" }
+      it { @cogi_l.ask('Who are you').should == "How are you?" }
 
   end
 
   it "can return raw question objects" do
 
-      msg = @cogi.ask('hello?',from: "wstrinz@gmail.com")
+      msg = @cogi_p.ask('hello?',from: "wstrinz@gmail.com")
       msg.to.should == "wstrinz@gmail.com"
       msg.from.should == "cogibara"
       original = msg.response_to
@@ -38,13 +40,13 @@ describe Cogibara, vcr: {record: :new_episodes} do
       msg.body = "hello?"
       msg.type = :chat
       msg.id = 1234
-      @cogi.ask_xmpp(msg).should == "Hi."
+      @cogi_x.ask(msg).should == "Hi."
 
   end
 
   it "can save memory" do
 
-      msg = @cogi.ask('hello?',from: "wstrinz@gmail.com")
+      msg = @cogi_p.ask('hello?',from: "wstrinz@gmail.com")
       Cogibara.export_memory('resource/example_memory.ttl')
       RDF::Repository.load('resource/example_memory.ttl').size.should == Cogibara.base_cogi.memory.repo.size
 
@@ -52,7 +54,7 @@ describe Cogibara, vcr: {record: :new_episodes} do
 
   it "can load memory" do
 
-      msg = @cogi.ask('hello?',from: "wstrinz@gmail.com")
+      msg = @cogi_p.ask('hello?',from: "wstrinz@gmail.com")
       Cogibara.import_memory('resource/example_memory.ttl')
 
   end

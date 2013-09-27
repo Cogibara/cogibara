@@ -11,7 +11,7 @@ class Cogibara
 
     ModuleStack.stack.each do |mod|
       catch(:mod_pass) do
-        response = mod.ask(message)
+        response = mod.ask(message) {|y| yield y }
         if response.is_a? String
           response = memory.new_message(response)
           response_details(message, response)
