@@ -39,7 +39,7 @@ end
 
 class Helper < Cogibara::Module
   def help_text
-    "helping you helpfully"
+    "Placeholder help text"
   end
 
   on(/.*/, maluuba_action: 'HELP_HELP') do

@@ -15,6 +15,10 @@ require_relative 'message.rb'
 require_relative 'module_stack.rb'
 
 require_relative 'built_in_modules/modules.rb'
-require_relative 'built_in_modules/dbpedia_query.rb'
-require_relative 'built_in_modules/dbpedia_spotlight.rb'
-require_relative 'built_in_modules/wit.rb'
+
+Dir["#{File.dirname(__FILE__)}/built_in_modules/*.rb"].each {|file| require file }
+
+# require_relative 'built_in_modules/dbpedia_query.rb'
+# require_relative 'built_in_modules/dbpedia_spotlight.rb'
+# require_relative 'built_in_modules/wit.rb'
+# require_relative 'built_in_modules/evernote.rb'

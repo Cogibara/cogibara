@@ -14,7 +14,7 @@ class Cogibara
     end
 
     def self.ask(message)
-      base_cogi.ask(message)
+      base_cogi.ask(message) {|y| yield y}
     end
 
     def self.load_base_modules

@@ -245,7 +245,7 @@ class DBPediaQuery < Cogibara::Module
 
 
 
-  on(/.*(?:what|who|why|how|where|when).*/, wit_intent: "interrogate_knowledge") do
+  on(:question, wit_intent: "interrogate_knowledge") do
     api_key = settings["keys"]["wit"]
     response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape current_message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
 
@@ -279,7 +279,7 @@ class DBPediaQuery < Cogibara::Module
     dbpedia_fact_question object, property
   end
 
-  on(/.*(?:what|who|why|how|where|when).*/, wit_intent: "fact_question") do
+  on(:question, wit_intent: "fact_question") do
     api_key = settings["keys"]["wit"]
     response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape current_message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
 

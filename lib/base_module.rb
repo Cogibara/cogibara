@@ -43,6 +43,17 @@ class Cogibara
     # TODO should make sure this is registered as a proc if it isnt already, so "return" will override
     # ask's return behavior?
     def self.on(pattern=/.*/, restrictions={}, &block)
+      if pattern.is_a? Symbol
+        case pattern
+        when :question
+          pattern = /(?:what|who|why|how|where|when).*/i
+        when :any
+          pattern = /.*/
+        else
+          raise "Unkown pattern symbol #{pattern}"
+        end
+      end
+
       response_patterns << [pattern, [block, restrictions]]
     end
 
@@ -61,6 +72,10 @@ class Cogibara
 
     def pass
       throw :mod_pass
+    end
+
+    def request_input(msg)
+      @__yielder.call msg
     end
 
     def settings
@@ -87,18 +102,18 @@ class Cogibara
     #  should have this call some other method if defined, so
     #  eg setting up current message still happens
 
-    def ask(message)
+    def ask(message,&block)
       @current_message = message
-      # @filter ||= Proc.new {|block| v = block.call(current_message); return unless v }
+      @__yielder ||= Proc.new {|y| yield y}
       selected = self.class.response_patterns.select{|patt| message.message[patt[0]] && meets_restrictions(message,patt[1][1])}
 
       if selected.size > 0
         selected.each do |sel|
           catch(:pass) do
             if sel[0].is_a? Regexp
-              return instance_exec(*[message, message.message.scan(sel[0])].flatten, &sel[1][0])
+              return instance_exec(*[message, message.message.scan(sel[0])].flatten, &sel[1][0]) #{|y| yield y }
             elsif sel[0].is_a? String
-              return instance_exec &sel[1][0]
+              return instance_exec &sel[1][0] #{|y| yield y }
             else
               raise "unknown pattern match type"
             end
