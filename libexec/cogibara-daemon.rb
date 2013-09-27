@@ -13,34 +13,6 @@ DaemonKit::Application.running! do |config|
 end
 
 DaemonKit::XMPP.run do
-  # when_ready { DaemonKit.logger.info "Connected as #{jid}" }
-
-  ## Enables file transfer (when_ready appears to be broken...)
-    # set_caps(
-    #   "arthur@wonderland.lit",
-    #   [{:type => "bot", :category => "client", :name => "arthur"}],
-    #   [
-    #   # In-band bytestreams: http://xmpp.org/extensions/xep-0047.html
-    #   "http://jabber.org/protocol/ibb",
-
-    #   # SOCKS5 Bytestreams: http://xmpp.org/extensions/xep-0065.html
-    #   "http://jabber.org/protocol/bytestreams",
-
-    #   # SI File Transfer: http://xmpp.org/extensions/xep-0096.html
-    #   "http://jabber.org/protocol/si",
-
-    #   # Namespace of stream initiation profile (specified in 0096)
-    #   "http://jabber.org/protocol/si/profile/file-transfer",
-    #   ]
-    # )
-    # DaemonKit.logger.info "Connected to #{client.jid}. Sent capabilities:"
-    # Thread.new do
-    #   sleep(3)
-    #   send_caps
-    #   set_status(state = nil, msg = 'I dream of electric sheep')
-
-    #   DaemonKit.logger.info "Connected as #{jid}"
-    # end
 
   client.register_handler :file_transfer do |iq|
       transfer = Blather::FileTransfer.new(client, iq)
