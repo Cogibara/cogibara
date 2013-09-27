@@ -38,7 +38,7 @@ end
 class Cogibara::Interface::XMPP
   include Cogibara::Interface
 
-  def ask(msg,opts={})
+  def ask(msg)
     msg = ask_string(msg.body, id: msg.id, from: msg.from)
     msg.message
   end
