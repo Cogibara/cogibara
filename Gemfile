@@ -32,11 +32,12 @@ group :test do
   gem 'webmock', '~> 1.11.0'
   gem 'simplecov'
 end
-# gem 'vines', git: 'https://github.com/negativecode/vines.git'
 
 gem 'rdf'
 gem 'rdf-turtle'
 gem 'spira'
+
+gem 'sinatra'
 
 # ## SQLite based persistence (some trouble with daemonizing)
 

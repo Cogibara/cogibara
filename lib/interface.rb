@@ -52,3 +52,13 @@ class Cogibara::Interface::Local
     msg.message
   end
 end
+
+class Cogibara::Interface::Speech
+  include Cogibara::Interface
+
+
+  # def ask(string)
+  #   msg = ask_string(string, from: "local")
+  #   msg.message
+  # end
+end
