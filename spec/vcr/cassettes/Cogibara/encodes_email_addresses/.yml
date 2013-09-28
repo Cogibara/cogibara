@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=Who%20are%20you
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 28 Sep 2013 17:31:29 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '66'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
+    http_version: 
+  recorded_at: Sat, 28 Sep 2013 17:30:39 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=Who%20are%20you&start=y&sessionid=&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=&vText2=&icognoid=wsf&icognocheck=eb70d60773570c011b18220f195eadaa&fno=0&prevref=&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Sep 2013 17:27:01 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS="0lR5WwZGjgCQ2ETgwgK/Dg"; Version=1
+      - JSESSIONID=2B13F1311BE55FA0A8F4506A7CF326FC; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*JTDIOGRQHLNYIQGOAEMGJDKHKRYIPGQFEOIAJSGEHI"; Expires=""
+      - cleverbotref="*GQHMKCUEKZKCETULEAPUGHGKYOCESUNJARWAGMKIDI"; Expires="Sat,
+        28 Sep 2013 18:30:30 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1437'
+      Sc:
+      - '11523'
+      Content-Length:
+      - '133'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "I am Jahranja.\rSHM00824164\rj2log-pXaTQcOUEKVLKAFOQSRE-detail\r\r\r\r\r\rWho
+        are you.\rI am Jahranja.\rSHR037891317\r\r\r\r\r\rI am Jahranja.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Sat, 28 Sep 2013 17:30:45 GMT
+recorded_with: VCR 2.5.0

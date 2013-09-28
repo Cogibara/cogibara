@@ -108,8 +108,12 @@ module Cogibara
 
     def ask(message,&block)
       @current_message = message
+      # raise "#{Cogibara.dump_memory}"
       @__yielder ||= Proc.new {|y| yield y}
-      selected = self.class.response_patterns.select{|patt| message.message[patt[0]] && meets_restrictions(message,patt[1][1])}
+      selected = self.class.response_patterns.select{|patt|
+        message.message[patt[0]] &&
+        meets_restrictions(message,patt[1][1])
+      }
 
       if selected.size > 0
         selected.each do |sel|

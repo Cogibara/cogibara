@@ -110,7 +110,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         CreepyGreeter.register
       end
 
-      it { @cogi_l.ask('hello you').should ==  "hehe... hello local" }
+      it { @cogi_l.ask('hello you').should ==  "hehe... hello http://cogi.strinz.me/users/local" }
     end
 
     describe "can order response handlers" do
