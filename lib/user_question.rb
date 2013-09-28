@@ -1,4 +1,4 @@
-class Cogibara
+module Cogibara
   class UserQuestion
     attr_accessor :question
     attr_accessor :response

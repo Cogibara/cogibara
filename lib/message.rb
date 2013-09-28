@@ -1,4 +1,4 @@
-class Cogibara
+module Cogibara
   class Message
     extend Cogibara::Onto
     include Cogibara::Onto
@@ -10,7 +10,7 @@ class Cogibara
 
       property :message, predicate: onto_prop.message_string
       property :response, predicate: onto_prop.response, type: RDF::URI
-      property :from, predicate: onto_prop.from_user, type: String
+      property :from, predicate: onto_prop.from_user, type: RDF::URI
       property :to, predicate: onto_prop.to_user, type: String
       property :message_id, predicate: onto_prop.message_id
 

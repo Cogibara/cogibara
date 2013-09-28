@@ -1,4 +1,4 @@
-class Cogibara
+module Cogibara
   # Change Module to 'Base' or something
   class Module
     def self.register(category=:none)

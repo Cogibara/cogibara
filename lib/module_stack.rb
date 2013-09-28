@@ -1,4 +1,4 @@
-class Cogibara
+module Cogibara
   class ModuleStack
 
     def self.known_categories

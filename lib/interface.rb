@@ -1,4 +1,4 @@
-class Cogibara
+module Cogibara
   module Interface
     def ask_string(msg, opts={})
       Cogibara.ask(Cogibara.memory.new_message(msg, opts)){|y|
@@ -35,30 +35,36 @@ class Cogibara
   end
 end
 
-class Cogibara::Interface::XMPP
-  include Cogibara::Interface
+module Cogibara
+  module Interface
+    class XMPP
+      include Cogibara::Interface
 
-  def ask(msg)
-    msg = ask_string(msg.body, id: msg.id, from: msg.from)
-    msg.message
+      def ask(msg)
+        msg = ask_string(msg.body, id: msg.id, from: msg.from)
+        msg.message
+      end
+    end
   end
 end
 
-class Cogibara::Interface::Local
-  include Cogibara::Interface
+module Cogibara
+  module Interface
+    class Local
+      include Cogibara::Interface
 
-  def ask(string)
-    msg = ask_string(string, from: "local")
-    msg.message
+      def ask(string)
+        msg = ask_string(string, from: "local")
+        msg.message
+      end
+    end
   end
 end
 
-class Cogibara::Interface::Speech
-  include Cogibara::Interface
-
-
-  # def ask(string)
-  #   msg = ask_string(string, from: "local")
-  #   msg.message
-  # end
+module Cogibara
+  module Interface
+    class Speech
+      include Cogibara::Interface
+    end
+  end
 end
