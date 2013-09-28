@@ -24,8 +24,8 @@ describe Cogibara, vcr: {record: :new_episodes} do
 
       msg = @cogi_p.ask('hello?',from: "wstrinz@gmail.com")
       msg.to.to_s.should == "http://cogi.strinz.me/users/wstrinz%40gmail.com"
-      msg.from.should == "cogibara"
-      # msg.from.should == "http://cogi.strinz.me/users/cogibara"
+      # msg.from.should == "cogibara"
+      msg.from.should == "http://cogi.strinz.me/users/cogibara"
 
       original = msg.response_to
       original.response.subject.should == msg.subject
