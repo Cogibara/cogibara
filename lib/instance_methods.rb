@@ -33,7 +33,7 @@ module Cogibara
 
     def response_details(message, response)
       message.response = response
-      response.from = "cogibara"
+      response.from = "http://cogi.strinz.me/users/cogibara"
       response.to = message.from
       message.save
       response.save
