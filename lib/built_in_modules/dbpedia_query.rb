@@ -134,7 +134,7 @@ class DBPediaQuery < Cogibara::Module
       @it = object
     end
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
-    object = object.capitalize unless object[0] == object[0].capitalize
+    object = object.titleize unless object[0] == object[0].titleize
 
     qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)])
     sols = qry.execute
@@ -158,7 +158,7 @@ class DBPediaQuery < Cogibara::Module
       past_results.first.response.message
     else
       sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
-      object = object.capitalize unless object[0] == object[0].capitalize
+      object = object.titleize unless object[0] == object[0].titleize
 
       sols = dbpedia_uri_for(object)
 
@@ -188,23 +188,24 @@ class DBPediaQuery < Cogibara::Module
     end
 
     sparql = SPARQL::Client.new("http://dbpedia.org/sparql")
-    object = object.capitalize unless object[0] == object[0].capitalize
+    object = object.titleize unless object[0] == object[0].titleize
     qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
     # puts qry.to_s
     sols = qry.execute
+    # puts "sing #{sols}"
 
-    if sols.size == 0
-      object = object.singularize
-      if object == "it"
-        object = @it if @it
-      else
-        @it = object
-      end
+    # if sols.size == 0
+    #   object = object.singularize
+    #   if object == "it"
+    #     object = @it if @it
+    #   else
+    #     @it = object
+    #   end
 
-      object = object.capitalize unless object[0] == object[0].capitalize
-      qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
-      sols = qry.execute
-    end
+    #   object = object.titleize unless object[0] == object[0].titleize
+    #   qry = sparql.select.distinct.where([:s, RDF::RDFS.label, RDF::Literal.new(object, language: :en)]) #.select.where(*Array(prop).map{|pro| [:s,RDF::URI.new(pro),:prop_val]})
+    #   sols = qry.execute
+    # end
 
     if sols.size > 0
       qry = <<-EOF
@@ -236,7 +237,11 @@ class DBPediaQuery < Cogibara::Module
       if results.size > 0
         results.join(', ')
       else
-        current_message
+        if object.singularize == object
+          current_message
+        else
+          dbpedia_summarize object.singularize
+        end
       end
     else
       current_message

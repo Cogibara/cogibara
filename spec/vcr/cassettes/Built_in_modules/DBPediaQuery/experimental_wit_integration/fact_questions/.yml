@@ -17,92 +17,40 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '635'
+      - '540'
       Server:
       - http-kit
       Date:
-      - Thu, 26 Sep 2013 15:29:05 GMT
+      - Sat, 28 Sep 2013 18:54:38 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "23c5cb79-27cf-4688-9df9-9d834067e668",
+          "msg_id" : "0c9ab5db-ed45-4664-b6cc-271a36ddf886",
           "msg_body" : "what's the capital of Cuba?",
           "outcome" : {
             "intent" : "fact_question",
             "entities" : {
-              "organization" : {
-                "end" : 27,
-                "start" : 26,
-                "value" : "?",
-                "body" : "?",
-                "suggested" : true
-              },
               "subject" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 26,
                 "start" : 22,
                 "value" : "Cuba",
-                "body" : "Cuba",
-                "suggested" : true
+                "body" : "Cuba"
               },
               "fact_property" : {
-                "end" : 19,
+                "source" : [ "levenum", "ner" ],
+                "end" : 18,
                 "start" : 11,
                 "value" : "capital",
-                "body" : "capital "
+                "body" : "capital"
               }
             },
             "confidence" : 0.999
           }
         }
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 15:29:05 GMT
-- request:
-    method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what's%20the%20capital%20of%20Cuba?
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 26 Sep 2013 15:29:04 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "what's the capital of Cuba?",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources": [  {
-            "@URI": "http://dbpedia.org/resource/Havana",
-            "@support": "3150",
-            "@types": "DBpedia:City,DBpedia:Settlement,DBpedia:PopulatedPlace,DBpedia:Place,Schema:Place,Schema:City,Freebase:/location/statistical_region,Freebase:/location,Freebase:/location/location,Freebase:/location/administrative_division,Freebase:/location/citytown,Freebase:/location/dated_location,Freebase:/film/film_location,Freebase:/film,DBpedia:TopicalConcept",
-            "@surfaceForm": "capital of Cuba",
-            "@offset": "11",
-            "@similarityScore": "0.18382056057453156",
-            "@percentageOfSecondRank": "-1.0"
-          }]
-        }
-    http_version: 
-  recorded_at: Thu, 26 Sep 2013 15:29:08 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:38 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what's%20the%20capital%20of%20Cuba?
@@ -118,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Thu, 26 Sep 2013 15:29:57 GMT
+      - Sat, 28 Sep 2013 18:55:29 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -127,7 +75,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 15:29:08 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:39 GMT
 - request:
     method: get
     uri: https://api.wit.ai/message?q=what's%20the%20capital%20of%20Cuba?
@@ -145,46 +93,40 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '635'
+      - '540'
       Server:
       - http-kit
       Date:
-      - Thu, 26 Sep 2013 15:29:09 GMT
+      - Sat, 28 Sep 2013 18:54:40 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "63ab5910-985e-4fe0-a736-abfceb8d97e9",
+          "msg_id" : "62e5ccb9-b276-4e23-8eda-ce242b5029cd",
           "msg_body" : "what's the capital of Cuba?",
           "outcome" : {
             "intent" : "fact_question",
             "entities" : {
-              "organization" : {
-                "end" : 27,
-                "start" : 26,
-                "value" : "?",
-                "body" : "?",
-                "suggested" : true
-              },
               "subject" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 26,
                 "start" : 22,
                 "value" : "Cuba",
-                "body" : "Cuba",
-                "suggested" : true
+                "body" : "Cuba"
               },
               "fact_property" : {
-                "end" : 19,
+                "source" : [ "levenum", "ner" ],
+                "end" : 18,
                 "start" : 11,
                 "value" : "capital",
-                "body" : "capital "
+                "body" : "capital"
               }
             },
             "confidence" : 0.999
           }
         }
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 15:29:09 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:40 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -212,7 +154,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2013 15:29:08 GMT
+      - Sat, 28 Sep 2013 18:54:39 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -258,7 +200,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 15:29:09 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:40 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -286,7 +228,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2013 15:29:09 GMT
+      - Sat, 28 Sep 2013 18:54:39 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -311,5 +253,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 15:29:10 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:41 GMT
 recorded_with: VCR 2.5.0

@@ -17,114 +17,40 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '527'
+      - '574'
       Server:
       - http-kit
       Date:
-      - Thu, 26 Sep 2013 14:57:06 GMT
+      - Sat, 28 Sep 2013 18:54:13 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "3b6a76a2-5b55-48d4-9fc5-9af2cc1d068f",
+          "msg_id" : "8b9e1d20-84d5-4570-beed-97986b967e1e",
           "msg_body" : "What is the gdp PPP per capita of Japan",
           "outcome" : {
             "intent" : "fact_question",
             "entities" : {
-              "organization" : {
+              "subject" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 39,
                 "start" : 34,
                 "value" : "Japan",
-                "body" : "Japan",
-                "suggested" : true
+                "body" : "Japan"
               },
               "fact_property" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 30,
                 "start" : 12,
-                "value" : "GDP PPP per capita",
-                "body" : "gdp ppp per capita"
+                "value" : "gdp PPP per capita",
+                "body" : "gdp PPP per capita"
               }
             },
-            "confidence" : 0.999
+            "confidence" : 1.0
           }
         }
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 14:57:06 GMT
-- request:
-    method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 26 Sep 2013 14:57:04 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "What is the gdp PPP per capita of Japan",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources":   [
-                {
-              "@URI": "http://dbpedia.org/resource/Gross_domestic_product",
-              "@support": "945",
-              "@types": "Freebase:/book/book_subject,Freebase:/book,DBpedia:TopicalConcept",
-              "@surfaceForm": "gdp",
-              "@offset": "12",
-              "@similarityScore": "0.18004775047302246",
-              "@percentageOfSecondRank": "-1.0"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Purchasing_power_parity",
-              "@support": "349",
-              "@types": "",
-              "@surfaceForm": "PPP",
-              "@offset": "16",
-              "@similarityScore": "0.5451440811157227",
-              "@percentageOfSecondRank": "0.15113095888913186"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Per_capita",
-              "@support": "226",
-              "@types": "",
-              "@surfaceForm": "per capita",
-              "@offset": "20",
-              "@similarityScore": "0.28242331743240356",
-              "@percentageOfSecondRank": "-1.0"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Japan",
-              "@support": "78616",
-              "@types": "DBpedia:Country,DBpedia:PopulatedPlace,DBpedia:Place,Schema:Place,Schema:Country,Freebase:/location/dated_location,Freebase:/location,Freebase:/food/beer_country_region,Freebase:/food,Freebase:/media_common/netflix_genre,Freebase:/media_common,Freebase:/royalty/system_of_nobility,Freebase:/royalty,Freebase:/book/publishing_company,Freebase:/book,Freebase:/film/film_location,Freebase:/film,Freebase:/biology/breed_origin,Freebase:/biology,Freebase:/olympics/olympic_participating_country,Freebase:/olympics,Freebase:/organization/organization_scope,Freebase:/organization,Freebase:/people/ethnicity,Freebase:/people,Freebase:/organization/organization_member,Freebase:/royalty/kingdom,Freebase:/government/governmental_jurisdiction,Freebase:/government,Freebase:/distilled_spirits/spirit_producing_region,Freebase:/distilled_spirits,Freebase:/military/military_post,Freebase:/military,Freebase:/meteorology/cyclone_affected_area,Freebase:/meteorology,Freebase:/location/statistical_region,Freebase:/aviation/aircraft_owner,Freebase:/aviation,Freebase:/sports/sport_country,Freebase:/sports,Freebase:/business/asset_owner,Freebase:/business,Freebase:/fictional_universe/fictional_setting,Freebase:/fictional_universe,Freebase:/location/location,Freebase:/location/region,Freebase:/sports/sports_team_location,Freebase:/cvg/computer_game_region,Freebase:/cvg,Freebase:/location/country,Freebase:/business/company_advisor,Freebase:/book/book_subject,Freebase:/projects/project_focus,Freebase:/projects,Freebase:/exhibitions/exhibition_subject,Freebase:/exhibitions,Freebase:/military/military_combatant,DBpedia:TopicalConcept",
-              "@surfaceForm": "Japan",
-              "@offset": "34",
-              "@similarityScore": "0.0794948935508728",
-              "@percentageOfSecondRank": "0.9520145227235749"
-            }
-          ]
-        }
-    http_version: 
-  recorded_at: Thu, 26 Sep 2013 14:57:08 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:13 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan
@@ -140,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Thu, 26 Sep 2013 14:57:58 GMT
+      - Sat, 28 Sep 2013 18:55:03 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -149,7 +75,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 14:57:09 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:14 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -177,7 +103,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2013 14:57:08 GMT
+      - Sat, 28 Sep 2013 18:54:13 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -217,7 +143,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 14:57:09 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:14 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -245,7 +171,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2013 14:57:09 GMT
+      - Sat, 28 Sep 2013 18:54:13 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -270,5 +196,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 14:57:10 GMT
+  recorded_at: Sat, 28 Sep 2013 18:54:15 GMT
 recorded_with: VCR 2.5.0
