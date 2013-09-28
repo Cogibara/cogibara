@@ -3,6 +3,7 @@
 
 require 'yaml'
 require 'tempfile'
+require 'cgi'
 
 require 'spira'
 

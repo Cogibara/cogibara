@@ -1,4 +1,4 @@
-class Cogibara
+module Cogibara
   class Memory
 
     include Cogibara::Onto

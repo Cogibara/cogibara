@@ -1,6 +1,6 @@
 require 'sinatra/base'
 
-class Cogibara
+module Cogibara
   class SServer < Sinatra::Base
     configure do
       set :interface, Cogibara::Interface::Speech.new

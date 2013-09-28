@@ -1,4 +1,4 @@
-class Cogibara
+module Cogibara
   module Onto
     def onto_class
       RDF::Vocabulary.new 'http://onto.cogibara.com/classes/'

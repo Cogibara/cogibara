@@ -1,23 +1,23 @@
-class Cogibara
+module Cogibara
 
-
-    def self.dump_memory
+  class << self
+    def dump_memory
       memory.dump_memory
     end
 
-    def self.memory
+    def memory
       @@memory ||= base_cogi.memory
     end
 
-    def self.base_cogi
-      @@base_cogi ||= Cogibara.new
+    def base_cogi
+      @@base_cogi ||= Cogibara::Instance.new
     end
 
-    def self.ask(message)
+    def ask(message)
       base_cogi.ask(message) {|y| yield y}
     end
 
-    def self.load_base_modules
+    def load_base_modules
       ::Chatbot.register :last
       ::Maluuba.register :classify
       ::MemoryDumper.register
@@ -27,12 +27,13 @@ class Cogibara
       # require_relative 'modules.rb'
     end
 
-    def self.export_memory(file='brain.ttl')
+    def export_memory(file='brain.ttl')
       open(file,'w'){|f| f.write(dump_memory)}
     end
 
-    def self.import_memory(file)
+    def import_memory(file)
       base_cogi.memory = RDF::Repository.load(file)
     end
 
+  end
 end
