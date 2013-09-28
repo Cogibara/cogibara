@@ -9,7 +9,8 @@ module Cogibara
       property :identifier, predicate: onto_prop.user_id, type: String
       property :name, predicate: RDF::FOAF.name, type: String
 
-      has_many :messages, predicate: onto_prop.has_message
+      has_many :sent_messages, predicate: onto_prop.has_message
+      has_many :received_messages, predicate: onto_prop.has_message
     end
 
     def rdf_user
@@ -17,6 +18,7 @@ module Cogibara
     end
 
     def self.for(name)
+      # should recognize uris
       new(name)
     end
 
@@ -31,7 +33,7 @@ module Cogibara
     end
 
     def method_missing(meth, *args, &block)
-      elsif rdf_user.respond_to? meth
+      if rdf_user.respond_to? meth
         if args.size >0
           rdf_user.send meth, *args, &block
         else

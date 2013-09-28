@@ -44,17 +44,38 @@ module Cogibara
       Spira.add_repository(:default,@repo)
     end
 
-    # TODO: move this to the message class
+    # TODO: move this to the Message class
     def new_message(msg,opts={})
       opts = default_opts.merge(opts)
       msg_uri = RDF::URI.new("http://cogi.strinz.me/messages/#{opts[:id]}")
       mem = repo
+      rdf_msg = Cogibara::Message.for(msg_uri)
+
       mem.insert([msg_uri, RDF.type, onto_class.Message])
-      mem.insert([msg_uri, onto_prop.message_string, msg])
-      mem.insert([msg_uri, onto_prop.message_id, opts[:id]]) if opts[:id]
-      mem.insert([msg_uri, onto_prop.from_user, opts[:from]]) if opts[:from]
-      mem.insert([msg_uri, onto_prop.to_user, opts[:to]]) if opts[:to]
-      Cogibara::Message.for(msg_uri)
+      rdf_msg.message = msg
+      rdf_msg.message_id = opts[:id] if opts[:id]
+      # mem.insert([msg_uri, onto_prop.message_string, msg])
+      # mem.insert([msg_uri, onto_prop.message_id, opts[:id]]) if opts[:id]
+
+      if opts[:to]
+        u_to = Cogibara::User.for(opts[:to])
+        u_to.received_messages << rdf_msg.subject
+        rdf_msg.to = u_to.subject
+        u_to.save
+        # mem.insert([msg_uri, onto_prop.to_user, opts[:to]]) if opts[:to]
+      end
+
+      if opts[:from]
+        u_from = Cogibara::User.for(opts[:from])
+        u_from.sent_messages << rdf_msg.subject
+        rdf_msg.from = u_from.subject
+        u_from.save
+        # mem.insert([msg_uri, onto_prop.from_user, opts[:from]])
+      end
+
+      rdf_msg.save
+
+      rdf_msg
     end
 
     def new_id

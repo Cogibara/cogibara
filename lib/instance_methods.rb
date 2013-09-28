@@ -9,7 +9,6 @@ module Cogibara
     end
 
     def ask(message)
-
       ModuleStack.stack.each do |mod|
         catch(:mod_pass) do
           response = mod.ask(message) {|y| yield y }
