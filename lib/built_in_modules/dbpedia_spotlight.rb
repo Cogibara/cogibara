@@ -13,7 +13,7 @@ class DBPediaSpotlight < Cogibara::Module
     if entities
       # puts "#{entities}"
       entities.select{|e| e["@surfaceForm"]}.each_with_index.map do |ent,i|
-        new_prop = current_message.new_property(i)
+        new_prop = current_message.new_property
         new_prop << [RDF.type, onto_class.SpotlightEntity]
         new_prop << [onto_prop.spotlight_entity_uri, ent["@URI"]]
         new_prop << [onto_prop.spotlight_types, ent["@types"]]

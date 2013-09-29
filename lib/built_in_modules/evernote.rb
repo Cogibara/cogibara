@@ -38,5 +38,5 @@ class EvNote < Cogibara::Module
     "okay, reminding you to #{reminder} at #{time}#{t}"
   end
 
-  register
+  # register
 end

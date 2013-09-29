@@ -133,10 +133,16 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     end
   end
 
-  describe EvNote, :no_travis do
+  describe Gcal, :no_travis do
     describe "sets reminders" do
       it {
         @cogi_l.ask("remind me to feed the cat at 7:00pm").should == "okay, reminding you to feed the cat at 7:00 tonight"
+      }
+    end
+
+    describe "select reminder method" do
+      it {
+        @cogi_l.ask("remind me via sms to feed the cat at 7:00pm").should == "okay, reminding you to feed the cat at 7:00 tonight"
       }
     end
   end

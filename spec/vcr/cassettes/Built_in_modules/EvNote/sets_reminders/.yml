@@ -184,4 +184,218 @@ http_interactions:
         LTE4N2U4NjY5ODFkYwwADgoAEgAAAUFcc9DgCgAUAAABQVx2kAAAAAA=
     http_version: 
   recorded_at: Thu, 26 Sep 2013 22:46:38 GMT
+- request:
+    method: post
+    uri: https://www.google.com/accounts/ClientLogin
+    body:
+      encoding: US-ASCII
+      string: Email=cogibara%40gmail.com&Passwd=Orcacat1%21&source=cogibara.com-gcal-integration&accountType=HOSTED_OR_GOOGLE&service=cl
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01-Jan-1990 00:00:00 GMT
+      Date:
+      - Sun, 29 Sep 2013 15:33:18 GMT
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '818'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+    body:
+      encoding: UTF-8
+      string: |
+        SID=DQAAALQAAABBxfSnmVdidQG6xQXwysoS7Spc-XE7T27WOTzHVWzbkP-JHWXgLHPJqmwrDI591wa4TbMNX9keGUf1LkAKaIHikGz2VRC5eWiBVoAFrfpfXT-gIpYMSjH9xr05ehyw5vcfZLrWlmXSEuE-dMZDBhSEbk0EA7cfsBLNni_NBeZ4goN0ip08Phmdnn4jKfTm7eybSj5bO8ffiHuKPPGCwvgDYrfwNZIF52--NYhudKt5ReN76ipG46zFGunw0v9EjxE
+        LSID=DQAAALUAAAAw3bzIpA7-0Echg4zqMm7Ip63FHARbU8tMv5qM-Y_nsp_XNCdMKvw_C8Ldwzoo3jZG0wak9m0Bj_PzV20f4SDYFMiV6e_9DFyL4wWogjsEbzH0PIHj1rmr109P7YOCjdDf1uJoqmZsPVeP2rq-SsbfnCk8hLV4pjLd9Lzk6j30ELqNFmluzxsJg1vc-Px5cQePqebAp8NPNgfbS4UJffSWqnM_5Nck60mpCRKlo-fEiOWOtWKA32h5KN81dB7MFQ0
+        Auth=DQAAALUAAAAw3bzIpA7-0Echg4zqMm7Ip63FHARbU8tMv5qM-Y_nsp_XNCdMKvw_C8Ldwzoo3jb8o8qd4SWpA4-Va3cnKfod0ooRg5jVGvQwz7UZ5__1Le8QOiF3Ih2QpV1i8esKT8p1P0XLZcfDxHL8HxstTQ2FgUSBYuX8LvBBEg-cJFGrEtJwzLS_h2YrhkNaTxLbIL--Sow_UlBbORIYSJFZooKb6QtdD47cQYDYnp6QU243b1T1pccG09vODtwjbT2bCu0
+    http_version: 
+  recorded_at: Sun, 29 Sep 2013 15:33:18 GMT
+- request:
+    method: post
+    uri: https://www.google.com/calendar/feeds/default/private/full
+    body:
+      encoding: UTF-8
+      string: |-
+        <entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>
+                  <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>
+                  <title type='text'>feed the cat</title>
+                  <content type='text'></content>
+                  <gd:transparency value='http://schemas.google.com/g/2005#event.'></gd:transparency>
+                  <gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus>
+                  <gd:where valueString=""></gd:where>
+                  <gd:when startTime="2013-09-29T15:43:30Z" endTime="2013-09-29T16:33:30Z">
+                    <gd:reminder method="sms" minutes="1"></gd:reminder>
+        <gd:reminder method="alert" minutes="1"></gd:reminder>
+                  </gd:when>
+                 </entry>
+    headers:
+      Authorization:
+      - GoogleLogin auth=DQAAALUAAAAw3bzIpA7-0Echg4zqMm7Ip63FHARbU8tMv5qM-Y_nsp_XNCdMKvw_C8Ldwzoo3jb8o8qd4SWpA4-Va3cnKfod0ooRg5jVGvQwz7UZ5__1Le8QOiF3Ih2QpV1i8esKT8p1P0XLZcfDxHL8HxstTQ2FgUSBYuX8LvBBEg-cJFGrEtJwzLS_h2YrhkNaTxLbIL--Sow_UlBbORIYSJFZooKb6QtdD47cQYDYnp6QU243b1T1pccG09vODtwjbT2bCu0
+      Content-Type:
+      - application/atom+xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Update-Client-Auth:
+      - DQAAALYAAAAw3bzIpA7-0Echg4zqMm7IkCXZcpeZivh31unPEDrZQGsjsDk7DGaO1pwN7045A4DsLnmNeKZihehKs4sshjSWW0VEK-FtlKcTpFGriiuuBqu5tUi9-qnHdq3glnWqZZqLMQMe0pxbfQ8UXqMviFS5PixYFdl7_ApgN68wH6Yq8B6DGg-5EOgZPxw5NGLK_tLtTjjj6TJs_U3noTCBW4P9UIDzDPgIMLqo_NgNIcomIFwIIBvbwaMEf6RV048pz1E
+      Set-Cookie:
+      - DO_NOT_CACHE_RESPONSE=true;Expires=Sun, 29-Sep-2013 15:33:31 GMT
+      - S=calendar=T6Y_8E4PEKU1JzsMW7YH8g;Expires=Wed, 09-Oct-2013 09:04:29 GMT;Secure
+      Expires:
+      - Sun, 29 Sep 2013 15:33:30 GMT
+      Date:
+      - Sun, 29 Sep 2013 15:33:30 GMT
+      Location:
+      - https://www.google.com/calendar/feeds/default/private/full?gsessionid=T6Y_8E4PEKU1JzsMW7YH8g
+      Content-Type:
+      - text/html; charset=UTF-8
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        <HTML>
+        <HEAD>
+        <TITLE>Moved Temporarily</TITLE>
+        </HEAD>
+        <BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+        <H1>Moved Temporarily</H1>
+        The document has moved <A HREF="https://www.google.com/calendar/feeds/default/private/full?gsessionid=T6Y_8E4PEKU1JzsMW7YH8g">here</A>.
+        </BODY>
+        </HTML>
+    http_version: 
+  recorded_at: Sun, 29 Sep 2013 15:33:30 GMT
+- request:
+    method: post
+    uri: https://www.google.com/calendar/feeds/default/private/full?gsessionid=T6Y_8E4PEKU1JzsMW7YH8g
+    body:
+      encoding: UTF-8
+      string: |-
+        <entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>
+                  <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>
+                  <title type='text'>feed the cat</title>
+                  <content type='text'></content>
+                  <gd:transparency value='http://schemas.google.com/g/2005#event.'></gd:transparency>
+                  <gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus>
+                  <gd:where valueString=""></gd:where>
+                  <gd:when startTime="2013-09-29T15:43:30Z" endTime="2013-09-29T16:33:30Z">
+                    <gd:reminder method="sms" minutes="1"></gd:reminder>
+        <gd:reminder method="alert" minutes="1"></gd:reminder>
+                  </gd:when>
+                 </entry>
+    headers:
+      Authorization:
+      - GoogleLogin auth=DQAAALUAAAAw3bzIpA7-0Echg4zqMm7Ip63FHARbU8tMv5qM-Y_nsp_XNCdMKvw_C8Ldwzoo3jb8o8qd4SWpA4-Va3cnKfod0ooRg5jVGvQwz7UZ5__1Le8QOiF3Ih2QpV1i8esKT8p1P0XLZcfDxHL8HxstTQ2FgUSBYuX8LvBBEg-cJFGrEtJwzLS_h2YrhkNaTxLbIL--Sow_UlBbORIYSJFZooKb6QtdD47cQYDYnp6QU243b1T1pccG09vODtwjbT2bCu0
+      Content-Type:
+      - application/atom+xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Update-Client-Auth:
+      - DQAAALYAAAAw3bzIpA7-0Echg4zqMm7IblKTBTb_8cruQrbFezbgO__kMeCHLXP2qWIfLmbR_cwb7UiKZZq5fkvOgjZTjAQtUr7DL8ikkrEEsLj0Rg2XzvjY8eTrrBEEXOHENbsiWLhDBQrr7FJ1C4chq-AdOnzB959WL1DXmFSdLWZ-o0-ra5DBa95qSoBWAnrHRp9US2p9eZpUngi2zGMIbsy6oJxJNs1nGrpeA-Xs_wt2qNZIHTsW3mD0-4goQTimW-xzl5E
+      Set-Cookie:
+      - DO_NOT_CACHE_RESPONSE=true;Expires=Sun, 29-Sep-2013 15:33:32 GMT
+      - S=calendar=iM0UbqVLAW-WxD9xlXFEWw;Expires=Fri, 11-Oct-2013 01:18:11 GMT;Secure
+      Expires:
+      - Sun, 29 Sep 2013 15:33:31 GMT
+      Date:
+      - Sun, 29 Sep 2013 15:33:31 GMT
+      Content-Type:
+      - application/atom+xml; charset=UTF-8
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Vary:
+      - Accept, X-GData-Authorization, GData-Version
+      Gdata-Version:
+      - '1.0'
+      Location:
+      - https://www.google.com/calendar/feeds/default/private/full/51kgs2s8hqfgm92djrlp94fr2o/63516152011
+      Content-Location:
+      - https://www.google.com/calendar/feeds/default/private/full/51kgs2s8hqfgm92djrlp94fr2o/63516152011
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom'
+        xmlns:gCal='http://schemas.google.com/gCal/2005' xmlns:gd='http://schemas.google.com/g/2005'><id>http://www.google.com/calendar/feeds/default/private/full/51kgs2s8hqfgm92djrlp94fr2o</id><published>2013-09-29T15:33:31.000Z</published><updated>2013-09-29T15:33:31.000Z</updated><category
+        scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/><title
+        type='text'>feed the cat</title><content type='text'/><link rel='alternate'
+        type='text/html' href='https://www.google.com/calendar/event?eid=NTFrZ3MyczhocWZnbTkyZGpybHA5NGZyMm8gY29naWJhcmFAbQ'
+        title='alternate'/><link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/51kgs2s8hqfgm92djrlp94fr2o'/><link
+        rel='edit' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/51kgs2s8hqfgm92djrlp94fr2o/63516152011'/><author><name>Cogibara
+        Org</name><email>cogibara@gmail.com</email></author><gd:comments><gd:feedLink
+        href='https://www.google.com/calendar/feeds/default/private/full/51kgs2s8hqfgm92djrlp94fr2o/comments'/></gd:comments><gd:eventStatus
+        value='http://schemas.google.com/g/2005#event.confirmed'/><gd:where valueString=''/><gd:who
+        email='cogibara@gmail.com' rel='http://schemas.google.com/g/2005#event.organizer'
+        valueString='Cogibara Org'/><gd:when endTime='2013-09-29T11:33:30.000-05:00'
+        startTime='2013-09-29T10:43:30.000-05:00'><gd:reminder method='alert' minutes='1'/><gd:reminder
+        method='sms' minutes='1'/></gd:when><gd:transparency value='http://schemas.google.com/g/2005#event.opaque'/><gd:visibility
+        value='http://schemas.google.com/g/2005#event.default'/><gCal:anyoneCanAddSelf
+        value='false'/><gCal:guestsCanInviteOthers value='true'/><gCal:guestsCanModify
+        value='false'/><gCal:guestsCanSeeGuests value='true'/><gCal:sequence value='0'/><gCal:uid
+        value='51kgs2s8hqfgm92djrlp94fr2o@google.com'/></entry>
+    http_version: 
+  recorded_at: Sun, 29 Sep 2013 15:33:31 GMT
 recorded_with: VCR 2.5.0

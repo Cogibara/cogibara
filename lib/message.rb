@@ -72,7 +72,12 @@ module Cogibara
       # Spira.repositories[@msg.class.configure[:reposity_name] || :default]
     end
 
-    def new_property(index,values=[])
+    def num_structs
+      rdf_msg.structured_properties.size
+    end
+
+    def new_property(values=[])
+      index = num_structs + 1
       values << [onto_prop.attached_to_message, rdf_msg.subject]
       StructuredProperty.new("#{rdf_msg.subject.to_s}/structured_properties/#{index}", values)
     end
