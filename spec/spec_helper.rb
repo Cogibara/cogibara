@@ -34,7 +34,7 @@ VCR.configure do |c|
   c.filter_sensitive_data('<Google Name>') { CGI::escape Cogibara::Module.settings["keys"]["google_name"] }
   c.filter_sensitive_data('<Google Pass>') { CGI::escape Cogibara::Module.settings["keys"]["google_pass"] }
   c.filter_sensitive_data('<Evernote Auth>') { Cogibara::Module.settings["keys"]["evernote"] }
-  # c.configure_rspec_metadata!
+  c.configure_rspec_metadata!
 end
 
 def test_values(object, expected_values)
