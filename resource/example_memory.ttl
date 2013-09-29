@@ -8,387 +8,293 @@ message:1234 a cogi_class:Message;
    prop:maluuba_category "KNOWLEDGE";
    prop:message_id "1234";
    prop:message_string "hello?";
-   prop:response message:32909568_909 .
+   prop:response message:719517377_11 .
 
-message:223322502_320 a cogi_class:Message;
+message:180960458_279 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "223322502_320";
+   prop:message_id "180960458_279";
    prop:message_string "hi";
-   prop:response message:237960468_713;
+   prop:response message:191730016_115;
    prop:wit_intent "hello" .
 
-message:247652530_134 a cogi_class:Message;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "247652530_134";
+message:226521971_291 a cogi_class:Message;
+   prop:message_id "226521971_291";
    prop:message_string "hi";
    prop:message_topic "tests and stuff";
-   prop:response message:259270545_663;
+   prop:response message:234640345_78;
    prop:wit_intent "hello" .
 
-message:26036396_427 a cogi_class:Message;
+message:250385410_427 a cogi_class:Message;
+   prop:message_id "250385410_427";
+   prop:message_string "hi";
+   prop:message_topic "tests and stuff";
+   prop:response message:258424444_138;
+   prop:wit_intent "hello" .
+
+message:26353757_945 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "26036396_427";
+   prop:message_id "26353757_945";
    prop:message_string "hello?";
-   prop:response message:54706662_560;
+   prop:response message:52232263_590;
    prop:wit_intent "hello" .
 
-message:273619367_467 a cogi_class:Message;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "273619367_467";
-   prop:message_string "hi";
-   prop:message_topic "tests and stuff";
-   prop:response message:286451229_574;
-   prop:wit_intent "hello" .
-
-message:323872371_952 a cogi_class:Message;
+message:271301259_32 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "323872371_952";
+   prop:message_id "271301259_32";
    prop:message_string "hello you";
    prop:message_topic "tests and stuff";
-   prop:response message:338546934_795;
+   prop:response message:282363033_374;
    prop:wit_intent "hello" .
 
-message:351087696_719 a cogi_class:Message;
+message:295144584_85 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "351087696_719";
+   prop:message_id "295144584_85";
    prop:message_string "testing";
    prop:message_topic "tests and stuff";
-   prop:response message:367851921_354;
+   prop:response message:330788046_454;
    prop:wit_intent "chat" .
 
-message:381693134_840 a cogi_class:Message;
+message:436872235_178 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "381693134_840";
-   prop:message_string "testing";
-   prop:message_topic "tests and stuff";
-   prop:response message:398339187_44;
-   prop:wit_intent "chat" .
-
-message:53491894_560 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/wstrinz%40gmail.com>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "53491894_560";
-   prop:message_string "hello?";
-   prop:response message:106940572_344 .
-
-message:663877042_875 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "663877042_875";
+   prop:message_id "436872235_178";
    prop:message_string "hello";
    prop:message_topic "tests and stuff";
-   prop:response message:682719474_674;
+   prop:response message:450559211_514;
    prop:wit_intent "hello" .
 
-message:702581035_583 a cogi_class:Message;
+message:467429841_594 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "702581035_583";
+   prop:message_id "467429841_594";
    prop:message_string "hi";
    prop:message_topic "tests and stuff";
-   prop:response message:719761795_999;
+   prop:response message:480594123_135;
    prop:wit_intent "hello" .
 
-message:764909097_120 a cogi_class:Message;
+message:496952675_60 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/wstrinz%40gmail.com>;
    prop:maluuba_action "KNOWLEDGE_SEARCH";
    prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "764909097_120";
+   prop:message_id "496952675_60";
    prop:message_string "hello?";
-   prop:response message:793176796_968 .
+   prop:response message:551695829_349 .
 
-message:79353492_421 a cogi_class:Message;
+message:57043783_78 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:maluuba_action "KNOWLEDGE_SEARCH";
-   prop:maluuba_category "KNOWLEDGE";
-   prop:message_id "79353492_421";
+   prop:message_id "57043783_78";
    prop:message_string "hello you";
-   prop:response message:96497935_754;
+   prop:response message:93999148_776;
    prop:wit_intent "hello" .
 
-message:101430430_254 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:has_structured_property <http://cogi.strinz.me/messages/101430430_254/structured_properties/1>;
-   prop:maluuba_action "CONTACT_SEARCH";
-   prop:maluuba_category "CONTACT";
-   prop:message_id "101430430_254";
-   prop:message_string "I'm bill";
-   prop:response message:125482768_526;
-   prop:wit_intent "my_name" .
+message:735990749_758 a cogi_class:Message;
+   prop:from_user <http://cogi.strinz.me/users/wstrinz%40gmail.com>;
+   prop:maluuba_action "KNOWLEDGE_SEARCH";
+   prop:maluuba_category "KNOWLEDGE";
+   prop:message_id "735990749_758";
+   prop:message_string "hello?";
+   prop:response message:786934246_194 .
 
-<http://cogi.strinz.me/messages/101430430_254/structured_properties/1> a cogi_class:WitEntity;
-   prop:attached_to_message message:101430430_254;
-   prop:wit_entity_body "bill";
-   prop:wit_entity_end 8;
-   prop:wit_entity_start 4;
-   prop:wit_entity_type "name";
-   prop:wit_entity_value "bill" .
-
-message:106940572_344 a cogi_class:Message;
+message:119376192_418 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "106940572_344";
-   prop:message_string "Ok nevermind. So what are you doing this weekend?";
-   prop:to_user <http://cogi.strinz.me/users/wstrinz%40gmail.com> .
-
-message:125482768_526 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "125482768_526";
+   prop:message_id "119376192_418";
    prop:message_string "hi bill";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-<http://cogi.strinz.me/messages/132869218_817/structured_properties/1> a cogi_class:WitEntity;
-   prop:attached_to_message message:132869218_817;
+<http://cogi.strinz.me/messages/125753557_501/structured_properties/1> a cogi_class:WitEntity;
+   prop:attached_to_message message:125753557_501;
    prop:wit_entity_body "1";
    prop:wit_entity_end 9;
    prop:wit_entity_start 8;
    prop:wit_entity_type "n_dice";
    prop:wit_entity_value "1" .
 
-<http://cogi.strinz.me/messages/132869218_817/structured_properties/2> a cogi_class:WitEntity;
-   prop:attached_to_message message:132869218_817;
+<http://cogi.strinz.me/messages/125753557_501/structured_properties/2> a cogi_class:WitEntity;
+   prop:attached_to_message message:125753557_501;
    prop:wit_entity_body "d150";
    prop:wit_entity_end 13;
    prop:wit_entity_start 9;
    prop:wit_entity_type "dice_size";
    prop:wit_entity_value "d150" .
 
-message:156196600_771 a cogi_class:Message;
+message:144185284_694 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "156196600_771";
-   prop:message_string "131";
+   prop:message_id "144185284_694";
+   prop:message_string "14";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-<http://cogi.strinz.me/messages/163682784_824/structured_properties/1> a cogi_class:WitEntity;
-   prop:attached_to_message message:163682784_824;
+<http://cogi.strinz.me/messages/151776774_768/structured_properties/1> a cogi_class:WitEntity;
+   prop:attached_to_message message:151776774_768;
    prop:wit_entity_body "4";
    prop:wit_entity_end 9;
    prop:wit_entity_start 8;
    prop:wit_entity_type "n_dice";
    prop:wit_entity_value "4" .
 
-<http://cogi.strinz.me/messages/163682784_824/structured_properties/2> a cogi_class:WitEntity;
-   prop:attached_to_message message:163682784_824;
+<http://cogi.strinz.me/messages/151776774_768/structured_properties/2> a cogi_class:WitEntity;
+   prop:attached_to_message message:151776774_768;
    prop:wit_entity_body "d12";
    prop:wit_entity_end 12;
    prop:wit_entity_start 9;
    prop:wit_entity_type "dice_size";
    prop:wit_entity_value "d12" .
 
-message:213100203_625 a cogi_class:Message;
+message:171275679_976 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "213100203_625";
-   prop:message_string """12
-3
-3
+   prop:message_id "171275679_976";
+   prop:message_string """8
+1
+10
 8""";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:237960468_713 a cogi_class:Message;
+message:191730016_115 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "237960468_713";
+   prop:message_id "191730016_115";
    prop:message_string "K1 got your message";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:259270545_663 a cogi_class:Message;
+message:234640345_78 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "259270545_663";
+   prop:message_id "234640345_78";
    prop:message_string "K1 got your message" .
 
-message:286451229_574 a cogi_class:Message;
+message:258424444_138 a cogi_class:Message;
    prop:cunkiness 1000;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "286451229_574";
+   prop:message_id "258424444_138";
    prop:message_string "K1 got your message" .
 
-message:32909568_909 a cogi_class:Message;
+message:282363033_374 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "32909568_909";
-   prop:message_string "What do you mean hello?";
-   prop:to_user <http://cogi.strinz.me/users/> .
-
-message:338546934_795 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "338546934_795";
+   prop:message_id "282363033_374";
    prop:message_string "hehe... hello http://cogi.strinz.me/users/local";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:367851921_354 a cogi_class:Message;
+message:330788046_454 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "367851921_354";
+   prop:message_id "330788046_454";
    prop:message_string "do say this";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:398339187_44 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "398339187_44";
-   prop:message_string "not an alarm";
-   prop:to_user <http://cogi.strinz.me/users/local> .
-
-message:438305078_437 a cogi_class:Message;
+message:343350295_735 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:has_structured_property <http://cogi.strinz.me/messages/438305078_437/structured_properties/1>;
-   prop:maluuba_action "ALARM_SET";
-   prop:maluuba_category "ALARM";
-   prop:message_id "438305078_437";
-   prop:message_string "set me an alarm for 8am tomorrow";
-   prop:message_topic "tests and stuff";
-   prop:response message:465969904_649;
-   prop:wit_intent "set_alarm" .
-
-<http://cogi.strinz.me/messages/438305078_437/structured_properties/1> a cogi_class:WitEntity;
-   prop:attached_to_message message:438305078_437;
-   prop:wit_entity_body "8am tomorrow";
-   prop:wit_entity_end 32;
-   prop:wit_entity_start 20;
-   prop:wit_entity_type "datetime";
-   prop:wit_entity_value "{\"from\"=>\"2013-09-30T08:00:00.000-05:00\", \"to\"=>\"2013-09-30T09:00:00.000-05:00\"}" .
-
-message:465969904_649 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "465969904_649";
-   prop:message_string "set an alarm";
-   prop:to_user <http://cogi.strinz.me/users/local> .
-
-message:482205009_918 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:has_structured_property <http://cogi.strinz.me/messages/482205009_918/structured_properties/1>;
-   prop:maluuba_action "ALARM_CANCEL";
-   prop:maluuba_category "ALARM";
-   prop:message_id "482205009_918";
-   prop:message_string "cancel my 8am alarm";
-   prop:message_topic "tests and stuff";
-   prop:response message:508699010_312;
-   prop:wit_intent "cancel_alarm" .
-
-<http://cogi.strinz.me/messages/482205009_918/structured_properties/1> a cogi_class:WitEntity;
-   prop:attached_to_message message:482205009_918;
-   prop:wit_entity_body "8am";
-   prop:wit_entity_end 13;
-   prop:wit_entity_start 10;
-   prop:wit_entity_type "datetime";
-   prop:wit_entity_value "{\"from\"=>\"2013-09-30T08:00:00.000-05:00\", \"to\"=>\"2013-09-30T09:00:00.000-05:00\"}" .
-
-message:508699010_312 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "508699010_312";
-   prop:message_string "cancel an alarm";
-   prop:to_user <http://cogi.strinz.me/users/local> .
-
-message:54706662_560 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "54706662_560";
-   prop:message_string "?olleh";
-   prop:to_user <http://cogi.strinz.me/users/local> .
-
-message:550037988_225 a cogi_class:Message;
-   prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:has_structured_property <http://cogi.strinz.me/messages/550037988_225/structured_properties/1>;
-   prop:maluuba_action "CONTACT_SEARCH";
-   prop:maluuba_category "CONTACT";
-   prop:message_id "550037988_225";
+   prop:has_structured_property <http://cogi.strinz.me/messages/343350295_735/structured_properties/1>;
+   prop:message_id "343350295_735";
    prop:message_string "who is Johnny Habu?";
    prop:message_topic "tests and stuff";
-   prop:response message:575997002_309;
+   prop:response message:362275661_800;
    prop:wit_intent "person_information" .
 
-<http://cogi.strinz.me/messages/550037988_225/structured_properties/1> a cogi_class:WitEntity;
-   prop:attached_to_message message:550037988_225;
+<http://cogi.strinz.me/messages/343350295_735/structured_properties/1> a cogi_class:WitEntity;
+   prop:attached_to_message message:343350295_735;
    prop:wit_entity_body "Johnny Habu";
    prop:wit_entity_end 18;
    prop:wit_entity_start 7;
    prop:wit_entity_type "contact";
    prop:wit_entity_value "Johnny Habu" .
 
-message:575997002_309 a cogi_class:Message;
+message:362275661_800 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "575997002_309";
+   prop:message_id "362275661_800";
    prop:message_string "looking up a person";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:592984441_650 a cogi_class:Message;
+message:376277762_514 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:has_structured_property <http://cogi.strinz.me/messages/592984441_650/structured_properties/1>;
-   prop:maluuba_action "CONTACT_SEARCH";
-   prop:maluuba_category "CONTACT";
-   prop:message_id "592984441_650";
+   prop:has_structured_property <http://cogi.strinz.me/messages/376277762_514/structured_properties/1>;
+   prop:message_id "376277762_514";
    prop:message_string "show me Johnny Habus contact info";
    prop:message_topic "tests and stuff";
-   prop:response message:620720505_792;
+   prop:response message:395108144_666;
    prop:wit_intent "contact_info" .
 
-<http://cogi.strinz.me/messages/592984441_650/structured_properties/1> a cogi_class:WitEntity;
-   prop:attached_to_message message:592984441_650;
+<http://cogi.strinz.me/messages/376277762_514/structured_properties/1> a cogi_class:WitEntity;
+   prop:attached_to_message message:376277762_514;
    prop:wit_entity_body "Johnny";
    prop:wit_entity_end 14;
    prop:wit_entity_start 8;
    prop:wit_entity_type "contact";
    prop:wit_entity_value "Johnny" .
 
-message:620720505_792 a cogi_class:Message;
+message:395108144_666 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "620720505_792";
+   prop:message_id "395108144_666";
    prop:message_string "you have to say 'who'";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:682719474_674 a cogi_class:Message;
+message:450559211_514 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "682719474_674";
+   prop:message_id "450559211_514";
    prop:message_string "hi bob! :D";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:719761795_999 a cogi_class:Message;
+message:480594123_135 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "719761795_999";
+   prop:message_id "480594123_135";
    prop:message_string "and this is the final one";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:793176796_968 a cogi_class:Message;
+message:52232263_590 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "793176796_968";
+   prop:message_id "52232263_590";
+   prop:message_string "?olleh";
+   prop:to_user <http://cogi.strinz.me/users/local> .
+
+message:551695829_349 a cogi_class:Message;
+   prop:from_user <http://cogi.strinz.me/users/cogibara>;
+   prop:message_id "551695829_349";
    prop:message_string "Hello my name is Cleverbot.";
    prop:to_user <http://cogi.strinz.me/users/wstrinz%40gmail.com> .
 
-message:96497935_754 a cogi_class:Message;
+message:719517377_11 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/cogibara>;
-   prop:message_id "96497935_754";
+   prop:message_id "719517377_11";
+   prop:message_string "What do you mean hello?";
+   prop:to_user <http://cogi.strinz.me/users/> .
+
+message:786934246_194 a cogi_class:Message;
+   prop:from_user <http://cogi.strinz.me/users/cogibara>;
+   prop:message_id "786934246_194";
+   prop:message_string "Ok nevermind. So what are you doing this weekend?";
+   prop:to_user <http://cogi.strinz.me/users/wstrinz%40gmail.com> .
+
+message:93999148_776 a cogi_class:Message;
+   prop:from_user <http://cogi.strinz.me/users/cogibara>;
+   prop:message_id "93999148_776";
    prop:message_string "hai dere";
    prop:to_user <http://cogi.strinz.me/users/local> .
 
-message:132869218_817 a cogi_class:Message;
+message:99536740_555 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:has_structured_property <http://cogi.strinz.me/messages/132869218_817/structured_properties/1>,
-     <http://cogi.strinz.me/messages/132869218_817/structured_properties/2>;
-   prop:maluuba_action "BUSINESS_SEARCH";
-   prop:maluuba_category "BUSINESS";
-   prop:message_id "132869218_817";
+   prop:has_structured_property <http://cogi.strinz.me/messages/99536740_555/structured_properties/1>;
+   prop:message_id "99536740_555";
+   prop:message_string "I'm bill";
+   prop:response message:119376192_418;
+   prop:wit_intent "my_name" .
+
+<http://cogi.strinz.me/messages/99536740_555/structured_properties/1> a cogi_class:WitEntity;
+   prop:attached_to_message message:99536740_555;
+   prop:wit_entity_body "bill";
+   prop:wit_entity_end 8;
+   prop:wit_entity_start 4;
+   prop:wit_entity_type "name";
+   prop:wit_entity_value "bill" .
+
+message:125753557_501 a cogi_class:Message;
+   prop:from_user <http://cogi.strinz.me/users/local>;
+   prop:has_structured_property <http://cogi.strinz.me/messages/125753557_501/structured_properties/1>,
+     <http://cogi.strinz.me/messages/125753557_501/structured_properties/2>;
+   prop:message_id "125753557_501";
    prop:message_string "roll me 1d150";
-   prop:response message:156196600_771;
+   prop:response message:144185284_694;
    prop:wit_intent "dice_roll" .
 
-message:163682784_824 a cogi_class:Message;
+message:151776774_768 a cogi_class:Message;
    prop:from_user <http://cogi.strinz.me/users/local>;
-   prop:has_structured_property <http://cogi.strinz.me/messages/163682784_824/structured_properties/1>,
-     <http://cogi.strinz.me/messages/163682784_824/structured_properties/2>;
-   prop:maluuba_action "BUSINESS_SEARCH";
-   prop:maluuba_category "BUSINESS";
-   prop:message_id "163682784_824";
+   prop:has_structured_property <http://cogi.strinz.me/messages/151776774_768/structured_properties/1>,
+     <http://cogi.strinz.me/messages/151776774_768/structured_properties/2>;
+   prop:message_id "151776774_768";
    prop:message_string "roll me 4d12";
-   prop:response message:213100203_625;
+   prop:response message:171275679_976;
    prop:wit_intent "dice_roll" .
 
 <http://cogi.strinz.me/users/> prop:user_id "" .
