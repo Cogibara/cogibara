@@ -11,11 +11,14 @@ class Maluuba < Cogibara::Module
     @client ||= MaluubaNapi::Client.new(@api_key)
   end
 
-  on(/^maluuba/) do
+  on(/^maluuba/) do |msg|
+    pass unless msg.message
+
     @client.interpret(phrase: current_message.message.gsub(/^maluuba/,'')).to_s
   end
 
   on do |msg|
+    pass unless msg.message
     h = @client.interpret phrase: msg.message
     msg.set_maluuba_category(h[:category])
     msg.set_maluuba_action(h[:action])
