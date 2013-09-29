@@ -15,10 +15,10 @@ class Maluuba < Cogibara::Module
     @client.interpret(phrase: current_message.message.gsub(/^maluuba/,'')).to_s
   end
 
-  on do
-    h = @client.interpret phrase: current_message.message
-    current_message.set_maluuba_category(h[:category])
-    current_message.set_maluuba_action(h[:action])
+  on do |msg|
+    h = @client.interpret phrase: msg.message
+    msg.set_maluuba_category(h[:category])
+    msg.set_maluuba_action(h[:action])
   end
 
   register :classify
