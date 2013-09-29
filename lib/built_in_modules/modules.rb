@@ -7,7 +7,7 @@ class Maluuba < Cogibara::Module
   requires 'maluuba_napi'
 
   def initialize
-    @client ||= MaluubaNapi::Client.new("12345")
+    @client ||= MaluubaNapi::Client.new(settings["keys"]["maluuba"])
   end
 
   on(/^maluuba/) do |msg|
@@ -18,7 +18,6 @@ class Maluuba < Cogibara::Module
 
   on do |msg|
     # pass unless msg.message
-    puts "m #{msg.message}"
     h = @client.interpret phrase: msg.message
     msg.set_maluuba_category(h[:category])
     msg.set_maluuba_action(h[:action])

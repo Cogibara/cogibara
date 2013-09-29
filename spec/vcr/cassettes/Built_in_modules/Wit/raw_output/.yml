@@ -17,158 +17,23 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '183'
+      - '184'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:44:12 GMT
+      - Sun, 29 Sep 2013 18:32:46 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "aa0939e4-2c3d-49b1-87ec-93845ceb055c",
+          "msg_id" : "c654d158-5e54-423f-bbff-ec45b505daa0",
           "msg_body" : "heyo hows it going",
           "outcome" : {
             "intent" : "hello",
             "entities" : { },
-            "confidence" : 0.93
+            "confidence" : 0.995
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:44:12 GMT
-- request:
-    method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=wit%20debug%20%22heyo%20hows%20it%20going%22
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 17:23:23 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "wit debug \"heyo hows it going\"",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources":   [
-                {
-              "@URI": "http://dbpedia.org/resource/Wit",
-              "@support": "124",
-              "@types": "Freebase:/media_common/quotation_subject,Freebase:/media_common",
-              "@surfaceForm": "wit",
-              "@offset": "0",
-              "@similarityScore": "0.09966367483139038",
-              "@percentageOfSecondRank": "0.9126996242402422"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Debugging",
-              "@support": "208",
-              "@types": "Freebase:/media_common/quotation_subject,Freebase:/media_common,DBpedia:TopicalConcept",
-              "@surfaceForm": "debug",
-              "@offset": "4",
-              "@similarityScore": "0.1160130724310875",
-              "@percentageOfSecondRank": "-1.0"
-            }
-          ]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 17:23:28 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=wit%20debug%20%22heyo%20hows%20it%20going%22
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 25 Sep 2013 17:24:18 GMT
-      Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '66'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 17:23:29 GMT
-- request:
-    method: post
-    uri: http://www.cleverbot.com/webservicemin
-    body:
-      encoding: UTF-8
-      string: stimulus=wit%20debug%20%22heyo%20hows%20it%20going%22&start=y&sessionid=VWT00488177&vText8=Bla%20bla.&vText7=What%20are%20Tardigrades%3F&vText6=My%20grades%3F&vText5=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis%3F&vText4=He%20thinks%20that%20you're%20the%20bee's%20knees.&vText3=I%20live%20in%20Madison%20Wisconsin.&vText2=And%20your%20name%20is%20Sam%3F&icognoid=wsf&icognocheck=c960e89e4f28f6e818e388f715ca860a&fno=0&prevref=USS011400053&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 17:20:26 GMT
-      Content-Type:
-      - text/html;charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - AIS=qHDJ0efjcIHVw9dIbaUgGQ
-      - JSESSIONID=38E74F031C942F7DBB3879526FB89C90; Path=/
-      - RPS=cs5860
-      - cleverbotfirstref2="*WGDIUPQBGWBYOPRBEKLXWDMGVEYOORECKOYAWEGCQK"; Expires=""
-      - cleverbotref="*TDVAWRLHBCYQQKXYWMGDTVOBBBQQJXBUMJEATKYESK"; Expires="Wed,
-        25 Sep 2013 18:23:21 GMT"
-      Mime-Version:
-      - '1.0'
-      Expires:
-      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache;no-store
-      Rps:
-      - cs5860
-      Rlm:
-      - '2101'
-      Sc:
-      - '20895'
-      Content-Length:
-      - '459'
-      Server:
-      - Jabberwacky
-    body:
-      encoding: UTF-8
-      string: "Is that a real thing? It sounds like something Dr. Doom would have.\rVWT00488177\rj2log-oTuYQjOIEYNWOAFCFEQG-detail\rMy
-        grades?\rWhat does President Obama think of the Bacon Crisis?\rHe thinks that
-        you're the bee's knees.\rI live in Madison Wisconsin.\rAnd your name is Sam?\rWit
-        debug 'heyo hows it going'.\rIs that a real thing? It sounds like something
-        Dr. Doom would have.\rUQ012480380\r\r\r\r\r\rIs that a real thing? It sounds
-        like something Dr. Doom would have.\r\r\r\r\r\r\r"
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 17:23:33 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:46 GMT
 recorded_with: VCR 2.5.0

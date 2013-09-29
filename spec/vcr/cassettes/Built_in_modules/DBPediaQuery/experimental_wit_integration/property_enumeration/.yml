@@ -21,12 +21,12 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sat, 28 Sep 2013 18:54:36 GMT
+      - Sun, 29 Sep 2013 18:32:39 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "5f3f4b7a-229d-46bd-ac66-58889513ce66",
+          "msg_id" : "cf7c133b-2c0d-49d0-a0f7-84c45be4a00f",
           "msg_body" : "what you know about balloon?",
           "outcome" : {
             "intent" : "interrogate_knowledge",
@@ -43,10 +43,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:36 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:39 GMT
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20you%20know%20about%20balloon?
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=what%20you%20know%20about%20balloon?
     body:
       encoding: US-ASCII
       string: ''
@@ -59,7 +59,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 28 Sep 2013 18:55:26 GMT
+      - Sun, 29 Sep 2013 18:33:30 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -68,7 +68,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"CONTACT_SEARCH","category":"CONTACT"}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:36 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:40 GMT
 - request:
     method: get
     uri: https://api.wit.ai/message?q=what%20you%20know%20about%20balloon?
@@ -90,12 +90,12 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sat, 28 Sep 2013 18:54:37 GMT
+      - Sun, 29 Sep 2013 18:32:41 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "4261209d-5fec-42ec-8951-0b3f60b80db0",
+          "msg_id" : "87924274-81dd-40bc-8bfd-2f4da78b40b5",
           "msg_body" : "what you know about balloon?",
           "outcome" : {
             "intent" : "interrogate_knowledge",
@@ -112,7 +112,7 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:37 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:41 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -140,7 +140,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 18:54:36 GMT
+      - Sun, 29 Sep 2013 18:32:40 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -165,7 +165,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:37 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:41 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -193,7 +193,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 18:54:36 GMT
+      - Sun, 29 Sep 2013 18:32:41 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -260,5 +260,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:38 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:42 GMT
 recorded_with: VCR 2.5.0

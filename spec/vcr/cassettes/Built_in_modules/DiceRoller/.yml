@@ -17,86 +17,43 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '392'
+      - '484'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:43:17 GMT
+      - Sun, 29 Sep 2013 18:31:49 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "e7b0fd97-eb83-49b5-b303-a3a7e7f82fda",
+          "msg_id" : "8cc070b9-4e50-45b3-aaf0-af28d318f8ba",
           "msg_body" : "roll 6d6",
           "outcome" : {
             "intent" : "dice_roll",
             "entities" : {
-              "n_dice" : [ {
+              "n_dice" : {
+                "source" : [ "levenum" ],
                 "end" : 6,
                 "start" : 5,
                 "value" : "6",
                 "body" : "6"
-              }, {
+              },
+              "dice_size" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 8,
-                "start" : 7,
-                "value" : "6",
-                "body" : "6"
-              } ]
+                "start" : 6,
+                "value" : "d6",
+                "body" : "d6"
+              }
             },
-            "confidence" : 0.913
+            "confidence" : 0.99
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:17 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:49 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=roll%206d6
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:43:17 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "roll 6d6",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources": [  {
-            "@URI": "http://dbpedia.org/resource/Roll_call",
-            "@support": "68",
-            "@types": "",
-            "@surfaceForm": "roll",
-            "@offset": "0",
-            "@similarityScore": "0.21562056243419647",
-            "@percentageOfSecondRank": "0.7772247658283996"
-          }]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:17 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=roll%206d6
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=roll%206d6
     body:
       encoding: US-ASCII
       string: ''
@@ -109,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:44:07 GMT
+      - Sun, 29 Sep 2013 18:32:40 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -118,5 +75,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"searchTerm":["roll 6d6"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:18 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:49 GMT
 recorded_with: VCR 2.5.0

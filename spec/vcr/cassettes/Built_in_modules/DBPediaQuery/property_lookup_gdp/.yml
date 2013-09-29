@@ -21,12 +21,12 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sat, 28 Sep 2013 18:54:11 GMT
+      - Sun, 29 Sep 2013 18:31:50 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "a620612e-d676-4ac5-867d-e2fb6e8d9fa0",
+          "msg_id" : "df5cfd20-a606-4b12-8ad3-f4fcf251f7fe",
           "msg_body" : "what is the GDP PPP per capita of United States",
           "outcome" : {
             "intent" : "fact_question",
@@ -50,10 +50,10 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:11 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:50 GMT
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20is%20the%20GDP%20PPP%20per%20capita%20of%20United%20States
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=what%20is%20the%20GDP%20PPP%20per%20capita%20of%20United%20States
     body:
       encoding: US-ASCII
       string: ''
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 28 Sep 2013 18:55:01 GMT
+      - Sun, 29 Sep 2013 18:32:41 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -75,7 +75,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:11 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:50 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -103,7 +103,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 18:54:11 GMT
+      - Sun, 29 Sep 2013 18:31:50 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -131,7 +131,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:12 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:51 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -159,7 +159,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 18:54:11 GMT
+      - Sun, 29 Sep 2013 18:31:51 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -184,5 +184,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:12 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:52 GMT
 recorded_with: VCR 2.5.0

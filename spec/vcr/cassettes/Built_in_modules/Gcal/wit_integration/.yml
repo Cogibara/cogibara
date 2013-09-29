@@ -17,16 +17,16 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '744'
+      - '742'
       Server:
       - http-kit
       Date:
-      - Sun, 29 Sep 2013 17:19:45 GMT
+      - Sun, 29 Sep 2013 18:32:56 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "de972cb7-52b7-4656-8329-471c7fc6d18e",
+          "msg_id" : "0fb8ca34-1f3f-4d94-be2e-d702ebbec38f",
           "msg_body" : "can you remind me via sms to eat pudding at 8:00pm",
           "outcome" : {
             "intent" : "set_reminder",
@@ -53,14 +53,14 @@ http_interactions:
                 "body" : "sms"
               }
             },
-            "confidence" : 0.999
+            "confidence" : 1.0
           }
         }
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 17:19:45 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:56 GMT
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=can%20you%20remind%20me%20via%20sms%20to%20eat%20pudding%20at%208:00pm
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=can%20you%20remind%20me%20via%20sms%20to%20eat%20pudding%20at%208:00pm
     body:
       encoding: US-ASCII
       string: ''
@@ -73,7 +73,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sun, 29 Sep 2013 17:20:36 GMT
+      - Sun, 29 Sep 2013 18:33:47 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -82,10 +82,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"message":["eat pudding at 8 00pm"]},"action":"TEXT_SEND","category":"TEXT"}'
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 17:19:46 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:57 GMT
 - request:
     method: post
-    uri: https://www.google.com/calendar/feeds/default/private/full?gsessionid=SZ_1hkGiUajXUy6b3kO8NQ
+    uri: https://www.google.com/calendar/feeds/default/private/full?gsessionid=ImqkhTP70dxEtuU9CmvAdA
     body:
       encoding: UTF-8
       string: |-
@@ -102,7 +102,7 @@ http_interactions:
                  </entry>
     headers:
       Authorization:
-      - GoogleLogin auth=DQAAALUAAADm0sdgj8Ko4aEC1BDJWkTaSyEp9rrfsqB3Z_CrqUIWpzt_C4oq4uRct0Odmn6rbwDuMZlUymZYyWTPJ4cYohqsDmNie_3S0s2W0ppZvIt6q9ov6MFtr_hCOT3ilkyu8RIrdF10Pjsr_aOuyQq9SrfTrmNcGidyYfNO6Z4T7uEQ9v2stB08SM32Wa0bJICsqmn4rnXMa7xYFPFkyWPy-Wvm-4fR4LO_B6lxeGdou6IqaH8J-TOITjtfY_zGt6YzpgA
+      - GoogleLogin auth=DQAAALUAAADM7bqobMpI4f7FGjtrF8Vt8keRdbHfHOsuT_2aGmkYkFpIf7nksxjxN1YYYQXl8rrvnySuM7MkROzXTQNxUuaZvQ8xrsWLFMflfv7X7WKeyxhpvVSK_KjMGEFHGbcyroqLQDmx43AVfBxdfH4yoHyQrdfKxTBuLv_drEv7JyIhUZCpGKGCuH4k_MwYHcGFcZFmXXVz-Nm80iI3kZWHCoZzkCD51Z5jtWO5oYdfQ61D_SnEzfOTMLCC8XOvx5b7NZg
       Content-Type:
       - application/atom+xml
       Accept-Encoding:
@@ -117,14 +117,14 @@ http_interactions:
       message: Created
     headers:
       Update-Client-Auth:
-      - DQAAALUAAADm0sdgj8Ko4aEC1BDJWkTal_TPjMu6uAqWHHuGsACacge3Pbf41FFmpSEW_5-Xk0qn7CAUljJ927LUjQTpbmybut2CNiZvwNFt5x26UTc02wzuLNUvYUq9M6UvvBvkhkVYBoaB27fdxU3EKi90ETJ1B-Odlp9nlYTwPoxsamcnTQod-eraV9ILOzHctUwek6NBpZF1cHRCJgOir_7VtXZUihikv2JWNCrAoajE5XDbb-60d360WiAeTmqysYFZxNM
+      - DQAAALYAAADM7bqobMpI4f7FGjtrF8VtqFlUaCzwzmZa5G15Pvy2IkFWF-b_KocaKvF9wedhsRsWjUhC3ur4U9iQRFi1ZON70IdQ6MvPhs4e4EZ-WtfasUF-QXth9BRSULbpZP6RfQ7_v7Y2ztmIh-LSnRB6YjLdMAJVbCXz87DkO59XF9ZIRpjLR1bkPCYKSuOLjbKs_omD2OrdbnjY5fTpEtmzsCWSMGwoBlEhNZEooO5bBrasUa-bVWB3EmEL3WDH4g7lQAQ
       Set-Cookie:
-      - DO_NOT_CACHE_RESPONSE=true;Expires=Sun, 29-Sep-2013 17:19:47 GMT
-      - S=calendar=xX-HITIKrwzMvlkhxURCcw;Expires=Thu, 10-Oct-2013 21:28:57 GMT;Secure
+      - DO_NOT_CACHE_RESPONSE=true;Expires=Sun, 29-Sep-2013 18:32:58 GMT
+      - S=calendar=fCPcZ7Bgw9gCGfW_NrHZvw;Expires=Wed, 09-Oct-2013 13:21:48 GMT;Secure
       Expires:
-      - Sun, 29 Sep 2013 17:19:46 GMT
+      - Sun, 29 Sep 2013 18:32:57 GMT
       Date:
-      - Sun, 29 Sep 2013 17:19:46 GMT
+      - Sun, 29 Sep 2013 18:32:57 GMT
       Content-Type:
       - application/atom+xml; charset=UTF-8
       Cache-Control:
@@ -134,9 +134,9 @@ http_interactions:
       Gdata-Version:
       - '1.0'
       Location:
-      - https://www.google.com/calendar/feeds/default/private/full/okq599grg5vfl2vuqp4sb99834/63516158386
+      - https://www.google.com/calendar/feeds/default/private/full/sarapgqrg3kikjtqnf92tg3e4k/63516162777
       Content-Location:
-      - https://www.google.com/calendar/feeds/default/private/full/okq599grg5vfl2vuqp4sb99834/63516158386
+      - https://www.google.com/calendar/feeds/default/private/full/sarapgqrg3kikjtqnf92tg3e4k/63516162777
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -152,14 +152,14 @@ http_interactions:
     body:
       encoding: UTF-8
       string: <?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom'
-        xmlns:gCal='http://schemas.google.com/gCal/2005' xmlns:gd='http://schemas.google.com/g/2005'><id>http://www.google.com/calendar/feeds/default/private/full/okq599grg5vfl2vuqp4sb99834</id><published>2013-09-29T17:19:46.000Z</published><updated>2013-09-29T17:19:46.000Z</updated><category
+        xmlns:gCal='http://schemas.google.com/gCal/2005' xmlns:gd='http://schemas.google.com/g/2005'><id>http://www.google.com/calendar/feeds/default/private/full/sarapgqrg3kikjtqnf92tg3e4k</id><published>2013-09-29T18:32:57.000Z</published><updated>2013-09-29T18:32:57.000Z</updated><category
         scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/><title
         type='text'>eat pudding</title><content type='text'/><link rel='alternate'
-        type='text/html' href='https://www.google.com/calendar/event?eid=b2txNTk5Z3JnNXZmbDJ2dXFwNHNiOTk4MzQgY29naWJhcmFAbQ'
-        title='alternate'/><link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/okq599grg5vfl2vuqp4sb99834'/><link
-        rel='edit' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/okq599grg5vfl2vuqp4sb99834/63516158386'/><author><name>Cogibara
+        type='text/html' href='https://www.google.com/calendar/event?eid=c2FyYXBncXJnM2tpa2p0cW5mOTJ0ZzNlNGsgY29naWJhcmFAbQ'
+        title='alternate'/><link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/sarapgqrg3kikjtqnf92tg3e4k'/><link
+        rel='edit' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/sarapgqrg3kikjtqnf92tg3e4k/63516162777'/><author><name>Cogibara
         Org</name><email>cogibara@gmail.com</email></author><gd:comments><gd:feedLink
-        href='https://www.google.com/calendar/feeds/default/private/full/okq599grg5vfl2vuqp4sb99834/comments'/></gd:comments><gd:eventStatus
+        href='https://www.google.com/calendar/feeds/default/private/full/sarapgqrg3kikjtqnf92tg3e4k/comments'/></gd:comments><gd:eventStatus
         value='http://schemas.google.com/g/2005#event.confirmed'/><gd:where valueString=''/><gd:who
         email='cogibara@gmail.com' rel='http://schemas.google.com/g/2005#event.organizer'
         valueString='Cogibara Org'/><gd:when endTime='2013-09-29T08:01:00.000-05:00'
@@ -167,7 +167,7 @@ http_interactions:
         value='http://schemas.google.com/g/2005#event.opaque'/><gd:visibility value='http://schemas.google.com/g/2005#event.default'/><gCal:anyoneCanAddSelf
         value='false'/><gCal:guestsCanInviteOthers value='true'/><gCal:guestsCanModify
         value='false'/><gCal:guestsCanSeeGuests value='true'/><gCal:sequence value='0'/><gCal:uid
-        value='okq599grg5vfl2vuqp4sb99834@google.com'/></entry>
+        value='sarapgqrg3kikjtqnf92tg3e4k@google.com'/></entry>
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 17:19:46 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:57 GMT
 recorded_with: VCR 2.5.0

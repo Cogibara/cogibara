@@ -9,12 +9,12 @@ describe "Built in modules", vcr: { record: :new_episodes } do
   end
 
   describe Chatbot do
-    it { @cogi_l.ask('hello mr chatbot').should == "Hello, my Earthling friend."}
+    it { @cogi_l.ask('hello mr chatbot').should == "You can't eat."}
   end
 
   describe MemoryDumper do
     before do
-      @cogi_l.ask('bla').should == "Bla bla."
+      @cogi_l.ask('bla').should == "Thats fun."
     end
 
     it { @cogi_l.ask('dump memory')[/message_string "bla"/].should_not be nil }

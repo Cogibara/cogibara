@@ -22,6 +22,7 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
+
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
@@ -29,6 +30,7 @@ VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr/cassettes"
   c.hook_into :webmock
   c.filter_sensitive_data('<Wit Auth>') { Cogibara::Module.settings["keys"]["wit"] }
+  c.filter_sensitive_data('<Maluuba Auth>') { Cogibara::Module.settings["keys"]["maluuba"] }
   c.filter_sensitive_data('<Google Name>') { CGI::escape Cogibara::Module.settings["keys"]["google_name"] }
   c.filter_sensitive_data('<Google Pass>') { CGI::escape Cogibara::Module.settings["keys"]["google_pass"] }
   c.filter_sensitive_data('<Evernote Auth>') { Cogibara::Module.settings["keys"]["evernote"] }

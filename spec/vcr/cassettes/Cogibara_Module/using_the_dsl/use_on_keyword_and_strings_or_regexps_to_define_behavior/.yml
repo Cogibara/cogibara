@@ -17,65 +17,28 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '175'
+      - '174'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:58:54 GMT
+      - Sun, 29 Sep 2013 18:29:08 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "1c5baeac-b7a9-46ea-933b-309bad9521c2",
+          "msg_id" : "01cafa50-3a34-4563-a5d1-351dccbed360",
           "msg_body" : "hello you",
           "outcome" : {
             "intent" : "hello",
             "entities" : { },
-            "confidence" : 0.985
+            "confidence" : 0.99
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:54 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:08 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=hello%20you
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:58:53 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "hello you",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist"
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:55 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=hello%20you
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=hello%20you
     body:
       encoding: US-ASCII
       string: ''
@@ -88,7 +51,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:59:44 GMT
+      - Sun, 29 Sep 2013 18:29:58 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -97,7 +60,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:55 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:08 GMT
 - request:
     method: get
     uri: https://api.wit.ai/message?q=I'm%20bill
@@ -115,81 +78,36 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '295'
+      - '335'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:58:56 GMT
+      - Sun, 29 Sep 2013 18:29:09 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "829fe3f0-e93d-4697-a707-c175bb7c24ed",
+          "msg_id" : "44cdb9ee-cc7b-4855-8d44-17a21b924443",
           "msg_body" : "I'm bill",
           "outcome" : {
             "intent" : "my_name",
             "entities" : {
               "name" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 8,
                 "start" : 4,
                 "value" : "bill",
                 "body" : "bill"
               }
             },
-            "confidence" : 0.969
+            "confidence" : 0.98
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:56 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:09 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=I'm%20bill
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:58:55 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "I'm bill",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources": [  {
-            "@URI": "http://dbpedia.org/resource/Bill_%28proposed_law%29",
-            "@support": "628",
-            "@types": "Freebase:/tv/tv_subject,Freebase:/tv,DBpedia:TopicalConcept",
-            "@surfaceForm": "bill",
-            "@offset": "4",
-            "@similarityScore": "0.338969349861145",
-            "@percentageOfSecondRank": "0.9976075099499522"
-          }]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:56 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=I'm%20bill
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=I'm%20bill
     body:
       encoding: US-ASCII
       string: ''
@@ -202,7 +120,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:59:45 GMT
+      - Sun, 29 Sep 2013 18:29:59 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -211,7 +129,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"contacts":[{"name":"bill"}]},"action":"CONTACT_SEARCH","category":"CONTACT"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:56 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:09 GMT
 - request:
     method: get
     uri: https://api.wit.ai/message?q=roll%20me%201d150
@@ -229,87 +147,43 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '419'
+      - '495'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:58:57 GMT
+      - Sun, 29 Sep 2013 18:29:10 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "85e883c8-4094-4fb7-8902-039b95b0f2c2",
+          "msg_id" : "9202e743-15a2-48f3-9d9c-2a9974b27ef8",
           "msg_body" : "roll me 1d150",
           "outcome" : {
             "intent" : "dice_roll",
             "entities" : {
               "n_dice" : {
+                "source" : [ "levenum" ],
                 "end" : 9,
                 "start" : 8,
                 "value" : "1",
                 "body" : "1"
               },
               "dice_size" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 13,
                 "start" : 9,
                 "value" : "d150",
                 "body" : "d150"
               }
             },
-            "confidence" : 0.99
+            "confidence" : 0.994
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:57 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:10 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=roll%20me%201d150
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:58:57 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "roll me 1d150",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources": [  {
-            "@URI": "http://dbpedia.org/resource/Roll_call",
-            "@support": "68",
-            "@types": "",
-            "@surfaceForm": "roll",
-            "@offset": "0",
-            "@similarityScore": "0.21562056243419647",
-            "@percentageOfSecondRank": "0.7772247658283996"
-          }]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:57 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=roll%20me%201d150
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=roll%20me%201d150
     body:
       encoding: US-ASCII
       string: ''
@@ -322,7 +196,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:59:47 GMT
+      - Sun, 29 Sep 2013 18:30:01 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -331,7 +205,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"searchTerm":["1d150"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:58 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:11 GMT
 - request:
     method: get
     uri: https://api.wit.ai/message?q=roll%20me%204d12
@@ -349,87 +223,43 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '417'
+      - '492'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:58:58 GMT
+      - Sun, 29 Sep 2013 18:29:11 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "e2d12ef0-878d-48cd-9259-8d62aa0a11b8",
+          "msg_id" : "b9507bdd-4241-4d23-ae7e-7d0ab3907b34",
           "msg_body" : "roll me 4d12",
           "outcome" : {
             "intent" : "dice_roll",
             "entities" : {
               "n_dice" : {
+                "source" : [ "levenum" ],
                 "end" : 9,
                 "start" : 8,
                 "value" : "4",
                 "body" : "4"
               },
               "dice_size" : {
+                "source" : [ "levenum", "ner" ],
                 "end" : 12,
                 "start" : 9,
                 "value" : "d12",
                 "body" : "d12"
               }
             },
-            "confidence" : 0.989
+            "confidence" : 0.993
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:58 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:11 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=roll%20me%204d12
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:58:58 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "roll me 4d12",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources": [  {
-            "@URI": "http://dbpedia.org/resource/Roll_call",
-            "@support": "68",
-            "@types": "",
-            "@surfaceForm": "roll",
-            "@offset": "0",
-            "@similarityScore": "0.21562056243419647",
-            "@percentageOfSecondRank": "0.7772247658283996"
-          }]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:59 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=roll%20me%204d12
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=roll%20me%204d12
     body:
       encoding: US-ASCII
       string: ''
@@ -442,7 +272,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:59:48 GMT
+      - Sun, 29 Sep 2013 18:30:02 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -451,5 +281,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"searchTerm":["4d12"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:58:59 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:12 GMT
 recorded_with: VCR 2.5.0

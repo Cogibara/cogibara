@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=hello?
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=hello?
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Mon, 23 Sep 2013 23:14:09 GMT
+      - Sun, 29 Sep 2013 18:30:21 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -24,13 +24,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Mon, 23 Sep 2013 23:13:20 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:31 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
     body:
       encoding: UTF-8
-      string: stimulus=hello%3F&start=y&sessionid=USG01295696&vText8=&vText7=&vText6=&vText5=Hello%3F&vText4=What%20are%20you%3F&vText3=Hello%3F&vText2=Hi.&icognoid=wsf&icognocheck=c9234e849d667e910d8e5f4915589ad9&fno=0&prevref=RTB056589606&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+      string: stimulus=hello%3F&start=y&sessionid=RVO01290444&vText8=&vText7=&vText6=&vText5=Hello%3F&vText4=Hello%20my%20name%20is%20Cleverbot.&vText3=Hello%3F&vText2=What%20do%20you%20mean%20hello%3F&icognoid=wsf&icognocheck=c9234e849d667e910d8e5f4915589ad9&fno=0&prevref=RSG035815144&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
     headers: {}
   response:
     status:
@@ -38,18 +38,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 23 Sep 2013 23:10:36 GMT
+      - Sun, 29 Sep 2013 18:25:39 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS=U10MX+WotQZxdB5qZl6QbQ
-      - JSESSIONID=E98E651481F0967C254BA407C3DACABD; Path=/
+      - AIS=k0uYlUwh+7FxLu7qxN8r8A
+      - JSESSIONID=2BD1340C53623120A3924852C16A0B31; Path=/
       - RPS=cs5860
-      - cleverbotfirstref2="*MWFKAUVWLRTAVPMRDQQTMFQLQVAUTMTBQTPAMSIKVK"; Expires=""
-      - cleverbotref="*QARWAUZIPDXMVTYVPQUFQRQPCZMUXYXNQXBAQGUIVM"; Expires="Tue,
-        24 Sep 2013 00:13:25 GMT"
+      - cleverbotfirstref2="*AKWBDVZOPJCRYREEZTULAWTPIJRXXEHATXKAAMZIVK"; Expires=""
+      - cleverbotref="*MWBGBTUKKFOWWMAQERPHMBRKEVWVSATFRSGAMSESTI"; Expires="Sun,
+        29 Sep 2013 19:29:30 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -61,18 +61,19 @@ http_interactions:
       Rps:
       - cs5860
       Rlm:
-      - '1579'
+      - '1756'
       Sc:
-      - '20065'
+      - '13121'
       Content-Length:
-      - '149'
+      - '297'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "How are you?\rUSG01295696\rj2log-fLdLAgOYEPDKVAKCXMHE-detail\r\rHello?\rWhat
-        are you?\rHello?\rHi.\rHello?\rHow are you?\rRYA021176209\r\r\r\r\r\rHow are
-        you?\r\r\r\r\r\r\r"
+      string: "Ok nevermind. So what are you doing this weekend?\rRVO01290444\rj2log-tCqVQeUCKTUUGAOOWEWG-detail\r\rHello?\rHello
+        my name is Cleverbot.\rHello?\rWhat do you mean hello?\rHello?\rOk nevermind.
+        So what are you doing this weekend?\rRRA052017616\r\r\r\r\r\rOk nevermind.
+        So what are you doing this weekend?\r!01\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Mon, 23 Sep 2013 23:13:21 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:35 GMT
 recorded_with: VCR 2.5.0

@@ -17,65 +17,28 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '181'
+      - '182'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:43:13 GMT
+      - Sun, 29 Sep 2013 18:31:37 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "fc92d692-5376-4685-b710-955806eaa811",
+          "msg_id" : "a8649aec-e2ec-4fcb-83d0-6de93da42877",
           "msg_body" : "hello mr chatbot",
           "outcome" : {
             "intent" : "hello",
             "entities" : { },
-            "confidence" : 0.93
+            "confidence" : 0.996
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:13 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:37 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=hello%20mr%20chatbot
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:43:12 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "hello mr chatbot",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist"
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:13 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=hello%20mr%20chatbot
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=hello%20mr%20chatbot
     body:
       encoding: US-ASCII
       string: ''
@@ -88,7 +51,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:44:02 GMT
+      - Sun, 29 Sep 2013 18:32:28 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -97,7 +60,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:13 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:38 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
@@ -111,18 +74,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:40:14 GMT
+      - Sun, 29 Sep 2013 18:27:44 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS=X5htnkHakR0T9WLnliGoPQ
-      - JSESSIONID=138DAAF8F3D9E2C8D8FAD8082BF7DB7C; Path=/
+      - AIS=562vInhHgvhmgTjHWVk0mw
+      - JSESSIONID=CED388BD8CDFC24755BE41D5E48D4720; Path=/
       - RPS=cs5860
-      - cleverbotfirstref2="*WGLQBWENUIBGVDDBMRZJWLTUHEGVCDEKRCKAWMOOXI"; Expires=""
-      - cleverbotref="*WGCHWRBQRLBXQAGBDMWMWCORKEXQZGEBMZNAWIFSSI"; Expires="Wed,
-        25 Sep 2013 06:43:16 GMT"
+      - cleverbotfirstref2="*OYLQKDKGABVGEJWSOAFZOLEAAWGEIWVKAIZAOEOICI"; Expires=""
+      - cleverbotref="*DNBGGZYKOFKWAXAHEWTDDBAOELWAWAKAWWDADAEEYI"; Expires="Sun,
+        29 Sep 2013 19:31:38 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -134,18 +97,17 @@ http_interactions:
       Rps:
       - cs5860
       Rlm:
-      - '1073'
+      - '1852'
       Sc:
-      - '15562'
+      - '13151'
       Content-Length:
-      - '177'
+      - '138'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "Hello, my Earthling friend.\rVWT00488177\rj2log-kPkORkIOYEJMPAZILAMG-detail\r\r\r\r\r\rHello
-        mr chatbot.\rHello, my Earthling friend.\r\r+3000_cbfull\r\r\r\r\rHello, my
-        Earthling friend.\r\r\r\r\r\r\r"
+      string: "You can't eat.\rRSJ00650195\rj2log-rAoWWfPOFEWRMAGGNAVG-detail\r\r\r\r\r\rHello
+        mr chatbot.\rYou can't eat.\rRXJ050762177\r\r\r\r\r\rYou can't eat.\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:43:14 GMT
+  recorded_at: Sun, 29 Sep 2013 18:31:41 GMT
 recorded_with: VCR 2.5.0

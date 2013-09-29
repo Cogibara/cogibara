@@ -17,65 +17,28 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '183'
+      - '184'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:44:13 GMT
+      - Sun, 29 Sep 2013 18:32:47 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "5ce6a611-0073-4fd3-89b9-a6a5e15437d5",
+          "msg_id" : "ca164de3-5b57-45a4-bb23-73f93e7add2a",
           "msg_body" : "heyo hows it going",
           "outcome" : {
             "intent" : "hello",
             "entities" : { },
-            "confidence" : 0.93
+            "confidence" : 0.995
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:44:13 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:47 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=heyo%20hows%20it%20going
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:44:12 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "heyo hows it going",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist"
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:44:13 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=heyo%20hows%20it%20going
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=heyo%20hows%20it%20going
     body:
       encoding: US-ASCII
       string: ''
@@ -88,7 +51,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 05:45:03 GMT
+      - Sun, 29 Sep 2013 18:33:37 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -97,13 +60,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:44:14 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:47 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
     body:
       encoding: UTF-8
-      string: stimulus=heyo%20hows%20it%20going&start=y&sessionid=VWT00488177&vText8=Bla%20bla.&vText7=What%20are%20Tardigrades%3F&vText6=My%20grades%3F&vText5=What%20does%20President%20Obama%20think%20of%20the%20Bacon%20Crisis%3F&vText4=He%20thinks%20that%20you're%20the%20bee's%20knees.&vText3=I%20live%20in%20Madison%20Wisconsin.&vText2=And%20your%20name%20is%20Sam%3F&icognoid=wsf&icognocheck=c1fb1b8402f87ec8528962f6524656b0&fno=0&prevref=USS011400053&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+      string: stimulus=heyo%20hows%20it%20going&start=y&sessionid=RSJ00650195&vText8=&vText7=&vText6=&vText5=Hello%20mr%20chatbot.&vText4=You%20can't%20eat.&vText3=Bla.&vText2=Thats%20fun.&icognoid=wsf&icognocheck=c1fb1b8402f87ec8528962f6524656b0&fno=0&prevref=RSE002777807&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
     headers: {}
   response:
     status:
@@ -111,18 +74,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Sep 2013 05:41:19 GMT
+      - Sun, 29 Sep 2013 18:28:53 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS="AtKCBOtPtkGkjU/PQbMKog"; Version=1
-      - JSESSIONID=96B8E0C1DD91F8DBFDD7767D4F6A759B; Path=/
+      - AIS=u2jZP9EJ8UGTwXoMA+6VuA
+      - JSESSIONID=9708B0160AA52A06567C09018679BBE4; Path=/
       - RPS=cs5860
-      - cleverbotfirstref2="*ZJPUNIWEMZEKHVUEQDRAZPFMYHKHUUHODUBAZKSGJK"; Expires=""
-      - cleverbotref="*CMBGSNQQGLHWMPGHCILMCBKGKKWMOGKAIONACSESOG"; Expires="Wed,
-        25 Sep 2013 06:44:06 GMT"
+      - cleverbotfirstref2="*SCHMIBJZZUZCCIPWKYESSHCZTACCHPZGYHSASAKAAK"; Expires=""
+      - cleverbotref="*ISFKMFASQNPAGZIMICVLIFGQMQAGYIPECYLAIQIEEI"; Expires="Sun,
+        29 Sep 2013 19:32:47 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -134,21 +97,17 @@ http_interactions:
       Rps:
       - cs5860
       Rlm:
-      - '1061'
+      - '1775'
       Sc:
-      - '15737'
+      - '13122'
       Content-Length:
-      - '444'
+      - '158'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "You didn't answer my question, but I forgive you, I am doing fine.\rVWT00488177\rj2log-bGuYCvWUMKAWAANORQDE-detail\rMy
-        grades?\rWhat does President Obama think of the Bacon Crisis?\rHe thinks that
-        you're the bee's knees.\rI live in Madison Wisconsin.\rAnd your name is Sam?\rHeyo
-        hows it going.\rYou didn't answer my question, but I forgive you, I am doing
-        fine.\rUC006515214\r\r\r\r\r\rYou didn't answer my question, but I forgive
-        you, I am doing fine.\r\r\r\r\r\r\r"
+      string: "Good.\rRSJ00650195\rj2log-oXmUIrFWVMTPYAWOVMSG-detail\r\rHello mr chatbot.\rYou
+        can't eat.\rBla.\rThats fun.\rHeyo hows it going.\rGood.\rRXM029882477\r\r\r\r\r\rGood.\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:44:19 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:50 GMT
 recorded_with: VCR 2.5.0

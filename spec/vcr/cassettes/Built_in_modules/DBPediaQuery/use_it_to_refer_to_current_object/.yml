@@ -17,16 +17,16 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '534'
+      - '532'
       Server:
       - http-kit
       Date:
-      - Sat, 28 Sep 2013 18:54:25 GMT
+      - Sun, 29 Sep 2013 18:32:27 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "d9b4280d-8754-4e55-bbb9-a6d3224f4bf2",
+          "msg_id" : "ba805488-23a0-46e3-a603-3febbfa5755f",
           "msg_body" : "what is the capital of it",
           "outcome" : {
             "intent" : "fact_question",
@@ -46,14 +46,14 @@ http_interactions:
                 "body" : "capital"
               }
             },
-            "confidence" : 0.999
+            "confidence" : 1.0
           }
         }
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:26 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:27 GMT
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=what%20is%20the%20capital%20of%20it
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=what%20is%20the%20capital%20of%20it
     body:
       encoding: US-ASCII
       string: ''
@@ -66,7 +66,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sat, 28 Sep 2013 18:55:16 GMT
+      - Sun, 29 Sep 2013 18:33:17 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -75,7 +75,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:26 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:27 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -103,7 +103,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 18:54:25 GMT
+      - Sun, 29 Sep 2013 18:32:26 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -143,7 +143,7 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:27 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:28 GMT
 - request:
     method: post
     uri: http://dbpedia.org/sparql
@@ -171,7 +171,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 28 Sep 2013 18:54:26 GMT
+      - Sun, 29 Sep 2013 18:32:27 GMT
       Content-Type:
       - application/sparql-results+xml; charset=UTF-8
       Content-Length:
@@ -196,5 +196,5 @@ http_interactions:
          </results>
         </sparql>
     http_version: 
-  recorded_at: Sat, 28 Sep 2013 18:54:27 GMT
+  recorded_at: Sun, 29 Sep 2013 18:32:29 GMT
 recorded_with: VCR 2.5.0

@@ -21,12 +21,12 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Fri, 27 Sep 2013 14:02:16 GMT
+      - Sun, 29 Sep 2013 18:29:21 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "3a57db90-4b5e-47d4-8ed5-f706e24c4413",
+          "msg_id" : "c6a5e070-acb9-4c88-b07e-337233b197b4",
           "msg_body" : "who is Johnny Habu?",
           "outcome" : {
             "intent" : "person_information",
@@ -40,14 +40,14 @@ http_interactions:
                 "suggested" : true
               }
             },
-            "confidence" : 0.985
+            "confidence" : 0.991
           }
         }
     http_version: 
-  recorded_at: Fri, 27 Sep 2013 14:02:16 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:21 GMT
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=who%20is%20Johnny%20Habu?
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=who%20is%20Johnny%20Habu?
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Fri, 27 Sep 2013 14:03:06 GMT
+      - Sun, 29 Sep 2013 18:30:12 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -69,7 +69,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"contacts":[{"name":"johnny"}]},"action":"CONTACT_SEARCH","category":"CONTACT"}'
     http_version: 
-  recorded_at: Fri, 27 Sep 2013 14:02:16 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:22 GMT
 - request:
     method: get
     uri: https://api.wit.ai/message?q=show%20me%20Johnny%20Habus%20contact%20info
@@ -91,12 +91,12 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Fri, 27 Sep 2013 14:02:17 GMT
+      - Sun, 29 Sep 2013 18:29:22 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "f3180ed3-00ac-4baf-a7d2-446c1816e420",
+          "msg_id" : "ed87aab3-de9d-4192-bb1d-aa0b9c3d349f",
           "msg_body" : "show me Johnny Habus contact info",
           "outcome" : {
             "intent" : "contact_info",
@@ -110,14 +110,14 @@ http_interactions:
                 "suggested" : true
               }
             },
-            "confidence" : 0.992
+            "confidence" : 0.995
           }
         }
     http_version: 
-  recorded_at: Fri, 27 Sep 2013 14:02:17 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:22 GMT
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=show%20me%20Johnny%20Habus%20contact%20info
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=show%20me%20Johnny%20Habus%20contact%20info
     body:
       encoding: US-ASCII
       string: ''
@@ -130,7 +130,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Fri, 27 Sep 2013 14:03:06 GMT
+      - Sun, 29 Sep 2013 18:30:13 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -139,5 +139,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{"contacts":[{"name":"johnny"}]},"action":"CONTACT_SEARCH","category":"CONTACT"}'
     http_version: 
-  recorded_at: Fri, 27 Sep 2013 14:02:17 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:23 GMT
 recorded_with: VCR 2.5.0

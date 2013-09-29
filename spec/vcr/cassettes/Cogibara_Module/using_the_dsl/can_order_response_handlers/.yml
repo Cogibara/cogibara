@@ -17,74 +17,28 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '172'
+      - '171'
       Server:
       - http-kit
       Date:
-      - Wed, 25 Sep 2013 05:59:10 GMT
+      - Sun, 29 Sep 2013 18:29:16 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "c83fd613-99e0-4480-afa2-257b1399cafc",
+          "msg_id" : "1ae1a4dd-010d-42da-a7e7-4f4834f4cbca",
           "msg_body" : "testing",
           "outcome" : {
             "intent" : "chat",
             "entities" : { },
-            "confidence" : 0.963
+            "confidence" : 0.99
           }
         }
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:59:10 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:16 GMT
 - request:
     method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=testing
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 05:59:09 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "testing",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources": [  {
-            "@URI": "http://dbpedia.org/resource/Debian",
-            "@support": "669",
-            "@types": "Freebase:/computer/operating_system,Freebase:/computer,Freebase:/computer/software,DBpedia:TopicalConcept",
-            "@surfaceForm": "testing",
-            "@offset": "0",
-            "@similarityScore": "0.09216555953025818",
-            "@percentageOfSecondRank": "-1.0"
-          }]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:59:11 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=testing
+    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=testing
     body:
       encoding: US-ASCII
       string: ''
@@ -97,7 +51,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 25 Sep 2013 06:00:01 GMT
+      - Sun, 29 Sep 2013 18:30:07 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -106,260 +60,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 05:59:12 GMT
-- request:
-    method: get
-    uri: https://api.wit.ai/message?q=set%20me%20an%20alarm%20for%208am%20tomorrow
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer <Wit Auth>
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '441'
-      Server:
-      - http-kit
-      Date:
-      - Wed, 25 Sep 2013 13:21:34 GMT
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "ec59dccb-4c7e-417d-bbf8-35dc89514e2b",
-          "msg_body" : "set me an alarm for 8am tomorrow",
-          "outcome" : {
-            "intent" : "set_alarm",
-            "entities" : {
-              "datetime" : {
-                "end" : 32,
-                "start" : 20,
-                "value" : {
-                  "from" : "2013-09-26T08:00:00.000-05:00",
-                  "to" : "2013-09-26T09:00:00.000-05:00"
-                },
-                "body" : "8am tomorrow"
-              }
-            },
-            "confidence" : 0.714
-          }
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 13:21:34 GMT
-- request:
-    method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=set%20me%20an%20alarm%20for%208am%20tomorrow
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 13:21:31 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "set me an alarm for 8am tomorrow",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources":   [
-                {
-              "@URI": "http://dbpedia.org/resource/Set_list",
-              "@support": "218",
-              "@types": "",
-              "@surfaceForm": "set",
-              "@offset": "0",
-              "@similarityScore": "0.09193041175603867",
-              "@percentageOfSecondRank": "0.9279534595687663"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/The_Alarm",
-              "@support": "152",
-              "@types": "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/internet/social_network_user,Freebase:/internet,Freebase:/tv/tv_actor,Freebase:/tv,Freebase:/music/musical_group,Freebase:/music,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music/producer",
-              "@surfaceForm": "alarm",
-              "@offset": "10",
-              "@similarityScore": "0.18332388997077942",
-              "@percentageOfSecondRank": "-1.0"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Tomorrow_%28band%29",
-              "@support": "54",
-              "@types": "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music,Freebase:/music/musical_group",
-              "@surfaceForm": "tomorrow",
-              "@offset": "24",
-              "@similarityScore": "0.13547877967357635",
-              "@percentageOfSecondRank": "0.6568485080061466"
-            }
-          ]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 13:21:35 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=set%20me%20an%20alarm%20for%208am%20tomorrow
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 25 Sep 2013 13:22:25 GMT
-      Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '76'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{"time":["08:00:00AM"]},"action":"ALARM_SET","category":"ALARM"}'
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 13:21:36 GMT
-- request:
-    method: get
-    uri: https://api.wit.ai/message?q=cancel%20my%208am%20alarm
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer <Wit Auth>
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '185'
-      Server:
-      - http-kit
-      Date:
-      - Wed, 25 Sep 2013 13:29:49 GMT
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "7885c337-7c6c-4174-af1f-a90b94434fca",
-          "msg_body" : "cancel my 8am alarm",
-          "outcome" : {
-            "intent" : "hello",
-            "entities" : { },
-            "confidence" : 0.277
-          }
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 13:29:49 GMT
-- request:
-    method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=cancel%20my%208am%20alarm
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 25 Sep 2013 13:29:46 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "cancel my 8am alarm",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources":   [
-                {
-              "@URI": "http://dbpedia.org/resource/Cancellation_%28mail%29",
-              "@support": "82",
-              "@types": "",
-              "@surfaceForm": "cancel",
-              "@offset": "0",
-              "@similarityScore": "0.1760825216770172",
-              "@percentageOfSecondRank": "0.9738146815633267"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/The_Alarm",
-              "@support": "152",
-              "@types": "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/internet/social_network_user,Freebase:/internet,Freebase:/tv/tv_actor,Freebase:/tv,Freebase:/music/musical_group,Freebase:/music,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/music/artist,Freebase:/music/producer",
-              "@surfaceForm": "alarm",
-              "@offset": "14",
-              "@similarityScore": "0.17864687740802765",
-              "@percentageOfSecondRank": "-1.0"
-            }
-          ]
-        }
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 13:29:50 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=cancel%20my%208am%20alarm
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Wed, 25 Sep 2013 13:30:40 GMT
-      Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '79'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{"time":["08:00:00AM"]},"action":"ALARM_CANCEL","category":"ALARM"}'
-    http_version: 
-  recorded_at: Wed, 25 Sep 2013 13:29:51 GMT
+  recorded_at: Sun, 29 Sep 2013 18:29:17 GMT
 recorded_with: VCR 2.5.0
