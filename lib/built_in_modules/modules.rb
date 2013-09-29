@@ -5,7 +5,6 @@
 
 class Maluuba < Cogibara::Module
   requires 'maluuba_napi'
-  requires 'gist'
 
   def initialize
     @client ||= MaluubaNapi::Client.new("12345")
@@ -19,6 +18,7 @@ class Maluuba < Cogibara::Module
 
   on do |msg|
     # pass unless msg.message
+    puts "m #{msg.message}"
     h = @client.interpret phrase: msg.message
     msg.set_maluuba_category(h[:category])
     msg.set_maluuba_action(h[:action])
@@ -28,6 +28,7 @@ class Maluuba < Cogibara::Module
 end
 
 class MemoryDumper < Cogibara::Module
+  requires 'gist'
   on(/^dump memory to gist/) do
     g = Gist.gist(Cogibara.dump_memory, filename: 'memory.ttl')
     g["html_url"]
