@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/spec_helper.rb'
 
 # Time to add your specs!
 # http://rspec.info/
-describe Cogibara do
+describe Cogibara, vcr: {record: :new_episodes} do
 
   before(:all) do
     @cogi_l = Cogibara::Interface::Local.new
