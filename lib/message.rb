@@ -172,6 +172,7 @@ module Cogibara
     end
 
     def method_missing(meth, *args, &block)
+      puts "mm"
       if meth.to_s =~ /^set_/
         set(onto_prop[meth.to_s.gsub(/^set_/,'')], *args, &block)
       elsif meth.to_s =~ /^get_/
