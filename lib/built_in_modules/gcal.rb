@@ -15,8 +15,8 @@ class Gcal < Cogibara::Module
 
     event = @cal.create_event do |e|
       e.title = message
-      e.start_time = time + (60 * 10)
-      e.end_time = time + (60 * 60) # seconds * min
+      e.start_time = time + 60
+      e.end_time = time + 60 # seconds * min
       methods.map{|m|
         e.reminders << {method: m, minutes: 1}
       }
@@ -34,6 +34,23 @@ class Gcal < Cogibara::Module
     make_remind(reminder, time + " " + day_night, method)
     t = " tonight" if day_night == "pm"
     "okay, reminding you to #{reminder} at #{time}#{t}"
+  end
+
+  on(:any, wit_intent: 'set_reminder') do |msg|
+    # puts current_message.struct_properties.map(&:values)
+    wit_entities = current_message.struct_properties.select{|p| p.values["wit_entity_type"] }.map(&:values)
+    time_entity = wit_entities.select{|e| e["wit_entity_type"] == "reminder_time"}.first
+    message_entity = wit_entities.select{|e| e["wit_entity_type"] == "reminder_text"}.first
+    method_entity = wit_entities.select{|e| e["wit_entity_type"] == "reminder_method"}
+
+    # puts message_entity
+    if method_entity.size > 0
+      make_remind(message_entity["wit_entity_value"], time_entity["wit_entity_value"], method_entity.first["wit_entity_value"])
+    else
+      make_remind(message_entity["wit_entity_value"], time_entity["wit_entity_value"])
+    end
+
+    "okay, reminding you to #{message_entity["wit_entity_value"]} at #{time_entity['wit_entity_value']}"
   end
 
   register

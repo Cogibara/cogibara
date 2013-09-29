@@ -15,6 +15,7 @@ class Wit < Cogibara::Module
   end
 
   def entity_structs(json)
+    # puts "json: #{json}, h: #{entity_hash(json)}" if json.to_s["remind"]
     entity_hash(json).map{|id,info|
       new_prop = current_message.new_property
       new_prop << [RDF.type, onto_class.WitEntity]
