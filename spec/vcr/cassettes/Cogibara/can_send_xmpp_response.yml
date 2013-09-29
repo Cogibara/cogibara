@@ -2,79 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=hello?
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Sun, 29 Sep 2013 19:39:28 GMT
-      Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '66'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 19:38:38 GMT
-- request:
-    method: post
-    uri: http://www.cleverbot.com/webservicemin
-    body:
-      encoding: UTF-8
-      string: stimulus=hello%3F&start=y&sessionid=RVS01455139&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=Hello%3F&vText2=How%20art%20thou%3F&icognoid=wsf&icognocheck=c9234e849d667e910d8e5f4915589ad9&fno=0&prevref=ROZ027791243&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 29 Sep 2013 19:34:42 GMT
-      Content-Type:
-      - text/html;charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - AIS="+HQQ0zhVP/9JZ9KrFcynhA"; Version=1
-      - JSESSIONID=302D763A5183245D23AE73875CC20692; Path=/
-      - RPS=cs5860
-      - cleverbotref="*CMINSPGJWEDDMFZHGIBCCIKWDLDMEZKGIEFACKLOKG"; Expires="Sun,
-        29 Sep 2013 20:38:40 GMT"
-      Mime-Version:
-      - '1.0'
-      Expires:
-      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache;no-store
-      Rps:
-      - cs5860
-      Rlm:
-      - '1799'
-      Sc:
-      - '14590'
-      Content-Length:
-      - '140'
-      Server:
-      - Jabberwacky
-    body:
-      encoding: UTF-8
-      string: "Who are you?\rRVS01455139\rj2log-fOhMGyREHVIHBAICXONE-detail\r\r\r\rHello?\rHow
-        art thou?\rHello?\rWho are you?\rRUZ027822613\r\r\r\r\r\rWho are you?\r\r\r\r\r\r\r"
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 19:38:39 GMT
-- request:
-    method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=hello?
     body:
       encoding: US-ASCII
@@ -88,7 +15,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sun, 29 Sep 2013 19:45:05 GMT
+      - Sun, 29 Sep 2013 19:49:00 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -97,5 +24,55 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 19:44:16 GMT
+  recorded_at: Sun, 29 Sep 2013 19:48:10 GMT
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=hello%3F&start=y&sessionid=RZF00888571&vText8=&vText7=&vText6=&vText5=&vText4=&vText3=Hello%3F&vText2=What%20have%20you%20done%20today%3F&icognoid=wsf&icognocheck=c9234e849d667e910d8e5f4915589ad9&fno=0&prevref=QQ008733743&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 29 Sep 2013 19:45:48 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=OmdSsi7KyHq62of9RSgsqg
+      - JSESSIONID=6B75E4677C910A9708134053DEBD8D16; Path=/
+      - RPS=cs5860
+      - cleverbotfirstref2="*FPTZSRSQILKPNLGKVINMFUOIKNPMQGMPIRGAFIXEKK"; Expires=""
+      - cleverbotref="*SCMSQPSWIRXILLMXOGNSSNMIQAIKQMZIGRMASMQIIK"; Expires="Sun,
+        29 Sep 2013 20:49:43 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - cs5860
+      Rlm:
+      - '1820'
+      Sc:
+      - '15408'
+      Content-Length:
+      - '172'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "What are you doing?\rRZF00888571\rj2log-fObCMrOIEYMAKAJMFGFE-detail\r\r\r\rHello?\rWhat
+        have you done today?\rHello?\rWhat are you doing?\rUD029816412\r\r\r\r\r\rWhat
+        are you doing?\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Sun, 29 Sep 2013 19:49:45 GMT
 recorded_with: VCR 2.5.0
