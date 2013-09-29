@@ -8,7 +8,8 @@ class Maluuba < Cogibara::Module
   requires_key 'maluuba'
 
   def initialize
-    @client ||= MaluubaNapi::Client.new(settings["keys"]["maluuba"])
+    # @client ||= MaluubaNapi::Client.new(settings["keys"]["maluuba"])
+    @client ||= MaluubaNapi::Client.new(nil)
   end
 
   on(/^maluuba/) do |msg|
