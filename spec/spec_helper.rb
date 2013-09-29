@@ -29,7 +29,8 @@ VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr/cassettes"
   c.hook_into :webmock
   c.filter_sensitive_data('<Wit Auth>') { Cogibara::Module.settings["keys"]["wit"] }
-  c.filter_sensitive_data('<Evernote Auth>') { Cogibara::Module.settings["keys"]["evernote"] }
+  c.filter_sensitive_data('<Google Name>') { CGI::escape Cogibara::Module.settings["keys"]["google_name"] }
+  c.filter_sensitive_data('<Google Pass>') { CGI::escape Cogibara::Module.settings["keys"]["google_pass"] }
   c.configure_rspec_metadata!
 end
 
