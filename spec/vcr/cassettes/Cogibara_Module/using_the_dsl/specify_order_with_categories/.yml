@@ -21,12 +21,12 @@ http_interactions:
       Server:
       - http-kit
       Date:
-      - Sun, 29 Sep 2013 18:29:12 GMT
+      - Sun, 29 Sep 2013 19:38:26 GMT
     body:
       encoding: UTF-8
       string: |-
         {
-          "msg_id" : "ffd2e545-3b1c-4102-b732-a8753c364c3f",
+          "msg_id" : "9f198fb5-e15d-4fdb-8dc5-ade9f5ce4cb6",
           "msg_body" : "hi",
           "outcome" : {
             "intent" : "hello",
@@ -35,7 +35,7 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:29:12 GMT
+  recorded_at: Sun, 29 Sep 2013 19:38:26 GMT
 - request:
     method: get
     uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=hi
@@ -51,7 +51,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sun, 29 Sep 2013 18:30:02 GMT
+      - Sun, 29 Sep 2013 19:39:17 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -60,5 +60,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:29:13 GMT
+  recorded_at: Sun, 29 Sep 2013 19:38:27 GMT
 recorded_with: VCR 2.5.0

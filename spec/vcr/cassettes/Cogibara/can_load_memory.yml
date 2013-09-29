@@ -15,7 +15,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Sun, 29 Sep 2013 18:30:26 GMT
+      - Sun, 29 Sep 2013 19:39:32 GMT
       Server:
       - Apache-Coyote/1.1
       Content-Length:
@@ -24,13 +24,13 @@ http_interactions:
       encoding: UTF-8
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:29:36 GMT
+  recorded_at: Sun, 29 Sep 2013 19:38:42 GMT
 - request:
     method: post
     uri: http://www.cleverbot.com/webservicemin
     body:
       encoding: UTF-8
-      string: stimulus=hello%3F&start=y&sessionid=RVO01290444&vText8=&vText7=Hello%3F&vText6=Hello%20my%20name%20is%20Cleverbot.&vText5=Hello%3F&vText4=What%20do%20you%20mean%20hello%3F&vText3=Hello%3F&vText2=Ok%20nevermind.%20So%20what%20are%20you%20doing%20this%20weekend%3F&icognoid=wsf&icognocheck=c9234e849d667e910d8e5f4915589ad9&fno=0&prevref=RRA052017616&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=!01&sub=Say&islearning=1&cleanslate=false
+      string: stimulus=hello%3F&start=y&sessionid=RVS01455139&vText8=&vText7=Hello%3F&vText6=How%20art%20thou%3F&vText5=Hello%3F&vText4=Who%20are%20you%3F&vText3=Hello%3F&vText2=Hello.&icognoid=wsf&icognocheck=c9234e849d667e910d8e5f4915589ad9&fno=0&prevref=QV012855116&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
     headers: {}
   response:
     status:
@@ -38,18 +38,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 29 Sep 2013 18:25:43 GMT
+      - Sun, 29 Sep 2013 19:34:47 GMT
       Content-Type:
       - text/html;charset=iso-8859-1
       Connection:
       - keep-alive
       Set-Cookie:
-      - AIS=18SEUXkVpseKbXno0HD3zQ
-      - JSESSIONID=4C21CFF8D606BB36BB15822E2DFA07F6; Path=/
+      - AIS="+HQQ0zhVP/9JZ9KrFcynhA"; Version=1
+      - JSESSIONID=D918E802804FAFE0647ED45187BEA33E; Path=/
       - RPS=cs5860
-      - cleverbotfirstref2="*YIDIYQVHLCAYTNXCGOQEYDOLBHYSTXFHOTDAYCGEQK"; Expires=""
-      - cleverbotref="*EONSOGUSKNGIJMIIQEPPENEKMNIISILRESOAEOQKGI"; Expires="Sun,
-        29 Sep 2013 19:29:36 GMT"
+      - cleverbotref="*KUCHROGYWTLXLFOPAHBRKCJWSTXLEOSAHEUAKQFQJI"; Expires="Sun,
+        29 Sep 2013 20:38:44 GMT"
       Mime-Version:
       - '1.0'
       Expires:
@@ -61,43 +60,18 @@ http_interactions:
       Rps:
       - cs5860
       Rlm:
-      - '1772'
+      - '1837'
       Sc:
-      - '13121'
+      - '14590'
       Content-Length:
-      - '205'
+      - '167'
       Server:
       - Jabberwacky
     body:
       encoding: UTF-8
-      string: "Hi.\rRVO01290444\rj2log-vEzEWkGWWNWDMAAAQEYG-detail\rHello my name
-        is Cleverbot.\rHello?\rWhat do you mean hello?\rHello?\rOk nevermind. So what
-        are you doing this weekend?\rHello?\rHi.\rRVN011615382\r\r\r\r\r\rHi.\r\r\r\r\r\r\r"
+      string: "How art thou?\rRVS01455139\rj2log-nWzEYqIYYPQZTAZERSVG-detail\rHow
+        art thou?\rHello?\rWho are you?\rHello?\rHello.\rHello?\rHow art thou?\rROZ027791243\r\r\r\r\r\rHow
+        art thou?\r\r\r\r\r\r\r"
     http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:29:39 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey=1234&phrase=hello?
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Sun, 29 Sep 2013 18:41:12 GMT
-      Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '39'
-    body:
-      encoding: UTF-8
-      string: 'OAuth Failure : Consumer Key is Invalid'
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:40:23 GMT
+  recorded_at: Sun, 29 Sep 2013 19:38:44 GMT
 recorded_with: VCR 2.5.0

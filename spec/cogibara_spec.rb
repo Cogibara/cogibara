@@ -14,9 +14,9 @@ describe Cogibara, vcr: {record: :new_episodes} do
 
   describe "defaults to chatting" do
       # puts "hello?"
-      it { @cogi_l.ask('hello?').should ==  "Do you have time to talk?" }
+      it { @cogi_l.ask('hello?').should ==  "Oh, don't you get sassy with me young lady!" }
 
-      it { @cogi_l.ask('Who are you').should == "Do you have time to talk?" }
+      it { @cogi_l.ask('Who are you').should == "Oh, don't you get sassy with me young lady!" }
 
   end
 
@@ -42,7 +42,7 @@ describe Cogibara, vcr: {record: :new_episodes} do
       msg.body = "hello?"
       msg.type = :chat
       msg.id = 1234
-      @cogi_x.ask(msg).should == "What do you mean hello?"
+      @cogi_x.ask(msg).should == "Who are you?"
 
   end
 
