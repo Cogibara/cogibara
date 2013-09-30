@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+#
+# executable for cogibara google voice
+#
+require "bundler/setup"
+
+# require File.expand_path('../../config/boot',  __FILE__)
+
+# Bundler.require :default, :development #, DaemonKit.env
+
+require_relative '../lib/cogibara.rb'
+# require_relative '../server/server.rb'
+
+
+require 'googlevoiceapi'
+require 'json'
+
+class GVPoller
+
+  def fetch_messages
+    api = @api
+    json_data = api.messages_json()
+    js = JSON.parse(json_data)
+  end
+
+  def poll
+    msgs = fetch_messages
+    childs =  msgs["messageList"].map{|m| m["children"]}.flatten
+    to_me = childs.select{|m| m["type"] != 11 and m["phoneNumber"] != ""}
+
+    if @read.size == 0
+      to_me.each{|m| @read << m["id"]}
+      []
+    else
+      unread = to_me.reject{|m| @read.include?(m["id"])}
+      unread.each{|m| @read << m["id"]}
+      unread
+    end
+  end
+
+  def initialize
+    @api = ::GoogleVoice::Api.new(Cogibara::Module.settings["keys"]["google_name"], Cogibara::Module.settings["keys"]["google_pass"])
+    @read = []
+    @start = Time.now
+  end
+
+  def cycle(sleeptime)
+    loop do
+      msgs = poll
+
+      # should make an interface that stores the phone number w/ the message
+      @cogi ||= Cogibara::Interface::GVoice.new
+      puts "got #{msgs.size}"
+      msgs.each do |m|
+        reply = @cogi.ask(m)
+        @api.sms(m["phoneNumber"], reply)
+      end
+      sleep(sleeptime)
+    end
+  end
+end
+
+puts GVPoller.new.cycle(60)
