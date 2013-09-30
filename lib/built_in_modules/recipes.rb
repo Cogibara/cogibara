@@ -11,14 +11,19 @@ class Recipes < Cogibara::Module
     end
   end
 
-  def find_recipe(query)
+  def find_recipes(query)
     recipes = Yummly.search(query)
     recipes = recipes.sort_by{|e| e.rating}.reverse
     unless recipes.first
       say "No Recipes Found"
       pass
     end
-    r = Yummly.find(recipes.first.id)
+    @recipes = recipes 
+  end
+
+  def select_recipe(index=0, criterion = :rating)
+    r = @recipes.sort_by{|r| r.send(criterion)}.reverse[index]
+    r = Yummly.find(r.id)
     <<-EOF
 Recipe: #{r.name}
 Ingredients:
@@ -27,10 +32,18 @@ Ingredients:
   end
 
   on(/recipe for (.+)$/i) do |msg, recipe|
-    find_recipe(recipe)
+    find_recipes(recipe)
+    @recipe_index = 0
+    select_recipe 0
   end
 
-  on(:any, wit_intent: 'recipe_search') do |msg|
+  on "next recipe" do
+    pass unless @recipe_index
+    @recipe_index += 1
+    select_recipe(@recipe_index)
+  end
+
+  on(:any, wit_intent: 'recipe_lookup') do |msg|
     # puts current_message.struct_properties.map(&:values)
     # wit_entities = current_message.struct_properties.select{|p| p.values["wit_entity_type"] }.map(&:values)
     # time_entity = wit_entities.select{|e| e["wit_entity_type"] == "reminder_time"}.first

@@ -168,6 +168,19 @@ Ingredients:
       }
     end 
 
+    describe "scroll through recipes" do
+      it {
+        @cogi_l.ask("next recipe").should == <<-EOF
+Recipe: Crisp Grilled Cheese Sandwich
+Ingredients:
+8 slices texas toast or other thick-sliced white bread
+8 tablespoons (4 ounces) unsalted butter, softened
+1 cup (2 ounces) finely grated parmesan cheese
+2 cups (8 ounces) grated sharp cheddar cheese
+        EOF
+      }
+    end 
+
     describe "skips on unknown recipe" do
       it {
         @cogi_l.ask("find me a recipe for Beluga Caviar with Marshmallows").should == 

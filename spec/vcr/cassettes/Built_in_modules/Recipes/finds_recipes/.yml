@@ -167,4 +167,58 @@ http_interactions:
         the Baker"},"id":"Pepper-jack-grilled-cheese-sandwich-309062"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:01:46 GMT
+- request:
+    method: get
+    uri: http://api.yummly.com/v1/api/recipe/The-World_s-Greatest-Grilled-Cheese-My-Recipes?_app_id=<Yummly
+      ID>&_app_key=<Yummly Key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 30 Sep 2013 19:44:48 GMT
+      Server:
+      - nginx
+      X-Yummly-Request-Id:
+      - c85e2b76-e260-4b77-8656-5c61fe4fcc02
+      Content-Length:
+      - '1268'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"attribution":{"html":"<a href=''http://www.yummly.com/recipe/The-World_s-Greatest-Grilled-Cheese-My-Recipes''>The
+        World''s Greatest Grilled Cheese recipe</a> information powered by <img alt=''Yummly''
+        src=''http://static.yummly.com/api-logo.png''/>","url":"http://www.yummly.com/recipe/The-World_s-Greatest-Grilled-Cheese-My-Recipes","text":"The
+        World''s Greatest Grilled Cheese recipes: information powered by Yummly","logo":"http://static.yummly.com/api-logo.png"},"ingredientLines":["1/3
+        cup mayonnaise","8 sourdough bread slices","6 (3/4-ounce) mozzarella cheese
+        slices","6 (3/4-ounce) cheddar cheese slices"],"flavors":{"Bitter":0.16666666666666666,"Meaty":1.0,"Piquant":0.0,"Salty":0.6666666666666666,"Sour":0.0,"Sweet":0.3333333333333333},"nutritionEstimates":[{"attribute":"FAT_KCAL","description":null,"value":220.00,"unit":{"id":"fea252f8-9888-4365-b005-e2c63ed3a776","name":"calorie","abbreviation":"kcal","plural":"calories","pluralAbbreviation":"kcal"}},{"attribute":"ENERC_KCAL","description":"Energy","value":299.88,"unit":{"id":"fea252f8-9888-4365-b005-e2c63ed3a776","name":"calorie","abbreviation":"kcal","plural":"calories","pluralAbbreviation":"kcal"}},{"attribute":"FAT","description":"Total
+        lipid (fat)","value":23.94,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"FASAT","description":"Fatty
+        acids, total saturated","value":11.81,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"CHOLE","description":"Cholesterol","value":0.06,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"NA","description":"Sodium,
+        Na","value":0.54,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"K","description":"Potassium,
+        K","value":0.06,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"CHOCDF","description":"Carbohydrate,
+        by difference","value":5.61,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"FIBTG","description":"Fiber,
+        total dietary","value":0.00,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"SUGAR","description":"Sugars,
+        total","value":1.80,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"PROCNT","description":"Protein","value":15.18,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"VITA_IU","description":"Vitamin
+        A, IU","value":577.86,"unit":{"id":"ed46fe0c-44fe-4c1f-b3a8-880f92e30930","name":"IU","abbreviation":"IU","plural":"IU","pluralAbbreviation":"IU"}},{"attribute":"VITC","description":"Vitamin
+        C, total ascorbic acid","value":0.00,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"CA","description":"Calcium,
+        Ca","value":0.39,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"FE","description":"Iron,
+        Fe","value":0.00,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}}],"images":[{"imageUrlsBySize":{"90":"http://lh3.ggpht.com/2g-Zozn-6qWj4J1EOb0aspKpAI7f8y3_311ZvH4ztj89JCFDuKAqUslzE_7bIqsa-7rJuKOc5bfKX8h5rTaakg=s90-c","360":"http://lh3.ggpht.com/2g-Zozn-6qWj4J1EOb0aspKpAI7f8y3_311ZvH4ztj89JCFDuKAqUslzE_7bIqsa-7rJuKOc5bfKX8h5rTaakg=s360-c"},"hostedLargeUrl":"http://i2.yummly.com/The-World_s-Greatest-Grilled-Cheese-My-Recipes-1.l.png","hostedSmallUrl":"http://i2.yummly.com/The-World_s-Greatest-Grilled-Cheese-My-Recipes-1.s.png"}],"name":"The
+        World''s Greatest Grilled Cheese","yield":"Makes 4 sandwiches","totalTime":"15
+        min","attributes":{"course":["Lunch and Snacks"]},"totalTimeInSeconds":900,"rating":4,"numberOfServings":4,"source":{"sourceRecipeUrl":"http://find.myrecipes.com/recipes/recipefinder.dyn?action=displayRecipe&recipe_id=1677957","sourceSiteUrl":"http://www.myrecipes.com","sourceDisplayName":"MyRecipes"},"id":"The-World_s-Greatest-Grilled-Cheese-My-Recipes"}'
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:44:48 GMT
 recorded_with: VCR 2.5.0

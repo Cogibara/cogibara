@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=next%20recipe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '185'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 30 Sep 2013 19:46:37 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "b1ad0464-9d91-4229-92ad-81a54b5e4ed7",
+          "msg_body" : "next recipe",
+          "outcome" : {
+            "intent" : "recipe_lookup",
+            "entities" : { },
+            "confidence" : 0.265
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:46:37 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=next%20recipe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 30 Sep 2013 19:47:28 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '82'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{"searchTerm":["next"]},"action":"SEARCH_RECIPES","category":"SEARCH"}'
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:46:38 GMT
+- request:
+    method: get
+    uri: http://api.yummly.com/v1/api/recipe/Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330?_app_id=<Yummly
+      ID>&_app_key=<Yummly Key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 30 Sep 2013 19:46:38 GMT
+      Server:
+      - nginx
+      X-Yummly-Request-Id:
+      - 20c4a42d-d9f2-4f50-858e-13dd10925b8d
+      Content-Length:
+      - '1318'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"attribution":{"html":"<a href=''http://www.yummly.com/recipe/Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330''>Crisp
+        Grilled Cheese Sandwich recipe</a> information powered by <img alt=''Yummly''
+        src=''http://static.yummly.com/api-logo.png''/>","url":"http://www.yummly.com/recipe/Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330","text":"Crisp
+        Grilled Cheese Sandwich recipes: information powered by Yummly","logo":"http://static.yummly.com/api-logo.png"},"ingredientLines":["8
+        slices texas toast or other thick-sliced white bread","8 tablespoons (4 ounces)
+        unsalted butter, softened","1 cup (2 ounces) finely grated parmesan cheese","2
+        cups (8 ounces) grated sharp cheddar cheese"],"flavors":{"Bitter":0.8333333333333334,"Meaty":1.0,"Piquant":0.0,"Salty":1.0,"Sour":0.0,"Sweet":0.16666666666666666},"nutritionEstimates":[{"attribute":"FAT_KCAL","description":null,"value":420.00,"unit":{"id":"fea252f8-9888-4365-b005-e2c63ed3a776","name":"calorie","abbreviation":"kcal","plural":"calories","pluralAbbreviation":"kcal"}},{"attribute":"ENERC_KCAL","description":"Energy","value":517.34,"unit":{"id":"fea252f8-9888-4365-b005-e2c63ed3a776","name":"calorie","abbreviation":"kcal","plural":"calories","pluralAbbreviation":"kcal"}},{"attribute":"FAT","description":"Total
+        lipid (fat)","value":47.43,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"FASAT","description":"Fatty
+        acids, total saturated","value":29.74,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"CHOLE","description":"Cholesterol","value":0.14,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"NA","description":"Sodium,
+        Na","value":0.66,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"K","description":"Potassium,
+        K","value":0.09,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"CHOCDF","description":"Carbohydrate,
+        by difference","value":1.37,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"FIBTG","description":"Fiber,
+        total dietary","value":0.00,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"SUGAR","description":"Sugars,
+        total","value":0.77,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"PROCNT","description":"Protein","value":22.01,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"VITA_IU","description":"Vitamin
+        A, IU","value":1448.22,"unit":{"id":"ed46fe0c-44fe-4c1f-b3a8-880f92e30930","name":"IU","abbreviation":"IU","plural":"IU","pluralAbbreviation":"IU"}},{"attribute":"VITC","description":"Vitamin
+        C, total ascorbic acid","value":0.00,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"CA","description":"Calcium,
+        Ca","value":0.64,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}},{"attribute":"FE","description":"Iron,
+        Fe","value":0.00,"unit":{"id":"12485d26-6e69-102c-9a8a-0030485841f8","name":"gram","abbreviation":"g","plural":"grams","pluralAbbreviation":"grams"}}],"images":[{"imageUrlsBySize":{"90":"http://lh4.ggpht.com/JSaY2MS85TJHGeEN6fp21g2eM61xQaoWWUahyB1e19AurP4Tk0exVygHyYL1a-SYNAINRjihr-fIztZwxdohwA=s90-c","360":"http://lh4.ggpht.com/JSaY2MS85TJHGeEN6fp21g2eM61xQaoWWUahyB1e19AurP4Tk0exVygHyYL1a-SYNAINRjihr-fIztZwxdohwA=s360-c"},"hostedLargeUrl":"http://i.yummly.com/Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330-40122.l.png","hostedSmallUrl":"http://i.yummly.com/Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330-40122.s.png"}],"name":"Crisp
+        Grilled Cheese Sandwich","yield":"Makes 4 sandwiches","totalTime":"30 min","attributes":{"course":["Lunch
+        and Snacks"]},"totalTimeInSeconds":1800,"rating":5,"numberOfServings":4,"source":{"sourceRecipeUrl":"http://www.seriouseats.com/recipes/2012/01/crisp-grilled-cheese-sandwich-recipe.html","sourceSiteUrl":"http://www.seriouseats.com/recipes/","sourceDisplayName":"Serious
+        Eats"},"id":"Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330"}'
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:46:38 GMT
+recorded_with: VCR 2.5.0
