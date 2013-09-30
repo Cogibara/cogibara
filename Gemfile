@@ -58,3 +58,4 @@ gem 'dbpedia-spotlight', :require => false, git: 'https://github.com/fumi/dbpedi
 gem 'httparty', :require => false
 gem 'evernote_oauth', :require => false
 gem 'google_calendar', :require => false
+gem 'googlevoiceapi', :require => false, git: 'https://github.com/wstrinz/googlevoiceapi.git'

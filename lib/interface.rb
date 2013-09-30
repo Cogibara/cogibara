@@ -65,6 +65,19 @@ end
 
 module Cogibara
   module Interface
+    class GVoice
+      include Cogibara::Interface
+
+      def ask(msg_json)
+        response = ask_string(msg_json["message"], from: msg_json["phoneNumber"])
+        response.message
+      end
+    end
+  end
+end
+
+module Cogibara
+  module Interface
     class Speech
       include Cogibara::Interface
     end
