@@ -22,8 +22,12 @@ class Recipes < Cogibara::Module
   end
 
   def select_recipe(index=0, criterion = :rating)
-    r = @recipes.sort_by{|r| r.send(criterion)}.reverse[index]
-    r = Yummly.find(r.id)
+    r = @recipes.sort_by{|r| r.send(criterion)}.reverse
+    unless r[index]
+      say "No more recipes"
+      pass
+    end
+    r = Yummly.find(r[index].id)
     <<-EOF
 Recipe: #{r.name}
 Ingredients:
