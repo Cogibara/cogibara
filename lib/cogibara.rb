@@ -5,6 +5,7 @@ require 'yaml'
 require 'tempfile'
 require 'cgi'
 
+require 'rdf/turtle'
 require 'spira'
 
 require_relative 'onto.rb'

@@ -35,6 +35,9 @@ VCR.configure do |c|
   c.filter_sensitive_data('<Google Name>') { CGI::escape Cogibara::Module.settings["keys"]["google_name"] } if Cogibara::Module.settings["keys"]["google_name"]
   c.filter_sensitive_data('<Google Pass>') { CGI::escape Cogibara::Module.settings["keys"]["google_pass"] } if Cogibara::Module.settings["keys"]["google_pass"]
   c.filter_sensitive_data('<Evernote Auth>') { Cogibara::Module.settings["keys"]["evernote"] }
+  c.filter_sensitive_data('<Yummly ID>') { Cogibara::Module.settings["keys"]["yummly_id"] }
+  c.filter_sensitive_data('<Yummly Key>') { Cogibara::Module.settings["keys"]["yummly_key"] }
+  
   c.configure_rspec_metadata!
 end
 

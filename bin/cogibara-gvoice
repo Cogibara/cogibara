@@ -39,7 +39,7 @@ class GVPoller
   end
 
   def initialize
-    @api = ::GoogleVoice::Api.new(Cogibara::Module.settings["keys"]["google_name"], Cogibara::Module.settings["keys"]["google_pass"])
+    @api = GoogleVoice::Api.new(Cogibara::Module.settings["keys"]["google_name"], Cogibara::Module.settings["keys"]["google_pass"])
     @read = []
     @start = Time.now
   end
@@ -48,7 +48,6 @@ class GVPoller
     loop do
       msgs = poll
 
-      # should make an interface that stores the phone number w/ the message
       @cogi ||= Cogibara::Interface::GVoice.new
       puts "got #{msgs.size}"
       msgs.each do |m|
@@ -60,4 +59,4 @@ class GVPoller
   end
 end
 
-puts GVPoller.new.cycle(60)
+puts GVPoller.new.cycle(120)

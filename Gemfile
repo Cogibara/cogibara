@@ -59,3 +59,4 @@ gem 'httparty', :require => false
 gem 'evernote_oauth', :require => false
 gem 'google_calendar', :require => false
 gem 'googlevoiceapi', :require => false, git: 'https://github.com/wstrinz/googlevoiceapi.git'
+gem 'yummly', :require => false

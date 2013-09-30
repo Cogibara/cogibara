@@ -1,0 +1,170 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=find%20me%20a%20recipe%20for%20Grilled%20Cheese
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '209'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 30 Sep 2013 19:01:01 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "9bb8ca18-d8b9-4ad4-860b-2f8bbada65cd",
+          "msg_body" : "find me a recipe for Grilled Cheese",
+          "outcome" : {
+            "intent" : "recipe_lookup",
+            "entities" : { },
+            "confidence" : 0.579
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:01:01 GMT
+- request:
+    method: get
+    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=find%20me%20a%20recipe%20for%20Grilled%20Cheese
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 30 Sep 2013 19:01:52 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Content-Length:
+      - '92'
+    body:
+      encoding: UTF-8
+      string: '{"entities":{"searchTerm":["grilled cheese"]},"action":"SEARCH_RECIPES","category":"SEARCH"}'
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:01:02 GMT
+- request:
+    method: get
+    uri: http://api.yummly.com/v1/api/recipes?_app_id=<Yummly ID>&_app_key=<Yummly
+      Key>&q=Grilled%20Cheese
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 30 Sep 2013 19:01:45 GMT
+      Server:
+      - nginx
+      X-Yummly-Request-Id:
+      - 97dee570-deab-4019-9c50-e701ed839c23
+      Content-Length:
+      - '2403'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"attribution":{"html":"Recipe search powered by <a href=''http://www.yummly.com/recipes''><img
+        alt=''Yummly'' src=''http://static.yummly.com/api-logo.png''/></a>","url":"http://www.yummly.com/recipes/","text":"Recipe
+        search powered by Yummly","logo":"http://static.yummly.com/api-logo.png"},"totalMatchCount":9918,"facetCounts":{},"matches":[{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Roasted-strawberry_-brie-_-chocolate-grilled-cheese-333388-295308.s.jpg"],"ingredients":["butter","canola
+        oil","brie cheese","strawberries","salt","chocolate","thick cut"],"flavors":{"sour":0.6666666666666666,"salty":0.6666666666666666,"sweet":0.8333333333333334,"meaty":0.3333333333333333,"bitter":0.5},"imageUrlsBySize":{"90":"http://lh3.ggpht.com/NOtks14NeicyyoUvTCVYwHEmC9ubWrvBXj4jCva31owXLH7GuEToGkiKdVwOGbF_MsRt1UvMk22UE48NbPCCcg=s90-c"},"attributes":{},"totalTimeInSeconds":1800.0,"rating":5,"recipeName":"Roasted
+        Strawberry, Brie + Chocolate Grilled Cheese","sourceDisplayName":"How Sweet
+        It Is","id":"Roasted-strawberry_-brie-_-chocolate-grilled-cheese-333388"},{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Grilled-Cheese-Sandwich-Allrecipes-92355.s.png","http://yummly-recipeimages-compressed.s3.amazonaws.com/Grilled-Cheese-Sandwich-Allrecipes-91721.s.png"],"ingredients":["butter","white
+        bread","cheddar cheese"],"flavors":{"sour":0.8333333333333334,"salty":1.0,"sweet":0.6666666666666666,"meaty":0.8333333333333334,"bitter":0.8333333333333334},"imageUrlsBySize":{"90":"http://lh3.ggpht.com/UvPv7u5wCTo_HwWYtrqGadAQ56kAc6pCEdACsF4PeO1I2GxtC_03AAKDGIDSjQ4AWK5A2S2KSuLLIG0RL8xOzA=s90-c"},"attributes":{"cuisine":["american"]},"totalTimeInSeconds":1200.0,"rating":5,"recipeName":"Grilled
+        Cheese Sandwich","sourceDisplayName":"AllRecipes","id":"Grilled-Cheese-Sandwich-Allrecipes"},{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Best-grilled-cheese-sandwich-306791-270442.s.jpg"],"ingredients":["cheddar
+        cheese","unsalted butter","bread","red onion"],"flavors":null,"imageUrlsBySize":{"90":"http://lh4.ggpht.com/r94q9DcrkoCD0Gs_6fk_jPdvZsblX1Bs6bMGvmryS5PNxwk-uRrX05olEVGEdp7MbeWY4xgcukCof6V8pbEd=s90-c"},"attributes":{},"totalTimeInSeconds":1500.0,"rating":5,"recipeName":"Best
+        Grilled Cheese Sandwich","sourceDisplayName":"Food Republic","id":"Best-grilled-cheese-sandwich-306791"},{"smallImageUrls":["http://lh6.ggpht.com/rFsb0W6Z0YS0RQ5wd0Ldqd35AN8OGHAsBmjreKfeKUT-PeJioPd-mR7DTD9Qpm9EgfzTPAmFCryHCLILcynuew=s90","http://yummly-recipeimages-compressed.s3.amazonaws.com/Cranberry-brie-grilled-cheese-309053-273228.s.jpg"],"ingredients":["cranberry
+        sauce","sourdough bread","brie cheese","unsalted butter","whole grain mustard"],"flavors":{"sour":0.8333333333333334,"salty":1.0,"sweet":0.6666666666666666,"meaty":0.6666666666666666,"bitter":0.6666666666666666},"imageUrlsBySize":{"90":"http://lh6.ggpht.com/kI2OzUUjD15ch5CR8CTO4siw5euySKtpEDUGDZ_Vvl8OxZzlvGxTwRYGfbhh_gMaZ26DKJHguoLKVO6NhKRy=s90-c"},"attributes":{"course":["Appetizers"],"holiday":["christmas","thanksgiving"]},"totalTimeInSeconds":null,"rating":5,"recipeName":"Cranberry
+        Brie Grilled Cheese","sourceDisplayName":"Joy the Baker","id":"Cranberry-brie-grilled-cheese-309053"},{"smallImageUrls":["http://yummly-recipeimages-2.s3.amazonaws.com/The-World_s-Greatest-Grilled-Cheese-My-Recipes-1.s.png"],"ingredients":["mayonnaise","cheddar
+        cheese","mozzarella cheese","sourdough bread"],"flavors":{"salty":0.6666666666666666,"sweet":0.3333333333333333,"meaty":1.0,"bitter":0.16666666666666666},"imageUrlsBySize":{"90":"http://lh3.ggpht.com/2g-Zozn-6qWj4J1EOb0aspKpAI7f8y3_311ZvH4ztj89JCFDuKAqUslzE_7bIqsa-7rJuKOc5bfKX8h5rTaakg=s90-c"},"attributes":{},"totalTimeInSeconds":900.0,"rating":4,"recipeName":"The
+        World''s Greatest Grilled Cheese","sourceDisplayName":"MyRecipes","id":"The-World_s-Greatest-Grilled-Cheese-My-Recipes"},{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330-40122.s.png"],"ingredients":["texas
+        toast","grated parmesan cheese","unsalted butter","sharp cheddar cheese"],"flavors":{"salty":1.0,"sweet":0.16666666666666666,"meaty":1.0,"bitter":0.8333333333333334},"imageUrlsBySize":{"90":"http://lh4.ggpht.com/JSaY2MS85TJHGeEN6fp21g2eM61xQaoWWUahyB1e19AurP4Tk0exVygHyYL1a-SYNAINRjihr-fIztZwxdohwA=s90-c"},"attributes":{},"totalTimeInSeconds":1800.0,"rating":5,"recipeName":"Crisp
+        Grilled Cheese Sandwich","sourceDisplayName":"Serious Eats","id":"Crisp-Grilled-Cheese-Sandwich-Serious-Eats-200330"},{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Fontina-_-blackberry-basil-smash-grilled-cheese-sandwiches-333362-295282.s.jpg"],"ingredients":["fontina
+        cheese","olive oil","blackberries","fresh basil leaves","bread"],"flavors":{"sour":0.6666666666666666,"salty":0.16666666666666666,"sweet":0.6666666666666666,"meaty":0.16666666666666666,"bitter":0.16666666666666666},"imageUrlsBySize":{"90":"http://lh4.ggpht.com/H0gFbUAAAcsRh89Go44atJ-WHFu1ZPK_kV6G258yS-QHUNwQG8AlCMq0BcSEblSvYEOQqvOBK10xl6YOsMuqvg=s90-c"},"attributes":{"cuisine":["american"]},"totalTimeInSeconds":1200.0,"rating":5,"recipeName":"Fontina
+        + Blackberry Basil Smash Grilled Cheese Sandwiches","sourceDisplayName":"How
+        Sweet It Is","id":"Fontina-_-blackberry-basil-smash-grilled-cheese-sandwiches-333362"},{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Grilled-Cheese-With-Tomato-Allrecipes-57316.s.png"],"ingredients":["butter","shredded
+        mozzarella cheese","dried basil","dried oregano","italian bread","tomatoes"],"flavors":{"sour":0.5,"salty":0.3333333333333333,"sweet":0.16666666666666666,"meaty":0.16666666666666666,"bitter":0.16666666666666666},"imageUrlsBySize":{"90":"http://lh6.ggpht.com/dL9Q3gablbdztW5okpWBDAlYTGsmIwqu6O1Cl6cEtOoK1QxUwO95wKYN1jSGuDT1aiQl5SpTmBRsY9DPydoOFdc=s90-c"},"attributes":{},"totalTimeInSeconds":600.0,"rating":5,"recipeName":"Grilled
+        Cheese with Tomato","sourceDisplayName":"Taste of Home","id":"Grilled-Cheese-With-Tomato-TasteOfHome"},{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Antipasti-grilled-cheese-310223-274676.s.jpg"],"ingredients":["mozzarella
+        cheese","olive oil","baguette","red pepper flakes","garlic","artichoke hearts","kosher
+        salt","tapenade","pesto","toasted pine nuts","sun-dried tomatoes"],"flavors":null,"imageUrlsBySize":{"90":"http://lh4.ggpht.com/4BpLjFFjRtiijK-Z1zi3wwiP80cCCqXXwMFp7m2uYB38NRegfwezMkhk8Y5w4-LwXoMRux2_9hPlnzzq-PlhUw=s90-c"},"attributes":{},"totalTimeInSeconds":900.0,"rating":5,"recipeName":"Antipasti
+        Grilled Cheese","sourceDisplayName":"Big Girls Small Kitchen","id":"Antipasti-grilled-cheese-310223"},{"smallImageUrls":["http://yummly-recipeimages-compressed.s3.amazonaws.com/Pepper-jack-grilled-cheese-sandwich-309062-273237.s.jpg"],"ingredients":["jalapeno
+        pepper","unsalted butter","bread","shredded Monterey Jack cheese","cream cheese,
+        softened"],"flavors":{"sour":0.5,"salty":0.3333333333333333,"sweet":0.3333333333333333,"piquant":0.8333333333333334,"meaty":0.3333333333333333,"bitter":0.16666666666666666},"imageUrlsBySize":{"90":"http://lh4.ggpht.com/zXRuBIxlk2HUEVtROmg44lhfdLnF4jKYjLjUDqWr2lZgV-nAmr0jGpXmr7eqAzKiEXXJCvyH31iGv12ywKJQ=s90-c"},"attributes":{},"totalTimeInSeconds":2100.0,"rating":5,"recipeName":"Pepper
+        Jack Grilled Cheese Sandwich","sourceDisplayName":"Joy the Baker","id":"Pepper-jack-grilled-cheese-sandwich-309062"}],"criteria":{"excludedIngredients":null,"allowedIngredients":null,"terms":null}}'
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:01:45 GMT
+- request:
+    method: get
+    uri: http://api.yummly.com/v1/api/recipe/Pepper-jack-grilled-cheese-sandwich-309062?_app_id=<Yummly
+      ID>&_app_key=<Yummly Key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 30 Sep 2013 19:01:46 GMT
+      Server:
+      - nginx
+      X-Yummly-Request-Id:
+      - a30041ea-d7af-4a58-b157-e35c4f0815a0
+      Content-Length:
+      - '728'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"attribution":{"html":"<a href=''http://www.yummly.com/recipe/Pepper-jack-grilled-cheese-sandwich-309062''>Pepper
+        Jack Grilled Cheese Sandwich recipe</a> information powered by <img alt=''Yummly''
+        src=''http://static.yummly.com/api-logo.png''/>","url":"http://www.yummly.com/recipe/Pepper-jack-grilled-cheese-sandwich-309062","text":"Pepper
+        Jack Grilled Cheese Sandwich recipes: information powered by Yummly","logo":"http://static.yummly.com/api-logo.png"},"ingredientLines":["5
+        jalapeno peppers","2 tablespoons unsalted butter, softened","3 tablespoons
+        cream cheese, softened","1/3 cup shredded Monterey Jack cheese","4 slices
+        bread"],"flavors":{"Bitter":0.16666666666666666,"Meaty":0.3333333333333333,"Piquant":0.8333333333333334,"Salty":0.3333333333333333,"Sour":0.5,"Sweet":0.3333333333333333},"nutritionEstimates":[],"images":[{"imageUrlsBySize":{"90":"http://lh4.ggpht.com/zXRuBIxlk2HUEVtROmg44lhfdLnF4jKYjLjUDqWr2lZgV-nAmr0jGpXmr7eqAzKiEXXJCvyH31iGv12ywKJQ=s90-c","360":"http://lh4.ggpht.com/zXRuBIxlk2HUEVtROmg44lhfdLnF4jKYjLjUDqWr2lZgV-nAmr0jGpXmr7eqAzKiEXXJCvyH31iGv12ywKJQ=s360-c"},"hostedLargeUrl":"http://i.yummly.com/Pepper-jack-grilled-cheese-sandwich-309062-273237.l.jpg","hostedSmallUrl":"http://i.yummly.com/Pepper-jack-grilled-cheese-sandwich-309062-273237.s.jpg"}],"name":"Pepper
+        Jack Grilled Cheese Sandwich","yield":"makes 2 ","totalTime":"35 min","attributes":{},"totalTimeInSeconds":2100,"rating":5,"numberOfServings":2,"source":{"sourceRecipeUrl":"http://joythebaker.com/2012/09/pepper-jack-grilled-cheese-sandwich/","sourceSiteUrl":"http://joythebaker.com","sourceDisplayName":"Joy
+        the Baker"},"id":"Pepper-jack-grilled-cheese-sandwich-309062"}'
+    http_version: 
+  recorded_at: Mon, 30 Sep 2013 19:01:46 GMT
+recorded_with: VCR 2.5.0

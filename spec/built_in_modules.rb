@@ -152,4 +152,27 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       }
     end
   end
+
+  describe Recipes, :no_travis do
+    describe "finds recipes" do
+      it {
+        @cogi_l.ask("find me a recipe for Grilled Cheese").should == <<-EOF
+Recipe: Pepper Jack Grilled Cheese Sandwich
+Ingredients:
+5 jalapeno peppers
+2 tablespoons unsalted butter, softened
+3 tablespoons cream cheese, softened
+1/3 cup shredded Monterey Jack cheese
+4 slices bread
+        EOF
+      }
+    end 
+
+    describe "skips on unknown recipe" do
+      it {
+        @cogi_l.ask("find me a recipe for Beluga Caviar with Marshmallows").should == 
+        "I think you want to recipe_lookup, but I don't know how. try asking for help"
+      }
+    end    
+  end
 end
