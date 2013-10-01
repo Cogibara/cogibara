@@ -14,6 +14,8 @@ require_relative '../lib/cogibara.rb'
 require 'rest_client'
 require 'json'
 
+
+# based on https://gist.github.com/pachacamac/1459921
 class SpeechRecog
   def record
     # fp = 'spec/resource/audio_test.flac'

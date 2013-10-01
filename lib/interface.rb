@@ -80,11 +80,11 @@ module Cogibara
   module Interface
     class Speech
       include Cogibara::Interface
-    end
 
-    # eventually move audio processing to here?
-    def ask(str)
-      ask_string(str, from: 'local-speech').message
+      # eventually move audio processing to here?
+      def ask(str)
+        ask_string(str, from: 'local-speech').message
+      end
     end
   end
 end
