@@ -49,6 +49,10 @@ gem 'sinatra'
 gem 'vines', "~> 0.4.7"
 gem 'vines-web'
 
+## Interface gems
+gem 'googlevoiceapi', :require => false, git: 'https://github.com/wstrinz/googlevoiceapi.git'
+gem 'rest-client', :require => false
+
 ## COGIBARA GEMS
 gem 'cleverbot', :require => false
 gem 'maluuba_napi', :require => false, git: 'https://github.com/wstrinz/napi-ruby.git'
@@ -58,5 +62,4 @@ gem 'dbpedia-spotlight', :require => false, git: 'https://github.com/fumi/dbpedi
 gem 'httparty', :require => false
 gem 'evernote_oauth', :require => false
 gem 'google_calendar', :require => false
-gem 'googlevoiceapi', :require => false, git: 'https://github.com/wstrinz/googlevoiceapi.git'
 gem 'yummly', :require => false

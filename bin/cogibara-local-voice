@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+#
+# executable for cogibara google voice
+#
+require "bundler/setup"
+
+# require File.expand_path('../../config/boot',  __FILE__)
+
+# Bundler.require :default, :development #, DaemonKit.env
+
+require_relative '../lib/cogibara.rb'
+# require_relative '../server/server.rb'
+
+require 'rest_client'
+require 'json'
+
+class SpeechRecog
+  def record
+    # fp = 'spec/resource/audio_test.flac'
+    # open(fp,'rb').read
+    `AUDIODEV=hw:1 sox -d --norm -t .flac - silence -l 1 0 1% 1 6.0 1% rate 16k`
+  end
+
+  def recognize(recording)
+    r = RestClient.post 'https://www.google.com/speech-api/v1/recognize?lang=en-US', recording,
+                        :content_type => 'audio/x-flac; rate=16000'
+    if j = JSON.parse(r)
+      j['hypotheses'].first['utterance']
+    end
+  end
+
+  def cycle
+    @active ||= false
+    @interface = Cogibara::Interface::Speech.new
+    loop do
+      if @active
+        msg = recognize(record)
+        puts "asking #{msg}"
+        response = @interface.ask(msg)
+        puts "from cogi #{response}"
+        `AUDIODEV=hw:0 espeak '#{response}'`
+      else
+        puts "still sleeping..."
+        msg = recognize(record)
+        puts "got #{msg}"
+        # if msg == "wake up"
+        if msg == "at NEC need for international managers will keep rising"
+          @active = true
+          `AUDIODEV=hw:0 espeak 'waking up'`
+        end
+      end
+    end
+  end
+end
+
+SpeechRecog.new.cycle
