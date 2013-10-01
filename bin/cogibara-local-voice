@@ -43,8 +43,8 @@ class SpeechRecog
         puts "still sleeping..."
         msg = recognize(record)
         puts "got #{msg}"
-        # if msg == "wake up"
-        if msg == "at NEC need for international managers will keep rising"
+        # if msg == "at NEC need for international managers will keep rising"
+        if msg == "wake up"
           @active = true
           `AUDIODEV=hw:0 espeak 'waking up'`
         end
