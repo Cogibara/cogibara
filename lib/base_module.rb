@@ -21,7 +21,8 @@ module Cogibara
 
     def self.requires_key(key)
       unless settings["keys"][key]
-        DaemonKit.logger.info "missing key #{key}, Skipping module #{self}"
+        # DaemonKit.logger.info "missing key #{key}, Skipping module #{self}"
+        puts "missing key #{key}, Skipping module #{self}"
         @__ignore = true
       end
     end

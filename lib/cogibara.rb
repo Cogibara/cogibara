@@ -8,6 +8,8 @@ require 'cgi'
 require 'rdf/turtle'
 require 'spira'
 
+# require 'daemon_kit'
+
 require_relative 'onto.rb'
 
 require_relative 'base_module.rb'
