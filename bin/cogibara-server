@@ -3,12 +3,15 @@
 # Stub executable for cogibara
 #
 require "bundler/setup"
+require 'launchy'
 
 # require File.expand_path('../../config/boot',  __FILE__)
 
 # Bundler.require :default, :development #, DaemonKit.env
 
 require_relative '../lib/cogibara.rb'
-require_relative '../server/server.rb'
 
+Launchy.open('http://localhost:4567')
+
+require_relative '../server/server.rb'
 

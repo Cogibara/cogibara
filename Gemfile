@@ -33,13 +33,16 @@ group :test do
   gem 'simplecov'
 end
 
+## RDF Gems
 gem 'rdf'
 gem 'rdf-turtle'
 gem 'spira'
 
+# Server gems
+gem 'launchy'
 gem 'sinatra'
 
-# ## SQLite based persistence (some trouble with daemonizing)
+# ## SQLite based persistence
 
 # gem 'rdf-do'
 # gem 'do_sqlite3'
