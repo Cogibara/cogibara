@@ -58,7 +58,7 @@ module Cogibara
       # mem.insert([msg_uri, onto_prop.message_id, opts[:id]]) if opts[:id]
 
       if opts[:to]
-        u_to = Cogibara::User.for(opts[:to])
+        u_to = Cogibara::User.new(opts[:to])
         u_to.received_messages << rdf_msg.subject
         rdf_msg.to = u_to.subject
         u_to.save
@@ -66,7 +66,7 @@ module Cogibara
       end
 
       if opts[:from]
-        u_from = Cogibara::User.for(opts[:from])
+        u_from = Cogibara::User.new(opts[:from])
         u_from.sent_messages << rdf_msg.subject
         rdf_msg.from = u_from.subject
         u_from.save

@@ -12,7 +12,7 @@ module Cogibara
       }
     end
 
-    # Maybe change ask to receive, so reply can be send?
+    # Maybe change ask to receive, so #reply can be #send?
     def ask(msg, opts={})
       ask_string(msg.to_s,opts)
     end
@@ -46,6 +46,10 @@ module Cogibara
       def reply(msg)
         raise "XMPP can't reply yet"
       end
+      
+      def intermediate_response(msg)
+        raise "XMPP can't reply yet"
+      end
     end
   end
 end
@@ -70,7 +74,7 @@ module Cogibara
 
       def ask(msg_json)
         response = ask_string(msg_json["message"], from: msg_json["phoneNumber"])
-        response.message
+        response
       end
     end
   end

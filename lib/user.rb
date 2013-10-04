@@ -19,7 +19,7 @@ module Cogibara
 
     def self.for(name)
       # should recognize uris
-      new(name)
+      RDFUser.for(name)
     end
 
     def initialize(name)
