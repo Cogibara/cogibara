@@ -22,20 +22,20 @@ describe Cogibara, vcr: {record: :new_episodes} do
   describe "encodes email addresses" do
       # puts "hello?"
     it {
-      u = Cogibara::User.for('wstrinz@gmail.com')
+      u = Cogibara::User.new('wstrinz@gmail.com')
       u.subject.to_s.should == "http://cogi.strinz.me/users/wstrinz%40gmail.com"
     }
   end
 
   describe "can modify attributes" do
     before do
-      @user = Cogibara::User.for('wstrinz@gmail.com')
+      @user = Cogibara::User.new('wstrinz@gmail.com')
     end
 
     it {
       @user.name = "Will Strinz"
       @user.save
-      Cogibara::User.for('wstrinz@gmail.com').name.should == "Will Strinz"
+      Cogibara::User.new('wstrinz@gmail.com').name.should == "Will Strinz"
     }
   end
 
