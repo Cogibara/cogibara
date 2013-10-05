@@ -25,6 +25,7 @@ require_relative 'module_stack.rb'
 require_relative 'built_in_modules/modules.rb'
 
 Dir["#{File.dirname(__FILE__)}/built_in_modules/*.rb"].each {|file| require file }
+Dir["#{File.dirname(__FILE__)}/interfaces/*.rb"].each {|file| require file }
 
 Spira.add_repository(:default,Cogibara.memory.repo)
 

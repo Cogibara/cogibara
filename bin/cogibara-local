@@ -11,9 +11,4 @@ require "bundler/setup"
 require_relative '../lib/cogibara.rb'
 # require_relative '../server/server.rb'
 
-require 'rest_client'
-require 'json'
-
-
-# based on https://gist.github.com/pachacamac/1459921
-Cogibara::Interface::Speech.new.cycle
+Cogibara::Interface::Local.new.cycle
