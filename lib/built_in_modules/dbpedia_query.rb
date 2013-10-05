@@ -251,19 +251,16 @@ class DBPediaQuery < Cogibara::Module
 
 
   on(:question, wit_intent: "interrogate_knowledge") do
-    api_key = settings["keys"]["wit"]
-    response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape current_message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
 
-    response.body.to_s
+    subjects = current_message.struct_properties("WitEntity").select{|p| p.wit_entity_type == "subject"}
 
-    data = JSON.parse(response.body)
-
-    # puts "#{data["outcome"]["entities"]}"
     filter do |msg|
-      data["outcome"]["entities"] && data["outcome"]["entities"]["subject"]
+      subjects != nil
     end
 
-    dbpedia_predicates data["outcome"]["entities"]["subject"]["value"]
+    subject = subjects.first.wit_entity_value
+
+    dbpedia_predicates subject #data["outcome"]["entities"]["subject"]["value"]
   end
 
   on(/what do you know about (.+?)(?:\?|$)/i) do |message, object|
@@ -301,19 +298,15 @@ class DBPediaQuery < Cogibara::Module
   end
 
   on(/.*(?:what|who|why|how|where|when).*/, wit_intent: "summarize_knowledge") do
-    api_key = settings["keys"]["wit"]
-    response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape current_message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
+    subjects = current_message.struct_properties("WitEntity").select{|p| p.wit_entity_type == "subject"}
 
-    response.body.to_s
-
-    data = JSON.parse(response.body)
-
-    # puts "#{data["outcome"]["entities"]}"
     filter do |msg|
-      data["outcome"]["entities"] && data["outcome"]["entities"]["subject"]
+      subjects != nil
     end
 
-    dbpedia_summarize data["outcome"]["entities"]["subject"]["value"]
+    subject = subjects.first.wit_entity_value
+
+    dbpedia_summarize subject
   end
 
   on(/(?:who|what) (is|are)(?: a | an | )(.+?)(?:\?|$)/) do |message, plural,object|

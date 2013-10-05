@@ -1,7 +1,5 @@
 require File.dirname(__FILE__) + '/spec_helper.rb'
 
-# Time to add your specs!
-# http://rspec.info/
 describe Cogibara, vcr: {record: :new_episodes} do
 
   before(:all) do
@@ -12,12 +10,6 @@ describe Cogibara, vcr: {record: :new_episodes} do
     Cogibara.load_base_modules
   end
 
-  # describe "defaults to chatting" do
-  #     # puts "hello?"
-  #     it { @cogi_l.ask('hello?').should ==  "How are you?" }
-
-  #     it { @cogi_l.ask('Who are you').should == "How are you?" }
-  # end
 
   describe "encodes email addresses" do
       # puts "hello?"

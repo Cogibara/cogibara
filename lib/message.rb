@@ -21,12 +21,18 @@ module Cogibara
 
     class StructuredProperty
 
-      def initialize(uri,values)
+      def initialize(uri,vals)
         @uri = uri
-        @values = values
+        @values = vals
+
+        values.keys.each{|k|
+          k = "type" if k == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+          define_singleton_method(k.to_sym) do
+            self[k]
+          end
+        }
       end
-
-
+      
       def subject
         @uri
       end
@@ -44,6 +50,10 @@ module Cogibara
           # puts "#{[RDF::URI(@uri),val[0],val[1]]}"
           repo << [RDF::URI(@uri),val[0],val[1]]
         }
+      end
+
+      def [](prop)
+        values[prop]
       end
     end
 
@@ -83,14 +93,28 @@ module Cogibara
       StructuredProperty.new("#{rdf_msg.subject.to_s}/structured_properties/#{index}", values)
     end
 
-    def struct_properties
-      rdf_msg.structured_properties.map{|prop| property_for(prop.to_s)}
+    def struct_properties(prop_class=nil)
+      if prop_class
+        m = rdf_msg
+        has_prop = onto_prop.has_structured_property
+        cl = onto_class[prop_class]
+        props = RDF::Query.execute(repo) do
+          pattern [m.subject, has_prop, :o]
+          pattern [:o, RDF.type, cl]
+        end
+
+        props = props.map{|prop| prop[:o] }
+
+        props.map{|prop| property_for(prop)}
+      else
+        rdf_msg.structured_properties.map{|prop| property_for(prop)}
+      end
     end
 
     def property_for(property_uri)
 
       props = RDF::Query.execute(repo) do
-        pattern [RDF::URI(property_uri), :p, :o]
+        pattern [property_uri, :p, :o]
       end
 
       props = props.map{|prop|
