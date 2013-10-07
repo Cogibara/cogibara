@@ -56,6 +56,7 @@ gem 'vines-web'
 gem 'googlevoiceapi', :require => false, git: 'https://github.com/wstrinz/googlevoiceapi.git'
 gem 'rest-client', :require => false
 
+
 ## COGIBARA GEMS
 gem 'cleverbot', :require => false
 gem 'maluuba_napi', :require => false, git: 'https://github.com/wstrinz/napi-ruby.git'
@@ -66,3 +67,4 @@ gem 'httparty', :require => false
 gem 'evernote_oauth', :require => false
 gem 'google_calendar', :require => false
 gem 'yummly', :require => false
+gem 'chronic', :require => false

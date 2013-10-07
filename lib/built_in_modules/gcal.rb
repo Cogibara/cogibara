@@ -1,6 +1,7 @@
 class Gcal < Cogibara::Module
   requires 'google_calendar'
   requires 'time'
+  requires 'chronic'
 
   requires_key 'google_name'
   requires_key 'google_pass'
@@ -10,7 +11,7 @@ class Gcal < Cogibara::Module
       :password => settings["keys"]["google_pass"],
       :app_name => 'cogibara.com-gcal-integration')
 
-    time = Time.parse(time)
+    time = Chronic.parse(time)
     methods = Array(methods)
 
     event = @cal.create_event do |e|
