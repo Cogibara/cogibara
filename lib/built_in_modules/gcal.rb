@@ -51,7 +51,7 @@ class Gcal < Cogibara::Module
       make_remind(message_entity["wit_entity_value"], time_entity["wit_entity_value"])
     end
 
-    "okay, reminding you to #{message_entity["wit_entity_value"]} at #{time_entity['wit_entity_value']}"
+    "okay, reminding you to #{message_entity["wit_entity_value"]} at #{Chronic.parse time_entity['wit_entity_value']}"
   end
 
   register

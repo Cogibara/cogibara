@@ -56,7 +56,7 @@ module Cogibara
                 puts "[#{Time.now.to_s}] got #{msgs.size}"
                 msgs.each do |m|
                   reply = ask(m)
-                  puts "asked #{m}, got #{reply.message}"
+                  puts "(#{m["phoneNumber"]}) asked #{m["message"]}\n got #{reply.message}"
                   u = Cogibara::User.for(reply.to.to_s)
                   @api.sms(u.identifier, reply.message)
                 end

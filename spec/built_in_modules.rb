@@ -148,7 +148,7 @@ describe "Built in modules", vcr: { record: :new_episodes } do
 
     describe "wit integration" do
       it {
-        @cogi_l.ask("can you remind me via sms to eat pudding at 8:00pm").should == "okay, reminding you to eat pudding at 8:00"
+        @cogi_l.ask("can you remind me via sms to eat pudding at 8:00pm").should == "okay, reminding you to eat pudding at 2013-10-07 08:00:00 -0500"
       }
     end
   end
@@ -186,6 +186,6 @@ Ingredients:
         @cogi_l.ask("find me a recipe for Beluga Caviar with Marshmallows").should == 
         "I think you want to recipe_lookup, but I don't know how. try asking for help"
       }
-    end    
+    end
   end
 end
