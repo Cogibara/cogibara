@@ -39,7 +39,8 @@ class Wit < Cogibara::Module
   end
 
   on do
-    subjects = current_message.entities(:wit)
+    current_message.entities(:wit)
+    current_message.intent(:wit)
 
     # message = current_message.message
     # api_key = settings["keys"]["wit"]

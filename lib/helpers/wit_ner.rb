@@ -17,7 +17,7 @@ class WitNER
     response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape message.message}", headers: {"Authorization" => "Bearer #{api_key}"})
 
     js = JSON.parse(response.body)
-    message.set_wit_intent(js["outcome"]["intent"]) if js["outcome"] and js["outcome"]["intent"]
+    # message.set_wit_intent(js["outcome"]["intent"]) if js["outcome"] and js["outcome"]["intent"]
     ents = entity_structs(js, message)
     ents.each{|s| message << s}
 

@@ -140,4 +140,92 @@ http_interactions:
       string: '{"entities":{"contacts":[{"name":"johnny"}]},"action":"CONTACT_SEARCH","category":"CONTACT"}'
     http_version: 
   recorded_at: Sun, 29 Sep 2013 19:48:02 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=who%20is%20Johnny%20Habu?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '363'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:17:17 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "7b44c6ce-b822-4780-b394-a3d546664d1d",
+          "msg_body" : "who is Johnny Habu?",
+          "outcome" : {
+            "intent" : "person_information",
+            "entities" : {
+              "contact" : {
+                "end" : 18,
+                "start" : 7,
+                "value" : "Johnny Habu",
+                "body" : "Johnny Habu",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.994
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:17:17 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=show%20me%20Johnny%20Habus%20contact%20info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '361'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:17:18 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "c91d384f-9abc-44ee-a86e-5fbc84ab6fa2",
+          "msg_body" : "show me Johnny Habus contact info",
+          "outcome" : {
+            "intent" : "contact_info",
+            "entities" : {
+              "contact" : {
+                "end" : 14,
+                "start" : 8,
+                "value" : "Johnny",
+                "body" : "Johnny",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.997
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:17:18 GMT
 recorded_with: VCR 2.5.0

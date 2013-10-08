@@ -109,7 +109,7 @@ module Cogibara
 
     def intent(sym=nil)
       if sym
-        Cogibara::Lang::Intent.for(sym).get_intent(self).map(&:intent)
+        Array(Cogibara::Lang::Intent.for(sym).get_intent(self)).map(&:intent)
       else
         Cogibara::Lang::Intent.get_intent(self).map(&:intent)
       end

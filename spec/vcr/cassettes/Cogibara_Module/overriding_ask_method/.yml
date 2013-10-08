@@ -61,4 +61,40 @@ http_interactions:
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
   recorded_at: Sun, 29 Sep 2013 19:47:48 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '172'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:17:06 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "916d118f-5b50-4575-a9f8-0d5c23db2eda",
+          "msg_body" : "hello?",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.991
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:17:06 GMT
 recorded_with: VCR 2.5.0

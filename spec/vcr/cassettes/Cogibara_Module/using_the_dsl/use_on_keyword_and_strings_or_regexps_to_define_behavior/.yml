@@ -282,4 +282,181 @@ http_interactions:
       string: '{"entities":{"searchTerm":["4d12"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
     http_version: 
   recorded_at: Sun, 29 Sep 2013 19:47:52 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello%20you
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '175'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:17:10 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "8057691e-f0d0-403f-afd2-430db8c15927",
+          "msg_body" : "hello you",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.994
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:17:10 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=I'm%20bill
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '295'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:17:10 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "5eea6cb8-cb7c-475d-ac69-bc8ce887a405",
+          "msg_body" : "I'm bill",
+          "outcome" : {
+            "intent" : "my_name",
+            "entities" : {
+              "name" : {
+                "end" : 8,
+                "start" : 4,
+                "value" : "bill",
+                "body" : "bill"
+              }
+            },
+            "confidence" : 0.985
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:17:10 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=roll%20me%201d150
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '420'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:17:11 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "96a02441-8baf-40bf-9dbf-4b876d0064e8",
+          "msg_body" : "roll me 1d150",
+          "outcome" : {
+            "intent" : "dice_roll",
+            "entities" : {
+              "n_dice" : {
+                "end" : 9,
+                "start" : 8,
+                "value" : "1",
+                "body" : "1"
+              },
+              "dice_size" : {
+                "end" : 13,
+                "start" : 9,
+                "value" : "d150",
+                "body" : "d150"
+              }
+            },
+            "confidence" : 0.996
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:17:11 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=roll%20me%204d12
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '417'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:17:12 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "a32ff71a-4ec9-489b-9e56-6dc6403f8d78",
+          "msg_body" : "roll me 4d12",
+          "outcome" : {
+            "intent" : "dice_roll",
+            "entities" : {
+              "n_dice" : {
+                "end" : 9,
+                "start" : 8,
+                "value" : "4",
+                "body" : "4"
+              },
+              "dice_size" : {
+                "end" : 12,
+                "start" : 9,
+                "value" : "d12",
+                "body" : "d12"
+              }
+            },
+            "confidence" : 0.995
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:17:12 GMT
 recorded_with: VCR 2.5.0
