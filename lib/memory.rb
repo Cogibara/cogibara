@@ -19,11 +19,11 @@ module Cogibara
     end
 
     def self.repo
-      Cogibara.base_cogi.repo
+      Cogibara.base_cogi.memory.repo
     end
 
     def self.new_message(msg,opts={})
-      Cogibara.base_cogi.repo.new_message(msg,opts)
+      Cogibara.base_cogi.memory.new_message(msg,opts)
     end
 
     def default_opts

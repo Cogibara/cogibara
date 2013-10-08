@@ -1,48 +1,48 @@
 module Cogibara
   # Change Module to 'Base' or something
   class Module
+    extend  Cogibara::Skippable
+
     def self.register(category=:none)
       #should probably put them on a list that gets loaded to make this more transparent
       # also need multiple categories
       Cogibara::ModuleStack.register self.new, category unless @__ignore
     end
 
-    def self.requires(*gems)
-      gems.each{|g|
-        begin
-          require g
-        rescue LoadError
-          @__ignore = true
-          puts "missing gem #{g}, Skipping module #{self}"
-          DaemonKit.logger.info "missing gem #{g}, Skipping module #{self}"
-        end
-      }
-    end
+    # def self.requires(*gems)
+    #   gems.each{|g|
+    #     begin
+    #       require g
+    #     rescue LoadError
+    #       @__ignore = true
+    #       puts "missing gem #{g}, Skipping module #{self}"
+    #       DaemonKit.logger.info "missing gem #{g}, Skipping module #{self}"
+    #     end
+    #   }
+    # end
 
-    def self.requires_key(key)
-      unless settings["keys"][key]
-        # DaemonKit.logger.info "missing key #{key}, Skipping module #{self}"
-        puts "missing key #{key}, Skipping module #{self}"
-        @__ignore = true
-      end
-    end
+    # def self.requires_key(key)
+    #   unless settings["keys"][key]
+    #     # DaemonKit.logger.info "missing key #{key}, Skipping module #{self}"
+    #     puts "missing key #{key}, Skipping module #{self}"
+    #     @__ignore = true
+    #   end
+    # end
 
-    def self.settings
-      @@yml ||= nil
-      unless @@yml
-        yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
-        if File.exist? yml_file
-          @@yml = YAML.load_file(yml_file)
-        else
-          @@yml = {"keys" => {}}
-        end
-      end
+    # def self.settings
+    #   @@yml ||= nil
+    #   unless @@yml
+    #     yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
+    #     if File.exist? yml_file
+    #       @@yml = YAML.load_file(yml_file)
+    #     else
+    #       @@yml = {"keys" => {}}
+    #     end
+    #   end
 
-      @@yml
-    end
+    #   @@yml
+    # end
 
-    # TODO should make sure this is registered as a proc if it isnt already, so "return" will override
-    # ask's return behavior?
     def self.on(pattern=/.*/, restrictions={}, &block)
       if pattern.is_a? Symbol
         case pattern

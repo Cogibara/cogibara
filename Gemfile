@@ -25,6 +25,7 @@ gem 'blather', git: 'https://github.com/adhearsion/blather.git', branch: 'develo
 group :development, :test do
   gem 'rake'
   gem 'rspec'
+  gem 'pry'
 end
 
 group :test do

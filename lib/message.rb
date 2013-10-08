@@ -86,6 +86,14 @@ module Cogibara
       @tmp_structs ||= rdf_msg.structured_properties.size
     end
 
+    def entities(sym=nil)
+      if sym
+        Cogibara::Lang::NER.for(sym).get_entities(self)
+      else
+        Cogibara::Lang::NER.get_entities(self)
+      end
+    end
+
     def new_property(values=[])
       index = num_structs + 1
       @tmp_structs += 1
@@ -97,10 +105,10 @@ module Cogibara
       if prop_class
         m = rdf_msg
         has_prop = onto_prop.has_structured_property
-        cl = onto_class[prop_class]
+        prop_class = onto_class[prop_class] unless RDF::Resource(prop_class).valid?
         props = RDF::Query.execute(repo) do
           pattern [m.subject, has_prop, :o]
-          pattern [:o, RDF.type, cl]
+          pattern [:o, RDF.type, prop_class]
         end
 
         props = props.map{|prop| prop[:o] }
