@@ -23,6 +23,7 @@ require_relative 'message.rb'
 require_relative 'user_question.rb'
 require_relative 'module_stack.rb'
 require_relative 'named_entity_recognition.rb'
+require_relative 'intent.rb'
 
 require_relative 'built_in_modules/modules.rb'
 
