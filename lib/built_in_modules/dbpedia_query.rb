@@ -175,9 +175,9 @@ class DBPediaQuery < Cogibara::Module
   end
 
   def dbpedia_summarize(object)
-    if current_message.get_wit_intent
+    if current_message.intent.size > 0
       filter do |m|
-        m.get_wit_intent == "summarize_knowledge"
+        m.intent.first == "summarize_knowledge"
       end
     end
     # object = object.singularize

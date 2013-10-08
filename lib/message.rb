@@ -24,13 +24,15 @@ module Cogibara
       def initialize(uri,vals)
         @uri = uri
         @values = vals
+        
+        define_methods
+        # values.keys.each{|k|
+        #   k = "type" if k == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
 
-        values.keys.each{|k|
-          k = "type" if k == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-          define_singleton_method(k.to_sym) do
-            self[k]
-          end
-        }
+        #   define_singleton_method(k.to_sym) do
+        #     self[k]
+        #   end
+        # }
       end
       
       def subject
@@ -45,8 +47,19 @@ module Cogibara
         Hash[@values.map{|v| [v[0].to_s.gsub('http://onto.cogibara.com/properties/',''), v[1].to_s]}]
       end
 
+      def define_methods
+        values.keys.each{|k|
+          k = "type" if k == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+          
+          define_singleton_method(k.to_sym) do
+            self[k]
+          end
+        }
+      end
+
       def save(repo)
-        @values.map{|val|
+        define_methods
+        @values.map{|val|          
           # puts "#{[RDF::URI(@uri),val[0],val[1]]}"
           repo << [RDF::URI(@uri),val[0],val[1]]
         }
@@ -91,6 +104,14 @@ module Cogibara
         Cogibara::Lang::NER.for(sym).get_entities(self)
       else
         Cogibara::Lang::NER.get_entities(self)
+      end
+    end
+
+    def intent(sym=nil)
+      if sym
+        Cogibara::Lang::Intent.for(sym).get_intent(self).map(&:intent)
+      else
+        Cogibara::Lang::Intent.get_intent(self).map(&:intent)
       end
     end
 

@@ -37,6 +37,7 @@ class WitNER
     entity_hash(json).map{|id,info|
       new_prop = message.new_property
       new_prop << [RDF.type, onto_class.WitEntity]
+      add_type(new_prop)
       new_prop << [onto_prop.wit_entity_type, id]
       info = info.first if info.is_a? Array
       new_prop << [onto_prop.wit_entity_value, info["value"]]

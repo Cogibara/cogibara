@@ -8,7 +8,7 @@ class WitIntent
   requires_key 'wit'
 
   def self.rdf_class
-    "WitEntity"
+    "WitIntent"
   end
 
   def self.process(message)
@@ -20,6 +20,7 @@ class WitIntent
     if js["outcome"] and js["outcome"]["intent"]
       message.set_wit_intent(js["outcome"]["intent"]) #if js["outcome"] and js["outcome"]["intent"]
       prop = message.new_property
+      add_type(prop)
       prop << [RDF.type, onto_class.WitIntent]
       prop << [onto_prop.intent, js["outcome"]["intent"]] 
       
@@ -52,5 +53,5 @@ class WitIntent
   #   }
   # end
   
-  # Cogibara::Lang::Intent.register(:wit, self)
+  Cogibara::Lang::Intent.register(:wit, self)
 end

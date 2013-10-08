@@ -42,6 +42,10 @@ module Cogibara
       def check_memory(msg)
         msg.struct_properties(rdf_class)
       end
+
+      def add_type(property)
+        property << [RDF.type, onto_class.Intent]
+      end
     end
   end
 end
