@@ -23,7 +23,7 @@ module Cogibara
     def settings
       @@yml ||= nil
       unless @@yml
-        yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
+        yml_file = File.dirname(__FILE__) + '/../../config/cogibara.yml'
         if File.exist? yml_file
           @@yml = YAML.load_file(yml_file)
         else
