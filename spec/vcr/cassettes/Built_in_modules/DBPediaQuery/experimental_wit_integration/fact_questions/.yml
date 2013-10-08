@@ -279,4 +279,56 @@ http_interactions:
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:00:58 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what's%20the%20capital%20of%20Cuba%3F&start=y&sessionid=RSJ00650195&vText8=You%20can't%20eat.&vText7=Bla.&vText6=Thats%20fun.&vText5=What%20is%20Tardigrade.&vText4=Death%2C%20certainly.&vText3=What%20you%20know%20about%20balloon%3F&vText2=I%20know%20nothing%20about%20steam%20engines.&icognoid=wsf&icognocheck=6f0f921c77a1a077ffcddb8b527f6fbe&fno=0&prevref=RZI078921852&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 21:35:33 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=U10MX+WotQZxdB5qZl6QbQ
+      - JSESSIONID=184D72B33C5575128CF61076EEE2A31B; Path=/
+      - RPS=server52054
+      - cleverbotfirstref2="*MWGLBUSAIVTBVRQQJRNTMGVIUUBVQQTFRQTAMEJMTK"; Expires=""
+      - cleverbotref="*KUTYTMSWIRRONRMOWJNPKTNIQSONQMRSJQPAKAWCLM"; Expires="Tue,
+        08 Oct 2013 22:36:49 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - server52054
+      Rlm:
+      - '1536'
+      Sc:
+      - '12851'
+      Content-Length:
+      - '328'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Havana. What's the capital of iceland?\rRSJ00650195\rj2log-vEgOBkLABQAJRACMZKZE-detail\rThats
+        fun.\rWhat is Tardigrade.\rDeath, certainly.\rWhat you know about balloon?\rI
+        know nothing about steam engines.\rWhat's the capital of Cuba?\rHavana. What's
+        the capital of iceland?\rVG008465100\r\r\r\r\r\rHavana. What's the capital
+        of iceland?\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 21:36:52 GMT
+recorded_with: VCR 2.6.0

@@ -350,4 +350,54 @@ http_interactions:
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:00:55 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20is%20Tardigrade&start=y&sessionid=RSJ00650195&vText8=&vText7=&vText6=&vText5=Hello%20mr%20chatbot.&vText4=You%20can't%20eat.&vText3=Bla.&vText2=Thats%20fun.&icognoid=wsf&icognocheck=c51a17f307dd6598d838607da5e36d6e&fno=0&prevref=RSE002777807&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 21:35:23 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=01VCFN6xspmL67yNQwzM6g
+      - JSESSIONID=00DEEFB64A44E23EF96F05FB930D267D; Path=/
+      - RPS=server52054
+      - cleverbotfirstref2="*GQTYWPUOKJNOQTEKWMPHGTQKIOOQSENSMSHAGAWMOK"; Expires=""
+      - cleverbotref="*OYZEFYCRSMVUZBHSCVXKOZZSLWUZAHVYVAKAOGCCXM"; Expires="Tue,
+        08 Oct 2013 22:36:35 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - server52054
+      Rlm:
+      - '1524'
+      Sc:
+      - '12851'
+      Content-Length:
+      - '193'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Death, certainly.\rRSJ00650195\rj2log-jSyGYhKGAWOBOABQFMNE-detail\r\rHello
+        mr chatbot.\rYou can't eat.\rBla.\rThats fun.\rWhat is Tardigrade.\rDeath,
+        certainly.\rQK008821757\r\r\r\r\r\rDeath, certainly.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 21:36:42 GMT
+recorded_with: VCR 2.6.0

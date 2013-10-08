@@ -312,4 +312,56 @@ http_interactions:
       string: '{"entities":{"message":["feed the cat"],"time":["07:00:00AM"]},"action":"REMINDER_SET","category":"REMINDER"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:00:59 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=remind%20me%20to%20feed%20the%20cat%20at%207%3A00pm&start=y&sessionid=RSJ00650195&vText8=Thats%20fun.&vText7=What%20is%20Tardigrade.&vText6=Death%2C%20certainly.&vText5=What%20you%20know%20about%20balloon%3F&vText4=I%20know%20nothing%20about%20steam%20engines.&vText3=What's%20the%20capital%20of%20Cuba%3F&vText2=Havana.%20What's%20the%20capital%20of%20iceland%3F&icognoid=wsf&icognocheck=dd0b0377f37b1cbbfd267803ebd666ba&fno=0&prevref=VG008465100&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 21:35:36 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS=5xqCAWPaiBMTBznWWdbWlg
+      - JSESSIONID=912586DB46BC52420571BED99EA920DB; Path=/
+      - RPS=server52054
+      - cleverbotfirstref2="*MWDIZSJTZOTYTIJQGPEMMDTZNUYTHJTCPHMAMMGMRK"; Expires=""
+      - cleverbotref="*GQVASLWOMJNQMVEKYIRHGVMMIOQMUENUIUHAGEYGKK"; Expires="Tue,
+        08 Oct 2013 22:36:58 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - server52054
+      Rlm:
+      - '1524'
+      Sc:
+      - '12851'
+      Content-Length:
+      - '347'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "No, you remind ME of the man.\rRSJ00650195\rj2log-bKuCWfSWIMGXMAJAVSFE-detail\rDeath,
+        certainly.\rWhat you know about balloon?\rI know nothing about steam engines.\rWhat's
+        the capital of Cuba?\rHavana. What's the capital of iceland?\rRemind me to
+        feed the cat at 7:00pm.\rNo, you remind ME of the man.\rRUZ036307725\r\r\r\r\r\rNo,
+        you remind ME of the man.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 21:36:54 GMT
+recorded_with: VCR 2.6.0

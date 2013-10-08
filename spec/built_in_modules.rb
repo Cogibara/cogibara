@@ -119,18 +119,19 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     # before do
     #   Wit.register(:pre)
     # end
+    pending("wit now part of natural language interface")
 
-    describe "raw output" do
-      it {
-        JSON.parse(@cogi_l.ask('wit debug "heyo hows it going"'))["outcome"]["intent"].should == "hello"
-      }
-    end
+    # describe "raw output" do
+    #   it {
+    #     JSON.parse(@cogi_l.ask('wit debug "heyo hows it going"'))["outcome"]["intent"].should == "hello"
+    #   }
+    # end
 
-    describe "sets wit_intent properties" do
-      it {
-        @cogi_p.ask("heyo hows it going").response_to.get_wit_intent.should == "hello"
-      }
-    end
+    # describe "sets wit_intent properties" do
+    #   it {
+    #     @cogi_p.ask("heyo hows it going").response_to.get_wit_intent.should == "hello"
+    #   }
+    # end
   end
 
   describe Gcal, :no_travis do

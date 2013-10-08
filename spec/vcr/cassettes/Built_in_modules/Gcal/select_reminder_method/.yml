@@ -195,4 +195,56 @@ http_interactions:
       string: '{"entities":{"message":["feed the cat"],"time":["07:00:00AM"]},"action":"REMINDER_SET","category":"REMINDER"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:01:00 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=remind%20me%20via%20sms%20to%20feed%20the%20cat%20at%207%3A00pm&start=y&sessionid=RSJ00650195&vText8=Death%2C%20certainly.&vText7=What%20you%20know%20about%20balloon%3F&vText6=I%20know%20nothing%20about%20steam%20engines.&vText5=What's%20the%20capital%20of%20Cuba%3F&vText4=Havana.%20What's%20the%20capital%20of%20iceland%3F&vText3=Remind%20me%20to%20feed%20the%20cat%20at%207%3A00pm.&vText2=No%2C%20you%20remind%20ME%20of%20the%20man.&icognoid=wsf&icognocheck=2fab90f73d035f844a5c1ac16ba295f8&fno=0&prevref=RUZ036307725&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 21:35:39 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS="vOstTcn7Zk1VW7y/WyEvQg"; Version=1
+      - JSESSIONID=F6F111D471BBA833824F6870E37148C2; Path=/
+      - RPS=server52054
+      - cleverbotfirstref2="*ISJOCVSEIZPEWRUMMSNXIJWIYQEWQUPISQXAIAMSUK"; Expires=""
+      - cleverbotref="*BLJOWPAKQFIEQZAFMMVDBJQQEJEQYAIIMYDABQMEOI"; Expires="Tue,
+        08 Oct 2013 22:36:49 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - server52054
+      Rlm:
+      - '1515'
+      Sc:
+      - '12851'
+      Content-Length:
+      - '326'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "Feed the rat.\rRSJ00650195\rj2log-zIvDEnWWMMEYUANCVEDG-detail\rI know
+        nothing about steam engines.\rWhat's the capital of Cuba?\rHavana. What's
+        the capital of iceland?\rRemind me to feed the cat at 7:00pm.\rNo, you remind
+        ME of the man.\rRemind me via sms to feed the cat at 7:00pm.\rFeed the rat.\rQV001870184\r\r\r\r\r\rFeed
+        the rat.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 21:36:58 GMT
+recorded_with: VCR 2.6.0

@@ -39,14 +39,16 @@ class Wit < Cogibara::Module
   end
 
   on do
-    message = current_message.message
-    api_key = settings["keys"]["wit"]
+    subjects = current_message.entities(:wit)
 
-    response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape message}", headers: {"Authorization" => "Bearer #{api_key}"})
+    # message = current_message.message
+    # api_key = settings["keys"]["wit"]
 
-    js = JSON.parse(response.body)
-    current_message.set_wit_intent(js["outcome"]["intent"]) if js["outcome"] and js["outcome"]["intent"]
-    entity_structs(js).each{|s| current_message << s}
+    # response = HTTParty.get("https://api.wit.ai/message?q=#{CGI::escape message}", headers: {"Authorization" => "Bearer #{api_key}"})
+
+    # js = JSON.parse(response.body)
+    # current_message.set_wit_intent(js["outcome"]["intent"]) if js["outcome"] and js["outcome"]["intent"]
+    # entity_structs(js).each{|s| current_message << s}
 
     pass
   end

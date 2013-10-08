@@ -286,4 +286,55 @@ http_interactions:
       string: '{"entities":{},"action":"CONTACT_SEARCH","category":"CONTACT"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:00:57 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: post
+    uri: http://www.cleverbot.com/webservicemin
+    body:
+      encoding: UTF-8
+      string: stimulus=what%20you%20know%20about%20balloon%3F&start=y&sessionid=RSJ00650195&vText8=&vText7=Hello%20mr%20chatbot.&vText6=You%20can't%20eat.&vText5=Bla.&vText4=Thats%20fun.&vText3=What%20is%20Tardigrade.&vText2=Death%2C%20certainly.&icognoid=wsf&icognocheck=489f2c274325f31487edf00ee839bd0e&fno=0&prevref=QK008821757&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 21:35:26 GMT
+      Content-Type:
+      - text/html;charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - AIS="u+D0dHZBIUXmkypEGA/A+A"; Version=1
+      - JSESSIONID=80CB2E98A576E3DE09EB78CB9F4543D2; Path=/
+      - RPS=server52054
+      - cleverbotfirstref2="*TDDIEXUIKDAYYTYXGUPBTDYKCBYYSYACUSBATEGGWK"; Expires=""
+      - cleverbotref="*MWMRQJOSENTHKNIQPGJLMMKEMUHKMITLGMLAMAPSII"; Expires="Tue,
+        08 Oct 2013 22:36:34 GMT"
+      Mime-Version:
+      - '1.0'
+      Expires:
+      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache;no-store
+      Rps:
+      - server52054
+      Rlm:
+      - '1519'
+      Sc:
+      - '12851'
+      Content-Length:
+      - '276'
+      Server:
+      - Jabberwacky
+    body:
+      encoding: UTF-8
+      string: "I know nothing about steam engines.\rRSJ00650195\rj2log-dMnVGpQSGIIQWAHSRQHE-detail\rYou
+        can't eat.\rBla.\rThats fun.\rWhat is Tardigrade.\rDeath, certainly.\rWhat
+        you know about balloon?\rI know nothing about steam engines.\rRZI078921852\r\r\r\r\r\rI
+        know nothing about steam engines.\r\r\r\r\r\r\r"
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 21:36:45 GMT
+recorded_with: VCR 2.6.0

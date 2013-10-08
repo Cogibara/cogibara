@@ -251,7 +251,8 @@ class DBPediaQuery < Cogibara::Module
 
 
   on(:question, wit_intent: "interrogate_knowledge") do
-    subject = current_message.entities(:wit)
+    subjects = current_message.entities(:wit)
+
     # subjects = current_message.struct_properties("WitEntity").select{|p| p.wit_entity_type == "subject"}
 
     filter do |msg|
