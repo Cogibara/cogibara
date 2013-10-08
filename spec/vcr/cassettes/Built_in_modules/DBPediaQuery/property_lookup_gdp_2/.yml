@@ -222,4 +222,242 @@ http_interactions:
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:00:50 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/250603704_210
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:51:57 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/250603704_210",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:04 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '492'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:52:05 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "27e1b6ea-0918-40c9-b1f3-9a315d450a13",
+          "msg_body" : "What is the gdp PPP per capita of Japan",
+          "outcome" : {
+            "intent" : "fact_question",
+            "entities" : {
+              "subject" : {
+                "end" : 39,
+                "start" : 34,
+                "value" : "Japan",
+                "body" : "Japan"
+              },
+              "fact_property" : {
+                "end" : 30,
+                "start" : 12,
+                "value" : "gdp PPP per capita",
+                "body" : "gdp PPP per capita"
+              }
+            },
+            "confidence" : 1.0
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:05 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/369340004_293
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:47 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/369340004_293",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:55 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=What%20is%20the%20gdp%20PPP%20per%20capita%20of%20Japan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:55:06 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "What is the gdp PPP per capita of Japan",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Gross_domestic_product",
+              "@support": "945",
+              "@types": "Freebase:/book/book_subject,Freebase:/book,DBpedia:TopicalConcept",
+              "@surfaceForm": "gdp",
+              "@offset": "12",
+              "@similarityScore": "0.18004775047302246",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Purchasing_power_parity",
+              "@support": "349",
+              "@types": "",
+              "@surfaceForm": "PPP",
+              "@offset": "16",
+              "@similarityScore": "0.5451440811157227",
+              "@percentageOfSecondRank": "0.15113095888913186"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Per_capita",
+              "@support": "226",
+              "@types": "",
+              "@surfaceForm": "per capita",
+              "@offset": "20",
+              "@similarityScore": "0.28242331743240356",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Japan",
+              "@support": "78616",
+              "@types": "DBpedia:Country,DBpedia:PopulatedPlace,DBpedia:Place,Schema:Place,Schema:Country,Freebase:/location/dated_location,Freebase:/location,Freebase:/food/beer_country_region,Freebase:/food,Freebase:/media_common/netflix_genre,Freebase:/media_common,Freebase:/royalty/system_of_nobility,Freebase:/royalty,Freebase:/book/publishing_company,Freebase:/book,Freebase:/film/film_location,Freebase:/film,Freebase:/biology/breed_origin,Freebase:/biology,Freebase:/olympics/olympic_participating_country,Freebase:/olympics,Freebase:/organization/organization_scope,Freebase:/organization,Freebase:/people/ethnicity,Freebase:/people,Freebase:/organization/organization_member,Freebase:/royalty/kingdom,Freebase:/government/governmental_jurisdiction,Freebase:/government,Freebase:/distilled_spirits/spirit_producing_region,Freebase:/distilled_spirits,Freebase:/military/military_post,Freebase:/military,Freebase:/meteorology/cyclone_affected_area,Freebase:/meteorology,Freebase:/location/statistical_region,Freebase:/aviation/aircraft_owner,Freebase:/aviation,Freebase:/sports/sport_country,Freebase:/sports,Freebase:/business/asset_owner,Freebase:/business,Freebase:/fictional_universe/fictional_setting,Freebase:/fictional_universe,Freebase:/location/location,Freebase:/location/region,Freebase:/sports/sports_team_location,Freebase:/cvg/computer_game_region,Freebase:/cvg,Freebase:/location/country,Freebase:/business/company_advisor,Freebase:/book/book_subject,Freebase:/projects/project_focus,Freebase:/projects,Freebase:/exhibitions/exhibition_subject,Freebase:/exhibitions,Freebase:/military/military_combatant,DBpedia:TopicalConcept",
+              "@surfaceForm": "Japan",
+              "@offset": "34",
+              "@similarityScore": "0.0794948935508728",
+              "@percentageOfSecondRank": "0.9520145227235749"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:55:13 GMT
 recorded_with: VCR 2.5.0

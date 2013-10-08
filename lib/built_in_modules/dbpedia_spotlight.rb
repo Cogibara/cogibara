@@ -39,11 +39,11 @@ class DBPediaSpotlight < Cogibara::Module
   end
 
   on do
-
-    struct = spotlight_structures(current_message.message)
-    struct.each{|st| current_message << st} if struct
-    current_message
+    current_message.entities(:spotlight)  
+    # struct = spotlight_structures(current_message.message)
+    # struct.each{|st| current_message << st} if struct
+    # current_message
   end
 
-  # register :classify
+  register :classify
 end

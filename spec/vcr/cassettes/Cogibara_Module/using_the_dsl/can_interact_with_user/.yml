@@ -194,4 +194,420 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 08 Oct 2013 23:17:19 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=hello
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:49:46 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "hello",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist"
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:49:53 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=hi
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:49:47 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "hi",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist"
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:49:53 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/286485934_161
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:50:51 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/286485934_161",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:50:58 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/810971240_689
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:50:52 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/810971240_689",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:50:59 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/165247294_781
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:51:05 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/165247294_781",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:12 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/724737605_287
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:51:05 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/724737605_287",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:13 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/401182252_380
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:51:20 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/401182252_380",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:27 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/906433146_30
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:51:20 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/906433146_30",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:28 GMT
 recorded_with: VCR 2.5.0

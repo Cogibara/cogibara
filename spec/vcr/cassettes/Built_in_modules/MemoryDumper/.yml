@@ -230,4 +230,407 @@ http_interactions:
       string: '{"entities":{"searchTerm":["memory"]},"action":"BUSINESS_SEARCH","category":"BUSINESS"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:00:49 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/631701807_834
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:51:47 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/631701807_834",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:54 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=bla
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '168'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:51:54 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "fbfa2971-2c32-4bb4-b514-4b502fb972b3",
+          "msg_body" : "bla",
+          "outcome" : {
+            "intent" : "chat",
+            "entities" : { },
+            "confidence" : 0.947
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:54 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/802565759_586
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:51:48 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/802565759_586",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:55 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=dump%20memory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '183'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:51:55 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "0269752c-db62-4cff-89e1-97b52a2fea0b",
+          "msg_body" : "dump memory",
+          "outcome" : {
+            "intent" : "dump_memory",
+            "entities" : { },
+            "confidence" : 0.997
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:51:55 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/311459948_379
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:46 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/311459948_379",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:53 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/800051544_528
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:46 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/800051544_528",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:54 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=bla
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:55:00 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "bla",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources": [  {
+            "@URI": "http://dbpedia.org/resource/Black_Liberation_Army",
+            "@support": "86",
+            "@types": "Freebase:/business/employer,Freebase:/business,Freebase:/organization/organization,Freebase:/organization",
+            "@surfaceForm": "bla",
+            "@offset": "0",
+            "@similarityScore": "0.30502504110336304",
+            "@percentageOfSecondRank": "-1.0"
+          }]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:55:07 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=dump%20memory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:55:00 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "dump memory",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Broadcast_delay",
+              "@support": "165",
+              "@types": "",
+              "@surfaceForm": "dump",
+              "@offset": "0",
+              "@similarityScore": "0.10110040009021759",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Memory_%28Cats_song%29",
+              "@support": "72",
+              "@types": "Freebase:/music/composition,Freebase:/music",
+              "@surfaceForm": "memory",
+              "@offset": "5",
+              "@similarityScore": "0.17923083901405334",
+              "@percentageOfSecondRank": "0.9491822316269617"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:55:08 GMT
 recorded_with: VCR 2.5.0

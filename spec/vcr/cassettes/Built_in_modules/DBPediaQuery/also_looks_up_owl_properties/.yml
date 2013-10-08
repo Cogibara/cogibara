@@ -210,4 +210,224 @@ http_interactions:
       string: '{"entities":{},"action":"SPORTS_MISC","category":"SPORTS"}'
     http_version: 
   recorded_at: Mon, 30 Sep 2013 19:00:52 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/929590279_581
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:00 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/929590279_581",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:07 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=what%20is%20the%20record%20label%20of%20Arashi
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '479'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:52:08 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "a280e30c-24ea-46bf-bda9-9e2c7ee3f832",
+          "msg_body" : "what is the record label of Arashi",
+          "outcome" : {
+            "intent" : "fact_question",
+            "entities" : {
+              "subject" : {
+                "end" : 34,
+                "start" : 28,
+                "value" : "Arashi",
+                "body" : "Arashi"
+              },
+              "fact_property" : {
+                "end" : 24,
+                "start" : 12,
+                "value" : "record label",
+                "body" : "record label"
+              }
+            },
+            "confidence" : 0.999
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:08 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/398318415_732
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:49 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/398318415_732",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:56 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=what%20is%20the%20record%20label%20of%20Arashi
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:55:08 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "what is the record label of Arashi",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Record_label",
+              "@support": "5862",
+              "@types": "Freebase:/organization/organization_type,Freebase:/organization,Freebase:/book/book_subject,Freebase:/book,Freebase:/business/industry,Freebase:/business",
+              "@surfaceForm": "record label",
+              "@offset": "12",
+              "@similarityScore": "0.32576343417167664",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Arashi",
+              "@support": "165",
+              "@types": "DBpedia:Band,DBpedia:Organisation,Schema:Organization,Schema:MusicGroup,Freebase:/music/artist,Freebase:/music,Freebase:/music/group_member,Freebase:/music/musical_group,DBpedia:TopicalConcept",
+              "@surfaceForm": "Arashi",
+              "@offset": "28",
+              "@similarityScore": "0.3810161352157593",
+              "@percentageOfSecondRank": "-1.0"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:55:15 GMT
 recorded_with: VCR 2.5.0

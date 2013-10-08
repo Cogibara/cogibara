@@ -246,4 +246,239 @@ http_interactions:
         you remind me via sms to eat pudding at 8:00pm.\rNo.\rI007257332\r\r\r\r\r\rNo.\r\r\r\r\r\r\r"
     http_version: 
   recorded_at: Tue, 08 Oct 2013 21:37:08 GMT
-recorded_with: VCR 2.6.0
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/103916136_626
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:14 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/103916136_626",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:21 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=can%20you%20remind%20me%20via%20sms%20to%20eat%20pudding%20at%208:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '619'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:52:22 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "f514823e-007d-4716-910f-62453c12ea59",
+          "msg_body" : "can you remind me via sms to eat pudding at 8:00pm",
+          "outcome" : {
+            "intent" : "set_reminder",
+            "entities" : {
+              "reminder_time" : {
+                "end" : 48,
+                "start" : 44,
+                "value" : "8:00",
+                "body" : "8:00"
+              },
+              "reminder_text" : {
+                "end" : 40,
+                "start" : 29,
+                "value" : "eat pudding",
+                "body" : "eat pudding"
+              },
+              "reminder_method" : {
+                "end" : 25,
+                "start" : 22,
+                "value" : "sms",
+                "body" : "sms"
+              }
+            },
+            "confidence" : 1.0
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:22 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/271905192_539
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:57 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/271905192_539",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:53:04 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=can%20you%20remind%20me%20via%20sms%20to%20eat%20pudding%20at%208:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:55:24 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "can you remind me via sms to eat pudding at 8:00pm",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/SMS",
+              "@support": "701",
+              "@types": "",
+              "@surfaceForm": "sms",
+              "@offset": "22",
+              "@similarityScore": "0.04473928362131119",
+              "@percentageOfSecondRank": "0.4595119242007026"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/East_Africa_Time",
+              "@support": "52",
+              "@types": "Freebase:/time/time_zone,Freebase:/time",
+              "@surfaceForm": "eat",
+              "@offset": "29",
+              "@similarityScore": "0.12429765611886978",
+              "@percentageOfSecondRank": "0.618317720685953"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Pudding",
+              "@support": "191",
+              "@types": "Freebase:/food/type_of_dish,Freebase:/food,Freebase:/food/dish",
+              "@surfaceForm": "pudding",
+              "@offset": "33",
+              "@similarityScore": "0.14457952976226807",
+              "@percentageOfSecondRank": "-1.0"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:55:31 GMT
+recorded_with: VCR 2.5.0

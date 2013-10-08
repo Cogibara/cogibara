@@ -364,4 +364,224 @@ http_interactions:
         you remind ME of the man.\r\r\r\r\r\r\r"
     http_version: 
   recorded_at: Tue, 08 Oct 2013 21:36:54 GMT
-recorded_with: VCR 2.6.0
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/977860740_434
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:11 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/977860740_434",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:18 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '483'
+      Server:
+      - http-kit
+      Date:
+      - Tue, 08 Oct 2013 23:52:19 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "809db633-291b-464a-a3de-25493c2ba145",
+          "msg_body" : "remind me to feed the cat at 7:00pm",
+          "outcome" : {
+            "intent" : "set_reminder",
+            "entities" : {
+              "reminder_time" : {
+                "end" : 35,
+                "start" : 29,
+                "value" : "7:00pm",
+                "body" : "7:00pm"
+              },
+              "reminder_text" : {
+                "end" : 25,
+                "start" : 13,
+                "value" : "feed the cat",
+                "body" : "feed the cat"
+              }
+            },
+            "confidence" : 1.0
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:52:19 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/950800002_453
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:52:55 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "http://cogi.strinz.me/messages/950800002_453",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
+              "@support": "248",
+              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
+              "@surfaceForm": "http://",
+              "@offset": "0",
+              "@similarityScore": "0.11038549989461899",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Message",
+              "@support": "153",
+              "@types": "",
+              "@surfaceForm": "messages",
+              "@offset": "22",
+              "@similarityScore": "0.11354076862335205",
+              "@percentageOfSecondRank": "0.6434202120008525"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:53:03 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Oct 2013 23:55:16 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "remind me to feed the cat at 7:00pm",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Attack_of_the_Show%21",
+              "@support": "117",
+              "@types": "DBpedia:TelevisionShow,DBpedia:Work,Schema:CreativeWork,Freebase:/internet/social_network_user,Freebase:/internet,Freebase:/tv/tv_program,Freebase:/tv",
+              "@surfaceForm": "feed",
+              "@offset": "13",
+              "@similarityScore": "0.07013469934463501",
+              "@percentageOfSecondRank": "-1.0"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Cat_Deeley",
+              "@support": "101",
+              "@types": "DBpedia:Person,Schema:Person,Freebase:/broadcast/artist,Freebase:/broadcast,Freebase:/tv/tv_personality,Freebase:/tv,Freebase:/tv/tv_actor,Freebase:/film/actor,Freebase:/film,Freebase:/people/person,Freebase:/people",
+              "@surfaceForm": "cat",
+              "@offset": "22",
+              "@similarityScore": "0.10164397954940796",
+              "@percentageOfSecondRank": "0.9012118374271317"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 08 Oct 2013 23:55:24 GMT
+recorded_with: VCR 2.5.0
