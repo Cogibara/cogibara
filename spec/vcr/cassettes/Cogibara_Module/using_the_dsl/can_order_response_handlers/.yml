@@ -314,4 +314,40 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 08 Oct 2013 23:51:26 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=testing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '172'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:04 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "ce2d76fe-63b7-4bc1-a2b8-2f8138e81e5c",
+          "msg_body" : "testing",
+          "outcome" : {
+            "intent" : "chat",
+            "entities" : { },
+            "confidence" : 0.994
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:04 GMT
 recorded_with: VCR 2.5.0

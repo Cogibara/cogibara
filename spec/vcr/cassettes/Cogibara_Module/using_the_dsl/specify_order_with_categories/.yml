@@ -342,4 +342,40 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 08 Oct 2013 23:57:40 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hi
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '168'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:01 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "d56b1b89-84c1-47dd-9663-baca8f5af13c",
+          "msg_body" : "hi",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.956
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:01 GMT
 recorded_with: VCR 2.5.0

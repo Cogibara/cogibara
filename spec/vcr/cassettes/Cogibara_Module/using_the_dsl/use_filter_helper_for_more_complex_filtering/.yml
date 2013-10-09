@@ -682,4 +682,92 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 08 Oct 2013 23:51:27 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=who%20is%20Johnny%20Habu?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '363'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:05 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "041fda98-31eb-42fe-8665-a2304c988160",
+          "msg_body" : "who is Johnny Habu?",
+          "outcome" : {
+            "intent" : "person_information",
+            "entities" : {
+              "contact" : {
+                "end" : 18,
+                "start" : 7,
+                "value" : "Johnny Habu",
+                "body" : "Johnny Habu",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.995
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:05 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=show%20me%20Johnny%20Habus%20contact%20info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '361'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:06 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "b53b2bce-53ac-4fc0-8860-a05a832a8245",
+          "msg_body" : "show me Johnny Habus contact info",
+          "outcome" : {
+            "intent" : "contact_info",
+            "entities" : {
+              "contact" : {
+                "end" : 14,
+                "start" : 8,
+                "value" : "Johnny",
+                "body" : "Johnny",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.997
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:06 GMT
 recorded_with: VCR 2.5.0

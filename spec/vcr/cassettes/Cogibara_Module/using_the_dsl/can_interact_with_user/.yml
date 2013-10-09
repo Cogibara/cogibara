@@ -684,4 +684,76 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 08 Oct 2013 23:57:43 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '171'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:06 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "d131dca7-e3ec-4c0d-91e0-300cdaf254fd",
+          "msg_body" : "hello",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.997
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:06 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hi
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '168'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:07 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "ab26d60a-e981-4b8a-a994-f4ef25f33a9b",
+          "msg_body" : "hi",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.956
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:07 GMT
 recorded_with: VCR 2.5.0

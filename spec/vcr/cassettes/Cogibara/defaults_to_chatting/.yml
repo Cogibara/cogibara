@@ -100,4 +100,84 @@ http_interactions:
       string: '{"entities":{},"action":"KNOWLEDGE_SEARCH","category":"KNOWLEDGE"}'
     http_version: 
   recorded_at: Sun, 29 Sep 2013 19:49:21 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '172'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:10 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "64d5a3d4-c663-4678-aa11-fff2b34650bf",
+          "msg_body" : "hello?",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.993
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:10 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=Who%20are%20you
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '325'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:11 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "54b26818-074d-4d5d-b058-264e8b4657bd",
+          "msg_body" : "Who are you",
+          "outcome" : {
+            "intent" : "chat",
+            "entities" : {
+              "subject" : {
+                "end" : 11,
+                "start" : 8,
+                "value" : "you",
+                "body" : "you",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.966
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:11 GMT
 recorded_with: VCR 2.5.0

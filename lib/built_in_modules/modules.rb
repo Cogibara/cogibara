@@ -13,13 +13,14 @@ class Maluuba < Cogibara::Module
   end
 
   on(/^maluuba/) do |msg|
-    @client.interpret(phrase: current_message.message.gsub(/^maluuba/,'')).to_s
+    msg.intent(:maluuba).to_s
+    # @client.interpret(phrase: current_message.message.gsub(/^maluuba/,'')).to_s
   end
 
   on do |msg|
-    h = @client.interpret phrase: msg.message
-    msg.set_maluuba_category(h[:category])
-    msg.set_maluuba_action(h[:action])
+    msg.intent(:maluuba)
+
+    pass
   end
 
   register :classify

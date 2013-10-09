@@ -75,4 +75,40 @@ http_interactions:
         are you doing?\r\r\r\r\r\r\r"
     http_version: 
   recorded_at: Sun, 29 Sep 2013 19:49:45 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=hello?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '172'
+      Server:
+      - http-kit
+      Date:
+      - Wed, 09 Oct 2013 19:12:08 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "395d5e01-9ba6-4a7e-880d-dfd4fcab2d50",
+          "msg_body" : "hello?",
+          "outcome" : {
+            "intent" : "hello",
+            "entities" : { },
+            "confidence" : 0.993
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 19:12:08 GMT
 recorded_with: VCR 2.5.0
