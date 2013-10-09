@@ -11,6 +11,7 @@ class DBPediaSpotlight < Cogibara::Module
       entities.select{|e| e["@surfaceForm"]}.each_with_index.map do |ent,i|
         new_prop = msg.new_property
         new_prop << [RDF.type, onto_class.SpotlightEntity]
+        add_type(new_prop)
         new_prop << [onto_prop.spotlight_entity_uri, ent["@URI"]]
         new_prop << [onto_prop.spotlight_types, ent["@types"]]
         new_prop << [onto_prop.spotlight_support_score, ent["@support"]]

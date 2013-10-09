@@ -11,7 +11,6 @@ class DBPediaSpotlight < Cogibara::Module
     spotlight = DBpedia::Spotlight("http://spotlight.dbpedia.org/rest/")
     entities = spotlight.annotate(msg)
     if entities
-      # puts "#{entities}"
       entities.select{|e| e["@surfaceForm"]}.each_with_index.map do |ent,i|
         new_prop = current_message.new_property
         new_prop << [RDF.type, onto_class.SpotlightEntity]
