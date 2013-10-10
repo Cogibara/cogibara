@@ -4,8 +4,8 @@
 
 
 class Maluuba < Cogibara::Module
-  requires 'maluuba_napi'
-  requires_key 'maluuba'
+  # requires 'maluuba_napi'
+  # requires_key 'maluuba'
 
   def initialize
     # @client ||= MaluubaNapi::Client.new(settings["keys"]["maluuba"])
@@ -23,7 +23,7 @@ class Maluuba < Cogibara::Module
     pass
   end
 
-  register :classify
+  # register :classify
 end
 
 class MemoryDumper < Cogibara::Module
