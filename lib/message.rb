@@ -19,57 +19,6 @@ module Cogibara
 
     end
 
-    class StructuredProperty
-
-      def initialize(uri,vals)
-        @uri = uri
-        @values = vals
-        
-        define_methods
-        # values.keys.each{|k|
-        #   k = "type" if k == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-
-        #   define_singleton_method(k.to_sym) do
-        #     self[k]
-        #   end
-        # }
-      end
-      
-      def subject
-        @uri
-      end
-
-      def <<(values)
-        @values << values
-      end
-
-      def values
-        Hash[@values.map{|v| [v[0].to_s.gsub('http://onto.cogibara.com/properties/',''), v[1].to_s]}]
-      end
-
-      def define_methods
-        values.keys.each{|k|
-          k = "type" if k == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-          
-          define_singleton_method(k.to_sym) do
-            self[k]
-          end
-        }
-      end
-
-      def save(repo)
-        define_methods
-        @values.map{|val|          
-          # puts "#{[RDF::URI(@uri),val[0],val[1]]}"
-          repo << [RDF::URI(@uri),val[0],val[1]]
-        }
-      end
-
-      def [](prop)
-        values[prop]
-      end
-    end
-
 
     def self.where(conditions = {})
       conditions = Hash[conditions.map{|k,v|
@@ -122,7 +71,7 @@ module Cogibara
       StructuredProperty.new("#{rdf_msg.subject.to_s}/structured_properties/#{index}", values)
     end
 
-    def struct_properties(prop_class=nil)
+    def structured_properties(prop_class=nil)
       if prop_class
         m = rdf_msg
         has_prop = onto_prop.has_structured_property
@@ -139,6 +88,8 @@ module Cogibara
         rdf_msg.structured_properties.map{|prop| property_for(prop)}
       end
     end
+    alias_method :struct_properties, :structured_properties
+    alias_method :structs, :structured_properties
 
     def property_for(property_uri)
 
