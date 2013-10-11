@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=remind%20me%20via%20sms%20to%20fetch%20the%20mail%20tonight
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '509'
+      Server:
+      - http-kit
+      Date:
+      - Fri, 11 Oct 2013 13:54:16 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "dcc2f234-a248-45c1-bf33-0cbf88cd0feb",
+          "msg_body" : "remind me via sms to fetch the mail tonight",
+          "outcome" : {
+            "intent" : "set_reminder",
+            "entities" : {
+              "reminder_text" : {
+                "end" : 43,
+                "start" : 21,
+                "value" : "fetch the mail tonight",
+                "body" : "fetch the mail tonight"
+              },
+              "reminder_method" : {
+                "end" : 17,
+                "start" : 14,
+                "value" : "sms",
+                "body" : "sms"
+              }
+            },
+            "confidence" : 0.999
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 11 Oct 2013 13:54:16 GMT
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=remind%20me%20via%20sms%20to%20fetch%20the%20mail%20tonight
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Oct 2013 13:54:14 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "remind me via sms to fetch the mail tonight",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/SMS",
+              "@support": "701",
+              "@types": "",
+              "@surfaceForm": "sms",
+              "@offset": "14",
+              "@similarityScore": "0.05800393223762512",
+              "@percentageOfSecondRank": "0.3349974939487404"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Daily_Mail",
+              "@support": "1516",
+              "@types": "DBpedia:Newspaper,DBpedia:PeriodicalLiterature,DBpedia:WrittenWork,DBpedia:Work,Schema:CreativeWork,Freebase:/business/employer,Freebase:/business,Freebase:/book/periodical,Freebase:/book,Freebase:/book/newspaper,Freebase:/media_common/quotation_source,Freebase:/media_common,DBpedia:TopicalConcept",
+              "@surfaceForm": "mail",
+              "@offset": "31",
+              "@similarityScore": "0.08893262594938278",
+              "@percentageOfSecondRank": "0.5249892869126076"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/Tonight_%28TV_series%29",
+              "@support": "52",
+              "@types": "DBpedia:TelevisionShow,DBpedia:Work,Schema:CreativeWork,Freebase:/tv/tv_program,Freebase:/tv",
+              "@surfaceForm": "tonight",
+              "@offset": "36",
+              "@similarityScore": "0.09690660238265991",
+              "@percentageOfSecondRank": "0.8863563253810531"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 11 Oct 2013 13:54:17 GMT
+recorded_with: VCR 2.5.0
