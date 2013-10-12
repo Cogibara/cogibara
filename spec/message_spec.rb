@@ -16,6 +16,6 @@ describe Cogibara::Message, vcr: {record: :new_episodes} do
       @msg.entities()
     end
 
-    it { @msg.structured_properties.first.type.should_not be nil}
+    it { @msg.structured_properties.first.rdf_type.should_not be nil}
   end
 end

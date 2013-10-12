@@ -30,6 +30,12 @@ module Cogibara
 
       def uri_to_method(uri)
         suffix = uri.to_s.split("/").last.split("#").last
+        prefix = Cogibara::Onto.prefix_for(uri)
+        if prefix
+          "#{prefix}_#{suffix}"
+        else
+          suffix
+        end
       end
 
       def define_methods
