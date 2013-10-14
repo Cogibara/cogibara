@@ -63,7 +63,7 @@ class Gcal < Cogibara::Module
 
     time = parse_time(time_entity.wit_entity_value)
     unless time
-      "couldn't understand time #{time_entity.wit_entity_value}, no reminder set"
+      "couldn't understand time '#{time_entity.wit_entity_value}', no reminder set"
     else
       # puts message_entity
       if method_entity.size > 0

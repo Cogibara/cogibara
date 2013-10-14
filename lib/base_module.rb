@@ -29,19 +29,13 @@ module Cogibara
     #   end
     # end
 
-    # def self.settings
-    #   @@yml ||= nil
-    #   unless @@yml
-    #     yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
-    #     if File.exist? yml_file
-    #       @@yml = YAML.load_file(yml_file)
-    #     else
-    #       @@yml = {"keys" => {}}
-    #     end
-    #   end
+    def self.settings
+      Cogibara.settings
+    end
 
-    #   @@yml
-    # end
+    def settings
+      Cogibara.settings
+    end
 
     def self.on(pattern=/.*/, restrictions={}, &block)
       if pattern.is_a? Symbol

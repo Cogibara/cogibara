@@ -18,7 +18,7 @@ class Recipes < Cogibara::Module
       say "No Recipes Found"
       pass
     end
-    @recipes = recipes 
+    @recipes = recipes
   end
 
   def select_recipe(index=0, criterion = :rating)
@@ -60,7 +60,7 @@ Ingredients:
     # else
     #   make_remind(message_entity["wit_entity_value"], time_entity["wit_entity_value"])
     # end
-
+    "Wit based recipe finding not implemented"
     # "okay, reminding you to #{message_entity["wit_entity_value"]} at #{time_entity['wit_entity_value']}"
   end
 

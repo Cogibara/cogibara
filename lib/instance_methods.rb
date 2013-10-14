@@ -25,11 +25,14 @@ module Cogibara
               # puts "pass along messages or return new ones"
             else
               # for now, just pass along messages with unknown returns
-              # puts "unknown return type #{response.class} from #{mod.class}"
+              # puts "unknown return type #{response.class} from #{mod.class}" if
             end
           rescue Exception => e
-            puts "error occured in module #{mod}" if Cogibara::Module::settings["debug"]
-            raise e
+            # puts "error occured in module #{mod}\n#{e.backtrace}" if Cogibara::Module::settings["debug"]
+            response = memory.new_message("error occured in module #{mod}")
+            response_details(message, "error occured in module #{mod}")
+            raise e if Cogibara.settings["debug"]
+            return response
           end
         end
       end
