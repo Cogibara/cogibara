@@ -10,12 +10,25 @@ describe Cogibara::Message, vcr: {record: :new_episodes} do
     Cogibara.load_base_modules
   end
 
-  describe "structured_properties" do
-    before do
-      @msg = Cogibara::Memory.new_message("remind me via sms to fetch the mail tonight")
-      @msg.entities()
+  context "#structured_properties" do
+
+    describe "dynamic methods for rdf predicates" do
+      before do
+        @msg = Cogibara::Memory.new_message("remind me via sms to fetch the mail tonight")
+        @msg.entities()
+      end
+
+      it { @msg.structured_properties.first.rdf_type.should_not be nil}
     end
 
-    it { @msg.structured_properties.first.rdf_type.should_not be nil}
+    describe "retrieve by rdf class" do
+      before do
+        @msg = Cogibara::Memory.new_message("remind me via sms to fetch the mail tonight")
+        @msg.entities()
+      end
+
+      it { @msg.structured_properties("NamedEntity").first.should_not be nil}
+    end
+
   end
 end
