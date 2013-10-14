@@ -10,20 +10,26 @@ module Cogibara
 
     def ask(message)
       ModuleStack.stack.each do |mod|
+        puts "asking #{mod}" if Cogibara::Module::settings["debug"]
         catch(:mod_pass) do
-          response = mod.ask(message) {|y| yield y }
-          if response.is_a? String
-            response = memory.new_message(response)
-            response_details(message, response)
-            return response
-          elsif response.is_a? Symbol
-            raise "received code #{response} from #{mod}"
-          elsif response.is_a? Cogibara::Message
-            # for now, just pass along message objects
-            # puts "pass along messages or return new ones"
-          else
-            # for now, just pass along messages with unknown returns
-            # puts "unknown return type #{response.class} from #{mod.class}"
+          begin
+            response = mod.ask(message) {|y| yield y }
+            if response.is_a? String
+              response = memory.new_message(response)
+              response_details(message, response)
+              return response
+            elsif response.is_a? Symbol
+              raise "received code #{response} from #{mod}"
+            elsif response.is_a? Cogibara::Message
+              # for now, just pass along message objects
+              # puts "pass along messages or return new ones"
+            else
+              # for now, just pass along messages with unknown returns
+              # puts "unknown return type #{response.class} from #{mod.class}"
+            end
+          rescue Exception => e
+            puts "error occured in module #{mod}" if Cogibara::Module::settings["debug"]
+            raise e
           end
         end
       end

@@ -1,15 +1,16 @@
 module Cogibara
   module Interface
     def ask_string(msg, opts={})
-      Cogibara.ask(Cogibara.memory.new_message(msg, opts)){|y|
-        # TODO; All replies should probably be Message objects, just give at userquestion as a type
-        #     should probably make #rdf_is_a? method or something to simplify that query
-        if y.is_a? Cogibara::UserQuestion
-          request_input y
-        else
-          intermediate_response y
-        end
-      }
+        Cogibara.ask(Cogibara.memory.new_message(msg, opts)){|y|
+          # TODO; All replies should probably be Message objects, just give at userquestion as a type
+          #     should probably make #rdf_is_a? method or something to simplify that query
+          if y.is_a? Cogibara::UserQuestion
+            request_input y
+          else
+            intermediate_response y
+          end
+        }
+
     end
 
     # Maybe change ask to receive, so #reply can be #send?

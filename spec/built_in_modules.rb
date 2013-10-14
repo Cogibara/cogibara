@@ -141,6 +141,18 @@ describe "Built in modules", vcr: { record: :new_episodes } do
       }
     end
 
+    describe "parses time using chronic" do
+      it {
+        @cogi_l.ask("remind me via sms tomorrow morning at 11 to bake bread")[/okay, reminding you to bake bread at \d+-\d+-\d+ 11:00:00 -0500/].should_not be nil
+      }
+    end
+
+    describe "handles unparsable times correctly" do
+      it {
+        @cogi_l.ask("remind me in three hours to fight the man").should_not be nil
+      }
+    end
+
     describe "select reminder method" do
       it {
         @cogi_l.ask("remind me via sms to feed the cat at 7:00pm").should == "okay, reminding you to feed the cat at 7:00 tonight"
@@ -167,7 +179,7 @@ Ingredients:
 4 slices bread
         EOF
       }
-    end 
+    end
 
     describe "scroll through recipes" do
       it {
@@ -180,11 +192,11 @@ Ingredients:
 2 cups (8 ounces) grated sharp cheddar cheese
         EOF
       }
-    end 
+    end
 
     describe "skips on unknown recipe" do
       it {
-        @cogi_l.ask("find me a recipe for Beluga Caviar with Marshmallows").should == 
+        @cogi_l.ask("find me a recipe for Beluga Caviar with Marshmallows").should ==
         "I think you want to recipe_lookup, but I don't know how. try asking for help"
       }
     end

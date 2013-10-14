@@ -2,533 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wit.ai/message?q=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer <Wit Auth>
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '565'
-      Server:
-      - http-kit
-      Date:
-      - Sun, 29 Sep 2013 18:32:51 GMT
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "9a186458-4768-4da4-a280-39751f914df3",
-          "msg_body" : "remind me to feed the cat at 7:00pm",
-          "outcome" : {
-            "intent" : "set_reminder",
-            "entities" : {
-              "reminder_time" : {
-                "source" : [ "levenum", "ner" ],
-                "end" : 35,
-                "start" : 29,
-                "value" : "7:00pm",
-                "body" : "7:00pm"
-              },
-              "reminder_text" : {
-                "source" : [ "levenum", "ner" ],
-                "end" : 25,
-                "start" : 13,
-                "value" : "feed the cat",
-                "body" : "feed the cat"
-              }
-            },
-            "confidence" : 1.0
-          }
-        }
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:32:51 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey=<Maluuba Auth>&phrase=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Sun, 29 Sep 2013 18:33:41 GMT
-      Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '109'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{"message":["feed the cat"],"time":["07:00:00AM"]},"action":"REMINDER_SET","category":"REMINDER"}'
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:32:51 GMT
-- request:
-    method: post
-    uri: https://www.google.com/accounts/ClientLogin
-    body:
-      encoding: US-ASCII
-      string: Email=<Google Name>&Passwd=<Google Pass>&source=cogibara.com-gcal-integration&accountType=HOSTED_OR_GOOGLE&service=cl
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/x-www-form-urlencoded
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - text/plain
-      X-Frame-Options:
-      - DENY
-      Cache-Control:
-      - no-cache, no-store
-      Pragma:
-      - no-cache
-      Expires:
-      - Mon, 01-Jan-1990 00:00:00 GMT
-      Date:
-      - Sun, 29 Sep 2013 18:32:51 GMT
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '818'
-      Server:
-      - GSE
-      Alternate-Protocol:
-      - 443:quic
-    body:
-      encoding: UTF-8
-      string: |
-        SID=DQAAALQAAAAIf10VoZ-O4yg_42Trf-I301xUPOdkKCTMsxmOLTkfdeUwJkDE9uqWXbynU8Teg3JcjOhAXs0gwkodeagIl6d3t2VnG7Pjc4NfHh7yRSjuAPPRT6RRF321MrmQ7lIb-TBmxVaOU62YJzbAwMK--49hBRew1EWujXsQQ5A2l1BFW8izJn1_J3gpSxKbviQoel4hhnXU0r80C3FVOgP038axw_AsDEfDSY8cvypcAV5KtZIDtwM_kIvCv_uHThzIz_8
-        LSID=DQAAALUAAADM7bqobMpI4f7FGjtrF8Vt8keRdbHfHOsuT_2aGmkYkFpIf7nksxjxN1YYYQXl8rrioKh3kHPr-LpeTGn38h_ww0nxEC2X-qFRVVhoKhDIVo2-M7Pin28WE6l8zsGZjoQwiN5lH5nE8WVfexwp6Q7eTkIIbgqO34DGNbWpj6CJKgZf_PfMhISmNb55i-xYPglRUlczImGJh-LiGwgF6WZWrCMK4UZ9hFiDyEPG2zR3qG2KbJNC_olHgdN3Xy-Gyx0
-        Auth=DQAAALUAAADM7bqobMpI4f7FGjtrF8Vt8keRdbHfHOsuT_2aGmkYkFpIf7nksxjxN1YYYQXl8rrvnySuM7MkROzXTQNxUuaZvQ8xrsWLFMflfv7X7WKeyxhpvVSK_KjMGEFHGbcyroqLQDmx43AVfBxdfH4yoHyQrdfKxTBuLv_drEv7JyIhUZCpGKGCuH4k_MwYHcGFcZFmXXVz-Nm80iI3kZWHCoZzkCD51Z5jtWO5oYdfQ61D_SnEzfOTMLCC8XOvx5b7NZg
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:32:51 GMT
-- request:
-    method: post
-    uri: https://www.google.com/calendar/feeds/default/private/full
-    body:
-      encoding: UTF-8
-      string: |-
-        <entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>
-                  <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>
-                  <title type='text'>feed the cat</title>
-                  <content type='text'></content>
-                  <gd:transparency value='http://schemas.google.com/g/2005#event.'></gd:transparency>
-                  <gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus>
-                  <gd:where valueString=""></gd:where>
-                  <gd:when startTime="2013-09-30T00:01:00Z" endTime="2013-09-30T00:01:00Z">
-                    <gd:reminder method="alert" minutes="1"></gd:reminder>
-                  </gd:when>
-                 </entry>
-    headers:
-      Authorization:
-      - GoogleLogin auth=DQAAALUAAADM7bqobMpI4f7FGjtrF8Vt8keRdbHfHOsuT_2aGmkYkFpIf7nksxjxN1YYYQXl8rrvnySuM7MkROzXTQNxUuaZvQ8xrsWLFMflfv7X7WKeyxhpvVSK_KjMGEFHGbcyroqLQDmx43AVfBxdfH4yoHyQrdfKxTBuLv_drEv7JyIhUZCpGKGCuH4k_MwYHcGFcZFmXXVz-Nm80iI3kZWHCoZzkCD51Z5jtWO5oYdfQ61D_SnEzfOTMLCC8XOvx5b7NZg
-      Content-Type:
-      - application/atom+xml
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Update-Client-Auth:
-      - DQAAALUAAADM7bqobMpI4f7FGjtrF8VtqFlUaCzwzmZa5G15Pvy2IkFWF-b_KocaKvF9wedhsRsWjUhC3ur4U9iQRFi1ZON70IdQ6MvPhs4e4EZ-WtfasUF-QXth9BRSULbpZP6RfQ7_v7Y2ztmIh-LSnRB6YjLdMAJVbCXz87DkO59XF9ZIRqkvdU1HMdqDqY7mjtfwBeOEmw-mMk1Yc7CjZTeASkYZC5UYRxHqmZsh7ezt8x_H4hX0tn9DggVPp6Kpa3euVAQ
-      Set-Cookie:
-      - DO_NOT_CACHE_RESPONSE=true;Expires=Sun, 29-Sep-2013 18:32:53 GMT
-      - S=calendar=ImqkhTP70dxEtuU9CmvAdA;Expires=Wed, 09-Oct-2013 12:01:52 GMT;Secure
-      Expires:
-      - Sun, 29 Sep 2013 18:32:52 GMT
-      Date:
-      - Sun, 29 Sep 2013 18:32:52 GMT
-      Location:
-      - https://www.google.com/calendar/feeds/default/private/full?gsessionid=ImqkhTP70dxEtuU9CmvAdA
-      Content-Type:
-      - text/html; charset=UTF-8
-      Cache-Control:
-      - private, max-age=0
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      Server:
-      - GSE
-      Alternate-Protocol:
-      - 443:quic
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |
-        <HTML>
-        <HEAD>
-        <TITLE>Moved Temporarily</TITLE>
-        </HEAD>
-        <BODY BGCOLOR="#FFFFFF" TEXT="#000000">
-        <H1>Moved Temporarily</H1>
-        The document has moved <A HREF="https://www.google.com/calendar/feeds/default/private/full?gsessionid=ImqkhTP70dxEtuU9CmvAdA">here</A>.
-        </BODY>
-        </HTML>
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:32:52 GMT
-- request:
-    method: post
-    uri: https://www.google.com/calendar/feeds/default/private/full?gsessionid=ImqkhTP70dxEtuU9CmvAdA
-    body:
-      encoding: UTF-8
-      string: |-
-        <entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>
-                  <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>
-                  <title type='text'>feed the cat</title>
-                  <content type='text'></content>
-                  <gd:transparency value='http://schemas.google.com/g/2005#event.'></gd:transparency>
-                  <gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus>
-                  <gd:where valueString=""></gd:where>
-                  <gd:when startTime="2013-09-30T00:01:00Z" endTime="2013-09-30T00:01:00Z">
-                    <gd:reminder method="alert" minutes="1"></gd:reminder>
-                  </gd:when>
-                 </entry>
-    headers:
-      Authorization:
-      - GoogleLogin auth=DQAAALUAAADM7bqobMpI4f7FGjtrF8Vt8keRdbHfHOsuT_2aGmkYkFpIf7nksxjxN1YYYQXl8rrvnySuM7MkROzXTQNxUuaZvQ8xrsWLFMflfv7X7WKeyxhpvVSK_KjMGEFHGbcyroqLQDmx43AVfBxdfH4yoHyQrdfKxTBuLv_drEv7JyIhUZCpGKGCuH4k_MwYHcGFcZFmXXVz-Nm80iI3kZWHCoZzkCD51Z5jtWO5oYdfQ61D_SnEzfOTMLCC8XOvx5b7NZg
-      Content-Type:
-      - application/atom+xml
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Update-Client-Auth:
-      - DQAAALYAAADM7bqobMpI4f7FGjtrF8VtqFlUaCzwzmZa5G15Pvy2IkFWF-b_KocaKvF9wedhsRsWjUhC3ur4U9iQRFi1ZON70IdQ6MvPhs4e4EZ-WtfasUF-QXth9BRSULbpZP6RfQ7_v7Y2ztmIh-LSnRB6YjLdMAJVbCXz87DkO59XF9ZIRpjLR1bkPCYKSuOLjbKs_omD2OrdbnjY5fTpEtmzsCWSMGwoBlEhNZEooO5bBrasUa-bVWB3EmEL3WDH4g7lQAQ
-      Set-Cookie:
-      - DO_NOT_CACHE_RESPONSE=true;Expires=Sun, 29-Sep-2013 18:32:53 GMT
-      - S=calendar=-WiDF4Au7ZyoN7DGoIfoUw;Expires=Wed, 09-Oct-2013 01:17:39 GMT;Secure
-      Expires:
-      - Sun, 29 Sep 2013 18:32:52 GMT
-      Date:
-      - Sun, 29 Sep 2013 18:32:52 GMT
-      Content-Type:
-      - application/atom+xml; charset=UTF-8
-      Cache-Control:
-      - private, max-age=0, must-revalidate, no-transform
-      Vary:
-      - Accept, X-GData-Authorization, GData-Version
-      Gdata-Version:
-      - '1.0'
-      Location:
-      - https://www.google.com/calendar/feeds/default/private/full/j6m8eaieb6bu83ces76kpg3lh8/63516162772
-      Content-Location:
-      - https://www.google.com/calendar/feeds/default/private/full/j6m8eaieb6bu83ces76kpg3lh8/63516162772
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      Server:
-      - GSE
-      Alternate-Protocol:
-      - 443:quic
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: <?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom'
-        xmlns:gCal='http://schemas.google.com/gCal/2005' xmlns:gd='http://schemas.google.com/g/2005'><id>http://www.google.com/calendar/feeds/default/private/full/j6m8eaieb6bu83ces76kpg3lh8</id><published>2013-09-29T18:32:52.000Z</published><updated>2013-09-29T18:32:52.000Z</updated><category
-        scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/><title
-        type='text'>feed the cat</title><content type='text'/><link rel='alternate'
-        type='text/html' href='https://www.google.com/calendar/event?eid=ajZtOGVhaWViNmJ1ODNjZXM3NmtwZzNsaDggY29naWJhcmFAbQ'
-        title='alternate'/><link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/j6m8eaieb6bu83ces76kpg3lh8'/><link
-        rel='edit' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/j6m8eaieb6bu83ces76kpg3lh8/63516162772'/><author><name>Cogibara
-        Org</name><email>cogibara@gmail.com</email></author><gd:comments><gd:feedLink
-        href='https://www.google.com/calendar/feeds/default/private/full/j6m8eaieb6bu83ces76kpg3lh8/comments'/></gd:comments><gd:eventStatus
-        value='http://schemas.google.com/g/2005#event.confirmed'/><gd:where valueString=''/><gd:who
-        email='cogibara@gmail.com' rel='http://schemas.google.com/g/2005#event.organizer'
-        valueString='Cogibara Org'/><gd:when endTime='2013-09-29T19:01:00.000-05:00'
-        startTime='2013-09-29T19:01:00.000-05:00'><gd:reminder method='alert' minutes='1'/></gd:when><gd:transparency
-        value='http://schemas.google.com/g/2005#event.opaque'/><gd:visibility value='http://schemas.google.com/g/2005#event.default'/><gCal:anyoneCanAddSelf
-        value='false'/><gCal:guestsCanInviteOthers value='true'/><gCal:guestsCanModify
-        value='false'/><gCal:guestsCanSeeGuests value='true'/><gCal:sequence value='0'/><gCal:uid
-        value='j6m8eaieb6bu83ces76kpg3lh8@google.com'/></entry>
-    http_version: 
-  recorded_at: Sun, 29 Sep 2013 18:32:53 GMT
-- request:
-    method: get
-    uri: http://napi.maluuba.com/v0/interpret?apikey&phrase=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=UTF-8
-      Date:
-      - Mon, 30 Sep 2013 19:01:49 GMT
-      Server:
-      - Apache-Coyote/1.1
-      Content-Length:
-      - '109'
-    body:
-      encoding: UTF-8
-      string: '{"entities":{"message":["feed the cat"],"time":["07:00:00AM"]},"action":"REMINDER_SET","category":"REMINDER"}'
-    http_version: 
-  recorded_at: Mon, 30 Sep 2013 19:00:59 GMT
-- request:
-    method: post
-    uri: http://www.cleverbot.com/webservicemin
-    body:
-      encoding: UTF-8
-      string: stimulus=remind%20me%20to%20feed%20the%20cat%20at%207%3A00pm&start=y&sessionid=RSJ00650195&vText8=Thats%20fun.&vText7=What%20is%20Tardigrade.&vText6=Death%2C%20certainly.&vText5=What%20you%20know%20about%20balloon%3F&vText4=I%20know%20nothing%20about%20steam%20engines.&vText3=What's%20the%20capital%20of%20Cuba%3F&vText2=Havana.%20What's%20the%20capital%20of%20iceland%3F&icognoid=wsf&icognocheck=dd0b0377f37b1cbbfd267803ebd666ba&fno=0&prevref=VG008465100&emotionaloutput=&emotionalhistory=&asbotname=&ttsvoice=&typing=&lineref=&sub=Say&islearning=1&cleanslate=false
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 08 Oct 2013 21:35:36 GMT
-      Content-Type:
-      - text/html;charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - AIS=5xqCAWPaiBMTBznWWdbWlg
-      - JSESSIONID=912586DB46BC52420571BED99EA920DB; Path=/
-      - RPS=server52054
-      - cleverbotfirstref2="*MWDIZSJTZOTYTIJQGPEMMDTZNUYTHJTCPHMAMMGMRK"; Expires=""
-      - cleverbotref="*GQVASLWOMJNQMVEKYIRHGVMMIOQMUENUIUHAGEYGKK"; Expires="Tue,
-        08 Oct 2013 22:36:58 GMT"
-      Mime-Version:
-      - '1.0'
-      Expires:
-      - 'Thu, 01 Jan 1970 00: 00:00 GMT'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - no-cache;no-store
-      Rps:
-      - server52054
-      Rlm:
-      - '1524'
-      Sc:
-      - '12851'
-      Content-Length:
-      - '347'
-      Server:
-      - Jabberwacky
-    body:
-      encoding: UTF-8
-      string: "No, you remind ME of the man.\rRSJ00650195\rj2log-bKuCWfSWIMGXMAJAVSFE-detail\rDeath,
-        certainly.\rWhat you know about balloon?\rI know nothing about steam engines.\rWhat's
-        the capital of Cuba?\rHavana. What's the capital of iceland?\rRemind me to
-        feed the cat at 7:00pm.\rNo, you remind ME of the man.\rRUZ036307725\r\r\r\r\r\rNo,
-        you remind ME of the man.\r\r\r\r\r\r\r"
-    http_version: 
-  recorded_at: Tue, 08 Oct 2013 21:36:54 GMT
-- request:
-    method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/977860740_434
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 08 Oct 2013 23:52:11 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "http://cogi.strinz.me/messages/977860740_434",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources":   [
-                {
-              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
-              "@support": "248",
-              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
-              "@surfaceForm": "http://",
-              "@offset": "0",
-              "@similarityScore": "0.11038549989461899",
-              "@percentageOfSecondRank": "-1.0"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Message",
-              "@support": "153",
-              "@types": "",
-              "@surfaceForm": "messages",
-              "@offset": "22",
-              "@similarityScore": "0.11354076862335205",
-              "@percentageOfSecondRank": "0.6434202120008525"
-            }
-          ]
-        }
-    http_version: 
-  recorded_at: Tue, 08 Oct 2013 23:52:18 GMT
-- request:
-    method: get
-    uri: https://api.wit.ai/message?q=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer <Wit Auth>
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '483'
-      Server:
-      - http-kit
-      Date:
-      - Tue, 08 Oct 2013 23:52:19 GMT
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "msg_id" : "809db633-291b-464a-a3de-25493c2ba145",
-          "msg_body" : "remind me to feed the cat at 7:00pm",
-          "outcome" : {
-            "intent" : "set_reminder",
-            "entities" : {
-              "reminder_time" : {
-                "end" : 35,
-                "start" : 29,
-                "value" : "7:00pm",
-                "body" : "7:00pm"
-              },
-              "reminder_text" : {
-                "end" : 25,
-                "start" : 13,
-                "value" : "feed the cat",
-                "body" : "feed the cat"
-              }
-            },
-            "confidence" : 1.0
-          }
-        }
-    http_version: 
-  recorded_at: Tue, 08 Oct 2013 23:52:19 GMT
-- request:
-    method: get
-    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=http://cogi.strinz.me/messages/950800002_453
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 08 Oct 2013 23:52:55 GMT
-      Server:
-      - grizzly/1.9.48
-      Access-Control-Allow-Origin:
-      - '*'
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "@text": "http://cogi.strinz.me/messages/950800002_453",
-          "@confidence": "0.0",
-          "@support": "0",
-          "@types": "",
-          "@sparql": "",
-          "@policy": "whitelist",
-          "Resources":   [
-                {
-              "@URI": "http://dbpedia.org/resource/Hypertext_Transfer_Protocol",
-              "@support": "248",
-              "@types": "Freebase:/internet/protocol,Freebase:/internet,Freebase:/computer/internet_protocol,Freebase:/computer,Freebase:/internet/api",
-              "@surfaceForm": "http://",
-              "@offset": "0",
-              "@similarityScore": "0.11038549989461899",
-              "@percentageOfSecondRank": "-1.0"
-            },
-                {
-              "@URI": "http://dbpedia.org/resource/Message",
-              "@support": "153",
-              "@types": "",
-              "@surfaceForm": "messages",
-              "@offset": "22",
-              "@similarityScore": "0.11354076862335205",
-              "@percentageOfSecondRank": "0.6434202120008525"
-            }
-          ]
-        }
-    http_version: 
-  recorded_at: Tue, 08 Oct 2013 23:53:03 GMT
-- request:
-    method: get
     uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
     body:
       encoding: US-ASCII
@@ -542,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 08 Oct 2013 23:55:16 GMT
+      - Mon, 14 Oct 2013 04:41:48 GMT
       Server:
       - grizzly/1.9.48
       Access-Control-Allow-Origin:
@@ -583,5 +56,314 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Tue, 08 Oct 2013 23:55:24 GMT
+  recorded_at: Mon, 14 Oct 2013 04:41:48 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '483'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 14 Oct 2013 04:41:49 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "c4af62ac-62df-4d90-9390-551a245727c3",
+          "msg_body" : "remind me to feed the cat at 7:00pm",
+          "outcome" : {
+            "intent" : "set_reminder",
+            "entities" : {
+              "reminder_time" : {
+                "end" : 35,
+                "start" : 29,
+                "value" : "7:00pm",
+                "body" : "7:00pm"
+              },
+              "reminder_text" : {
+                "end" : 25,
+                "start" : 13,
+                "value" : "feed the cat",
+                "body" : "feed the cat"
+              }
+            },
+            "confidence" : 1.0
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 04:41:49 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=remind%20me%20to%20feed%20the%20cat%20at%207:00pm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '483'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 14 Oct 2013 04:41:49 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "5f302755-1dcd-4ee4-a6f2-375e23138ef4",
+          "msg_body" : "remind me to feed the cat at 7:00pm",
+          "outcome" : {
+            "intent" : "set_reminder",
+            "entities" : {
+              "reminder_time" : {
+                "end" : 35,
+                "start" : 29,
+                "value" : "7:00pm",
+                "body" : "7:00pm"
+              },
+              "reminder_text" : {
+                "end" : 25,
+                "start" : 13,
+                "value" : "feed the cat",
+                "body" : "feed the cat"
+              }
+            },
+            "confidence" : 1.0
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 04:41:49 GMT
+- request:
+    method: post
+    uri: https://www.google.com/accounts/ClientLogin
+    body:
+      encoding: US-ASCII
+      string: Email=<Google Name>&Passwd=<Google Pass>&source=cogibara.com-gcal-integration&accountType=HOSTED_OR_GOOGLE&service=cl
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01-Jan-1990 00:00:00 GMT
+      Date:
+      - Mon, 14 Oct 2013 04:41:50 GMT
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '818'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+    body:
+      encoding: UTF-8
+      string: |
+        SID=DQAAALMAAAChQSdJWAaWbMZ_u6GY9zT1DPJZX5TkXWVLAhz99tP7qsXWXKANH3MtOVclAdE6jbSgjFFCr7jii2ugIoRLiM1MR4n6EzcBHOak1zHTIKb8ua1NWzF2QG0J3GoZrKopYL7RE7F5gddnbCE_jm0EqEA0Po7ssJJ10g_8fLoot2nWA2J8hAfWO0PyM1cLF6wqr9EuMQp9T9GTvhggTZxeo1qmRgNY-qx9bemVo-rgmt9ordiW_8DBQ1mszz0Q5gL1Gc4
+        LSID=DQAAALYAAADNi_Jmf64gR-QgYhCYbU52gzV0eBkk6FAbDJVNtZteAtiPWmF4MnwEoIcbf0LD439uPvORGvbZ9t58SEnK6J1_9hmewCwHM6pUvFCXKNUCH_GQJPPUsRifw7UOod3OlI7schU6HzGTf8ajhHPivHUjKC_glYfKba-K6_c810EIXM5Fa376rPXh9ZkxIEJkApjZIe5P7v53H6Zwxptu4Vq2PBLkvllfz3iJ9PbkWNmQtpVmSuFcIUovhF9_z1T-Vo0
+        Auth=DQAAALUAAADNi_Jmf64gR-QgYhCYbU52gzV0eBkk6FAbDJVNtZteAtiPWmF4MnwEoIcbf0LD439XuoMgPvxfyJZYUmbsuTsuuEB6KWr0QFEDgzd15s7f5zsx9zntoC7OPd8wSwqfE3tpEvZyzBSKfV49LYQFZ-M5ZQC9cslQGDqlcBfBzhOl7LV1rQXEVt8PJQvGbuUIPS5llSiS7TDEkI94Z_-Uzd6Jd6YJVfzFt5YAM8CEzTykV4oE4BxL-UsNOtAOlBsZto4
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 04:41:50 GMT
+- request:
+    method: post
+    uri: https://www.google.com/calendar/feeds/default/private/full
+    body:
+      encoding: UTF-8
+      string: |-
+        <entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>
+                  <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>
+                  <title type='text'>feed the cat</title>
+                  <content type='text'></content>
+                  <gd:transparency value='http://schemas.google.com/g/2005#event.'></gd:transparency>
+                  <gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus>
+                  <gd:where valueString=""></gd:where>
+                  <gd:when startTime="2013-10-14T00:01:00Z" endTime="2013-10-14T00:01:00Z">
+                    <gd:reminder method="alert" minutes="1"></gd:reminder>
+                  </gd:when>
+                 </entry>
+    headers:
+      Authorization:
+      - GoogleLogin auth=DQAAALUAAADNi_Jmf64gR-QgYhCYbU52gzV0eBkk6FAbDJVNtZteAtiPWmF4MnwEoIcbf0LD439XuoMgPvxfyJZYUmbsuTsuuEB6KWr0QFEDgzd15s7f5zsx9zntoC7OPd8wSwqfE3tpEvZyzBSKfV49LYQFZ-M5ZQC9cslQGDqlcBfBzhOl7LV1rQXEVt8PJQvGbuUIPS5llSiS7TDEkI94Z_-Uzd6Jd6YJVfzFt5YAM8CEzTykV4oE4BxL-UsNOtAOlBsZto4
+      Content-Type:
+      - application/atom+xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Update-Client-Auth:
+      - DQAAALYAAADNi_Jmf64gR-QgYhCYbU52gzV0eBkk6FAbDJVNtZteAtiPWmF4MnwEoIcbf0LD439XuoMgPvxfyJZYUmbsuTsuuEB6KWr0QFEDgzd15s7f5zsx9zntoC7OPd8wSwqfE3tpEvZyzBSKfV49LYQFZ-M5ZQC9cslQGDqlcBfBzhOl7GSxuhtlkmtPEzWwHGN3G88rx7wuPv30Bm3mf-kmeZ74xgm8qng5G_LTXiHwcERMUbpUGRYXCy5hQHnxoyIAKHk
+      Set-Cookie:
+      - DO_NOT_CACHE_RESPONSE=true;Expires=Mon, 14-Oct-2013 04:41:51 GMT
+      - S=calendar=G1TorNX4hNR4fL7D63-mGA;Expires=Sun, 27-Oct-2013 23:32:32 GMT;Secure
+      Expires:
+      - Mon, 14 Oct 2013 04:41:50 GMT
+      Date:
+      - Mon, 14 Oct 2013 04:41:50 GMT
+      Location:
+      - https://www.google.com/calendar/feeds/default/private/full?gsessionid=G1TorNX4hNR4fL7D63-mGA
+      Content-Type:
+      - text/html; charset=UTF-8
+      Cache-Control:
+      - private, max-age=0
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        <HTML>
+        <HEAD>
+        <TITLE>Moved Temporarily</TITLE>
+        </HEAD>
+        <BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+        <H1>Moved Temporarily</H1>
+        The document has moved <A HREF="https://www.google.com/calendar/feeds/default/private/full?gsessionid=G1TorNX4hNR4fL7D63-mGA">here</A>.
+        </BODY>
+        </HTML>
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 04:41:50 GMT
+- request:
+    method: post
+    uri: https://www.google.com/calendar/feeds/default/private/full?gsessionid=G1TorNX4hNR4fL7D63-mGA
+    body:
+      encoding: UTF-8
+      string: |-
+        <entry xmlns='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'>
+                  <category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'></category>
+                  <title type='text'>feed the cat</title>
+                  <content type='text'></content>
+                  <gd:transparency value='http://schemas.google.com/g/2005#event.'></gd:transparency>
+                  <gd:eventStatus value='http://schemas.google.com/g/2005#event.confirmed'></gd:eventStatus>
+                  <gd:where valueString=""></gd:where>
+                  <gd:when startTime="2013-10-14T00:01:00Z" endTime="2013-10-14T00:01:00Z">
+                    <gd:reminder method="alert" minutes="1"></gd:reminder>
+                  </gd:when>
+                 </entry>
+    headers:
+      Authorization:
+      - GoogleLogin auth=DQAAALUAAADNi_Jmf64gR-QgYhCYbU52gzV0eBkk6FAbDJVNtZteAtiPWmF4MnwEoIcbf0LD439XuoMgPvxfyJZYUmbsuTsuuEB6KWr0QFEDgzd15s7f5zsx9zntoC7OPd8wSwqfE3tpEvZyzBSKfV49LYQFZ-M5ZQC9cslQGDqlcBfBzhOl7LV1rQXEVt8PJQvGbuUIPS5llSiS7TDEkI94Z_-Uzd6Jd6YJVfzFt5YAM8CEzTykV4oE4BxL-UsNOtAOlBsZto4
+      Content-Type:
+      - application/atom+xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Update-Client-Auth:
+      - DQAAALYAAADNi_Jmf64gR-QgYhCYbU528T8tNUIpdp3kmiJARDokwc_nXI_Sj-0-y8r74lFKbAvWQXhOS6cXD9EjlpYnP4J8xj4n8V2Gw4FcpQbSISVlSdCbRD9sJy0rUceySnAMk18xwf_cTjnezc9muZObF8nwqClr05LReR73cUxknc94iBs3EBB3SILP9oGV_FGVBFP3VsGm3jqMraAn-8g_vBHQYESb3IH2Zc5g6fizE1DnzYATDlcWVmcFvQcKGTjKXGc
+      Set-Cookie:
+      - DO_NOT_CACHE_RESPONSE=true;Expires=Mon, 14-Oct-2013 04:41:52 GMT
+      - S=calendar=CNpDlLU90eaNSNZNvhS-OQ;Expires=Wed, 23-Oct-2013 16:13:00 GMT;Secure
+      Expires:
+      - Mon, 14 Oct 2013 04:41:51 GMT
+      Date:
+      - Mon, 14 Oct 2013 04:41:51 GMT
+      Content-Type:
+      - application/atom+xml; charset=UTF-8
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Vary:
+      - Accept, X-GData-Authorization, GData-Version
+      Gdata-Version:
+      - '1.0'
+      Location:
+      - https://www.google.com/calendar/feeds/default/private/full/5dv06oms1ch7g4ma3ddcgmj8k4/63517408911
+      Content-Location:
+      - https://www.google.com/calendar/feeds/default/private/full/5dv06oms1ch7g4ma3ddcgmj8k4/63517408911
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: <?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom'
+        xmlns:gCal='http://schemas.google.com/gCal/2005' xmlns:gd='http://schemas.google.com/g/2005'><id>http://www.google.com/calendar/feeds/default/private/full/5dv06oms1ch7g4ma3ddcgmj8k4</id><published>2013-10-14T04:41:51.000Z</published><updated>2013-10-14T04:41:51.000Z</updated><category
+        scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/g/2005#event'/><title
+        type='text'>feed the cat</title><content type='text'/><link rel='alternate'
+        type='text/html' href='https://www.google.com/calendar/event?eid=NWR2MDZvbXMxY2g3ZzRtYTNkZGNnbWo4azQgY29naWJhcmFAbQ'
+        title='alternate'/><link rel='self' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/5dv06oms1ch7g4ma3ddcgmj8k4'/><link
+        rel='edit' type='application/atom+xml' href='https://www.google.com/calendar/feeds/default/private/full/5dv06oms1ch7g4ma3ddcgmj8k4/63517408911'/><author><name>Cogibara
+        Org</name><email>cogibara@gmail.com</email></author><gd:comments><gd:feedLink
+        href='https://www.google.com/calendar/feeds/default/private/full/5dv06oms1ch7g4ma3ddcgmj8k4/comments'/></gd:comments><gd:eventStatus
+        value='http://schemas.google.com/g/2005#event.confirmed'/><gd:where valueString=''/><gd:who
+        email='cogibara@gmail.com' rel='http://schemas.google.com/g/2005#event.organizer'
+        valueString='Cogibara Org'/><gd:when endTime='2013-10-13T19:01:00.000-05:00'
+        startTime='2013-10-13T19:01:00.000-05:00'><gd:reminder method='alert' minutes='1'/></gd:when><gd:transparency
+        value='http://schemas.google.com/g/2005#event.opaque'/><gd:visibility value='http://schemas.google.com/g/2005#event.default'/><gCal:anyoneCanAddSelf
+        value='false'/><gCal:guestsCanInviteOthers value='true'/><gCal:guestsCanModify
+        value='false'/><gCal:guestsCanSeeGuests value='true'/><gCal:sequence value='0'/><gCal:uid
+        value='5dv06oms1ch7g4ma3ddcgmj8k4@google.com'/></entry>
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 04:41:51 GMT
 recorded_with: VCR 2.5.0

@@ -84,16 +84,17 @@ module Cogibara
     end
 
     def settings
-      unless @yml
-        yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
-        if File.exist? yml_file
-          @yml = YAML.load_file(yml_file)
-        else
-          @yml = {"keys" => {}}
-        end
-      end
+      self.class.settings
+      # unless @yml
+      #   yml_file = File.dirname(__FILE__) + '/../config/cogibara.yml'
+      #   if File.exist? yml_file
+      #     @yml = YAML.load_file(yml_file)
+      #   else
+      #     @yml = {"keys" => {}}
+      #   end
+      # end
 
-      @yml
+      # @yml
     end
 
 

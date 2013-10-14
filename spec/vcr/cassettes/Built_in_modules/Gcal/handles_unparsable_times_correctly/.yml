@@ -1,0 +1,160 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://spotlight.dbpedia.org/rest/annotate?confidence=0&support=0&text=remind%20me%20in%20three%20hours%20to%20fight%20the%20man
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Oct 2013 16:13:58 GMT
+      Server:
+      - grizzly/1.9.48
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "@text": "remind me in three hours to fight the man",
+          "@confidence": "0.0",
+          "@support": "0",
+          "@types": "",
+          "@sparql": "",
+          "@policy": "whitelist",
+          "Resources":   [
+                {
+              "@URI": "http://dbpedia.org/resource/Fighting_in_ice_hockey",
+              "@support": "58",
+              "@types": "",
+              "@surfaceForm": "fight",
+              "@offset": "28",
+              "@similarityScore": "0.15036165714263916",
+              "@percentageOfSecondRank": "0.664446514577924"
+            },
+                {
+              "@URI": "http://dbpedia.org/resource/The_Six_Million_Dollar_Man",
+              "@support": "301",
+              "@types": "DBpedia:TelevisionShow,DBpedia:Work,Schema:CreativeWork,Freebase:/tv/tv_program,Freebase:/tv,Freebase:/award/award_nominated_work,Freebase:/award,Freebase:/media_common/adaptation,Freebase:/media_common",
+              "@surfaceForm": "man",
+              "@offset": "38",
+              "@similarityScore": "0.1202283725142479",
+              "@percentageOfSecondRank": "0.8978164725438701"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 16:14:02 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=remind%20me%20in%20three%20hours%20to%20fight%20the%20man
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '531'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 14 Oct 2013 16:14:03 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "3514f942-4ca4-4a89-9781-6c5164c80a88",
+          "msg_body" : "remind me in three hours to fight the man",
+          "outcome" : {
+            "intent" : "set_reminder",
+            "entities" : {
+              "reminder_time" : {
+                "end" : 24,
+                "start" : 13,
+                "value" : "three hours",
+                "body" : "three hours"
+              },
+              "reminder_text" : {
+                "end" : 41,
+                "start" : 28,
+                "value" : "fight the man",
+                "body" : "fight the man",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.942
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 16:14:03 GMT
+- request:
+    method: get
+    uri: https://api.wit.ai/message?q=remind%20me%20in%20three%20hours%20to%20fight%20the%20man
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <Wit Auth>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '531'
+      Server:
+      - http-kit
+      Date:
+      - Mon, 14 Oct 2013 16:14:04 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "msg_id" : "466a0211-69c8-49b6-8b7a-bb3617504574",
+          "msg_body" : "remind me in three hours to fight the man",
+          "outcome" : {
+            "intent" : "set_reminder",
+            "entities" : {
+              "reminder_time" : {
+                "end" : 24,
+                "start" : 13,
+                "value" : "three hours",
+                "body" : "three hours"
+              },
+              "reminder_text" : {
+                "end" : 41,
+                "start" : 28,
+                "value" : "fight the man",
+                "body" : "fight the man",
+                "suggested" : true
+              }
+            },
+            "confidence" : 0.942
+          }
+        }
+    http_version: 
+  recorded_at: Mon, 14 Oct 2013 16:14:04 GMT
+recorded_with: VCR 2.5.0
