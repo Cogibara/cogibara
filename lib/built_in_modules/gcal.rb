@@ -7,7 +7,17 @@ class Gcal < Cogibara::Module
   requires_key 'google_pass'
 
   def parse_time(t)
-    Chronic.parse(t)
+    time = Chronic.parse t
+    if time
+      time
+    else
+      interm = current_message.normalize
+      if interm && interm.first && interm.first["normalized_time"]
+        Chronic.parse interm.first["normalized_time"]
+      else
+        nil
+      end
+    end
   end
 
   def make_remind(message, time = Time.now.to_s, methods = ['sms'])

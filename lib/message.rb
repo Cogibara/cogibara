@@ -56,6 +56,14 @@ module Cogibara
       end
     end
 
+    def normalize(sym=nil)
+      if sym
+        Cogibara::Lang::Normalize.for(sym).get_normalized(self)
+      else
+        Cogibara::Lang::Normalize.get_normalized(self)
+      end
+    end
+
     def intent(sym=nil)
       if sym
         Array(Cogibara::Lang::Intent.for(sym).get_intent(self)).map(&:intent)
