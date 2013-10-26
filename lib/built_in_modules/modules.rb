@@ -1,7 +1,4 @@
 
-# require 'cleverbot'
-
-
 
 class Maluuba < Cogibara::Module
   # requires 'maluuba_napi'
