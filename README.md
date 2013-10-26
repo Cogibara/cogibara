@@ -24,6 +24,10 @@ Start one of the interfaces in the bin directory. For example, try running `./bi
 
 (coming soon)
 
+Extend `Cogibara::Module` and make sure you `register` your class.
+
+See the [built in modules](https://github.com/Cogibara/cogibara/blob/master/lib/built_in_modules/modules.rb) for some examples
+
 ## Key components
 
   * Simple DSL for responding to linguistic features of user input
