@@ -36,7 +36,7 @@ module Cogibara
     end
 
     def self.repo
-      Spira.repositories[RDFMsg.configure[:reposity_name] || :default]
+      Spira.repository
     end
 
     def repo

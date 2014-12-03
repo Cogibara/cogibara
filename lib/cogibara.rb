@@ -31,8 +31,7 @@ Dir["#{File.dirname(__FILE__)}/built_in_modules/*.rb"].each {|file| require file
 Dir["#{File.dirname(__FILE__)}/interfaces/*.rb"].each {|file| require file }
 Dir["#{File.dirname(__FILE__)}/helpers/*.rb"].each {|file| require file }
 
-Spira.add_repository(:default,Cogibara.memory.repo)
-
+Spira.repository = Cogibara.memory.repo
 
 # require_relative 'built_in_modules/dbpedia_query.rb'
 # require_relative 'built_in_modules/dbpedia_spotlight.rb'
