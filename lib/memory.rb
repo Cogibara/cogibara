@@ -41,7 +41,7 @@ module Cogibara
       # @repo ||= RDF::DataObjects::Repository.new('sqlite3:cogi_brain.db')
       raise 'not a repository' unless new_repo.is_a? RDF::Repository
       @repo = new_repo
-      Spira.add_repository(:default,@repo)
+      Spira.repository = @repo
     end
 
     # TODO: move this to the Message class

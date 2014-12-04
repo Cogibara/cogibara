@@ -42,6 +42,7 @@ gem 'spira'
 # Server gems
 gem 'launchy'
 gem 'sinatra'
+gem 'tilt', '~> 1.4.1'
 
 # ## SQLite based persistence
 

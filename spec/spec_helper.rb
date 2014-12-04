@@ -22,8 +22,6 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
-
-  config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
 VCR.configure do |c|

@@ -51,8 +51,6 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
 
 
     describe "specify order with categories" do
-
-
       class K1 < Cogibara::Module
         on 'hi' do
           "K1 got your message"
@@ -150,8 +148,6 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         AlarmSetter.register
       end
 
-      it { pending "Maluuba CI issues"}
-
       # it { @cogi_l.ask('testing').should == "not an alarm" }
       # it { @cogi_l.ask('set me an alarm for 8am tomorrow').should == "set an alarm"}
       # it { @cogi_l.ask('cancel my 8am alarm').should == "cancel an alarm" }
@@ -201,7 +197,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         @cogi_l.stub(:puts)
       end
 
-      it {@cogi_l.ask('hello').should == "hi bob! :D"}
+      it { expect(@cogi_l.ask('hello')).to eq("hi bob! :D") }
       it {@cogi_l.ask('hi').should == "and this is the final one"}
     end
 
