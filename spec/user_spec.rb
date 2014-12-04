@@ -15,7 +15,7 @@ describe Cogibara, vcr: {record: :new_episodes} do
       # puts "hello?"
     it {
       u = Cogibara::User.new('wstrinz@gmail.com')
-      u.subject.to_s.should == "http://cogi.strinz.me/users/wstrinz%40gmail.com"
+      expect(u.subject.to_s).to eq("http://cogi.strinz.me/users/wstrinz%40gmail.com")
     }
   end
 
@@ -27,7 +27,7 @@ describe Cogibara, vcr: {record: :new_episodes} do
     it {
       @user.name = "Will Strinz"
       @user.save
-      Cogibara::User.new('wstrinz@gmail.com').name.should == "Will Strinz"
+      expect(Cogibara::User.new('wstrinz@gmail.com').name).to eq("Will Strinz")
     }
   end
 

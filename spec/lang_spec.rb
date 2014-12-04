@@ -17,11 +17,11 @@ describe Cogibara::Lang, vcr: {record: :new_episodes} do
     end
 
     it "does NER with wit", :no_travis do
-      @ner.for(:wit).get_entities(@msg).first.should_not be nil
+      expect(@ner.for(:wit).get_entities(@msg).first).not_to be nil
     end
 
     it "iterates through registered recognizers" do
-      @ner.get_entities(@msg).first.should_not be nil
+      expect(@ner.get_entities(@msg).first).not_to be nil
     end
   end
 
@@ -31,7 +31,7 @@ describe Cogibara::Lang, vcr: {record: :new_episodes} do
     end
 
     describe "normalizes time" do
-      it { Time.parse(@maluuba.get_normalized("Remind me to go the shop in 5 hours")).should_not be nil }
+      it { expect(Time.parse(@maluuba.get_normalized("Remind me to go the shop in 5 hours"))).not_to be nil }
     end
   end
 end

@@ -19,7 +19,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       Reverser.register
     end
 
-    it { @cogi_l.ask('hello?').should ==  "?olleh" }
+    it { expect(@cogi_l.ask('hello?')).to eq("?olleh") }
   end
 
   context "using the dsl", vcr: { record: :new_episodes } do
@@ -42,10 +42,10 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         DiceRoller.register
       end
 
-      it { @cogi_l.ask('hello you').should ==  "hai dere" }
-      it { @cogi_l.ask("I'm bill").should ==  "hi bill" }
-      it { @cogi_l.ask("roll me 1d150").to_i.should > 0  }
-      it { @cogi_l.ask("roll me 4d12").split("\n").size.should == 4 }
+      it { expect(@cogi_l.ask('hello you')).to eq("hai dere") }
+      it { expect(@cogi_l.ask("I'm bill")).to eq("hi bill") }
+      it { expect(@cogi_l.ask("roll me 1d150").to_i).to be > 0  }
+      it { expect(@cogi_l.ask("roll me 4d12").split("\n").size).to eq(4) }
     end
 
 
@@ -69,7 +69,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
       end
 
 
-      it { @cogi_l.ask('hi').should ==  "K1 got your message" }
+      it { expect(@cogi_l.ask('hi')).to eq("K1 got your message") }
     end
 
     describe "add topics" do
@@ -83,7 +83,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         Topicizer.register :classify
       end
 
-      it { @cogi_p.ask('hi').response_to.topics.first.should ==  "tests and stuff" }
+      it { expect(@cogi_p.ask('hi').response_to.topics.first).to eq("tests and stuff") }
     end
 
     describe "can set/get properties manually" do
@@ -93,7 +93,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
 
         it {
           @msg.set_cunkiness 1000
-          @msg.get_cunkiness.should == 1000
+          expect(@msg.get_cunkiness).to eq(1000)
         }
     end
 
@@ -108,7 +108,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         CreepyGreeter.register
       end
 
-      it { @cogi_l.ask('hello you').should ==  "hehe... hello http://cogi.strinz.me/users/local" }
+      it { expect(@cogi_l.ask('hello you')).to eq("hehe... hello http://cogi.strinz.me/users/local") }
     end
 
     describe "can order response handlers" do
@@ -126,7 +126,7 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         OrderKlass.register
       end
 
-      it { @cogi_l.ask('testing').should == "do say this"}
+      it { expect(@cogi_l.ask('testing')).to eq("do say this")}
     end
 
     describe "can restrict on arbitrary properties" do
@@ -173,8 +173,8 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
         PersonLookup.register
       end
 
-      it {@cogi_l.ask('who is Johnny Habu?').should == "looking up a person" }
-      it {@cogi_l.ask('show me Johnny Habus contact info').should == "you have to say 'who'" }
+      it {expect(@cogi_l.ask('who is Johnny Habu?')).to eq("looking up a person") }
+      it {expect(@cogi_l.ask('show me Johnny Habus contact info')).to eq("you have to say 'who'") }
     end
 
     describe "can interact with user" do
@@ -193,12 +193,12 @@ describe Cogibara::Module, vcr: { record: :new_episodes } do
 
       before do
         Namer.register
-        @cogi_l.stub(:gets).and_return('bob')
-        @cogi_l.stub(:puts)
+        allow(@cogi_l).to receive(:gets).and_return('bob')
+        allow(@cogi_l).to receive(:puts)
       end
 
       it { expect(@cogi_l.ask('hello')).to eq("hi bob! :D") }
-      it {@cogi_l.ask('hi').should == "and this is the final one"}
+      it {expect(@cogi_l.ask('hi')).to eq("and this is the final one")}
     end
 
   end

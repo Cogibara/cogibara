@@ -9,56 +9,56 @@ describe "Built in modules", vcr: { record: :new_episodes } do
   end
 
   describe Chatbot do
-    it { @cogi_l.ask('hello mr chatbot').should == "You can't eat."}
+    it { expect(@cogi_l.ask('hello mr chatbot')).to eq("You can't eat.")}
   end
 
   describe MemoryDumper do
     before do
-      @cogi_l.ask('bla').should == "Thats fun."
+      expect(@cogi_l.ask('bla')).to eq("Thats fun.")
     end
 
-    it { @cogi_l.ask('dump memory')[/message_string "bla"/].should_not be nil }
+    it { expect(@cogi_l.ask('dump memory')[/message_string "bla"/]).not_to be nil }
   end
 
   describe DiceRoller do
-    it { @cogi_l.ask('roll 6d6').split("\n").first.to_i.should > 0 }
+    it { expect(@cogi_l.ask('roll 6d6').split("\n").first.to_i).to be > 0 }
   end
 
   describe DBPediaQuery do
     describe "property lookup gdp" do
-      it { @cogi_l.ask('what is the GDP PPP per capita of United States').should == "49802.0"}
+      it { expect(@cogi_l.ask('what is the GDP PPP per capita of United States')).to eq("49802.0")}
     end
 
     describe "property lookup gdp 2" do
-      it { @cogi_l.ask('What is the gdp PPP per capita of Japan').should == "36179.0"}
+      it { expect(@cogi_l.ask('What is the gdp PPP per capita of Japan')).to eq("36179.0")}
     end
 
     describe "doesn't mind question marks" do
-      it { @cogi_l.ask('who is the leader of France?').should == "Jean-Marc Ayrault, François Hollande"}
+      it { expect(@cogi_l.ask('who is the leader of France?')).to eq("Jean-Marc Ayrault, François Hollande")}
     end
 
     describe "also looks up owl properties" do
-      it { @cogi_l.ask('what is the record label of Arashi').should == "J Storm, Pony Canyon"}
+      it { expect(@cogi_l.ask('what is the record label of Arashi')).to eq("J Storm, Pony Canyon")}
     end
 
     describe "returns uris when no labels are available" do
-      it { @cogi_l.ask('what is the website of Community (TV series)').should == "http://www.nbc.com/community/"}
+      it { expect(@cogi_l.ask('what is the website of Community (TV series)')).to eq("http://www.nbc.com/community/")}
     end
 
     describe "property lookup with multi-word property 'leader name'" do
-      it { @cogi_l.ask('what is the leader name of germany')[/Angela Merkel/].should_not be nil  }
+      it { expect(@cogi_l.ask('what is the leader name of germany')[/Angela Merkel/]).not_to be nil  }
     end
 
     describe "cached properties" do
-      it { @cogi_l.ask('who is the leader of germany')[/Angela Merkel/].should_not be nil }
+      it { expect(@cogi_l.ask('who is the leader of germany')[/Angela Merkel/]).not_to be nil }
     end
 
     describe "use it to refer to current object" do
-      it { @cogi_l.ask('what is the capital of it').should == "Berlin" }
+      it { expect(@cogi_l.ask('what is the capital of it')).to eq("Berlin") }
     end
 
     describe "can fetch abstracts" do
-      it { @cogi_l.ask('what is Tardigrade')[0..119].should == "Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs." }
+      it { expect(@cogi_l.ask('what is Tardigrade')[0..119]).to eq("Tardigrades (commonly known as waterbears or moss piglets) are small, water-dwelling, segmented animals with eight legs.") }
     end
 
     # describe "uses ActiveSupport to singularize" do
@@ -66,21 +66,21 @@ describe "Built in modules", vcr: { record: :new_episodes } do
     # end
 
     describe "can help disambiguate abstracts" do
-      it { @cogi_l.ask('what is pitch?')[0..43].should == "Pitch Pine, Pitch (card game), Pitch (film)," }
+      it { expect(@cogi_l.ask('what is pitch?')[0..43]).to eq("Pitch Pine, Pitch (card game), Pitch (film),") }
     end
 
 
     describe "lists known predicates" do
-      it { @cogi_l.ask('what can you tell me about Germany')['Capital, Caption, cctld, color, common name, conventional long name, currency'].should_not be nil }
+      it { expect(@cogi_l.ask('what can you tell me about Germany')['Capital, Caption, cctld, color, common name, conventional long name, currency']).not_to be nil }
     end
 
     context "experimental wit integration" do
       describe "property enumeration" do
-        it { @cogi_l.ask('what you know about balloon?')[0..43].should == "sameAs, label, depiction, comment, is primar" }
+        it { expect(@cogi_l.ask('what you know about balloon?')[0..43]).to eq("sameAs, label, depiction, comment, is primar") }
       end
 
       describe "fact questions" do
-        it { @cogi_l.ask('what\'s the capital of Cuba?')[0..43].should == "Havana" }
+        it { expect(@cogi_l.ask('what\'s the capital of Cuba?')[0..43]).to eq("Havana") }
       end
     end
   end
@@ -137,31 +137,31 @@ describe "Built in modules", vcr: { record: :new_episodes } do
   describe Gcal, :no_travis do
     describe "sets reminders" do
       it {
-        @cogi_l.ask("remind me to feed the cat at 7:00pm").should == "okay, reminding you to feed the cat at 7:00 tonight"
+        expect(@cogi_l.ask("remind me to feed the cat at 7:00pm")).to eq("okay, reminding you to feed the cat at 7:00 tonight")
       }
     end
 
     describe "parses time using chronic" do
       it {
-        @cogi_l.ask("remind me via sms tomorrow morning at 11 to bake bread")[/okay, reminding you to bake bread at \d+-\d+-\d+ 11:00:00 -0500/].should_not be nil
+        expect(@cogi_l.ask("remind me via sms tomorrow morning at 11 to bake bread")[/okay, reminding you to bake bread at \d+-\d+-\d+ 11:00:00 -0500/]).not_to be nil
       }
     end
 
     describe "handles unparsable times correctly" do
       it {
-        @cogi_l.ask("remind me in three hours to fight the man").should_not be nil
+        expect(@cogi_l.ask("remind me in three hours to fight the man")).not_to be nil
       }
     end
 
     describe "select reminder method" do
       it {
-        @cogi_l.ask("remind me via sms to feed the cat at 7:00pm").should == "okay, reminding you to feed the cat at 7:00 tonight"
+        expect(@cogi_l.ask("remind me via sms to feed the cat at 7:00pm")).to eq("okay, reminding you to feed the cat at 7:00 tonight")
       }
     end
 
     describe "wit integration" do
       it {
-        @cogi_l.ask("can you remind me via sms to eat pudding at 8:00pm")[/okay, reminding you to eat pudding at \d+-\d+-\d+ 08:00:00 -0500/].should_not be nil
+        expect(@cogi_l.ask("can you remind me via sms to eat pudding at 8:00pm")[/okay, reminding you to eat pudding at \d+-\d+-\d+ 08:00:00 -0500/]).not_to be nil
       }
     end
   end
@@ -169,7 +169,7 @@ describe "Built in modules", vcr: { record: :new_episodes } do
   describe Recipes, :no_travis do
     describe "finds recipes" do
       it {
-        @cogi_l.ask("find me a recipe for Grilled Cheese").should == <<-EOF
+        expect(@cogi_l.ask("find me a recipe for Grilled Cheese")).to eq <<-EOF
 Recipe: Pepper Jack Grilled Cheese Sandwich
 Ingredients:
 5 jalapeno peppers
@@ -183,7 +183,7 @@ Ingredients:
 
     describe "scroll through recipes" do
       it {
-        @cogi_l.ask("next recipe").should == <<-EOF
+        expect(@cogi_l.ask("next recipe")).to eq <<-EOF
 Recipe: Crisp Grilled Cheese Sandwich
 Ingredients:
 8 slices texas toast or other thick-sliced white bread
@@ -196,8 +196,9 @@ Ingredients:
 
     describe "skips on unknown recipe" do
       it {
-        @cogi_l.ask("find me a recipe for Beluga Caviar with Marshmallows").should ==
+        expect(@cogi_l.ask("find me a recipe for Beluga Caviar with Marshmallows")).to eq(
         "I think you want to recipe_lookup, but I don't know how. try asking for help"
+        )
       }
     end
   end

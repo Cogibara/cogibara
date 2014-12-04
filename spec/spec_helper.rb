@@ -41,6 +41,6 @@ end
 
 def test_values(object, expected_values)
   expected_values.each do |attribute, value|
-    object[attribute].should == value
+    expect(object[attribute]).to eq(value)
   end
 end

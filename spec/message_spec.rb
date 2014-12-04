@@ -18,7 +18,7 @@ describe Cogibara::Message, vcr: {record: :new_episodes} do
         @msg.entities()
       end
 
-      it { @msg.structured_properties.first.rdf_type.should_not be nil}
+      it { expect(@msg.structured_properties.first.rdf_type).not_to be nil}
     end
 
     describe "retrieve by rdf class" do
@@ -27,7 +27,7 @@ describe Cogibara::Message, vcr: {record: :new_episodes} do
         @msg.entities()
       end
 
-      it { @msg.structured_properties("NamedEntity").first.should_not be nil}
+      it { expect(@msg.structured_properties("NamedEntity").first).not_to be nil}
     end
 
   end
